@@ -156,29 +156,11 @@ function rewriteInlineScriptPaths(html, htmlFile, productRoot) {
   );
 }
 
-function reviewBannerHref(htmlFile) {
-  const rel = relative(dirname(htmlFile), join(MOCKUPS_ROOT, 'shared', 'review-banner.css'));
-  return rel.split(sep).join('/');
-}
-
-function injectReviewChrome(html, htmlFile) {
-  const bannerCss = reviewBannerHref(htmlFile);
-  const injectHead = `<meta name="robots" content="noindex" />\n<link rel="stylesheet" href="${bannerCss}" />`;
-  const injectBody = `<p class="review-banner">Design review mockup · <a href="${hubHref(htmlFile)}">Back to catalog</a></p>`;
-
+function stripReviewChrome(html) {
   let out = html;
-  if (!out.includes('review-banner.css')) {
-    out = out.replace(/<head([^>]*)>/i, `<head$1>\n${injectHead}`);
-  }
-  if (!out.includes('class="review-banner"')) {
-    out = out.replace(/<body([^>]*)>/i, `<body$1>\n${injectBody}`);
-  }
+  out = out.replace(/<link rel="stylesheet" href="[^"]*review-banner\.css"[^>]*>\s*/gi, '');
+  out = out.replace(/<p class="review-banner">[\s\S]*?<\/p>\s*/gi, '');
   return out;
-}
-
-function hubHref(htmlFile) {
-  const rel = relative(dirname(htmlFile), join(MOCKUPS_ROOT, 'index.html'));
-  return rel.split(sep).join('/');
 }
 
 /** Directory URL for the page (leading/trailing slash) so assets resolve without a trailing slash in the browser URL. */
@@ -248,7 +230,7 @@ async function processHtmlFile(filePath, productRoot) {
   html = rewriteInlineScriptPaths(html, filePath, productRoot);
   html = rewriteFetchHandlers(html);
   html = injectBaseHref(html, filePath);
-  html = injectReviewChrome(html, filePath);
+  html = stripReviewChrome(html);
   await writeFile(filePath, html);
 }
 
@@ -425,12 +407,6 @@ async function generateAo3ModalGallery() {
   )
     .split(sep)
     .join('/');
-  const bannerCss = relative(
-    join(PATHS.out.ao3, 'editor-modals'),
-    join(MOCKUPS_ROOT, 'shared', 'review-banner.css'),
-  )
-    .split(sep)
-    .join('/');
   const appCss = '../src/style.css';
   const tokensCss = '../assets/brand/tokens.css';
   const themeCss = '../assets/brand/theme.css';
@@ -464,13 +440,11 @@ async function generateAo3ModalGallery() {
   <link rel="stylesheet" href="${legacyCss}" />
   <link rel="stylesheet" href="${appCss}" />
   <link rel="stylesheet" href="${galleryCss}" />
-  <link rel="stylesheet" href="${bannerCss}" />
 </head>
 <body class="aw-theme-default-a review-gallery-page">
-  <p class="review-banner">Design review · AO3 Works modals · <a href="${hub}">Back to catalog</a></p>
   <header class="review-gallery-intro">
     <h1>AO3 Works — All modals</h1>
-    <p>Each dialog shown open for visual review. <a href="../editor/index.html">Open full editor</a>.</p>
+    <p>Each dialog shown open for visual review. <a href="../editor/index.html">Open full editor</a> · <a href="${hub}">Catalog</a>.</p>
   </header>
   <main>
 ${frames}
@@ -481,6 +455,7 @@ ${frames}
   const outDir = join(PATHS.out.ao3, 'editor-modals');
   await mkdir(outDir, { recursive: true });
   await writeFile(join(outDir, 'index.html'), page);
+  await processHtmlFile(join(outDir, 'index.html'), PATHS.out.ao3);
   log('AO3 modal gallery generated');
 }
 
