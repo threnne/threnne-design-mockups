@@ -1,0 +1,3 @@
+/api/get-involved  /.netlify/functions/get-involved  200
+/pipeline    /background/   301
+/pipeline/   /background/   301

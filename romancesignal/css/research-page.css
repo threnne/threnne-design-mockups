@@ -1,0 +1,296 @@
+/* Research volumes hub */
+
+.rs-page {
+  --rs-accent: var(--color-primary);
+  --rs-accent-soft: var(--color-primary-soft);
+}
+
+.rs-masthead {
+  max-width: var(--content-wide);
+  margin: 0 auto;
+  padding: clamp(2.5rem, 6vw, 4rem) clamp(1.25rem, 4vw, 2rem) clamp(2rem, 4vw, 2.5rem);
+  border-bottom: 2px solid var(--color-border-strong);
+}
+
+.rs-masthead__label {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--rs-accent);
+  margin-bottom: 1.25rem;
+}
+
+.rs-masthead__title {
+  font-family: var(--font-display);
+  font-size: clamp(2.75rem, 8vw, 4.5rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  margin-bottom: 1.25rem;
+}
+
+.rs-masthead__intro {
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-size: clamp(1.1rem, 2vw, 1.35rem);
+  font-style: italic;
+  line-height: 1.55;
+  color: var(--color-text);
+  max-width: 40rem;
+}
+
+.rs-main {
+  max-width: var(--content-wide);
+  margin: 0 auto;
+  padding: clamp(2rem, 4vw, 3rem) clamp(1.25rem, 4vw, 2rem) clamp(3rem, 5vw, 5rem);
+}
+
+.rs-lead {
+  margin-bottom: clamp(3rem, 6vw, 5rem);
+  padding-bottom: clamp(3rem, 6vw, 5rem);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.rs-lead__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.25rem;
+}
+
+.rs-lead__volume {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--rs-accent);
+}
+
+.rs-lead__meta {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.rs-lead__title {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
+  max-width: 56rem;
+}
+
+.rs-lead__dek {
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-size: clamp(1.1rem, 2vw, 1.35rem);
+  font-style: italic;
+  line-height: 1.5;
+  color: var(--color-text);
+  max-width: 40rem;
+  margin-bottom: 2rem;
+}
+
+.rs-lead__dek em {
+  font-style: italic;
+  color: var(--rs-accent);
+}
+
+.rs-lead__grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 2rem;
+  align-items: start;
+  margin-bottom: 2rem;
+}
+
+.rs-lead__chart {
+  border: 1px solid var(--color-border);
+  background: var(--color-surface-offset);
+  overflow: hidden;
+}
+
+.rs-lead__chart .vol-chart {
+  margin-bottom: 0;
+  border: none;
+  background: transparent;
+}
+
+.rs-lead__chart .vol-chart__wrap {
+  padding: 0.5rem 0.75rem 0;
+}
+
+.rs-lead__chart-caption {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  padding: 0.75rem 1rem;
+  border-top: 1px solid var(--color-border);
+  background: var(--color-surface);
+}
+
+.rs-lead__body p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--color-text);
+  margin-bottom: 1.15rem;
+}
+
+.rs-lead__body p:last-child {
+  margin-bottom: 0;
+}
+
+.rs-lead__body strong {
+  font-weight: 600;
+}
+
+.rs-lead__cta-block {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+
+.rs-lead__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 1rem 1.75rem;
+  background: var(--color-text);
+  color: var(--color-surface);
+  text-decoration: none;
+  border: 1px solid var(--color-text);
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.rs-lead__cta:hover {
+  background: var(--rs-accent);
+  border-color: var(--rs-accent);
+  color: var(--color-surface);
+}
+
+.rs-lead__cta:focus-visible {
+  outline: 2px solid var(--rs-accent);
+  outline-offset: 2px;
+}
+
+.rs-lead__read-time {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.rs-coming__header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.rs-coming__label {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--rs-accent);
+}
+
+.rs-coming__divider {
+  flex: 1;
+  height: 1px;
+  background: var(--color-border);
+}
+
+.rs-coming__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.rs-coming__card {
+  padding: 1.75rem 1.5rem;
+  background: var(--color-surface-offset);
+  border: 1px solid var(--color-border);
+}
+
+.rs-coming__status {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: 0.75rem;
+}
+
+.rs-coming__title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.rs-coming__note {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+}
+
+.rs-closing {
+  --home-ink: #0d1421;
+  --home-on-dark: #f6f0f2;
+  --home-on-dark-muted: rgba(246, 240, 242, 0.72);
+  background: var(--home-ink);
+  color: var(--home-on-dark);
+  padding: clamp(2.5rem, 5vw, 3.5rem) clamp(1.25rem, 4vw, 2rem);
+  text-align: center;
+}
+
+.rs-closing__text {
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-size: 1.2rem;
+  font-style: italic;
+  line-height: 1.6;
+  color: var(--home-on-dark-muted);
+  max-width: 36rem;
+  margin: 0 auto 1.5rem;
+}
+
+.rs-closing__cta {
+  display: inline-block;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0.85rem 1.75rem;
+  color: var(--home-on-dark);
+  border: 1px solid var(--home-on-dark);
+  text-decoration: none;
+  transition: background 0.15s, color 0.15s;
+}
+
+.rs-closing__cta:hover {
+  background: var(--home-on-dark);
+  color: var(--home-ink);
+}
+
+.rs-closing__cta:focus-visible {
+  outline: 2px solid var(--home-on-dark);
+  outline-offset: 3px;
+}
+
+@media (max-width: 900px) {
+  .rs-lead__grid {
+    grid-template-columns: 1fr;
+  }
+  .rs-coming__grid {
+    grid-template-columns: 1fr;
+  }
+}

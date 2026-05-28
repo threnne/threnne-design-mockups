@@ -1,0 +1,70 @@
+/* AO3 Works modal review gallery — mockups only */
+.review-gallery-page {
+  margin: 0;
+  padding: 2rem 1.25rem 4rem;
+  font-family: "Hanken Grotesk", system-ui, sans-serif;
+  background: #0c0f1f;
+  color: #f4f1ec;
+  /* style.css sets body { height: 100vh; overflow: hidden } for the editor app */
+  height: auto;
+  min-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  display: block;
+}
+
+.review-gallery-intro {
+  max-width: 48rem;
+  margin: 0 auto 2rem;
+}
+
+.review-gallery-intro h1 {
+  margin: 0 0 0.5rem;
+  font-size: 1.5rem;
+}
+
+.review-gallery-intro p {
+  margin: 0;
+  color: rgba(244, 241, 236, 0.65);
+  font-size: 0.92rem;
+}
+
+.review-gallery-intro a {
+  color: #c9d862;
+}
+
+.review-modal-frame {
+  max-width: 56rem;
+  margin: 0 auto 3rem;
+  padding: 0 0 1rem;
+  border-bottom: 1px solid rgba(244, 241, 236, 0.1);
+}
+
+.review-modal-frame__label {
+  margin: 0 0 1rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #c9d862;
+}
+
+.review-modal-frame__stage {
+  position: relative;
+  min-height: 12rem;
+  padding: 1.5rem;
+  background: rgba(0, 0, 0, 0.35);
+  border-radius: 8px;
+}
+
+.review-modal-frame .modal-overlay {
+  position: relative !important;
+  display: flex !important;
+  inset: auto !important;
+  min-height: 10rem;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.review-modal-frame .modal-overlay.hidden {
+  display: flex !important;
+}

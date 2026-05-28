@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" data-brand="signal" data-theme="light"> <head>
+<base href="/romancesignal/states/" />
+<meta name="robots" content="noindex" />
+<link rel="stylesheet" href="../../shared/review-banner.css" /><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Romance Signal · Research and Infrastructure for the Romance Genre</title><meta name="description" content="The research wing of Threnne. Working in public on what makes a romance succeed — live watchlist signals from Goodreads, Amazon BSR, news coverage, and more."><link rel="icon" type="image/png" sizes="32x32" href="../favicon-32-light.png"><link rel="icon" type="image/png" sizes="16x16" href="../favicon-16-light.png"><link rel="icon" type="image/png" sizes="32x32" href="../favicon-32-light.png"><link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png"><link rel="manifest" href="../manifest.webmanifest"><meta name="theme-color" content="#0C0F1F" media="(prefers-color-scheme: dark)"><meta name="theme-color" content="#FAFAF7" media="(prefers-color-scheme: light)"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300..700&family=JetBrains+Mono:wght@400;500&display=swap"><link rel="stylesheet" href="../css/base.css"><link rel="stylesheet" href="../css/style.css"><link rel="stylesheet" href="../css/style-pages.css"><link rel="stylesheet" href="../css/get-involved.css"><link rel="stylesheet" href="../css/home-marketing.css"><link rel="stylesheet" href="../css/volume-001-page.css"><link rel="stylesheet" href="../brand/legacy-aliases.css"><script>
+      // Restore theme before paint to avoid flash
+      try {
+        const saved = localStorage.getItem('rs-theme');
+        if (saved === 'light' || saved === 'dark') {
+          document.documentElement.setAttribute('data-theme', saved);
+        }
+      } catch (e) {}
+    </script><link rel="stylesheet" href="../_astro/index.Du8h-bcg.css"></head> <body data-page="home">
+<p class="review-banner">Design review mockup · <a href="../../index.html">Back to catalog</a></p>  <div class="mockup-banner mockup-banner--watchlist" role="note"> <div class="mockup-banner__inner mockup-banner__inner--watchlist"> <span class="mockup-banner__chip">WATCHLIST · TESTING</span> <span class="mockup-banner__copy"> 
+Watchlist data is currently in testing as we build our cohort of starting books. Please be patient
+            while coverage and charts come online.
+ </span>  </div> </div> <header class="topnav"> <div class="topnav__inner"> <a href="../index.html" class="brand" aria-label="Romance Signal by Threnne home"> <img class="brand__mark" src="../brand/signal-s-mark-dark.svg" alt="" width="32" height="32" data-brand-mark-dark="../brand/signal-s-mark-dark.svg" data-brand-mark-light="../brand/signal-s-mark-light.svg"> <span class="brand__text"> <img class="brand__wordmark-img" src="../brand/romance-signal-wordmark-dark.svg" alt="Romance Signal" height="20" data-brand-wordmark-dark="../brand/romance-signal-wordmark-dark.svg" data-brand-wordmark-light="../brand/romance-signal-wordmark-light.svg"> <span class="brand__sub">by Threnne</span> </span> </a> <nav class="topnav__links" aria-label="Primary"> <a href="../watchlist/index.html" class="topnav__link">Watchlist</a><a href="../background/index.html" class="topnav__link">Background</a><a href="../research/index.html" class="topnav__link">Research</a><a href="../methodology/index.html" class="topnav__link">Methodology</a> </nav> <div class="topnav__actions"> <button type="button" class="topnav__menu-btn" id="navMenuToggle" aria-expanded="true" aria-controls="navMenuPanel" aria-label="Close navigation menu"> <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"> <path d="M4 7h16M4 12h16M4 17h16" /> </svg> </button> <button type="button" class="theme-toggle" aria-label="Toggle theme" id="themeToggle"> <svg class="theme-toggle__sun" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="currentColor" /><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2v3" /><path d="M12 19v3" /><path d="M2 12h3" /><path d="M19 12h3" /><path d="m4.9 4.9 2.1 2.1" /><path d="m17 17 2.1 2.1" /><path d="m4.9 19.1 2.1-2.1" /><path d="m17 7 2.1-2.1" /></g></svg> <svg class="theme-toggle__moon" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.5A9 9 0 1 1 11.5 3a7 7 0 0 0 9.5 9.5z" fill="currentColor" /></svg> </button> </div> </div> <nav class="topnav__menu-panel" id="navMenuPanel" aria-label="Primary mobile"> <a href="../watchlist/index.html" class="topnav__menu-link">Watchlist</a><a href="../background/index.html" class="topnav__menu-link">Background</a><a href="../research/index.html" class="topnav__menu-link">Research</a><a href="../methodology/index.html" class="topnav__menu-link">Methodology</a> </nav> </header> <script>
+  (function () {
+    const btn = document.getElementById('navMenuToggle');
+    const panel = document.getElementById('navMenuPanel');
+    if (!btn || !panel) return;
+
+    function setOpen(open) {
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      btn.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
+      if (open) panel.removeAttribute('hidden');
+      else panel.setAttribute('hidden', '');
+    }
+
+    btn.addEventListener('click', () => {
+      setOpen(panel.hasAttribute('hidden'));
+    });
+
+    panel.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => setOpen(false));
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !panel.hasAttribute('hidden')) setOpen(false);
+    });
+
+    const mobileMq = window.matchMedia('(max-width: 768px)');
+    mobileMq.addEventListener('change', (e) => {
+      if (!e.matches) setOpen(false);
+    });
+  })();
+</script>  <section class="home-hero"> <div class="home-hero__inner"> <div class="home-hero__top"> <p class="home-hero__label">Research · Infrastructure · Built openly</p> <h1 class="home-hero__title">Romance Signal</h1> <p class="home-hero__thesis">
+The research wing of Threnne. Working in public on what makes a romance succeed, so writers can read their
+          work against <em>what the data actually says</em>.
+</p> </div> <section class="wl-preview" aria-label="Watchlist preview"> <div class="wl-preview__header"> <div class="wl-preview__header-left"> <span class="wl-preview__dot" aria-hidden="true"></span> <span class="wl-preview__label">Currently watching</span> </div> <span class="wl-preview__meta"> Week of May 18–May 24, 2026 · 3 of 6 shown
+</span> </div> <div class="wl-preview__grid wl-preview__grid--cols-3"> <article class="wl-card wl-card--has-link"> <div class="wl-card__top"> <div class="wl-card__title-block"> <a href="../watchlist/heated-rivalry/index.html" class="wl-card__title-link"> <p class="wl-card__title">Heated Rivalry</p> </a> <p class="wl-card__author">Rachel Reid</p> <div class="wl-card__links"> <a href="https://www.goodreads.com/book/show/41735449-heated-rivalry" target="_blank" rel="noopener noreferrer" class="wl-card__meta-link">
+Goodreads ↗
+</a>  </div> </div>  </div> <div class="wl-card__signals"> <div class="wl-signal"> <span class="wl-signal__label">Goodreads</span> <span class="wl-signal__value">401K</span> <span class="wl-signal__trend wl-signal__trend--up">+1.2K wk</span> </div><div class="wl-signal"> <span class="wl-signal__label">Amazon BSR</span> <span class="wl-signal__value">#615</span> <span class="wl-signal__trend wl-signal__trend--flat">latest rank</span> </div><div class="wl-signal"> <span class="wl-signal__label">News</span> <span class="wl-signal__value">1.6K</span> <span class="wl-signal__trend wl-signal__trend--down">−1.6K articles wk</span> </div> </div> <p class="wl-card__note">21 weeks on NYT lists, peaked #2 combined fiction.</p> <p class="wl-card__detail-link"> <a href="../watchlist/heated-rivalry/index.html">Full breakdown →</a> </p> </article><article class="wl-card wl-card--has-link"> <div class="wl-card__top"> <div class="wl-card__title-block"> <a href="../watchlist/in-her-own-league/index.html" class="wl-card__title-link"> <p class="wl-card__title">In Her Own League</p> </a> <p class="wl-card__author">Liz Tomforde</p> <div class="wl-card__links"> <a href="https://www.goodreads.com/book/show/230926478-in-her-own-league" target="_blank" rel="noopener noreferrer" class="wl-card__meta-link">
+Goodreads ↗
+</a>  </div> </div>  </div> <div class="wl-card__signals"> <div class="wl-signal"> <span class="wl-signal__label">Goodreads</span> <span class="wl-signal__value">155K</span> <span class="wl-signal__trend wl-signal__trend--up">+1.1K wk</span> </div><div class="wl-signal"> <span class="wl-signal__label">Amazon BSR</span> <span class="wl-signal__value">#2,707</span> <span class="wl-signal__trend wl-signal__trend--flat">latest rank</span> </div><div class="wl-signal"> <span class="wl-signal__label">News</span> <span class="wl-signal__value">3</span> <span class="wl-signal__trend wl-signal__trend--flat">flat</span> </div> </div> <p class="wl-card__note">2 weeks on NYT lists, peaked #7 combined fiction.</p> <p class="wl-card__detail-link"> <a href="../watchlist/in-her-own-league/index.html">Full breakdown →</a> </p> </article><article class="wl-card wl-card--has-link"> <div class="wl-card__top"> <div class="wl-card__title-block"> <a href="../watchlist/last-first-kiss/index.html" class="wl-card__title-link"> <p class="wl-card__title">Last First Kiss</p> </a> <p class="wl-card__author">Julian Winters</p> <div class="wl-card__links"> <a href="https://www.goodreads.com/book/show/231127304-last-first-kiss" target="_blank" rel="noopener noreferrer" class="wl-card__meta-link">
+Goodreads ↗
+</a>  </div> </div>  </div> <div class="wl-card__signals"> <div class="wl-signal"> <span class="wl-signal__label">Goodreads</span> <span class="wl-signal__value">1.5K</span> <span class="wl-signal__trend wl-signal__trend--up">+6 wk</span> </div><div class="wl-signal"> <span class="wl-signal__label">Amazon BSR</span> <span class="wl-signal__value">#706,223</span> <span class="wl-signal__trend wl-signal__trend--flat">latest rank</span> </div><div class="wl-signal"> <span class="wl-signal__label">News</span> <span class="wl-signal__value">30</span> <span class="wl-signal__trend wl-signal__trend--flat">flat</span> </div> </div> <p class="wl-card__note">NYT list data pending for this title.</p> <p class="wl-card__detail-link"> <a href="../watchlist/last-first-kiss/index.html">Full breakdown →</a> </p> </article> </div> <div class="wl-preview__footer"> <p class="wl-preview__footer-note">
+Preview · The full watchlist tracks active cohort books across multiple data sources, refreshed weekly.
+</p> <a href="../watchlist/index.html" class="wl-preview__cta">See the full watchlist →</a> </div> </section> </div> </section> <main class="home-main"> <div class="home-divider"> <div class="home-divider__line"></div> <span class="home-divider__label">What this is</span> <div class="home-divider__line"></div> </div> <h2 class="home-section-title">
+The research wing of Threnne. Built for romance, built for writers trying to understand what works.
+</h2> <p class="home-section-lead">
+Writers want to know what makes a romance succeed. <em>We're working on the answer in public.</em> </p> <div class="home-prose"> <p>
+Romance Signal is the research wing of Threnne. Threnne builds tools and services for romance writers. Romance
+        Signal is how Threnne learns what to build, by understanding the genre carefully enough to build for it.
+</p> <p>
+The work has two halves. The first is the signals downstream gatekeepers already use, including Goodreads
+        velocity, Amazon performance, NYT presence, BookTok trends, and news cycles. The second half is the signals the
+        trad pipeline misses — community and platform activity before retail catches up.
+</p> <p>
+Both halves answer the same question: <em>What does a successful romance look like in the data?</em> We put the
+        inputs in front of you, in public, so you can do the work yourself.
+</p> <p> <a href="../background/index.html" class="home-text-link">How publishing acquisition and Hollywood scouting compare →</a> </p> </div> <div class="home-case"> <div class="home-case__header"> <span class="home-card-label">From Volume 001 · Published May 2026</span> <span class="home-card-tag">Example of what we publish</span> </div> <div class="home-case__body"> <h3 class="home-card-title">Off Campus and Heated Rivalry. What the Trad Pipeline Catches, What It Misses.</h3> <p class="home-card-body">
+Two hockey romance adaptations dropped in the last six months. The chart below shows the pre-show asymmetry
+          between the two books in the signals that publishers and producers actually read.
+</p> <div class="home-case__chart"> <figure class="vol-chart vol-chart--asymmetry vol-chart--compact"> <div class="vol-chart__head"> <h3 class="vol-chart__title">Pre-show, per-reader output diverged sharply</h3> </div> <div class="vol-chart__wrap"> <svg viewBox="0 0 560 200" width="100%" role="img" aria-label="AO3 works per one thousand Goodreads ratings before show premiere: The Deal 0.087 versus Heated Rivalry 10.5, about 122 times higher for Heated Rivalry"> <text x="326" y="190" text-anchor="middle" font-size="10" fill="var(--color-text-muted)">
+AO3 works per 1,000 Goodreads ratings (pre-show)
+</text> <g> <line x1="148" y1="28" x2="148" y2="156" stroke="var(--color-border)" stroke-width="0.5" /> <text x="148" y="170" text-anchor="middle" font-size="9" fill="var(--color-text-faint)"> 0 </text> </g><g> <line x1="207.33333333333331" y1="28" x2="207.33333333333331" y2="156" stroke="var(--color-border)" stroke-width="0.5" /> <text x="207.33333333333331" y="170" text-anchor="middle" font-size="9" fill="var(--color-text-faint)"> 2 </text> </g><g> <line x1="266.66666666666663" y1="28" x2="266.66666666666663" y2="156" stroke="var(--color-border)" stroke-width="0.5" /> <text x="266.66666666666663" y="170" text-anchor="middle" font-size="9" fill="var(--color-text-faint)"> 4 </text> </g><g> <line x1="326" y1="28" x2="326" y2="156" stroke="var(--color-border)" stroke-width="0.5" /> <text x="326" y="170" text-anchor="middle" font-size="9" fill="var(--color-text-faint)"> 6 </text> </g><g> <line x1="385.3333333333333" y1="28" x2="385.3333333333333" y2="156" stroke="var(--color-border)" stroke-width="0.5" /> <text x="385.3333333333333" y="170" text-anchor="middle" font-size="9" fill="var(--color-text-faint)"> 8 </text> </g><g> <line x1="444.6666666666667" y1="28" x2="444.6666666666667" y2="156" stroke="var(--color-border)" stroke-width="0.5" /> <text x="444.6666666666667" y="170" text-anchor="middle" font-size="9" fill="var(--color-text-faint)"> 10 </text> </g><g> <line x1="504" y1="28" x2="504" y2="156" stroke="var(--color-border)" stroke-width="0.5" /> <text x="504" y="170" text-anchor="middle" font-size="9" fill="var(--color-text-faint)"> 12 </text> </g> <g> <text x="138" y="50" text-anchor="end" font-size="11" font-weight="600" fill="var(--color-text)"> The Deal </text> <text x="138" y="64" text-anchor="end" font-size="9" fill="var(--color-text-muted)" font-style="italic"> 87 works / ~1.0M readers
+</text> <rect x="148" y="44" width="2.581" height="28" fill="#2D6A4F" rx="1" /> <text x="156.581" y="62" font-size="12" font-weight="700" fill="#2D6A4F"> 0.087 </text> </g><g> <text x="138" y="114" text-anchor="end" font-size="11" font-weight="600" fill="var(--color-text)"> Heated Rivalry </text> <text x="138" y="128" text-anchor="end" font-size="9" fill="var(--color-text-muted)" font-style="italic"> 362 works / 34K readers
+</text> <rect x="148" y="108" width="315.8627450980392" height="28" fill="#9B2226" rx="1" /> <text x="469.8627450980392" y="126" font-size="12" font-weight="700" fill="#9B2226"> 10.6 </text> </g> <text x="500" y="44" text-anchor="end" font-size="18" font-weight="700" fill="#9B2226"> 122×
+</text> <text x="500" y="60" text-anchor="end" font-size="9" fill="var(--color-text-muted)" font-style="italic">
+more AO3 works per Goodreads reader
+</text> </svg> </div> </figure> <span class="home-case__chart-label">Chart 03 · The Pre-Show Asymmetry, Per Reader</span> </div> <p class="home-card-body"> <strong>Heated Rivalry had a much smaller Goodreads base than The Deal while producing more community-written
+            work per reader.</strong> The methodology page explains what the engine captures and what stays manual.
+</p> <p style="margin-top: 1rem; display: flex; flex-wrap: wrap; gap: 1.25rem"> <a href="../research/volume-001/index.html" class="home-text-link">Read Volume 001 →</a> <a href="../research/index.html" class="home-text-link">All volumes →</a> <a href="../background/index.html" class="home-text-link">Industry pipelines →</a> </p> </div> </div> <div class="home-divider"> <div class="home-divider__line"></div> <span class="home-divider__label">What we believe</span> <div class="home-divider__line"></div> </div> <div class="home-principles"> <div class="home-principle"> <p class="home-card-label">01</p> <h3 class="home-card-title">We're writers building for writers.</h3> <p class="home-card-body">
+Romance Signal exists because a writer wanted research she couldn't find. The engine, the watchlist, and the
+          published work all come from that position.
+</p> </div> <div class="home-principle"> <p class="home-card-label">02</p> <h3 class="home-card-title">Editorial curation is a known bias. We correct for it in public.</h3> <p class="home-card-body">
+The watchlist is maintained by hand. We document why every entity was added and flag editorial picks
+          separately from criteria-driven ones.
+</p> </div> <div class="home-principle"> <p class="home-card-label">03</p> <h3 class="home-card-title">Community signals deserve careful handling.</h3> <p class="home-card-body">
+The richest signals live in spaces that should not be commercially extracted. We measure manually where we
+          should and collect nothing we wouldn't show the communities producing it.
+</p> </div> </div> <div class="home-divider"> <div class="home-divider__line"></div> <span class="home-divider__label">What we're building</span> <div class="home-divider__line"></div> </div> <h2 class="home-section-title">Three layers. Each one supports the one above it.</h2> <div class="home-architecture"> <div class="home-arch-layer"> <p class="home-card-label">The surface</p> <h3 class="home-card-title">Published research</h3> <p class="home-card-body">
+Case studies and framework analysis, released as standalone volumes. Our first volume examines what the trad
+          pipeline catches and what it misses.
+</p> <p class="home-card-tag">What you read</p> </div> <div class="home-arch-layer home-arch-layer--mid"> <p class="home-card-label">The middle</p> <h3 class="home-card-title">The watchlist</h3> <p class="home-card-body">
+A curated set of romance properties tracked week-over-week across multiple data sources — what published
+          research draws from.
+</p> <p class="home-card-tag"><a href="../watchlist/index.html">Where the work happens</a></p> </div> <div class="home-arch-layer home-arch-layer--dark"> <p class="home-card-label">The foundation</p> <h3 class="home-card-title">The engine</h3> <p class="home-card-body">
+A production data pipeline running weekly captures across TikTok, Reddit, Google Trends, Google News, Amazon
+          BSR, NYT, and Goodreads.
+</p> <p class="home-card-tag"><a href="../methodology/index.html" style="color: inherit">What makes it possible</a></p> </div> </div> </main> <section class="get-involved" id="get-involved" aria-labelledby="get-involved-title"> <div class="get-involved__inner"> <p class="get-involved__label">Get involved</p> <h2 class="get-involved__title" id="get-involved-title">Build this with us</h2> <div class="get-involved__prose"> <p>
+The watchlist is starting small and opening in stages. <strong>Get on the list for access</strong> as it
+        expands across subgenres and to a wider group of readers.
+</p> <p> <strong>Writers, published, drafting, or thinking about starting, we want to talk to more of you.</strong> In
+        exchange for the conversation, <em>we'll build you a custom report</em> — either a historical analysis of an
+        author whose career you're studying, or a multi-source tracking report on your specific subgenre. We'll reach
+        out to collect more information as we have capacity.
+</p> </div> <a href="../watchlist/index.html" class="get-involved__watchlist-link">
+See the current watchlist →
+</a> <div class="get-involved__form-wrap"> <h3 class="get-involved__form-title">Get on the list</h3> <form class="gi-form" id="get-involved-form"> <div class="gi-field"> <label for="gi-email">Email</label> <input type="email" id="gi-email" name="email" required autocomplete="email" inputmode="email" spellcheck="false" placeholder="signal@threnne.com"> </div> <fieldset class="gi-field gi-field--interests" id="gi-interests" aria-required="true"> <legend>What are you interested in?</legend> <label class="gi-check"> <input type="checkbox" name="interestWatchlist" value="1"> <span class="gi-check__text"> <strong>Full watchlist access</strong>
+The watchlist tracks romance titles week-over-week across Goodreads, Amazon BSR, Wikipedia, news, and
+              more.
+</span> </label> <label class="gi-check"> <input type="checkbox" name="interestWriter" value="1"> <span class="gi-check__text"> <strong>A writer conversation (custom report)</strong>
+Published, drafting, or thinking about starting.
+</span> </label> <p class="gi-field-error" id="gi-interests-error" hidden role="alert">
+Select at least one interest.
+</p> </fieldset> <button type="submit" class="gi-submit" id="gi-submit">Submit</button> <p class="gi-status" id="gi-status" hidden role="status" aria-live="polite"></p> </form> </div> </div> </section> <script src="../js/get-involved.js" defer></script>  <footer class="footer"> <div class="container footer__inner"> <div class="footer__brand"> <a href="../index.html" class="brand brand--footer"> <img class="brand__mark" src="../brand/signal-s-mark-dark.svg" alt="" width="24" height="24" data-brand-mark-dark="../brand/signal-s-mark-dark.svg" data-brand-mark-light="../brand/signal-s-mark-light.svg"> <span class="brand__text"> <img class="brand__wordmark-img" src="../brand/romance-signal-wordmark-dark.svg" alt="Romance Signal" height="18" data-brand-wordmark-dark="../brand/romance-signal-wordmark-dark.svg" data-brand-wordmark-light="../brand/romance-signal-wordmark-light.svg"> <span class="brand__sub">by Threnne</span> </span> </a> <p class="footer__tag">Measuring the romance market for the people writing it.</p> </div> <div class="footer__cols"> <div> <h4 class="footer__col-title">Research</h4> <ul role="list"> <li><a href="../watchlist/index.html">Watchlist</a></li> <li><a href="../research/index.html">Volumes</a></li> <li><a href="../background/index.html">Background</a></li> </ul> </div> <div> <h4 class="footer__col-title">Methods</h4> <ul role="list"> <li><a href="../methodology/index.html">Methodology</a></li> </ul> </div> <div> <h4 class="footer__col-title">Contact</h4> <ul role="list"> <li><a href="../index.html#get-involved">Get involved</a></li> <li><a href="mailto:signal@threnne.com">signal@threnne.com</a></li> </ul> </div> </div> </div> <div class="footer__bottom"> <div class="container footer__bottom-inner"> <span class="tabular">© 2026 Romance Signal · A Threnne project</span> <span class="tabular">signal@threnne.com</span> </div> </div> </footer> <script>
+      // Theme toggle wiring
+      (function () {
+        const root = document.documentElement;
+        const btn = document.getElementById('themeToggle');
+        if (!btn) return;
+        let current = root.getAttribute('data-theme') || 'light';
+        function syncBrandMarks() {
+          const theme = root.getAttribute('data-theme') || 'light';
+          const pick = (el, darkKey, lightKey) => {
+            if (!el) return;
+            const dark = el.getAttribute(darkKey);
+            const light = el.getAttribute(lightKey);
+            if (dark && light) el.setAttribute('src', theme === 'light' ? light : dark);
+          };
+          document.querySelectorAll('[data-brand-mark-dark]').forEach((el) => pick(el, 'data-brand-mark-dark', 'data-brand-mark-light'));
+          document.querySelectorAll('[data-brand-wordmark-dark]').forEach((el) => pick(el, 'data-brand-wordmark-dark', 'data-brand-wordmark-light'));
+        }
+        btn.addEventListener('click', () => {
+          current = current === 'dark' ? 'light' : 'dark';
+          root.setAttribute('data-theme', current);
+          try { localStorage.setItem('rs-theme', current); } catch (e) {}
+          syncBrandMarks();
+          btn.setAttribute('aria-label', 'Switch to ' + (current === 'dark' ? 'light' : 'dark') + ' mode');
+        });
+        syncBrandMarks();
+      })();
+      // Search "/" focus shortcut
+      document.addEventListener('keydown', (e) => {
+        const tag = document.activeElement && document.activeElement.tagName;
+        if (e.key === '/' && tag !== 'INPUT' && tag !== 'TEXTAREA') {
+          e.preventDefault();
+          const s = document.querySelector('.search input');
+          if (s) s.focus();
+        }
+      });
+    </script> </body> </html>

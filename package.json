@@ -1,0 +1,15 @@
+{
+  "name": "threnne-design-mockups",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Static design-review snapshots of Threnne product UIs",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "serve": "serve . -l 4173"
+  },
+  "devDependencies": {
+    "linkedom": "^0.18.12",
+    "serve": "^14.2.4"
+  }
+}

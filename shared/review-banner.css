@@ -1,0 +1,19 @@
+.review-banner {
+  position: sticky;
+  top: 0;
+  z-index: 10000;
+  margin: 0;
+  padding: 0.45rem 1rem;
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: #0c0f1f;
+  background: #c9d862;
+  border-bottom: 1px solid rgba(12, 15, 31, 0.15);
+}
+
+.review-banner a {
+  color: inherit;
+  font-weight: 600;
+}

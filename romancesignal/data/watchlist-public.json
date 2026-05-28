@@ -1,0 +1,627 @@
+{
+  "cohortSlug": "watchlist",
+  "weekLabel": "Week of May 18\u2013May 24, 2026",
+  "weekStart": "2026-05-18",
+  "weekEnd": "2026-05-25",
+  "cohortBookCount": 7,
+  "books": [
+    {
+      "slug": "watchlist-qa-fake",
+      "title": "QA Chart Test (Fake)",
+      "author": "Romance Signal QA",
+      "goodreadsUrl": "https://www.goodreads.com/book/show/00000000-qa-fake-charts",
+      "nytCaptured": true,
+      "signals": [
+        {
+          "label": "Goodreads",
+          "value": "1.2M",
+          "trend": "+542 wk",
+          "trendDir": "up"
+        },
+        {
+          "label": "Amazon BSR",
+          "value": "#500",
+          "trend": "Kindle Store",
+          "trendDir": "flat"
+        },
+        {
+          "label": "News",
+          "value": "618",
+          "trend": "articles wk",
+          "trendDir": "flat"
+        }
+      ],
+      "note": "39 weeks on NYT lists, peaked #2 combined fiction.",
+      "href": "/watchlist/watchlist-qa-fake/",
+      "volumeScore": 11.67798971610701,
+      "hasSignalData": true,
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/QA_Fake_Chart_Test_Book"
+    },
+    {
+      "slug": "heated-rivalry",
+      "title": "Heated Rivalry",
+      "author": "Rachel Reid",
+      "goodreadsUrl": "https://www.goodreads.com/book/show/41735449-heated-rivalry",
+      "nytCaptured": false,
+      "signals": [
+        {
+          "label": "Goodreads",
+          "value": "\u2014",
+          "trend": "pending",
+          "trendDir": "flat"
+        },
+        {
+          "label": "Amazon BSR",
+          "value": "#615",
+          "trend": "latest rank",
+          "trendDir": "flat"
+        },
+        {
+          "label": "News",
+          "value": "1.6K",
+          "trend": "\u22121 articles wk",
+          "trendDir": "down"
+        }
+      ],
+      "note": "NYT list data pending for this title.",
+      "href": "/watchlist/heated-rivalry/",
+      "volumeScore": 6.3817834338443395,
+      "hasSignalData": true,
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Heated_Rivalry_(novel)",
+      "series": "Game Changers #2"
+    },
+    {
+      "slug": "in-her-own-league",
+      "title": "In Her Own League",
+      "author": "Liz Tomforde",
+      "goodreadsUrl": "https://www.goodreads.com/book/show/230926478-in-her-own-league",
+      "nytCaptured": false,
+      "signals": [
+        {
+          "label": "Goodreads",
+          "value": "144K",
+          "trend": "wk",
+          "trendDir": "flat"
+        },
+        {
+          "label": "Amazon BSR",
+          "value": "\u2014",
+          "trend": "latest rank",
+          "trendDir": "flat"
+        },
+        {
+          "label": "News",
+          "value": "\u2014",
+          "trend": "articles",
+          "trendDir": "flat"
+        }
+      ],
+      "note": "NYT list data pending for this title.",
+      "href": "/watchlist/in-her-own-league/",
+      "volumeScore": 5.157855519408091,
+      "hasSignalData": true,
+      "series": "Windy City Series",
+      "filters": {
+        "pov": "dual",
+        "tense": "first-person-present",
+        "tropes": [
+          "boss-and-employee",
+          "age-gap",
+          "dislike-to-lovers",
+          "workplace-romance",
+          "she-falls-first-then-he-does",
+          "forced-proximity"
+        ],
+        "pairing": "mf",
+        "setting": [
+          "sports-world",
+          "baseball",
+          "chicago",
+          "urban"
+        ],
+        "heat_level": "high",
+        "engine_tier": "cohort-v1",
+        "debut_status": "established",
+        "series_status": "spinoff",
+        "publisher_tier": "indie-trade",
+        "representation": [
+          "plus-size-fmc",
+          "older-fmc"
+        ],
+        "content_warnings": [
+          "on-page-sex",
+          "workplace-power-imbalance"
+        ],
+        "primary_subgenre": "sports-romance",
+        "publication_year": 2026,
+        "format_availability": [
+          "paperback",
+          "ebook",
+          "audiobook"
+        ],
+        "publication_quarter": "2026-Q1",
+        "secondary_subgenres": [
+          "contemporary-romance"
+        ]
+      }
+    }
+  ],
+  "allBooks": [
+    {
+      "slug": "watchlist-qa-fake",
+      "title": "QA Chart Test (Fake)",
+      "author": "Romance Signal QA",
+      "goodreadsUrl": "https://www.goodreads.com/book/show/00000000-qa-fake-charts",
+      "nytCaptured": true,
+      "signals": [
+        {
+          "label": "Goodreads",
+          "value": "1.2M",
+          "trend": "+542 wk",
+          "trendDir": "up"
+        },
+        {
+          "label": "Amazon BSR",
+          "value": "#500",
+          "trend": "Kindle Store",
+          "trendDir": "flat"
+        },
+        {
+          "label": "News",
+          "value": "618",
+          "trend": "articles wk",
+          "trendDir": "flat"
+        }
+      ],
+      "note": "39 weeks on NYT lists, peaked #2 combined fiction.",
+      "href": "/watchlist/watchlist-qa-fake/",
+      "volumeScore": 11.67798971610701,
+      "hasSignalData": true,
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/QA_Fake_Chart_Test_Book"
+    },
+    {
+      "slug": "heated-rivalry",
+      "title": "Heated Rivalry",
+      "author": "Rachel Reid",
+      "goodreadsUrl": "https://www.goodreads.com/book/show/41735449-heated-rivalry",
+      "nytCaptured": false,
+      "signals": [
+        {
+          "label": "Goodreads",
+          "value": "\u2014",
+          "trend": "pending",
+          "trendDir": "flat"
+        },
+        {
+          "label": "Amazon BSR",
+          "value": "#615",
+          "trend": "latest rank",
+          "trendDir": "flat"
+        },
+        {
+          "label": "News",
+          "value": "1.6K",
+          "trend": "\u22121 articles wk",
+          "trendDir": "down"
+        }
+      ],
+      "note": "NYT list data pending for this title.",
+      "href": "/watchlist/heated-rivalry/",
+      "volumeScore": 6.3817834338443395,
+      "hasSignalData": true,
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Heated_Rivalry_(novel)",
+      "series": "Game Changers #2"
+    },
+    {
+      "slug": "in-her-own-league",
+      "title": "In Her Own League",
+      "author": "Liz Tomforde",
+      "goodreadsUrl": "https://www.goodreads.com/book/show/230926478-in-her-own-league",
+      "nytCaptured": false,
+      "signals": [
+        {
+          "label": "Goodreads",
+          "value": "144K",
+          "trend": "wk",
+          "trendDir": "flat"
+        },
+        {
+          "label": "Amazon BSR",
+          "value": "\u2014",
+          "trend": "latest rank",
+          "trendDir": "flat"
+        },
+        {
+          "label": "News",
+          "value": "\u2014",
+          "trend": "articles",
+          "trendDir": "flat"
+        }
+      ],
+      "note": "NYT list data pending for this title.",
+      "href": "/watchlist/in-her-own-league/",
+      "volumeScore": 5.157855519408091,
+      "hasSignalData": true,
+      "series": "Windy City Series",
+      "filters": {
+        "pov": "dual",
+        "tense": "first-person-present",
+        "tropes": [
+          "boss-and-employee",
+          "age-gap",
+          "dislike-to-lovers",
+          "workplace-romance",
+          "she-falls-first-then-he-does",
+          "forced-proximity"
+        ],
+        "pairing": "mf",
+        "setting": [
+          "sports-world",
+          "baseball",
+          "chicago",
+          "urban"
+        ],
+        "heat_level": "high",
+        "engine_tier": "cohort-v1",
+        "debut_status": "established",
+        "series_status": "spinoff",
+        "publisher_tier": "indie-trade",
+        "representation": [
+          "plus-size-fmc",
+          "older-fmc"
+        ],
+        "content_warnings": [
+          "on-page-sex",
+          "workplace-power-imbalance"
+        ],
+        "primary_subgenre": "sports-romance",
+        "publication_year": 2026,
+        "format_availability": [
+          "paperback",
+          "ebook",
+          "audiobook"
+        ],
+        "publication_quarter": "2026-Q1",
+        "secondary_subgenres": [
+          "contemporary-romance"
+        ]
+      }
+    },
+    {
+      "slug": "a-vow-in-vengeance",
+      "title": "A Vow in Vengeance",
+      "author": "Jaclyn Rodriguez",
+      "goodreadsUrl": "https://www.goodreads.com/book/show/230614708-a-vow-in-vengeance",
+      "nytCaptured": false,
+      "signals": [
+        {
+          "label": "Goodreads",
+          "value": "\u2014",
+          "trend": "pending",
+          "trendDir": "flat"
+        },
+        {
+          "label": "Amazon BSR",
+          "value": "\u2014",
+          "trend": "latest rank",
+          "trendDir": "flat"
+        },
+        {
+          "label": "News",
+          "value": "\u2014",
+          "trend": "articles",
+          "trendDir": "flat"
+        }
+      ],
+      "note": "NYT list data pending for this title.",
+      "href": "/watchlist/a-vow-in-vengeance/",
+      "volumeScore": 0.0,
+      "hasSignalData": false,
+      "series": "Immortal Desires",
+      "filters": {
+        "pov": "dual",
+        "tense": "first-person-present",
+        "tropes": [
+          "reluctant-allies-to-lovers",
+          "fake-fated-mates",
+          "forced-proximity",
+          "one-bed",
+          "he-falls-first",
+          "he-trains-her",
+          "found-family",
+          "coming-of-rage",
+          "academy-setting",
+          "slow-burn",
+          "revenge-arc"
+        ],
+        "pairing": "mf",
+        "setting": [
+          "the-forge-academy",
+          "immortal-realms",
+          "secondary-world-fantasy",
+          "magical-school"
+        ],
+        "heat_level": "high",
+        "engine_tier": "cohort-v1",
+        "debut_status": "debut",
+        "series_status": "series-opener",
+        "publisher_tier": "indie-trade",
+        "representation": [
+          "latine-fmc",
+          "biracial-puerto-rican-author",
+          "bipoc-mc"
+        ],
+        "content_warnings": [
+          "attempted-sexual-assault",
+          "nonconsensual-kissing-touching",
+          "on-page-suicide",
+          "slavery",
+          "death-and-violence",
+          "grief",
+          "drug-and-alcohol-use",
+          "forced-assimilation",
+          "diaspora"
+        ],
+        "primary_subgenre": "romantasy",
+        "publication_year": 2026,
+        "format_availability": [
+          "hardcover",
+          "ebook",
+          "audiobook"
+        ],
+        "publication_quarter": "2026-Q1",
+        "secondary_subgenres": [
+          "dark-academia",
+          "fantasy-romance",
+          "high-fantasy"
+        ]
+      }
+    },
+    {
+      "slug": "get-over-it-april-evans",
+      "title": "Get Over It, April Evans",
+      "author": "Ashley Herring Blake",
+      "goodreadsUrl": "https://www.goodreads.com/book/show/232794580-get-over-it-april-evans",
+      "nytCaptured": false,
+      "signals": [
+        {
+          "label": "Goodreads",
+          "value": "\u2014",
+          "trend": "pending",
+          "trendDir": "flat"
+        },
+        {
+          "label": "Amazon BSR",
+          "value": "\u2014",
+          "trend": "latest rank",
+          "trendDir": "flat"
+        },
+        {
+          "label": "News",
+          "value": "\u2014",
+          "trend": "articles",
+          "trendDir": "flat"
+        }
+      ],
+      "note": "NYT list data pending for this title.",
+      "href": "/watchlist/get-over-it-april-evans/",
+      "volumeScore": 0.0,
+      "hasSignalData": false,
+      "series": "Clover Lake",
+      "filters": {
+        "pov": "dual",
+        "tense": "first-person-past",
+        "tropes": [
+          "enemies-to-lovers",
+          "ex-of-the-same-ex",
+          "slow-burn",
+          "only-one-bed",
+          "forced-proximity",
+          "found-family",
+          "second-chance-at-love"
+        ],
+        "pairing": "ff",
+        "setting": [
+          "small-town",
+          "lake-resort",
+          "summer",
+          "art-class"
+        ],
+        "heat_level": "medium",
+        "engine_tier": "cohort-v1",
+        "debut_status": "established",
+        "series_status": "sequel",
+        "publisher_tier": "big-five",
+        "representation": [
+          "sapphic",
+          "queer-fmc",
+          "tattoo-artist-mc"
+        ],
+        "content_warnings": [
+          "on-page-sex",
+          "light-bdsm-elements",
+          "infidelity-backstory",
+          "financial-stress"
+        ],
+        "primary_subgenre": "sapphic-contemporary",
+        "publication_year": 2026,
+        "format_availability": [
+          "hardcover",
+          "paperback",
+          "ebook",
+          "audiobook"
+        ],
+        "publication_quarter": "2026-Q1",
+        "secondary_subgenres": [
+          "contemporary-romance",
+          "romantic-comedy"
+        ]
+      }
+    },
+    {
+      "slug": "last-first-kiss",
+      "title": "Last First Kiss",
+      "author": "Julian Winters",
+      "goodreadsUrl": "https://www.goodreads.com/book/show/231127304-last-first-kiss",
+      "nytCaptured": false,
+      "signals": [
+        {
+          "label": "Goodreads",
+          "value": "\u2014",
+          "trend": "pending",
+          "trendDir": "flat"
+        },
+        {
+          "label": "Amazon BSR",
+          "value": "\u2014",
+          "trend": "latest rank",
+          "trendDir": "flat"
+        },
+        {
+          "label": "News",
+          "value": "\u2014",
+          "trend": "articles",
+          "trendDir": "flat"
+        }
+      ],
+      "note": "NYT list data pending for this title.",
+      "href": "/watchlist/last-first-kiss/",
+      "volumeScore": 0.0,
+      "hasSignalData": false,
+      "series": "24 Carter Gold",
+      "filters": {
+        "pov": "single-him",
+        "tense": "first-person-past",
+        "tropes": [
+          "second-chance",
+          "friends-to-lovers-backstory",
+          "wedding-planning",
+          "workplace-adjacent",
+          "self-discovery",
+          "unrequited-to-requited"
+        ],
+        "pairing": "mm",
+        "setting": [
+          "event-planning-firm",
+          "high-profile-wedding",
+          "family-business",
+          "atlanta-adjacent",
+          "urban"
+        ],
+        "heat_level": "medium",
+        "engine_tier": "cohort-v1",
+        "debut_status": "established",
+        "series_status": "sequel",
+        "publisher_tier": "big-five",
+        "representation": [
+          "queer-mm",
+          "demisexual-mc",
+          "ace-spectrum-rep",
+          "black-mc",
+          "found-family"
+        ],
+        "content_warnings": [
+          "on-page-intimacy",
+          "coming-out-themes",
+          "family-pressure",
+          "career-stress"
+        ],
+        "primary_subgenre": "mm-contemporary",
+        "publication_year": 2026,
+        "format_availability": [
+          "paperback",
+          "ebook",
+          "audiobook"
+        ],
+        "publication_quarter": "2026-Q1",
+        "secondary_subgenres": [
+          "contemporary-romance",
+          "romantic-comedy",
+          "coming-of-age-adjacent"
+        ]
+      }
+    },
+    {
+      "slug": "modern-divination",
+      "title": "Modern Divination",
+      "author": "Isa Agajanian",
+      "goodreadsUrl": "https://www.goodreads.com/book/show/242205293-modern-divination",
+      "nytCaptured": false,
+      "signals": [
+        {
+          "label": "Goodreads",
+          "value": "\u2014",
+          "trend": "pending",
+          "trendDir": "flat"
+        },
+        {
+          "label": "Amazon BSR",
+          "value": "\u2014",
+          "trend": "latest rank",
+          "trendDir": "flat"
+        },
+        {
+          "label": "News",
+          "value": "\u2014",
+          "trend": "articles",
+          "trendDir": "flat"
+        }
+      ],
+      "note": "NYT list data pending for this title.",
+      "href": "/watchlist/modern-divination/",
+      "volumeScore": 0.0,
+      "hasSignalData": false,
+      "series": "Spells for Life and Death",
+      "filters": {
+        "pov": "dual",
+        "tense": "third-person",
+        "tropes": [
+          "rivals-to-lovers",
+          "academic-rivals",
+          "forced-proximity",
+          "magic-system-driven",
+          "murder-mystery-adjacent",
+          "slow-burn",
+          "hidden-magic"
+        ],
+        "pairing": "mf",
+        "setting": [
+          "cambridge-university",
+          "uk",
+          "elite-college",
+          "magical-modern"
+        ],
+        "heat_level": "low",
+        "engine_tier": "cohort-v1",
+        "debut_status": "breakout-watch",
+        "series_status": "series-opener",
+        "publisher_tier": "big-five",
+        "representation": [
+          "witch-fmc",
+          "queer-friendly-cast"
+        ],
+        "content_warnings": [
+          "murder",
+          "magic-violence",
+          "kissing-only-on-page"
+        ],
+        "primary_subgenre": "dark-academia",
+        "publication_year": 2025,
+        "format_availability": [
+          "paperback",
+          "ebook",
+          "audiobook"
+        ],
+        "publication_quarter": "2025-Q1",
+        "secondary_subgenres": [
+          "fantasy-romance",
+          "paranormal-romance",
+          "witches",
+          "cottagecore-academic"
+        ]
+      }
+    }
+  ],
+  "fetchedAt": "2026-05-27T22:03:28.981343+00:00",
+  "fromDb": true
+}

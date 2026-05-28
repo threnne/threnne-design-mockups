@@ -1,0 +1,166 @@
+/* ============================================================
+ * tokens.css
+ * Threnne Brand System · design tokens as CSS custom properties
+ *
+ * Import this file ONCE at the root of your app.
+ * It defines `:root` defaults (dark mode) and overrides for
+ * `[data-theme="light"]` and per-brand `[data-brand="..."]`.
+ *
+ * Usage:
+ *   <html data-theme="dark" data-brand="threnne">
+ *
+ * Switch themes by toggling `data-theme="dark|light"` on <html>.
+ * Switch brand context by setting `data-brand="threnne|signal|works"`.
+ * ============================================================ */
+
+/* ----- DARK MODE (default) ----- */
+:root,
+[data-theme="dark"] {
+  /* Grounds and text */
+  --ground:           #0C0F1F;   /* ink — primary background */
+  --ground-mid:       #181D2E;   /* slightly raised surface */
+  --ground-soft:      #2A3045;   /* card/panel borders */
+  --text:             #F3E6DC;   /* cream — primary text · AAA 15.55:1 */
+  --text-dim:         #C5ACA4;   /* AAA 8.89:1 */
+  --text-faint:       #968279;   /* labels, eyebrows · AA 5.10:1 (was #8C7670, failed by 0.02) */
+  --line:             rgba(243, 230, 220, 0.07);
+  --line-strong:      rgba(243, 230, 220, 0.14);
+
+  /* Accents — full family always available */
+  --pink:             #D1396A;   /* Threnne · LARGE/display only on ground (4.08:1) */
+  --pink-soft:        #9A2649;
+  --pink-bg:          #BD3360;   /* Button-bg variant · 4.51:1 cream-on-pink-bg, AA compliant */
+  --acid:             #D8F03A;   /* Signal · AAA 14.90:1 */
+  --teal:             #5DAD9F;   /* Works · AAA 7.20:1 */
+
+  /* Wayfinding aliases — meaningful per-surface */
+  --c-threnne:        var(--pink);
+  --c-signal:         var(--acid);
+  --c-works:          var(--teal);
+
+  /* Primary accent for the current surface.
+     Override per-brand via [data-brand="..."]. Defaults to pink. */
+  --primary:          var(--pink);
+  --primary-bg:       var(--pink-bg);   /* use for button backgrounds */
+  --primary-text:     var(--text);
+}
+
+/* ----- LIGHT MODE ----- */
+[data-theme="light"] {
+  --ground:           #FAFAF7;
+  --ground-mid:       #F0EFEA;
+  --ground-soft:      #DDDCD6;
+  --text:             #0C0F1F;        /* AAA 18.19:1 */
+  --text-dim:         #4A4843;        /* AAA 8.73:1 */
+  --text-faint:       #6F6D69;        /* AA 4.55:1 (was #8C8A86, failed at 3.29:1) */
+  --line:             rgba(12, 15, 31, 0.08);
+  --line-strong:      rgba(12, 15, 31, 0.14);
+
+  /* Light-mode accent shifts */
+  --pink:             #D1396A;        /* unchanged · LARGE/display only (4.46:1) */
+  --pink-bg:          #BD3360;        /* button background · AA compliant with near-white text */
+  --acid:             #134E4A;        /* deep teal — acid loses contrast on white · AAA 9.06:1 */
+  --teal:             #2E6B5F;        /* AA 5.93:1 */
+
+  /* refresh wayfinding aliases */
+  --c-threnne:        var(--pink);
+  --c-signal:         var(--acid);
+  --c-works:          var(--teal);
+
+  --primary:          var(--pink);
+  --primary-bg:       var(--pink-bg);
+  --primary-text:     #FAFAF7;
+}
+
+/* ----- PER-BRAND PRIMARY OVERRIDES ----- */
+/* Set on a root element (e.g., <html data-brand="signal">) or on
+   any subtree to scope the primary color to that brand's accent.
+   --primary       = the brand color (use for type, marks, accents)
+   --primary-bg    = the same color tuned for solid backgrounds with text on top
+   --primary-text  = the text color that goes on --primary-bg with WCAG AA contrast */
+
+[data-brand="threnne"] {
+  --primary:          var(--c-threnne);
+  --primary-bg:       var(--pink-bg);
+  --primary-text:     var(--text);
+}
+[data-brand="signal"] {
+  --primary:          var(--c-signal);
+  --primary-bg:       var(--c-signal);
+}
+[data-brand="works"] {
+  --primary:          var(--c-works);
+  --primary-bg:       var(--c-works);
+}
+
+/* In dark mode, signal's bright acid wants ink text on the primary;
+   teal is bright enough that ink-on-teal reads better than cream. */
+[data-theme="dark"][data-brand="signal"] {
+  --primary-text:     #0C0F1F;        /* on acid: AAA 14.90:1 */
+}
+[data-theme="dark"][data-brand="works"] {
+  --primary-text:     #0C0F1F;        /* on teal: AAA 7.20:1 */
+}
+
+/* In light mode the primaries are already dark, so near-white text */
+[data-theme="light"][data-brand="threnne"] {
+  --primary-text:     #FAFAF7;        /* on pink-bg #BD3360: AA-large compliant */
+}
+[data-theme="light"][data-brand="signal"] {
+  --primary-text:     #FAFAF7;        /* on deep teal: AAA 9.06:1 */
+}
+[data-theme="light"][data-brand="works"] {
+  --primary-text:     #FAFAF7;        /* on teal-light #2E6B5F: AA 5.93:1 */
+}
+
+/* ----- TYPOGRAPHY ----- */
+:root {
+  --font-display:     'Hanken Grotesk', system-ui, -apple-system, sans-serif;
+  --font-mono:        'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+
+  /* Type scale (rem-based — respects user font-size preferences)
+     Minimum body size is 14px (0.875rem) per WCAG-aligned best practice.
+     Eyebrows/labels go down to 11px but MUST use --text or --text-dim,
+     never --text-faint, when below 14px. */
+  --fs-micro:         0.75rem;     /* 12px — captions, footnotes only */
+  --fs-eyebrow:       0.6875rem;   /* 11px — eyebrows/uppercase only, use --text or --text-dim */
+  --fs-small:         0.8125rem;   /* 13px — small UI text */
+  --fs-body:          1rem;        /* 16px — minimum recommended body text */
+  --fs-lede:          1.0625rem;   /* 17px */
+  --fs-h3:            1.625rem;    /* 26px */
+  --fs-h2:            2.75rem;     /* 44px */
+  --fs-h1:            4.5rem;      /* 72px — clamp this in the calling site */
+
+  /* WCAG "large text" threshold — at or above 1.125rem (18pt = 24px)
+     OR 1.125rem bold (14pt bold). Accent colors as text are OK at this size. */
+  --fs-large-text:    1.125rem;
+
+  /* Letter-spacing */
+  --ls-eyebrow:       0.22em;
+  --ls-display:       -0.035em;
+  --ls-wordmark:      -0.045em;
+  --ls-mark-nn:       -0.06em;
+
+  /* Line-height */
+  --lh-tight:         0.95;
+  --lh-display:       1.05;
+  --lh-body:          1.55;  /* WCAG SC 1.4.12 recommends ≥ 1.5 line-height for body */
+}
+
+/* ----- SPACING ----- */
+:root {
+  --space-1:          0.25rem;
+  --space-2:          0.5rem;
+  --space-3:          0.75rem;
+  --space-4:          1rem;
+  --space-6:          1.5rem;
+  --space-8:          2rem;
+  --space-12:         3rem;
+  --space-16:         4rem;
+  --space-24:         6rem;
+
+  --radius-sm:        4px;
+  --radius-md:        8px;
+  --radius-lg:        14px;
+  --radius-xl:        18px;
+}

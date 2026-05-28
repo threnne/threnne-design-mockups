@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" aria-hidden="true">
+  <rect width="180" height="180" rx="32" fill="#F4F1EC"/>
+  <g transform="translate(30 40)">
+    <rect x="0" y="0" width="120" height="14" rx="7" fill="#6E876A"/>
+    <rect x="0" y="26" width="92" height="14" rx="7" fill="#6E876A"/>
+    <rect x="0" y="52" width="64" height="14" rx="7" fill="#6E876A"/>
+  </g>
+  <text x="30" y="148" font-family="'Clash Display', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-weight="500" font-size="26" fill="#6E876A" letter-spacing="-0.5">AO3 Works<tspan fill="#A8B743">.</tspan></text>
+</svg>
