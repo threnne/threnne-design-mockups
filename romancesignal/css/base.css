@@ -1,12 +1,12 @@
 /* =============================================================
-   THE ROMANCE LEDGER — DESIGN TOKENS + BASE
+   THE ROMANCE LEDGER - DESIGN TOKENS + BASE
    CoinMarketCap-inspired: crisp, dense, colorful, alive.
    Romance accent: magenta-pink. Crypto-style up/down greens/reds.
    ============================================================= */
 
 :root,
 [data-theme='light'] {
-  /* Surfaces — crisp white, soft gray surfaces */
+  /* Surfaces - crisp white, soft gray surfaces */
   --color-bg: #ffffff;
   --color-surface: #ffffff;
   --color-surface-2: #f8fafd;
@@ -21,14 +21,14 @@
   --color-text-faint: #a6b0c3;
   --color-text-inverse: #ffffff;
 
-  /* Accent — rose (romance-coded, joyful, sophisticated) */
+  /* Accent - rose (romance-coded, joyful, sophisticated) */
   --color-primary: #d6336c;
   --color-primary-hover: #b8285c;
   --color-primary-active: #98204c;
   --color-primary-soft: #fce4ec;
   --color-primary-highlight: #fdedf2;
 
-  /* Secondary accents — for dashboard cards, chips */
+  /* Secondary accents - for dashboard cards, chips */
   --color-violet: #7c3aed;
   --color-violet-soft: #ede4ff;
   --color-blue: #3861fb;
@@ -42,7 +42,7 @@
   --color-mint: #16c784;
   --color-mint-soft: #d4f4e6;
 
-  /* Semantic — CMC-style market signals */
+  /* Semantic - CMC-style market signals */
   --color-up: #16c784;
   --color-up-soft: #d4f4e6;
   --color-up-bg: #ecfdf5;
@@ -72,7 +72,7 @@
   --content-default: 1200px;
   --content-wide: 1440px;
 
-  /* Type scale — tighter, more compact than editorial */
+  /* Type scale - tighter, more compact than editorial */
   --text-xs: 0.75rem;       /* 12px */
   --text-sm: 0.8125rem;     /* 13px */
   --text-base: 0.9375rem;   /* 15px */
@@ -98,7 +98,7 @@
 
 }
 
-/* DARK MODE — CMC-style deep slate */
+/* DARK MODE - CMC-style deep slate */
 [data-theme='dark'] {
   --color-bg: #0d1421;
   --color-surface: #17202f;

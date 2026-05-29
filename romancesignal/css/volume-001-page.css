@@ -1,4 +1,4 @@
-/* Volume 001 article — ported from review */
+/* Volume 001 article - ported from review */
 
 .vol-nav {
   max-width: var(--content-wide);
@@ -25,12 +25,12 @@
 }
 
 .vol-page {
-  /* Fixed dark panels — always light text (theme-independent). */
+  /* Fixed dark panels - always light text (theme-independent). */
   --vol-panel-ink: #0d1421;
   --vol-on-dark: #f6f0f2;
   --vol-on-dark-muted: rgba(246, 240, 242, 0.78);
   --vol-on-dark-subtle: rgba(246, 240, 242, 0.58);
-  /* Elevated light cards — theme-aware. */
+  /* Elevated light cards - theme-aware. */
   --vol-card-bg: var(--color-surface-2);
   color: var(--color-text);
   background: var(--color-surface);

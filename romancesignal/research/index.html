@@ -1,12 +1,14 @@
-<!DOCTYPE html><html lang="en" data-brand="signal" data-theme="light"> <head>
+<!DOCTYPE html><html lang="en" data-brand="signal" data-theme="dark"> <head>
 <base href="/romancesignal/research/" />
 <meta name="robots" content="noindex" />
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Research — Romance Signal</title><meta name="description" content="Long-form research volumes on what the data shows about romance succeeding — published as the work is ready."><link rel="icon" type="image/png" sizes="32x32" href="../favicon-32-light.png"><link rel="icon" type="image/png" sizes="16x16" href="../favicon-16-light.png"><link rel="icon" type="image/png" sizes="32x32" href="../favicon-32-light.png"><link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png"><link rel="manifest" href="../manifest.webmanifest"><meta name="theme-color" content="#0C0F1F" media="(prefers-color-scheme: dark)"><meta name="theme-color" content="#FAFAF7" media="(prefers-color-scheme: light)"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300..700&family=JetBrains+Mono:wght@400;500&display=swap"><link rel="stylesheet" href="../css/base.css"><link rel="stylesheet" href="../css/style.css"><link rel="stylesheet" href="../css/style-pages.css"><link rel="stylesheet" href="../css/get-involved.css"><link rel="stylesheet" href="../css/research-page.css"><link rel="stylesheet" href="../css/volume-001-page.css"><link rel="stylesheet" href="../brand/legacy-aliases.css"><script>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Research · Romance Signal</title><meta name="description" content="Long-form research volumes on what the data shows about romance succeeding, published as the work is ready."><link rel="icon" type="image/svg+xml" href="../favicon.svg"><link rel="icon" type="image/png" sizes="32x32" href="../favicon-32-light.png"><link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png"><link rel="manifest" href="../manifest.webmanifest"><meta name="theme-color" content="#0C0F1F" media="(prefers-color-scheme: dark)"><meta name="theme-color" content="#FAFAF7" media="(prefers-color-scheme: light)"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300..700&family=JetBrains+Mono:wght@400;500&display=swap"><link rel="stylesheet" href="../css/base.css"><link rel="stylesheet" href="../css/style.css"><link rel="stylesheet" href="../css/style-pages.css"><link rel="stylesheet" href="../css/get-involved.css"><link rel="stylesheet" href="../css/research-page.css"><link rel="stylesheet" href="../css/volume-001-page.css"><link rel="stylesheet" href="../brand/legacy-aliases.css"><script>
       // Restore theme before paint to avoid flash
       try {
         const saved = localStorage.getItem('rs-theme');
         if (saved === 'light' || saved === 'dark') {
           document.documentElement.setAttribute('data-theme', saved);
+        } else {
+          document.documentElement.setAttribute('data-theme', 'dark');
         }
       } catch (e) {}
     </script><link rel="stylesheet" href="../_astro/index.Du8h-bcg.css"></head> <body data-page="research">
@@ -56,7 +58,7 @@ more AO3 works per Goodreads reader
 The watchlist is starting small and opening in stages. <strong>Get on the list for access</strong> as it
         expands across subgenres and to a wider group of readers.
 </p> <p> <strong>Writers, published, drafting, or thinking about starting, we want to talk to more of you.</strong> In
-        exchange for the conversation, <em>we'll build you a custom report</em> — either a historical analysis of an
+        exchange for the conversation, <em>we'll build you a custom report</em>: either a historical analysis of an
         author whose career you're studying, or a multi-source tracking report on your specific subgenre. We'll reach
         out to collect more information as we have capacity.
 </p> </div>  <div class="get-involved__form-wrap"> <h3 class="get-involved__form-title">Get on the list</h3> <form class="gi-form" id="get-involved-form"> <div class="gi-field"> <label for="gi-email">Email</label> <input type="email" id="gi-email" name="email" required autocomplete="email" inputmode="email" spellcheck="false" placeholder="signal@threnne.com"> </div> <fieldset class="gi-field gi-field--interests" id="gi-interests" aria-required="true"> <legend>What are you interested in?</legend> <label class="gi-check"> <input type="checkbox" name="interestWatchlist" value="1"> <span class="gi-check__text"> <strong>Full watchlist access</strong>
@@ -72,9 +74,9 @@ Select at least one interest.
         const root = document.documentElement;
         const btn = document.getElementById('themeToggle');
         if (!btn) return;
-        let current = root.getAttribute('data-theme') || 'light';
+        let current = root.getAttribute('data-theme') || 'dark';
         function syncBrandMarks() {
-          const theme = root.getAttribute('data-theme') || 'light';
+          const theme = root.getAttribute('data-theme') || 'dark';
           const pick = (el, darkKey, lightKey) => {
             if (!el) return;
             const dark = el.getAttribute(darkKey);

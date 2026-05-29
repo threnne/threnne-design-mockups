@@ -1,5 +1,5 @@
 /**
- * Watchlist listing — text search + collapsible facet filters.
+ * Watchlist listing - text search + collapsible facet filters.
  */
 (function () {
   const panel = document.getElementById('wl-filters');

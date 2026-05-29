@@ -1,5 +1,5 @@
 /**
- * Background page — comparison table filter, sort, expand.
+ * Background page - comparison table filter, sort, expand.
  * Rows are SSR'd; this script toggles visibility and order.
  */
 (function () {
