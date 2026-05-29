@@ -1,9 +1,28 @@
 /* Volume 001 article - ported from review */
 
+.vol-page .vol-back {
+  max-width: 100%;
+  padding: 1.35rem 0 0.35rem;
+}
+
+.vol-page .vol-back a {
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  color: var(--color-text-muted);
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  transition: 0.15s;
+}
+
+.vol-page .vol-back a:hover {
+  color: var(--color-primary);
+}
+
 .vol-nav {
-  max-width: var(--content-wide);
+  max-width: var(--content-default);
   margin: 0 auto;
-  padding: 1.25rem clamp(1.25rem, 4vw, 2rem) 0;
+  padding: 1.25rem 0 0;
+  padding-inline: var(--shell-inline);
 }
 
 .vol-nav__back {
@@ -32,15 +51,18 @@
   --vol-on-dark-subtle: rgba(246, 240, 242, 0.58);
   /* Elevated light cards - theme-aware. */
   --vol-card-bg: var(--color-surface-2);
+  width: 100%;
+  max-width: var(--content-default);
+  margin-inline: auto;
   color: var(--color-text);
   background: var(--color-surface);
 }
 
 
 .vol-page .title-section {
-  max-width: 900px;
+  max-width: var(--content-narrow);
   margin: 0 auto;
-  padding: 5rem 2rem 3rem;
+  padding: clamp(3rem, 8vw, 5rem) 0 clamp(2rem, 5vw, 3rem);
   text-align: center;
 }
 
@@ -68,7 +90,7 @@
   font-size: 1.5rem;
   line-height: 1.5;
   color: var(--color-text);
-  max-width: 720px;
+  max-width: var(--content-narrow);
   margin: 0 auto;
 }
 
@@ -91,9 +113,9 @@
 /* Section dividers */
 
 .vol-page .section-divider {
-  max-width: 1100px;
+  max-width: 100%;
   margin: 4rem auto;
-  padding: 0 2rem;
+  padding: 0;
   display: flex;
   align-items: center;
   gap: 1.5rem;
@@ -115,13 +137,13 @@
 
 /* Content blocks */
 .vol-page main {
-  max-width: 1100px;
+  max-width: 100%;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0;
 }
 
 .vol-page .content-block {
-  max-width: 680px;
+  max-width: var(--content-narrow);
   margin: 0 auto 3rem;
 }
 
@@ -148,9 +170,9 @@
 /* Framework callout */
 
 .vol-page .framework-callout {
-  max-width: 720px;
+  max-width: var(--content-narrow);
   margin: 0 auto 3rem;
-  padding: 2.5rem 2rem;
+  padding: 2.5rem clamp(1.25rem, 4vw, 2rem);
   background: var(--color-surface-offset);
   border-left: 3px solid var(--color-primary);
 }
@@ -252,7 +274,7 @@
 /* Hook comparison */
 
 .vol-page .hook-comparison {
-  max-width: 1000px;
+  max-width: min(100%, var(--content-default));
   margin: 0 auto 4rem;
   padding: 0;
   border: 1px solid var(--color-border);
@@ -371,14 +393,16 @@
 }
 
 @media (max-width: 768px) {
-.vol-page   .hook-comparison-grid { grid-template-columns: 1fr; }
-.vol-page   .hook-stats { grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .vol-page .hook-comparison-grid { grid-template-columns: 1fr; }
+  .vol-page .hook-stats { grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .vol-page .stat-grid { grid-template-columns: 1fr; }
+  .vol-page .comparison { grid-template-columns: 1fr; }
 }
 
 /* Series split visual */
 
 .vol-page .series-split {
-  max-width: 1000px;
+  max-width: min(100%, var(--content-default));
   margin: 0 auto 3rem;
 }
 
@@ -478,14 +502,14 @@
 /* Series split responsive */
 
 @media (max-width: 768px) {
-.vol-page   .series-split-grid { grid-template-columns: 1fr; }
-.vol-page   .series-split-title { font-size: 1.25rem; }
+  .vol-page .series-split-grid { grid-template-columns: 1fr; }
+  .vol-page .series-split-title { font-size: 1.25rem; }
 }
 
 /* Visual block */
 
 .vol-page .visual-block {
-  max-width: 1000px;
+  max-width: min(100%, var(--content-default));
   margin: 0 auto 3rem;
 }
 
@@ -575,7 +599,7 @@
   line-height: 1.5;
   font-style: italic;
   padding-top: 1rem;
-  max-width: 700px;
+  max-width: var(--content-narrow);
 }
 
 .vol-page .visual-caption strong {
@@ -593,13 +617,13 @@
   padding-top: 0.75rem;
   margin-top: 0.5rem;
   border-top: 1px solid var(--color-border);
-  max-width: 700px;
+  max-width: var(--content-narrow);
 }
 
 /* Comparison table */
 
 .vol-page .comparison {
-  max-width: 900px;
+  max-width: min(100%, var(--content-narrow));
   margin: 0 auto 3rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -610,7 +634,7 @@
 
 .vol-page .comparison-side {
   background: var(--vol-card-bg);
-  padding: 2.5rem 2rem;
+  padding: 2.5rem clamp(1.25rem, 4vw, 2rem);
   color: var(--color-text);
 }
 
@@ -679,10 +703,10 @@
 /* Pull quote */
 
 .vol-page .pull-quote {
-  max-width: 800px;
+  max-width: var(--content-narrow);
   margin: 4rem auto;
   text-align: center;
-  padding: 0 2rem;
+  padding: 0;
 }
 
 .vol-page .pull-quote-text {
@@ -702,12 +726,12 @@
 .vol-page .signal-section {
   background: var(--vol-panel-ink);
   color: var(--vol-on-dark);
-  padding: 5rem 2rem;
+  padding: clamp(3rem, 8vw, 5rem) clamp(1.25rem, 4vw, 2rem);
   margin-top: 4rem;
 }
 
 .vol-page .signal-inner {
-  max-width: 760px;
+  max-width: var(--content-narrow);
   margin: 0 auto;
 }
 
@@ -747,6 +771,32 @@
 .vol-page .signal-body em {
   font-style: italic;
   color: var(--color-primary-highlight);
+}
+
+.vol-page .vol-signal-cta {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 13.5px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  padding: 12px 20px;
+  border-radius: 7px;
+  text-decoration: none;
+  background: var(--color-primary);
+  color: #fff;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.vol-page .vol-signal-cta:hover {
+  box-shadow: 0 0 24px -6px var(--color-primary);
+  transform: translateY(-1px);
+}
+
+.vol-page .vol-signal-cta:focus-visible {
+  outline: 2px solid var(--color-primary-highlight);
+  outline-offset: 2px;
 }
 
 /* CTAs */
@@ -803,9 +853,9 @@
 /* Update note */
 
 .vol-page .update-note {
-  max-width: 680px;
+  max-width: var(--content-narrow);
   margin: 0 auto;
-  padding: 3rem 2rem 2rem;
+  padding: 3rem 0 2rem;
   text-align: center;
 }
 

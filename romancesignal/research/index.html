@@ -1,428 +1,52 @@
-<!DOCTYPE html><html lang="en" data-brand="signal" data-theme="dark">
-<head>
-<meta name="robots" content="noindex" />
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Research · Romance Signal</title>
-<meta name="description" content="Long-form research volumes on what the data shows about romance succeeding, published as the work is ready.">
-<meta name="theme-color" content="#0E0B0D" media="(prefers-color-scheme: dark)">
-<meta name="theme-color" content="#F6F1EA" media="(prefers-color-scheme: light)">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;1,300;1,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-<script>
-  // Restore theme before paint to avoid flash; default dark
-  try {
-    var saved = localStorage.getItem('rs-theme');
-    document.documentElement.setAttribute('data-theme', (saved === 'light' || saved === 'dark') ? saved : 'dark');
-  } catch (e) {}
-</script>
-<link rel="stylesheet" href="../css/bouquet-base.css"><style>@media(max-width:900px){.nav__links{display:none}}</style>
-<style>
-.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-.nav__links a.is-active{color:var(--text)}
-.nav__cta{font-family:var(--font-mono);font-size:12px;border:1px solid var(--pink);color:var(--pink);
-  padding:8px 15px;border-radius:6px;transition:.2s;letter-spacing:.02em}
-.nav__cta:hover{background:var(--pink);color:#fff}
-
-/* section frame */
-.eyebrow{font-family:var(--font-mono);font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;
-  color:var(--peony);margin-bottom:14px;display:flex;align-items:center;gap:10px}
-.eyebrow::before{content:"";width:24px;height:1px;background:var(--peony)}
-.h2{font-family:var(--font-display);font-weight:700;font-size:clamp(26px,3.2vw,38px);letter-spacing:-.02em;
-  line-height:1.12;max-width:24ch;text-wrap:balance;color:var(--text)}
-.h2 em{font-family:var(--font-serif);font-style:italic;font-weight:400;color:var(--thistle)}
-.lead{font-size:16.5px;color:var(--text-muted);max-width:62ch;margin-top:16px;line-height:1.6;text-wrap:pretty}
-.lead .serif{font-family:var(--font-serif);font-style:italic;color:var(--text)}
-
-/* hero (research masthead) */
-.bg-hero{padding:56px 0 28px}
-.bg-hero__label{font-family:var(--font-mono);font-size:11.5px;color:var(--euc);letter-spacing:.16em;text-transform:uppercase;
-  display:inline-flex;align-items:center;gap:8px;margin-bottom:22px;
-  border:1px solid var(--border);padding:6px 12px;border-radius:999px;background:var(--surface)}
-.bg-hero__label::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--euc);box-shadow:0 0 8px var(--euc)}
-.bg-hero h1{font-family:var(--font-display);font-weight:900;font-size:clamp(44px,6vw,72px);line-height:1.0;
-  letter-spacing:-.03em;max-width:14ch;margin-bottom:22px}
-.bg-hero h1 em{font-family:var(--font-serif);font-style:italic;font-weight:400;color:var(--thistle)}
-.bg-hero__intro{font-size:17px;color:var(--text-muted);max-width:62ch;line-height:1.6;margin-bottom:14px}
-.bg-hero__intro em{font-family:var(--font-serif);font-style:italic;color:var(--text);font-weight:400}
-
-/* citation pattern reused from bg_b */
-.cite{font-family:var(--font-mono);font-size:10px;letter-spacing:.04em;color:var(--text-faint);line-height:1.4}
-.cite a{color:var(--text-faint);text-decoration:none;border-bottom:1px solid color-mix(in srgb,var(--text-faint) 40%,transparent)}
-.cite a:hover{color:var(--sage);border-color:var(--sage)}
-
-/* section block */
-section.block{padding:48px 0 12px;position:relative}
-.sec-head{display:flex;align-items:baseline;gap:14px;margin-bottom:8px}
-.sec-num{font-family:var(--font-mono);font-size:11px;color:var(--peony);letter-spacing:.18em;text-transform:uppercase}
-.sec-divider{flex:1;height:1px;background:var(--border)}
-
-/* ============ VOLUME 001 FEATURE CARD ============ */
-.vol-feature{margin-top:28px;background:var(--surface);border:1px solid var(--border-strong);border-radius:var(--radius);
-  border-top:3px solid var(--peony);padding:28px 28px 24px;position:relative;overflow:hidden}
-.vol-feature::before{content:"";position:absolute;top:0;right:0;width:240px;height:240px;pointer-events:none;
-  background:radial-gradient(ellipse at top right, color-mix(in srgb,var(--peony) 22%, transparent), transparent 70%)}
-.vol-feature__head{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px;margin-bottom:14px;position:relative;z-index:1}
-.vol-feature__meta{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
-.vol-feature__volume{font-family:var(--font-mono);font-size:11px;color:var(--peony);letter-spacing:.16em;text-transform:uppercase;font-weight:600}
-.vol-feature__date{font-family:var(--font-mono);font-size:11px;color:var(--text-faint);letter-spacing:.06em}
-.vol-feature__badge{font-family:var(--font-mono);font-size:10.5px;color:var(--acid);letter-spacing:.14em;text-transform:uppercase;
-  border:1px solid color-mix(in srgb,var(--acid) 40%,transparent);background:color-mix(in srgb,var(--acid) 10%,transparent);
-  padding:4px 10px;border-radius:999px}
-.vol-feature__title{font-family:var(--font-display);font-weight:900;font-size:clamp(24px,3vw,36px);line-height:1.1;
-  letter-spacing:-.02em;color:var(--text);margin-bottom:14px;max-width:30ch;text-wrap:balance;position:relative;z-index:1}
-.vol-feature__dek{font-family:var(--font-body);font-size:16px;line-height:1.55;color:var(--text-muted);max-width:60ch;margin-bottom:24px;position:relative;z-index:1}
-.vol-feature__dek em{font-family:var(--font-serif);font-style:italic;color:var(--text);font-weight:400}
-
-.vol-feature__grid{display:grid;grid-template-columns:1.15fr 1fr;gap:30px;align-items:start;margin-bottom:22px;position:relative;z-index:1}
-.vol-feature__body p{font-size:14.5px;color:var(--text-muted);line-height:1.6;margin-bottom:12px}
-.vol-feature__body p:last-child{margin-bottom:0}
-
-/* chart card inside feature */
-.vol-chart{background:var(--bg-2);border:1px solid var(--border);border-radius:8px;padding:18px 20px}
-.vol-chart__head{margin-bottom:14px}
-.vol-chart__title{font-family:var(--font-display);font-weight:700;font-size:13.5px;letter-spacing:-.005em;color:var(--text);line-height:1.3}
-.vol-chart__sub{font-family:var(--font-mono);font-size:10.5px;color:var(--text-faint);letter-spacing:.04em;margin-top:4px}
-.vol-chart__wrap{position:relative}
-.vol-chart svg{display:block;width:100%;height:auto}
-.vol-chart__caption{font-family:var(--font-mono);font-size:10px;color:var(--text-faint);letter-spacing:.04em;margin-top:10px}
-
-/* CTA block */
-.vol-feature__cta-block{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;
-  margin-top:6px;padding-top:18px;border-top:1px solid var(--border);position:relative;z-index:1}
-.vol-feature__cta{display:inline-flex;align-items:center;gap:10px;font-family:var(--font-mono);font-size:13px;
-  border:1px solid var(--euc);color:var(--euc);padding:11px 22px;border-radius:7px;transition:.2s;letter-spacing:.02em}
-.vol-feature__cta:hover{background:var(--euc);color:var(--bg)}
-.vol-feature__read-time{font-family:var(--font-mono);font-size:11.5px;color:var(--text-faint);letter-spacing:.06em}
-
-/* ============ COMING / QUEUE CARDS ============ */
-.queue-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:30px}
-.queue-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:22px 22px;
-  display:flex;flex-direction:column;gap:10px;position:relative}
-.queue-card--dev{border-top:3px solid var(--teal)}
-.queue-card--ongoing{border-top:3px solid var(--acid-deep)}
-.queue-card__status{font-family:var(--font-mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--text-faint);
-  display:inline-flex;align-items:center;gap:8px}
-.queue-card__status::before{content:"";width:18px;height:1px;background:var(--text-faint)}
-.queue-card--dev .queue-card__status{color:var(--teal)}
-.queue-card--dev .queue-card__status::before{background:var(--teal)}
-.queue-card--ongoing .queue-card__status{color:var(--acid-deep)}
-.queue-card--ongoing .queue-card__status::before{background:var(--acid-deep)}
-.queue-card__title{font-family:var(--font-display);font-weight:700;font-size:20px;letter-spacing:-.015em;color:var(--text)}
-.queue-card__note{font-size:13.5px;color:var(--text-muted);line-height:1.55}
-
-/* ============ GET INVOLVED (conversion) ============ */
-.gi{margin-top:64px;border-top:1px solid var(--border);
-  background:linear-gradient(160deg,var(--plum),var(--bg-2));padding:60px 0 70px}
-.gi__inner{max-width:var(--maxw);margin:0 auto;padding:0 26px;
-  display:grid;grid-template-columns:1.2fr 1fr;gap:48px;align-items:start}
-.gi__label{font-family:var(--font-mono);font-size:11.5px;color:var(--pink);letter-spacing:.16em;text-transform:uppercase;
-  display:flex;align-items:center;gap:10px;margin-bottom:14px}
-.gi__label::before{content:"";width:24px;height:1px;background:var(--pink)}
-.gi__title{font-family:var(--font-display);font-weight:900;font-size:clamp(28px,3.6vw,44px);letter-spacing:-.025em;
-  line-height:1.05;margin-bottom:20px;color:var(--text);max-width:20ch}
-.gi__title em{font-family:var(--font-serif);font-style:italic;font-weight:400;color:var(--thistle)}
-.gi__prose p{font-size:15.5px;color:var(--text-muted);line-height:1.65;margin-bottom:14px;max-width:54ch}
-.gi__prose p strong{color:var(--text);font-weight:600}
-.gi__prose p em{font-family:var(--font-serif);font-style:italic;color:var(--text);font-weight:400}
-
-/* form */
-.gi-form-wrap{background:var(--surface);border:1px solid var(--border-strong);border-radius:var(--radius);padding:24px 24px}
-.gi-form-title{font-family:var(--font-display);font-weight:700;font-size:18px;letter-spacing:-.01em;color:var(--text);margin-bottom:18px}
-.gi-form{display:flex;flex-direction:column;gap:18px}
-.gi-field{display:flex;flex-direction:column;gap:7px}
-.gi-field label,.gi-field legend{font-family:var(--font-mono);font-size:11px;color:var(--text-faint);letter-spacing:.1em;text-transform:uppercase}
-.gi-field input[type="email"]{background:var(--bg-2);border:1px solid var(--border);border-radius:7px;color:var(--text);
-  font-family:var(--font-body);font-size:14.5px;padding:11px 13px;outline:none;transition:.15s}
-.gi-field input[type="email"]:focus{border-color:var(--pink);box-shadow:0 0 0 3px color-mix(in srgb,var(--pink) 20%,transparent)}
-.gi-field input[type="email"]::placeholder{color:var(--text-faint)}
-.gi-field--interests{border:none;padding:0}
-.gi-field--interests legend{margin-bottom:8px}
-.gi-checks{display:flex;flex-direction:column;gap:10px}
-.gi-check{display:grid;grid-template-columns:18px 1fr;gap:11px;align-items:start;padding:11px 13px;
-  background:var(--bg-2);border:1px solid var(--border);border-radius:7px;cursor:pointer;transition:.15s}
-.gi-check:hover{border-color:var(--border-strong)}
-.gi-check input{margin-top:3px;accent-color:var(--pink)}
-.gi-check__text{font-size:13.5px;color:var(--text-muted);line-height:1.45;text-transform:none;letter-spacing:normal;font-family:var(--font-body)}
-.gi-check__text strong{display:block;color:var(--text);font-weight:600;font-size:14px;margin-bottom:2px;font-family:var(--font-body);letter-spacing:-.005em}
-.gi-submit{background:var(--pink);color:#fff;font-family:var(--font-mono);font-size:13px;font-weight:600;
-  letter-spacing:.02em;border:none;border-radius:7px;padding:13px 22px;cursor:pointer;transition:.2s;text-align:center;
-  display:inline-flex;align-items:center;justify-content:center;gap:8px}
-.gi-submit:hover{filter:brightness(1.07);transform:translateY(-1px)}
-.gi-submit:active{transform:translateY(0)}
-.gi-status{font-family:var(--font-mono);font-size:12px;color:var(--text-muted);margin-top:2px}
-
-/* footer */
-.foot{border-top:1px solid var(--border);padding:42px 0 34px;margin-top:0;background:var(--bg-2)}
-
-@media(max-width:980px){
-  .vol-feature__grid{grid-template-columns:1fr;gap:22px}
-  .queue-grid{grid-template-columns:1fr}
-  .gi__inner{grid-template-columns:1fr;gap:32px}
-  .nav__links a:not(.nav__cta):not(.toggle){display:none}
-  .nav__links{gap:14px}
-}
-@media(max-width:560px){
-  .bg-hero h1{font-size:48px}
-  .vol-feature{padding:22px 20px 20px}
-  .vol-feature__title{font-size:22px}
-  .gi{padding:48px 0 56px}
-  .gi__inner{padding:0 22px}
-  .gi-form-wrap{padding:20px}
-}</style>
-</head>
-<body>
-
-<div class="app">
-
-<!-- TESTING BANNER (plum/peony gradient) -->
-
-<!-- NAV -->
-<header class="nav">
-  <div class="wrap nav__in">
-    <a href="../index.html" class="brand">
-      <span class="brand__word">romance <span class="brand__sig">s</span>ignal</span>
-      <span class="brand__by">by threnne</span>
-    </a>
-    <nav class="nav__links">
-      <a href="../watchlist/index.html">watchlist</a>
-      <a href="index.html" class="is-active">research</a>
-      <a href="../methodology/index.html">methodology</a>
-      <a href="#get-involved" class="nav__cta">get_involved()</a>
-      <button class="toggle" onclick="tog()" aria-label="Toggle theme">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
-      </button>
-    </nav>
-  </div>
-</header>
-
-<!-- HERO / MASTHEAD -->
-<section class="bg-hero">
-  <div class="wrap">
-    <span class="bg-hero__label">Research</span>
-    <h1>Volumes</h1>
-    <p class="bg-hero__intro">Long-form research on what the data shows about romance succeeding. <em>Published as the work is ready, one volume at a time.</em></p>
-  </div>
-</section>
-
-<!-- 01 · VOLUME 001 FEATURE -->
-<section class="block">
-  <div class="wrap">
-    <div class="sec-head"><span class="sec-num">01</span><div class="sec-divider"></div></div>
-    <span class="eyebrow">latest volume</span>
-    <h2 class="h2">The first volume looks at two romance adaptations the trad pipeline read <em>very differently.</em></h2>
-
-    <article class="vol-feature" aria-labelledby="vol-001-title">
-      <div class="vol-feature__head">
-        <div class="vol-feature__meta">
-          <span class="vol-feature__volume">Volume 001</span>
-          <span class="vol-feature__date">May 2026</span>
-        </div>
-        <span class="vol-feature__badge">Latest</span>
-      </div>
-
-      <h3 class="vol-feature__title" id="vol-001-title">Off Campus and Heated Rivalry. What the Trad Pipeline Catches, What It Misses.</h3>
-      <p class="vol-feature__dek">Two hockey romance adaptations dropped in the last six months. <em>The industry caught one cleanly. The other was harder.</em></p>
-
-      <div class="vol-feature__grid">
-
-        <!-- Body copy -->
-        <div class="vol-feature__body">
-          <p>Prime Video's Off Campus, an adaptation of Elle Kennedy's The Deal, premiered twelve days ago. HBO Max's Heated Rivalry, an adaptation of Rachel Reid's second Game Changers book, aired six months earlier. By every signal that gets weighted heavily, Heated Rivalry looked midlist right up until the show forced the issue.</p>
-          <p>Goodreads is the most important signal the romance industry reads. It caught The Deal cleanly. It did not catch Heated Rivalry the same way. The signal that was doing something unusual lived on AO3, in a small pairing tag that had been producing durable activity for years.</p>
-          <p>Whether that pattern is readable as a leading indicator, and whether it can be read ethically, is the open question this volume sits with.</p>
-        </div>
-
-        <!-- Chart card: Pre-show, per-reader output diverged sharply -->
-        <figure class="vol-chart" aria-labelledby="vol-chart-title">
-          <div class="vol-chart__head">
-            <h4 class="vol-chart__title" id="vol-chart-title">Pre-show, per-reader output diverged sharply</h4>
-            <p class="vol-chart__sub">AO3 Works per 1,000 Goodreads ratings · pre-premiere window</p>
-          </div>
-          <div class="vol-chart__wrap">
-            <svg viewBox="0 0 540 230" role="img" aria-label="AO3 Works per one thousand Goodreads ratings before show premiere: The Deal 0.087, Heated Rivalry 10.6, about 122 times higher for Heated Rivalry">
-              <!-- y/x axis -->
-              <!-- left label column -->
-              <text x="170" y="64" text-anchor="end" font-family="'Inter',sans-serif" font-size="12" font-weight="600" fill="var(--text)">The Deal</text>
-              <text x="170" y="80" text-anchor="end" font-family="'JetBrains Mono',monospace" font-size="9.5" fill="var(--text-muted)" font-style="italic">87 Works · ~1.0M ratings</text>
-              <text x="170" y="142" text-anchor="end" font-family="'Inter',sans-serif" font-size="12" font-weight="600" fill="var(--text)">Heated Rivalry</text>
-              <text x="170" y="158" text-anchor="end" font-family="'JetBrains Mono',monospace" font-size="9.5" fill="var(--text-muted)" font-style="italic">362 Works · 34K ratings</text>
-
-              <!-- axis line -->
-              <line x1="180" y1="40" x2="180" y2="194" stroke="var(--border-strong)" stroke-width="1"/>
-              <!-- ticks: 0, 2, 4, 6, 8, 10, 12 across x180..x516 (28 px per unit) -->
-              <g font-family="'JetBrains Mono',monospace" font-size="9" fill="var(--text-faint)">
-                <line x1="180" y1="194" x2="180" y2="200" stroke="var(--border)"/>
-                <text x="180" y="212" text-anchor="middle">0</text>
-                <line x1="236" y1="194" x2="236" y2="200" stroke="var(--border)"/>
-                <text x="236" y="212" text-anchor="middle">2</text>
-                <line x1="292" y1="194" x2="292" y2="200" stroke="var(--border)"/>
-                <text x="292" y="212" text-anchor="middle">4</text>
-                <line x1="348" y1="194" x2="348" y2="200" stroke="var(--border)"/>
-                <text x="348" y="212" text-anchor="middle">6</text>
-                <line x1="404" y1="194" x2="404" y2="200" stroke="var(--border)"/>
-                <text x="404" y="212" text-anchor="middle">8</text>
-                <line x1="460" y1="194" x2="460" y2="200" stroke="var(--border)"/>
-                <text x="460" y="212" text-anchor="middle">10</text>
-                <line x1="516" y1="194" x2="516" y2="200" stroke="var(--border)"/>
-                <text x="516" y="212" text-anchor="middle">12</text>
-              </g>
-
-              <!-- gridlines -->
-              <g stroke="var(--border)" stroke-width="0.5">
-                <line x1="236" y1="40" x2="236" y2="194"/>
-                <line x1="292" y1="40" x2="292" y2="194"/>
-                <line x1="348" y1="40" x2="348" y2="194"/>
-                <line x1="404" y1="40" x2="404" y2="194"/>
-                <line x1="460" y1="40" x2="460" y2="194"/>
-                <line x1="516" y1="40" x2="516" y2="194"/>
-              </g>
-
-              <!-- The Deal bar (0.087 → ~2.4 px wide). Use sage as primary measured signal -->
-              <rect x="180" y="56" width="3" height="32" fill="var(--sage)" rx="1"/>
-              <text x="192" y="78" font-family="'JetBrains Mono',monospace" font-size="11" font-weight="700" fill="var(--sage)">0.087</text>
-
-              <!-- Heated Rivalry bar (10.6 → 10.6 * 28 = 296.8) -->
-              <rect x="180" y="118" width="297" height="32" fill="var(--peony)" rx="1"/>
-              <text x="485" y="140" font-family="'JetBrains Mono',monospace" font-size="11" font-weight="700" fill="var(--peony)">10.6</text>
-
-              <!-- Multiplier callout -->
-              <text x="520" y="62" text-anchor="end" font-family="'Satoshi',sans-serif" font-size="22" font-weight="700" fill="var(--peony)">122×</text>
-              <text x="520" y="78" text-anchor="end" font-family="'JetBrains Mono',monospace" font-size="9" fill="var(--text-muted)" font-style="italic">more AO3 Works per rating</text>
-
-              <!-- x axis title -->
-              <text x="348" y="228" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="9.5" fill="var(--text-faint)" letter-spacing="0.04em">AO3 Works per 1,000 Goodreads ratings (pre-show)</text>
-            </svg>
-          </div>
-          <p class="vol-chart__caption">Chart 03 · The pre-show asymmetry, per reader</p>
-          <p class="cite" style="margin-top:8px">Source · Goodreads ratings counts, <a href="https://archiveofourown.org/" target="_blank" rel="noopener noreferrer">AO3</a> Works counts in pairing tags · Romance Signal, May 2026</p>
-        </figure>
-
-      </div>
-
-      <div class="vol-feature__cta-block">
-        <a href="volume-001/index.html" class="vol-feature__cta">read the full case study <span aria-hidden="true">→</span></a>
-        <span class="vol-feature__read-time">Approx 12 min read</span>
-      </div>
-    </article>
-  </div>
-</section>
-
-<!-- 02 · IN THE QUEUE -->
-<section class="block" aria-labelledby="queue-heading">
-  <div class="wrap">
-    <div class="sec-head"><span class="sec-num">02</span><div class="sec-divider"></div></div>
-    <span class="eyebrow" id="queue-heading">in the queue</span>
-    <h2 class="h2">What's <em>next,</em> and what we keep publishing alongside it.</h2>
-    <p class="lead">A new volume publishes when the data and the writing are both ready. <span class="serif">Shorter pieces ship in between.</span></p>
-
-    <div class="queue-grid">
-      <article class="queue-card queue-card--dev">
-        <p class="queue-card__status">In development</p>
-        <h3 class="queue-card__title">Volume 002</h3>
-        <p class="queue-card__note">A follow-up investigation working through what we found in Volume 001 and what we couldn't yet answer. Publishes when the data and the writing are both ready.</p>
-      </article>
-      <article class="queue-card queue-card--ongoing">
-        <p class="queue-card__status">Ongoing</p>
-        <h3 class="queue-card__title">Notes from the engine</h3>
-        <p class="queue-card__note">Shorter pieces that don't warrant a full volume. Pattern observations, methodology updates, edge cases the watchlist surfaces. Released as they're ready.</p>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- 03 · GET INVOLVED (CONVERSION CTA) -->
-<section class="gi" id="get-involved" aria-labelledby="gi-title">
-  <div class="gi__inner">
-    <div>
-      <p class="gi__label">Get involved</p>
-      <h2 class="gi__title" id="gi-title">Build this <em>with us.</em></h2>
-      <div class="gi__prose">
-        <p>The watchlist is starting small and opening in stages. <strong>Get on the list for access</strong> as it expands across subgenres and to a wider group of readers.</p>
-        <p><strong>Writers, whether published, drafting, or thinking about starting, we want to talk to more of you.</strong> In exchange for the conversation, <em>we'll build you a custom report</em>: either a historical analysis of an author whose career you're studying, or a multi-source tracking report on your specific subgenre. We'll reach out to collect more information as we have capacity.</p>
-      </div>
-    </div>
-
-    <div class="gi-form-wrap">
-      <h3 class="gi-form-title">Get on the list</h3>
-      <form class="gi-form" id="get-involved-form" novalidate>
-        <div class="gi-field">
-          <label for="gi-email">Email</label>
-          <input type="email" id="gi-email" name="email" required autocomplete="email" inputmode="email" spellcheck="false" placeholder="signal@threnne.com">
-        </div>
-        <fieldset class="gi-field gi-field--interests" id="gi-interests" aria-required="true">
-          <legend>What are you interested in?</legend>
-          <div class="gi-checks">
-            <label class="gi-check">
-              <input type="checkbox" name="interestWatchlist" value="1">
-              <span class="gi-check__text">
-                <strong>Full watchlist access</strong>
-                The watchlist tracks romance titles week-over-week across Goodreads, Amazon BSR, Wikipedia, news, and more.
-              </span>
-            </label>
-            <label class="gi-check">
-              <input type="checkbox" name="interestWriter" value="1">
-              <span class="gi-check__text">
-                <strong>A writer conversation (custom report)</strong>
-                Published, drafting, or thinking about starting.
-              </span>
-            </label>
-          </div>
-        </fieldset>
-        <button type="submit" class="gi-submit" id="gi-submit">Submit</button>
-        <p class="gi-status" id="gi-status" hidden role="status" aria-live="polite"></p>
-      </form>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer class="foot">
-  <div class="wrap foot__in">
-    <div>
-      <a href="../index.html" class="brand">
-        <span class="brand__word">romance <span class="brand__sig">s</span>ignal</span>
-        <span class="brand__by">by threnne</span>
-      </a>
-      <p class="foot__tag">Measuring the romance market for the people writing it.</p>
-    </div>
-    <div class="foot__cols">
-      <div class="foot__col"><h4>research</h4><a href="../watchlist/index.html">watchlist</a><a href="index.html">volumes</a><a href="../background/index.html">background</a></div>
-      <div class="foot__col"><h4>methods</h4><a href="../methodology/index.html">methodology</a></div>
-      <div class="foot__col"><h4>contact</h4><a href="#get-involved">get involved</a><a href="mailto:signal@threnne.com">signal@threnne.com</a></div>
-    </div>
-  </div>
-  <div class="wrap foot__bottom">
-    <span>© 2026 Romance Signal · A Threnne project</span>
-    <span>signal@threnne.com</span>
-  </div>
-</footer>
-
-</div>
-
-<script>
-function tog(){
-  var r=document.documentElement;
-  var next = r.getAttribute('data-theme')==='light' ? 'dark' : 'light';
-  r.setAttribute('data-theme', next);
-  try { localStorage.setItem('rs-theme', next); } catch(e){}
-}
-
-// Get involved form (mockup, no real submit)
-(function(){
-  var form = document.getElementById('get-involved-form');
-  if(!form) return;
-  var status = document.getElementById('gi-status');
-  form.addEventListener('submit', function(e){
-    e.preventDefault();
-    if(!status) return;
-    status.hidden = false;
-    status.textContent = 'Thanks. We will be in touch as capacity opens up.';
-  });
-})();
-</script>
-
-</body>
-</html>
+<!DOCTYPE html><html lang="en" data-brand="signal" data-theme="dark"> <head>
+<base href="/romancesignal/research/" /><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Research — Romance Signal</title><meta name="description" content="Long-form research volumes on what the data shows about romance succeeding — published as the work is ready."><link rel="icon" href="../favicon.svg" type="image/svg+xml"><link rel="icon" type="image/png" sizes="32x32" href="../favicon-32-light.png"><link rel="icon" type="image/png" sizes="16x16" href="../favicon-16-light.png"><link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png"><link rel="manifest" href="../manifest.webmanifest"><meta name="theme-color" content="#C9D862"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;1,300;1,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600;700&display=swap"><script>
+      try {
+        const saved = localStorage.getItem('rs-theme');
+        document.documentElement.setAttribute(
+          'data-theme',
+          saved === 'light' || saved === 'dark' ? saved : 'dark',
+        );
+      } catch (e) {}
+    </script><link rel="stylesheet" href="../css/bouquet-base.css"><link rel="stylesheet" href="../css/base.css"><link rel="stylesheet" href="../css/style.css"><link rel="stylesheet" href="../css/style-pages.css"><link rel="stylesheet" href="../css/get-involved.css"><link rel="stylesheet" href="../css/home-marketing.css"><link rel="stylesheet" href="../css/research-page.css"><link rel="stylesheet" href="../css/volume-001-page.css"><link rel="stylesheet" href="../_astro/index.DjilQ9Ld.css"></head> <body data-page="research"> <div class="app">  <header class="nav"> <div class="wrap nav__in"> <a href="../index.html" class="brand" aria-label="Romance Signal by Threnne home"> <span class="brand__word">romance <span class="brand__sig">s</span>ignal</span> <span class="brand__by">by threnne</span> </a> <nav class="nav__links" aria-label="Primary"> <a href="../watchlist/index.html">watchlist</a><a href="../background/index.html">background</a><a href="./index.html" class="is-active">research</a><a href="../methodology/index.html">methodology</a> <a href="../index.html#get-involved" class="nav__cta">get_involved()</a> <button type="button" class="toggle" aria-label="Toggle theme" id="themeToggle"> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"> <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"></path> </svg> </button> </nav> </div> </header>    <div class="rs-page"> <div class="wrap wl-page-hero"> <p class="home-hero__label" style="color: var(--color-primary)">Research</p> <h1> volumes </h1> <p class="wl-detail-meta">Long-form research on what the data shows about romance succeeding. Published as the work is ready, one volume at a time.</p>  </div> <main class="rs-main"> <article class="rs-lead"> <div class="rs-lead__header"> <span class="rs-lead__volume">Volume 001 · May 2026</span> <span class="rs-lead__meta">Latest</span> </div> <h2 class="rs-lead__title">Off Campus and Heated Rivalry. What the Trad Pipeline Catches, What It Misses.</h2> <p class="rs-lead__dek">Two hockey romance adaptations dropped in the last six months. <em>The industry caught one cleanly. The other was harder.</em></p> <div class="rs-lead__grid"> <div class="rs-lead__chart"> <figure class="vol-chart vol-chart--asymmetry"> <div class="vol-chart__head"> <h3 class="vol-chart__title">Pre-show, per-reader output diverged sharply</h3> </div> <div class="vol-chart__wrap"> <svg viewBox="0 0 720 240" width="100%" role="img" aria-label="AO3 works per one thousand Goodreads ratings before show premiere: The Deal 0.087 versus Heated Rivalry 10.5, about 122 times higher for Heated Rivalry"> <text x="406" y="230" text-anchor="middle" font-size="10" fill="var(--color-text-muted)">
+AO3 works per 1,000 Goodreads ratings (pre-show)
+</text> <g> <line x1="148" y1="40" x2="148" y2="196" stroke="var(--color-border)" stroke-width="0.5"></line> <text x="148" y="210" text-anchor="middle" font-size="9" fill="var(--color-text-faint)"> 0 </text> </g><g> <line x1="234" y1="40" x2="234" y2="196" stroke="var(--color-border)" stroke-width="0.5"></line> <text x="234" y="210" text-anchor="middle" font-size="9" fill="var(--color-text-faint)"> 2 </text> </g><g> <line x1="320" y1="40" x2="320" y2="196" stroke="var(--color-border)" stroke-width="0.5"></line> <text x="320" y="210" text-anchor="middle" font-size="9" fill="var(--color-text-faint)"> 4 </text> </g><g> <line x1="406" y1="40" x2="406" y2="196" stroke="var(--color-border)" stroke-width="0.5"></line> <text x="406" y="210" text-anchor="middle" font-size="9" fill="var(--color-text-faint)"> 6 </text> </g><g> <line x1="492" y1="40" x2="492" y2="196" stroke="var(--color-border)" stroke-width="0.5"></line> <text x="492" y="210" text-anchor="middle" font-size="9" fill="var(--color-text-faint)"> 8 </text> </g><g> <line x1="578" y1="40" x2="578" y2="196" stroke="var(--color-border)" stroke-width="0.5"></line> <text x="578" y="210" text-anchor="middle" font-size="9" fill="var(--color-text-faint)"> 10 </text> </g><g> <line x1="664" y1="40" x2="664" y2="196" stroke="var(--color-border)" stroke-width="0.5"></line> <text x="664" y="210" text-anchor="middle" font-size="9" fill="var(--color-text-faint)"> 12 </text> </g> <g> <text x="138" y="62" text-anchor="end" font-size="11" font-weight="600" fill="var(--color-text)"> The Deal </text> <text x="138" y="76" text-anchor="end" font-size="9" fill="var(--color-text-muted)" font-style="italic"> 87 works / ~1.0M readers
+</text> <rect x="148" y="56" width="3.7409999999999997" height="36" fill="var(--sage)" rx="1"></rect> <text x="157.74099999999999" y="78" font-size="12" font-weight="700" fill="var(--sage)"> 0.087 </text> </g><g> <text x="138" y="134" text-anchor="end" font-size="11" font-weight="600" fill="var(--color-text)"> Heated Rivalry </text> <text x="138" y="148" text-anchor="end" font-size="9" fill="var(--color-text-muted)" font-style="italic"> 362 works / 34K readers
+</text> <rect x="148" y="128" width="457.82352941176475" height="36" fill="var(--peony)" rx="1"></rect> <text x="611.8235294117648" y="150" font-size="12" font-weight="700" fill="var(--peony)"> 10.6 </text> </g> <text x="660" y="56" text-anchor="end" font-size="22" font-weight="700" fill="var(--peony)"> 122×
+</text> <text x="660" y="76" text-anchor="end" font-size="9" fill="var(--color-text-muted)" font-style="italic">
+more AO3 works per Goodreads reader
+</text> </svg> </div> </figure> <p class="rs-lead__chart-caption">Chart 03 · The Pre-Show Asymmetry, Per Reader</p> </div> <div class="rs-lead__body"> <p>Prime Video&#39;s Off Campus, an adaptation of Elle Kennedy&#39;s The Deal, premiered twelve days ago. HBO Max&#39;s Heated Rivalry, an adaptation of Rachel Reid&#39;s second Game Changers book, aired six months earlier. By every signal that gets weighted heavily, Heated Rivalry looked midlist right up until the show forced the issue.</p><p>Goodreads is the most important signal the romance industry reads. It caught The Deal cleanly. It did not catch Heated Rivalry the same way. The signal that was doing something unusual lived on AO3, in a small pairing tag that had been producing durable activity for years.</p><p>Whether that pattern is readable as a leading indicator, and whether it can be read ethically, is the open question this volume sits with.</p> </div> </div> <div class="rs-lead__cta-block"> <a href="./volume-001/index.html" class="rs-lead__cta">Read the full case study →</a> <span class="rs-lead__read-time">Approx 12 min read</span> </div> </article> <section class="rs-coming" aria-labelledby="rs-coming-heading"> <div class="rs-coming__header"> <span class="rs-coming__label" id="rs-coming-heading">In the queue</span> <div class="rs-coming__divider" aria-hidden="true"></div> </div> <div class="rs-coming__grid"> <article class="rs-coming__card"> <p class="rs-coming__status">In development</p> <h3 class="rs-coming__title">Volume 002</h3> <p class="rs-coming__note">A follow-up investigation working through what we found in Volume 001 and what we couldn&#39;t yet answer. Publishes when the data and the writing are both ready.</p> </article><article class="rs-coming__card"> <p class="rs-coming__status">Ongoing</p> <h3 class="rs-coming__title">Notes from the engine</h3> <p class="rs-coming__note">Shorter pieces that don&#39;t warrant a full volume. Pattern observations, methodology updates, edge cases the watchlist surfaces. Released as they&#39;re ready.</p> </article> </div> </section> </main> <section class="get-involved get-involved--flush-top" id="get-involved" aria-labelledby="get-involved-title"><div class="get-involved__inner"><h2 class="get-involved__title" id="get-involved-title">
+Get on the <em>list.</em></h2><div class="get-involved__prose"><p>
+The watchlist is starting small and opening in stages. <strong>Get on the list for access</strong> as it
+            expands across subgenres and to a wider group of readers.
+</p><p><strong>Writers, published, drafting, or thinking about starting, we want to talk to more of you.</strong> 
+In exchange for the conversation, <em>we'll build you a custom report</em> — either a historical analysis
+            of an author whose career you're studying, or a multi-source tracking report on your specific subgenre.
+            We'll reach out to collect more information as we have capacity.
+</p></div><div class="get-involved__form-wrap"><form class="gi-form" id="get-involved-form"><div class="gi-field"><label for="gi-email">Email</label><input type="email" id="gi-email" name="email" required autocomplete="email" inputmode="email" spellcheck="false" placeholder="signal@threnne.com"></div><fieldset class="gi-field gi-field--interests" id="gi-interests" aria-required="true"><legend>What are you interested in?</legend><label class="gi-check"><input type="checkbox" name="interestWatchlist" value="1"><span class="gi-check__text"><strong>Full watchlist access</strong>
+The watchlist tracks romance titles week-over-week across Goodreads, Amazon BSR, Wikipedia, news, and
+                  more.
+</span></label><label class="gi-check"><input type="checkbox" name="interestWriter" value="1"><span class="gi-check__text"><strong>A writer conversation (custom report)</strong>
+Published, drafting, or thinking about starting.
+</span></label><p class="gi-field-error" id="gi-interests-error" hidden role="alert">
+Select at least one interest.
+</p></fieldset><button type="submit" class="gi-submit" id="gi-submit">
+let us know you're interested
+</button><p class="gi-status" id="gi-status" hidden role="status" aria-live="polite"></p></form></div></div></section><script src="../js/get-involved.js" defer></script> </div>  <footer class="foot"> <div class="wrap foot__in"> <div> <a href="../index.html" class="brand" aria-label="Romance Signal by Threnne home"> <span class="brand__word">romance <span class="brand__sig">s</span>ignal</span> <span class="brand__by">by threnne</span> </a> <p class="foot__tag">Built for writers, readers, and the people watching romance from the inside. Slow, careful, curious.</p> </div> <div class="foot__cols"> <div class="foot__col"> <h4>Research</h4> <a href="../watchlist/index.html">watchlist</a> <a href="./index.html">volumes</a> <a href="../background/index.html">background</a> </div> <div class="foot__col"> <h4>Methods</h4> <a href="../methodology/index.html">methodology</a> </div> <div class="foot__col"> <h4>Contact</h4> <a href="../index.html#get-involved">let us know you're interested</a> <a href="mailto:signal@threnne.com">signal@threnne.com</a> </div> </div> </div> <div class="wrap foot__bottom"> <span>© 2026 Romance Signal · A Threnne project</span> <span>signal@threnne.com</span> </div> </footer>  </div> <script>
+      (function () {
+        const root = document.documentElement;
+        const btn = document.getElementById('themeToggle');
+        if (!btn) return;
+        let current = root.getAttribute('data-theme') || 'dark';
+        btn.addEventListener('click', () => {
+          current = current === 'dark' ? 'light' : 'dark';
+          root.setAttribute('data-theme', current);
+          try {
+            localStorage.setItem('rs-theme', current);
+          } catch (e) {}
+          btn.setAttribute(
+            'aria-label',
+            'Switch to ' + (current === 'dark' ? 'light' : 'dark') + ' mode',
+          );
+        });
+      })();
+    </script> </body> </html>

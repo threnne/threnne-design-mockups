@@ -1,11 +1,10 @@
 <!doctype html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
   <head>
 <base href="/romancesignal/" />
-<meta name="robots" content="noindex" />
-<meta charset="utf-8" />
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Romance Signal · Design System</title>
+    <title>Romance Signal — Design System</title>
     <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
     <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
     <link href="https://api.fontshare.com/v2/css?f[]=satoshi@500,600,700,900&display=swap" rel="stylesheet" />
@@ -16,7 +15,7 @@
     <link rel="stylesheet" href="./css/base.css" />
     <link rel="stylesheet" href="./css/style.css" />
     <style>
-      /* Showcase layout only, not part of the product design system */
+      /* Showcase layout only — not part of the product design system */
       .ds-page {
         padding-bottom: var(--space-16);
       }
@@ -132,14 +131,12 @@
         const saved = localStorage.getItem('rs-theme');
         if (saved === 'light' || saved === 'dark') {
           document.documentElement.setAttribute('data-theme', saved);
-        } else {
-          document.documentElement.setAttribute('data-theme', 'dark');
         }
       } catch (e) {}
     </script>
   </head>
   <body class="ds-page">
-<div class="container">
+    <div class="container">
       <div class="ds-toolbar">
         <span class="chip chip--ghost">Design system preview</span>
         <button type="button" class="btn btn--secondary" id="themeToggle" aria-label="Toggle theme">
@@ -152,7 +149,7 @@
         <h1>Design system</h1>
         <p>
           Tokens and UI primitives for the marketing site and insights reports. CoinMarketCap-inspired:
-          dense, colorful, romance-accent magenta. There is no separate npm package; everything lives in
+          dense, colorful, romance-accent magenta. There is no separate npm package — everything lives in
           plain CSS.
         </p>
         <p class="ds-hero__meta">
@@ -200,7 +197,7 @@
             <span class="ds-type-sample__meta">--text-xl</span>
           </div>
           <div class="ds-type-sample">
-            <span style="font-size: var(--text-base)">Body base: live signals from eight sources.</span>
+            <span style="font-size: var(--text-base)">Body base — live signals from eight sources.</span>
             <span class="ds-type-sample__meta">--text-base</span>
           </div>
           <div class="ds-type-sample">
@@ -213,7 +210,7 @@
       <!-- Buttons & chips -->
       <section class="ds-section" id="actions">
         <h2 class="ds-section__title">Buttons & chips</h2>
-        <p class="ds-section__desc">From <code>style.css</code>: <code>.btn</code>, <code>.chip</code>.</p>
+        <p class="ds-section__desc">From <code>style.css</code> — <code>.btn</code>, <code>.chip</code>.</p>
         <div class="ds-row" style="margin-bottom: var(--space-4)">
           <button type="button" class="btn btn--primary">Primary</button>
           <button type="button" class="btn btn--secondary">Secondary</button>
@@ -372,7 +369,7 @@
       <section class="ds-section">
         <h2 class="ds-section__title">Also in the repo</h2>
         <p class="ds-section__desc">
-          <code>site/public/css/style-pages.css</code>: shared marketing utilities (loaded via
+          <code>site/public/css/style-pages.css</code> — shared marketing utilities (loaded via
           <code>MarketingLayout.astro</code>). Page-specific sheets:
           <code>home-marketing.css</code>, <code>methodology-page.css</code>, <code>watchlist</code> styles in
           <code>style.css</code>, etc.
@@ -385,7 +382,7 @@
         const root = document.documentElement;
         const btn = document.getElementById('themeToggle');
         if (!btn) return;
-        let current = root.getAttribute('data-theme') || 'dark';
+        let current = root.getAttribute('data-theme') || 'light';
         btn.addEventListener('click', () => {
           current = current === 'dark' ? 'light' : 'dark';
           root.setAttribute('data-theme', current);

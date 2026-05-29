@@ -499,7 +499,7 @@
   flex-shrink: 0;
 }
 .tier__features li.disabled { color: var(--color-text-faint); }
-.tier__features li.disabled::before { content: "–"; color: var(--color-text-faint); }
+.tier__features li.disabled::before { content: "—"; color: var(--color-text-faint); }
 .tier__cta { width: 100%; }
 
 /* ---------- ABOUT ---------- */

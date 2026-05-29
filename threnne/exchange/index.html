@@ -1,7 +1,5 @@
 <!DOCTYPE html><html lang="en" data-theme="dark" data-brand="threnne"> <head>
-<base href="/threnne/exchange/" />
-<meta name="robots" content="noindex" />
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="A romance-specific beta reader exchange. Matched by subgenre and heat level. Join the waitlist for early access."><title>The Exchange · Threnne</title><script>
+<base href="/threnne/exchange/" /><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="A romance-specific beta reader exchange. Matched by subgenre and heat level. Join the waitlist for early access."><title>The Exchange · Threnne</title><script>
       (() => {
         try {
           const saved = localStorage.getItem('threnne-theme');
@@ -12,162 +10,23 @@
           }
         } catch (e) {}
       })();
-    </script><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300..700&family=JetBrains+Mono:wght@400;500&display=swap"><link rel="stylesheet" href="../brand/threnne-legacy.css"><link rel="icon" type="image/svg+xml" href="../favicon.svg"><link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="../favicon-16.png"><link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png"><link rel="manifest" href="../manifest.webmanifest"><meta name="theme-color" content="#0C0F1F" media="(prefers-color-scheme: dark)"><meta name="theme-color" content="#FAFAF7" media="(prefers-color-scheme: light)"><style>.exchange-field[data-astro-cid-dwrss3ym]{margin:0 0 1rem;padding:0;border:none}.exchange-field--role[data-astro-cid-dwrss3ym]{border:1px solid transparent;border-radius:8px;transition:border-color .15s ease}.exchange-field--role[data-astro-cid-dwrss3ym].exchange-field--invalid{border-color:#ffb4b48c;padding:.55rem}.exchange-input[data-astro-cid-dwrss3ym]:focus{outline:none;border-color:var(--primary)}.exchange-choices[data-astro-cid-dwrss3ym]{display:grid;gap:.55rem}.exchange-choice[data-astro-cid-dwrss3ym]{display:flex;gap:.75rem;align-items:flex-start;padding:.75rem .85rem;background:color-mix(in oklab,var(--ground) 84%,transparent);border:1px solid color-mix(in oklab,var(--pink) 30%,transparent);border-radius:var(--radius-md);cursor:pointer;transition:border-color .15s ease,background .15s ease}.exchange-choice[data-astro-cid-dwrss3ym]:hover{border-color:color-mix(in oklab,var(--pink) 55%,transparent)}.exchange-choice[data-astro-cid-dwrss3ym]:has(input:checked){border-color:var(--primary);background:color-mix(in oklab,var(--ground) 72%,transparent)}.exchange-choice[data-astro-cid-dwrss3ym] input[data-astro-cid-dwrss3ym]{margin-top:.2rem;flex-shrink:0;accent-color:var(--primary)}.exchange-choice__text[data-astro-cid-dwrss3ym]{display:grid;gap:.15rem;font-size:.875rem;line-height:1.45;color:var(--text-dim)}.exchange-choice__text[data-astro-cid-dwrss3ym] strong[data-astro-cid-dwrss3ym]{font-weight:500;color:var(--text)}.exchange-submit[data-astro-cid-dwrss3ym]:hover:not(:disabled){opacity:.9}.exchange-submit[data-astro-cid-dwrss3ym]:disabled{opacity:.7;cursor:not-allowed}
-</style>
-<link rel="stylesheet" href="../_astro/exchange.DJ2gNUxa.css">
-<style>
-/* ============================================================
-   The Exchange  refresh (v3)  brand-consistent with home
-   ============================================================ */
-/* Theme-aware, larger logo (matches home) */
-.site-logo{display:inline-flex;align-items:center}
-.site-logo__wordmark{height:2.05rem;width:auto}
-.logo-dark{display:none}.logo-light{display:inline-block}
-[data-theme="dark"] .logo-dark{display:inline-block}
-[data-theme="dark"] .logo-light{display:none}
-@media(prefers-color-scheme:dark){html:not([data-theme="light"]) .logo-dark{display:inline-block}html:not([data-theme="light"]) .logo-light{display:none}}
-@media(prefers-color-scheme:light){html:not([data-theme="dark"]) .logo-light{display:inline-block}html:not([data-theme="dark"]) .logo-dark{display:none}}
-
-/* Matching / credits product mockup (toggleable demo) */
-.xc-demo{margin-top:2rem;display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(1.25rem,3vw,2.5rem);align-items:center}
-@media(max-width:780px){.xc-demo{grid-template-columns:1fr;gap:1.75rem}}
-.xc-match{border:1px solid var(--line);border-radius:var(--radius-lg);background:var(--ground-mid);overflow:hidden;box-shadow:0 18px 48px -26px rgba(0,0,0,.55)}
-.xc-match__head{display:flex;justify-content:space-between;align-items:center;gap:.75rem;padding:.85rem 1rem;border-bottom:1px solid var(--line);font-family:var(--font-mono);font-size:.68rem;letter-spacing:.07em;text-transform:uppercase;color:var(--text-dim)}
-.xc-match__credits{display:inline-flex;align-items:center;gap:.4rem;color:var(--pink)}
-.xc-match__credits b{font-weight:600;color:var(--text)}
-.xc-match__dot{width:6px;height:6px;border-radius:50%;background:var(--pink);display:inline-block}
-.xc-match__row{display:grid;grid-template-columns:1fr auto;gap:.75rem;align-items:center;padding:.85rem 1rem;border-bottom:1px solid var(--line)}
-.xc-match__row:last-child{border-bottom:none}
-.xc-match__title{font-size:.95rem;font-weight:600}
-.xc-match__meta{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.45rem}
-.xc-tag{font-family:var(--font-mono);font-size:.62rem;letter-spacing:.04em;text-transform:uppercase;padding:.18rem .5rem;border-radius:999px;border:1px solid var(--line-strong);color:var(--text-dim)}
-.xc-tag--heat{border-color:color-mix(in oklab,var(--pink) 45%,var(--line-strong));color:var(--pink)}
-.xc-tag--genre{border-color:color-mix(in oklab,var(--teal) 45%,var(--line-strong));color:var(--teal)}
-.xc-match__action{font-family:var(--font-mono);font-size:.66rem;letter-spacing:.05em;text-transform:uppercase;white-space:nowrap;padding:.42rem .7rem;border-radius:999px;border:1px solid var(--pink);color:var(--pink);background:transparent}
-.xc-match__action--earn{border-color:var(--pink);color:#fff;background:var(--pink-bg)}
-.xc-match__bar{display:flex;align-items:center;gap:.6rem;padding:.8rem 1rem;background:color-mix(in oklab,var(--ground) 80%,var(--pink-soft));font-family:var(--font-mono);font-size:.66rem;letter-spacing:.05em;text-transform:uppercase;color:var(--text-dim)}
-.xc-match__progress{flex:1;height:5px;border-radius:999px;background:var(--line);overflow:hidden}
-.xc-match__progress span{display:block;height:100%;width:62%;background:var(--pink)}
-.xc-demo__note{font-family:var(--font-mono);font-size:.72rem;letter-spacing:.05em;text-transform:uppercase;color:var(--text-faint);margin-top:1rem}
-
-/* ============================================================
-   Pink rebalance (v3) - teal + neutral do the work,
-   pink reserved for hero + conversion moments only
-   ============================================================ */
-/* Default section highlights -> teal; eyebrow dots -> teal */
-#exchange-main .section-title em{color:var(--teal)}
-#exchange-main .eyebrow:before{background:var(--teal)}
-/* Hero headline emphasis stays pink (the one hero moment) */
-#exchange-main .hero-title em{color:var(--pink)}
-
-/* "The practice" card region uses default neutral surfaces already */
-/* First surface-card (no genre-native exchange) -> neutral, teal accent */
-.xc-surface--neutral{border-color:var(--line-strong) !important;background:var(--ground-mid) !important}
-.xc-surface--neutral .eyebrow--signal:before{background:var(--teal)}
-.xc-surface--neutral .section-title em{color:var(--teal)}
-
-/* Waitlist card + its emphasis keep pink (conversion) */
-#exchange-waitlist .surface-card{border-color:color-mix(in oklab,var(--pink) 32%,transparent)}
-#exchange-waitlist .eyebrow:before{background:var(--pink)}
-#exchange-waitlist .section-title em{color:var(--pink)}
-
-/* Form: neutral borders + teal focus; pink only on submit + selected choice */
-.exchange-form{border-color:var(--line-strong) !important}
-.exchange-input[data-astro-cid-dwrss3ym]{border-color:var(--line-strong) !important}
-.exchange-input[data-astro-cid-dwrss3ym]:focus{border-color:var(--teal) !important}
-.exchange-choice[data-astro-cid-dwrss3ym]{border-color:var(--line-strong) !important;background:color-mix(in oklab,var(--ground) 80%,transparent) !important}
-.exchange-choice[data-astro-cid-dwrss3ym]:hover{border-color:color-mix(in oklab,var(--teal) 55%,transparent) !important}
-.exchange-choice[data-astro-cid-dwrss3ym]:has(input:checked){border-color:var(--pink) !important}
-
-/* Content uses container-wide (72rem) to align with nav.
-   Cap prose measure (loose) and balance wraps so emphasis phrases
-   never get stranded at the right edge. */
-#exchange-main .hero-title{max-width:22ch;text-wrap:balance}
-#exchange-main .section-title{max-width:32ch;text-wrap:balance}
-#exchange-main .hero-copy,#exchange-main .section-copy{max-width:56ch}
-
-/* Full-width sections: the practice title + the market-gap statement.
-   #exchange-main prefix is required to beat the id-level caps above. */
-#exchange-main .section--practice .section-title{max-width:none;text-wrap:pretty}
-#exchange-main .section--practice .section-copy{max-width:none}
-#exchange-main .section--gap .section-title{max-width:none;text-wrap:pretty;font-size:clamp(1.7rem,3.4vw,2.9rem);line-height:1.15}
-#exchange-main .section--gap .section-copy{max-width:none}
-
-/* The market-gap statement reads as a full-width hero moment */
-.section--gap{padding-top:1rem;padding-bottom:1rem}
-.section--gap .xc-surface--neutral{padding:clamp(2rem,4vw,3.5rem)}
-
-/* ============================================================
-   Warm acid accent (the lime) - a deliberate third color.
-   Used for the human/community moments: "The practice"
-   (the reader) and "Two audiences" (the people). Pink stays
-   for conversion, teal for the system mechanics.
-   ============================================================ */
-/* "The practice" - the romance reader is a warm, human note */
-#exchange-main .section--practice .eyebrow:before{background:var(--acid)}
-#exchange-main .section--practice .section-title em{color:var(--acid)}
-#exchange-main .section--practice .section-copy strong{color:var(--acid)}
-/* "Two audiences" - the people on both sides */
-#exchange-main .section--people .eyebrow:before{background:var(--acid)}
-#exchange-main .section--people .section-title em{color:var(--acid)}
-#exchange-main .section--people .story-card__label{color:var(--acid)}
-#exchange-main .section--people .story-card{border-color:color-mix(in oklab,var(--acid) 26%,transparent)}
-
-/* ============================================================
-   Responsive / mobile
-   ============================================================ */
-@media(max-width:680px){
-  #exchange-main .hero-title{font-size:clamp(2.1rem,9vw,3rem);line-height:1.12;max-width:none}
-  #exchange-main .section-title{font-size:clamp(1.5rem,6.5vw,2.1rem);line-height:1.18;max-width:none}
-  #exchange-main .hero-copy,#exchange-main .section-copy{max-width:none}
-  .section--gap .section-title{font-size:clamp(1.5rem,6.5vw,2.1rem)}
-  /* let bound emphasis phrases break naturally on narrow screens */
-  #exchange-main .hero-title em,#exchange-main .section-title em{white-space:normal}
-}
-
-/* Mockup: earn buttons -> teal; keep credits, heat tag + progress pink */
-.xc-match__action{border-color:var(--teal) !important;color:var(--teal) !important}
-.xc-match__action--earn{border-color:var(--teal) !important;color:#fff !important;background:color-mix(in oklab,var(--teal) 78%,#000) !important}
-.xc-match__bar{background:color-mix(in oklab,var(--ground) 84%,var(--ground-mid)) !important}
-.xc-match__progress span{background:var(--teal) !important}
-</style></head> <body>
-<a class="skip-link" href="#main-content">Skip to main content</a>  <header class="site-nav-wrap"> <nav class="site-nav container-wide" aria-label="Primary"> <a href="../index.html" class="site-logo" aria-label="Threnne home"> <img class="site-logo__wordmark logo-light" src="../brand/threnne-wordmark-light-nnpink.svg" alt="Threnne" height="26"> <img class="site-logo__wordmark logo-dark" src="../brand/threnne-wordmark-dark-nnpink.svg" alt="Threnne" aria-hidden="true" height="26"> </a> <div class="site-nav__links"> <a href="https://romancesignal.com" class="site-nav__link">Research</a> <a href="./" class="site-nav__link is-active" aria-current="page">Beta Readers</a> <a href="../index.html#join" class="site-nav__cta">Get Updates</a> </div> </nav> </header> <main id="exchange-main"> <section class="section"> <div class="container-wide"> <p class="eyebrow">Threnne · The Exchange · In progress</p> <h1 class="hero-title">Finding beta readers for romance is <em>harder&nbsp;than&nbsp;it&nbsp;should&nbsp;be.</em></h1> <p class="hero-copy">
+    </script><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300..700&family=JetBrains+Mono:wght@400;500&display=swap"><link rel="stylesheet" href="../brand/threnne-legacy.css"><link rel="icon" type="image/svg+xml" href="../favicon.svg"><link rel="icon" type="image/png" sizes="32x32" href="../favicon-32-light.png"><link rel="icon" type="image/png" sizes="16x16" href="../favicon-16-light.png"><link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png"><link rel="manifest" href="../manifest.webmanifest"><meta name="theme-color" content="#0C0F1F" media="(prefers-color-scheme: dark)"><meta name="theme-color" content="#FAFAF7" media="(prefers-color-scheme: light)"><link rel="stylesheet" href="../_astro/exchange.pGRn7W-V.css">
+<link rel="stylesheet" href="../_astro/exchange.BzO5nIA6.css"></head> <body> <a class="skip-link" href="#main-content">Skip to main content</a>  <header class="site-nav-wrap"> <nav class="site-nav container-wide" aria-label="Primary"> <a href="../index.html" class="site-logo" aria-label="Threnne home"> <img class="site-logo__wordmark logo-light" src="../brand/threnne-wordmark-light-nnpink.svg" alt="Threnne" height="26"> <img class="site-logo__wordmark logo-dark" src="../brand/threnne-wordmark-dark-nnpink.svg" alt="Threnne" aria-hidden="true" height="26"> </a> <div class="site-nav__links"> <a href="../index.html#romance-signal" class="site-nav__link">Research</a> <a href="./" class="site-nav__link is-active" aria-current="page">
+Beta Readers
+</a> <a href="../index.html#join" class="site-nav__cta">Get Updates</a> </div> </nav> </header> <main id="main-content" class="exchange-page"> <section class="section"> <div class="container-wide"> <p class="eyebrow">Threnne · The Exchange · In progress</p> <h1 class="hero-title">Finding beta readers for romance is <em>harder&nbsp;than&nbsp;it&nbsp;should&nbsp;be.</em></h1> <p class="hero-copy">
 Writers reading writers. Readers reading writers. Matched well, you finish a better book.
           Matched badly, you lose a year.
 </p> </div> </section> <section class="section section--tight section--practice"> <div class="container-wide"> <p class="eyebrow">The practice</p> <h2 class="section-title">A romance manuscript needs <em>a romance reader.</em></h2> <p class="section-copy">
 General writing communities are generous, but not always genre-aware. Romance has specific promises:
-          <strong>HEA, heat expectations, and trope fluency.</strong>
-</p> <p class="section-copy">
+<strong>HEA, heat expectations, and trope fluency.</strong> </p> <p class="section-copy">
 The right reader understands those promises and can tell you whether the book is delivering on them.
 </p> </div> </section> <section class="section section--tight"> <div class="container-wide"> <p class="eyebrow">How it works</p> <h2 class="section-title">Reciprocal, <em>by design.</em></h2> <p class="section-copy">
 Earn credits by reading, or buy credits directly. In both paths, matching and quality standards stay the same.
-</p>
-<!-- XC-DEMO-START : embedded matching/credits product mockup -->
-<div class="xc-demo" data-xc-demo>
-  <div class="xc-match" aria-hidden="true">
-    <div class="xc-match__head"><span>Your matches</span><span class="xc-match__credits"><span class="xc-match__dot"></span><b>12,400</b>&nbsp;credits</span></div>
-    <div class="xc-match__row">
-      <div><div class="xc-match__title">Enemies-to-lovers, hockey romance</div><div class="xc-match__meta"><span class="xc-tag xc-tag--genre">Sports romance</span><span class="xc-tag xc-tag--heat">Heat 4</span><span class="xc-tag">62k words</span></div></div>
-      <button class="xc-match__action xc-match__action--earn" type="button">Read to earn</button>
-    </div>
-    <div class="xc-match__row">
-      <div><div class="xc-match__title">Small-town second chance</div><div class="xc-match__meta"><span class="xc-tag xc-tag--genre">Contemporary</span><span class="xc-tag xc-tag--heat">Heat 2</span><span class="xc-tag">48k words</span></div></div>
-      <button class="xc-match__action xc-match__action--earn" type="button">Read to earn</button>
-    </div>
-    <div class="xc-match__row">
-      <div><div class="xc-match__title">Your manuscript: Faking the Faceoff</div><div class="xc-match__meta"><span class="xc-tag xc-tag--genre">Sports romance</span><span class="xc-tag xc-tag--heat">Heat 4</span><span class="xc-tag">2 readers matched</span></div></div>
-      <button class="xc-match__action" type="button">In review</button>
-    </div>
-    <div class="xc-match__bar"><span>Next read</span><span class="xc-match__progress"><span></span></span><span>3,100 / 5,000 words</span></div>
-  </div>
-  <div>
-    <p class="section-copy">Credits are word-for-word. Read 5,000 words of someone else's manuscript and earn 5,000 words of feedback on your own. Matching is anonymous and genre-native, so a hockey-romance draft lands with readers who know the subgenre's promises.</p>
-    <p class="xc-demo__note">Preview of the matching dashboard, in development</p>
-  </div>
-</div>
-<!-- XC-DEMO-END -->
-<div class="story-grid" style="margin-top:2rem"> <article class="story-card"> <p class="story-card__label">Read to earn</p> <h3 class="story-card__title">Word-for-word credits</h3> <p class="story-card__copy">A 5,000-word review earns 5,000 words of feedback on your own manuscript.</p> </article> <article class="story-card"> <p class="story-card__label">Buy in</p> <h3 class="story-card__title">Skip the reciprocal lane</h3> <p class="story-card__copy">Pay a per-word rate if you want feedback without doing review work first.</p> </article> <article class="story-card"> <p class="story-card__label">Matched for fit</p> <h3 class="story-card__title">Subgenre and heat-level matching</h3> <p class="story-card__copy">Anonymous by default, with moderation before feedback reaches writers.</p> </article> </div> </div> </section> <section class="section section--tight section--people"> <div class="container-wide"> <p class="eyebrow">Two sides</p> <h2 class="section-title">Two audiences. <em>Same system.</em></h2> <div class="story-grid"> <article class="story-card"> <p class="story-card__label">Writers</p> <h3 class="story-card__title">Feedback that gets the book</h3> <p class="story-card__copy">Get reads from people who understand your subgenre, tone, and heat promises.</p> </article> <article class="story-card"> <p class="story-card__label">Readers</p> <h3 class="story-card__title">Just here for the reading</h3> <p class="story-card__copy">Read early manuscripts, leave useful notes, and collect credits as you go.</p> </article> </div> </div> </section> <section class="section section--tight section--gap"> <div class="container-wide"> <div class="surface-card xc-surface--neutral"> <p class="eyebrow eyebrow--signal">Threnne</p> <h2 class="section-title">The exchanges that exist are built for every genre at once. None are built around romance's subgenres and heat levels. <em>We are making the one that is.</em></h2> <p class="section-copy">We are matching manually while the platform is built underneath. Early access opens in rounds.</p> </div> </div> </section> <section class="section" id="exchange-waitlist"> <div class="container-wide"> <div class="surface-card"> <p class="eyebrow">The Exchange</p> <h2 class="section-title" id="exchange-signup-heading">Join the waitlist for our <em>beta&nbsp;program.</em></h2> <p class="product-card__meta" style="margin-top:0.6rem;margin-bottom:1rem;">One note when your round opens. No drip.</p> <form class="exchange-form" id="exchange-signup-form" aria-labelledby="exchange-signup-heading" data-astro-cid-dwrss3ym> <div class="exchange-field" data-astro-cid-dwrss3ym> <label class="exchange-label" for="exchange-email" data-astro-cid-dwrss3ym>Email</label> <input type="email" id="exchange-email" name="email" class="exchange-input" placeholder="your@email.com" required autocomplete="email" data-astro-cid-dwrss3ym> </div> <fieldset class="exchange-field exchange-field--role" id="exchange-role-group" data-astro-cid-dwrss3ym> <legend class="exchange-legend" data-astro-cid-dwrss3ym>How do you want to participate?</legend> <div class="exchange-choices" data-astro-cid-dwrss3ym> <label class="exchange-choice" data-astro-cid-dwrss3ym> <input type="radio" name="role" value="reader" data-astro-cid-dwrss3ym> <span class="exchange-choice__text" data-astro-cid-dwrss3ym> <strong data-astro-cid-dwrss3ym>Beta read for others</strong> <span data-astro-cid-dwrss3ym>I want to read and give feedback on someone else's romance manuscript.</span> </span> </label> <label class="exchange-choice" data-astro-cid-dwrss3ym> <input type="radio" name="role" value="writer" data-astro-cid-dwrss3ym> <span class="exchange-choice__text" data-astro-cid-dwrss3ym> <strong data-astro-cid-dwrss3ym>Get my work beta read</strong> <span data-astro-cid-dwrss3ym>I have a draft and want matched readers in my subgenre.</span> </span> </label> <label class="exchange-choice" data-astro-cid-dwrss3ym> <input type="radio" name="role" value="both" data-astro-cid-dwrss3ym> <span class="exchange-choice__text" data-astro-cid-dwrss3ym> <strong data-astro-cid-dwrss3ym>Open to both</strong> <span data-astro-cid-dwrss3ym>I write and I'm willing to read for others too.</span> </span> </label> </div> <p class="exchange-field-error" id="exchange-role-error" hidden role="alert" data-astro-cid-dwrss3ym>
+</p> <div class="xc-demo" data-xc-demo> <div class="xc-match" aria-hidden="true"> <div class="xc-match__head"> <span>Your matches</span> <span class="xc-match__credits"><span class="xc-match__dot"></span><b>12,400</b>&nbsp;credits</span> </div> <div class="xc-match__row"> <div> <div class="xc-match__title">Enemies-to-lovers, hockey romance</div> <div class="xc-match__meta"> <span class="xc-tag xc-tag--genre">Sports romance</span> <span class="xc-tag xc-tag--heat">Heat 4</span> <span class="xc-tag">62k words</span> </div> </div> <button class="xc-match__action xc-match__action--earn" type="button">Read to earn</button> </div> <div class="xc-match__row"> <div> <div class="xc-match__title">Small-town second chance</div> <div class="xc-match__meta"> <span class="xc-tag xc-tag--genre">Contemporary</span> <span class="xc-tag xc-tag--heat">Heat 2</span> <span class="xc-tag">48k words</span> </div> </div> <button class="xc-match__action xc-match__action--earn" type="button">Read to earn</button> </div> <div class="xc-match__row"> <div> <div class="xc-match__title">Your manuscript: Faking the Faceoff</div> <div class="xc-match__meta"> <span class="xc-tag xc-tag--genre">Sports romance</span> <span class="xc-tag xc-tag--heat">Heat 4</span> <span class="xc-tag">2 readers matched</span> </div> </div> <button class="xc-match__action" type="button">In review</button> </div> <div class="xc-match__bar"> <span>Next read</span> <span class="xc-match__progress"><span></span></span> <span>3,100 / 5,000 words</span> </div> </div> <div> <p class="section-copy">
+Credits are word-for-word. Read 5,000 words of someone else's manuscript and earn 5,000 words of feedback on your own. Matching is anonymous and genre-native, so a hockey-romance draft lands with readers who know the subgenre's promises.
+</p> <p class="xc-demo__note">Preview of the matching dashboard, in development</p> </div> </div> <div class="story-grid" style="margin-top:2rem"> <article class="story-card"> <p class="story-card__label">Read to earn</p> <h3 class="story-card__title">Word-for-word credits</h3> <p class="story-card__copy">A 5,000-word review earns 5,000 words of feedback on your own manuscript.</p> </article> <article class="story-card"> <p class="story-card__label">Buy in</p> <h3 class="story-card__title">Skip the reciprocal lane</h3> <p class="story-card__copy">Pay a per-word rate if you want feedback without doing review work first.</p> </article> <article class="story-card"> <p class="story-card__label">Matched for fit</p> <h3 class="story-card__title">Subgenre and heat-level matching</h3> <p class="story-card__copy">Anonymous by default, with moderation before feedback reaches writers.</p> </article> </div> </div> </section> <section class="section section--tight section--people"> <div class="container-wide"> <p class="eyebrow">Two sides</p> <h2 class="section-title">Two audiences. <em>Same system.</em></h2> <div class="story-grid"> <article class="story-card"> <p class="story-card__label">Writers</p> <h3 class="story-card__title">Feedback that gets the book</h3> <p class="story-card__copy">Get reads from people who understand your subgenre, tone, and heat promises.</p> </article> <article class="story-card"> <p class="story-card__label">Readers</p> <h3 class="story-card__title">Just here for the reading</h3> <p class="story-card__copy">Read early manuscripts, leave useful notes, and collect credits as you go.</p> </article> </div> </div> </section> <section class="section section--tight section--gap"> <div class="container-wide"> <div class="surface-card xc-surface--neutral"> <p class="eyebrow eyebrow--signal">Threnne</p> <h2 class="section-title">
+The exchanges that exist are built for every genre at once. None are built around romance's subgenres and heat levels. <em>We are making the one that is.</em> </h2> <p class="section-copy">We are matching manually while the platform is built underneath. Early access opens in rounds.</p> </div> </div> </section> <section class="section" id="exchange-waitlist"> <div class="container-wide"> <div class="surface-card"> <p class="eyebrow">The Exchange</p> <h2 class="section-title" id="exchange-signup-heading">Join the waitlist for our <em>beta&nbsp;program.</em></h2> <p class="product-card__meta" style="margin-top:0.6rem;margin-bottom:1rem;">One note when your round opens. No drip.</p> <form class="exchange-form" id="exchange-signup-form" aria-labelledby="exchange-signup-heading" data-astro-cid-dwrss3ym> <div class="exchange-field" data-astro-cid-dwrss3ym> <label class="exchange-label" for="exchange-email" data-astro-cid-dwrss3ym>Email</label> <input type="email" id="exchange-email" name="email" class="exchange-input" placeholder="your@email.com" required autocomplete="email" data-astro-cid-dwrss3ym> </div> <fieldset class="exchange-field exchange-field--role" id="exchange-role-group" data-astro-cid-dwrss3ym> <legend class="exchange-legend" data-astro-cid-dwrss3ym>How do you want to participate?</legend> <div class="exchange-choices" data-astro-cid-dwrss3ym> <label class="exchange-choice" data-astro-cid-dwrss3ym> <input type="radio" name="role" value="reader" data-astro-cid-dwrss3ym> <span class="exchange-choice__text" data-astro-cid-dwrss3ym> <strong data-astro-cid-dwrss3ym>Beta read for others</strong> <span data-astro-cid-dwrss3ym>I want to read and give feedback on someone else's romance manuscript.</span> </span> </label> <label class="exchange-choice" data-astro-cid-dwrss3ym> <input type="radio" name="role" value="writer" data-astro-cid-dwrss3ym> <span class="exchange-choice__text" data-astro-cid-dwrss3ym> <strong data-astro-cid-dwrss3ym>Get my work beta read</strong> <span data-astro-cid-dwrss3ym>I have a draft and want matched readers in my subgenre.</span> </span> </label> <label class="exchange-choice" data-astro-cid-dwrss3ym> <input type="radio" name="role" value="both" data-astro-cid-dwrss3ym> <span class="exchange-choice__text" data-astro-cid-dwrss3ym> <strong data-astro-cid-dwrss3ym>Open to both</strong> <span data-astro-cid-dwrss3ym>I write and I'm willing to read for others too.</span> </span> </label> </div> <p class="exchange-field-error" id="exchange-role-error" hidden role="alert" data-astro-cid-dwrss3ym>
 Please pick how you want to participate.
-</p> </fieldset> <button type="submit" class="exchange-submit" aria-live="polite" data-astro-cid-dwrss3ym>Join the waitlist &rarr;</button> <p class="exchange-status" id="exchange-form-status" hidden data-astro-cid-dwrss3ym></p> <p class="exchange-disclaimer" data-astro-cid-dwrss3ym>Romance-specific. Anonymous by default on both sides. Leave anytime.</p> </form>  <script type="module">const y=/^[^\s@]+@[^\s@]+\.[^\s@]+$/,p=new Set(["writer","reader","both"]);async function v(e){const r=e.email.trim().toLowerCase();if(!r||!y.test(r))return{ok:!1,error:"Please enter a valid email address."};if(!e.role||!p.has(e.role))return{ok:!1,error:"Please pick how you want to participate."};try{const t=await fetch("about:blank",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:r,role:e.role})}),o=await t.json().catch(()=>({}));return t.ok&&o.ok?{ok:!0}:{ok:!1,error:o.error||"Could not save your signup. Please try again."}}catch{return{ok:!1,error:"Could not reach the signup service. Please try again."}}}const n=document.getElementById("exchange-signup-form");if(!n)throw new Error("exchange-signup-form not found");const c=n.querySelector("#exchange-role-group"),l=n.querySelector("#exchange-role-error"),i=n.querySelectorAll('input[name="role"]');function b(){return n.querySelector('input[name="role"]:checked')?.value||""}function d(e,r,t){e&&(e.hidden=!1,e.dataset.kind=r,e.textContent=t,e.setAttribute("role",r==="error"?"alert":"status"))}function k(e){e&&(e.hidden=!0,e.textContent="",delete e.dataset.kind)}function f(){c?.classList.add("exchange-field--invalid"),c?.setAttribute("aria-invalid","true"),l&&(l.hidden=!1),i[0]?.focus()}function h(){c?.classList.remove("exchange-field--invalid"),c?.removeAttribute("aria-invalid"),l&&(l.hidden=!0)}i.forEach(e=>{e.addEventListener("change",()=>{e.checked&&h()})});n.addEventListener("submit",async e=>{e.preventDefault(),k(n.querySelector("#exchange-form-status")),h();const r=n.querySelector("#exchange-email"),t=n.querySelector(".exchange-submit"),o=n.querySelector("#exchange-form-status");if(!r||!t)return;const g=r.value.trim(),u=b(),m=t.innerHTML;if(!u){f();return}t.disabled=!0,r.disabled=!0,i.forEach(s=>{s.disabled=!0}),t.textContent="Sending…";const a=await v({email:g,role:u});if(a.ok){t.textContent="Thanks. We'll be in touch.",d(o,"success","You can leave the list anytime."),r.value="",i.forEach(s=>{s.checked=!1});return}if(t.innerHTML=m,t.disabled=!1,r.disabled=!1,i.forEach(s=>{s.disabled=!1}),a.error?.toLowerCase().includes("participat")||a.error?.toLowerCase().includes("role")){f();return}d(o,"error",a.error||"Could not save your signup. Please try again."),a.error?.toLowerCase().includes("email")&&r.focus()});</script> </div> </div> </section> </main> <footer class="site-footer"> <div class="container-wide"> <div class="site-footer__inner"> <div> <p class="site-footer__brand">Threnne</p> <p class="site-footer__tagline">
+</p> </fieldset> <button type="submit" class="exchange-submit" aria-live="polite" data-astro-cid-dwrss3ym>Join the waitlist &rarr;</button> <p class="exchange-status" id="exchange-form-status" hidden aria-live="polite" data-astro-cid-dwrss3ym></p> <p class="exchange-disclaimer" data-astro-cid-dwrss3ym>Romance-specific. Anonymous by default on both sides. Leave anytime.</p> </form>  <script type="module">const y=/^[^\s@]+@[^\s@]+\.[^\s@]+$/,p=new Set(["writer","reader","both"]);async function v(e){const t=e.email.trim().toLowerCase();if(!t||!y.test(t))return{ok:!1,error:"Please enter a valid email address."};if(!e.role||!p.has(e.role))return{ok:!1,error:"Please pick how you want to participate."};try{const r=await fetch("about:blank",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:t,role:e.role})}),o=await r.json().catch(()=>({}));return r.ok&&o.ok?{ok:!0}:{ok:!1,error:o.error||"Could not save your signup. Please try again."}}catch{return{ok:!1,error:"Could not reach the signup service. Please try again."}}}const n=document.getElementById("exchange-signup-form");if(!n)throw new Error("exchange-signup-form not found");const c=n.querySelector("#exchange-role-group"),u=n.querySelector("#exchange-role-error"),i=n.querySelectorAll('input[name="role"]');function S(){return n.querySelector('input[name="role"]:checked')?.value||""}function f(e,t,r){e&&(e.hidden=!1,e.dataset.kind=t,e.textContent=r,e.setAttribute("role",t==="error"?"alert":"status"))}function w(e){e&&(e.hidden=!0,e.textContent="",delete e.dataset.kind)}function x(e,t){n.classList.add("is-success"),t.classList.add("is-success"),t.textContent="You're on the waitlist",f(e,"success","We'll email you when your round opens. You can leave the list anytime.")}function d(){c?.classList.add("exchange-field--invalid"),c?.setAttribute("aria-invalid","true"),u&&(u.hidden=!1),i[0]?.focus()}function h(){c?.classList.remove("exchange-field--invalid"),c?.removeAttribute("aria-invalid"),u&&(u.hidden=!0)}i.forEach(e=>{e.addEventListener("change",()=>{e.checked&&h()})});n.addEventListener("submit",async e=>{e.preventDefault(),w(n.querySelector("#exchange-form-status")),h();const t=n.querySelector("#exchange-email"),r=n.querySelector(".exchange-submit"),o=n.querySelector("#exchange-form-status");if(!t||!r)return;const g=t.value.trim(),l=S(),m=r.innerHTML;if(!l){d();return}r.disabled=!0,t.disabled=!0,i.forEach(a=>{a.disabled=!0}),r.textContent="Sending…";const s=await v({email:g,role:l});if(s.ok){t.value="",i.forEach(a=>{a.checked=!1}),x(o,r);return}if(r.innerHTML=m,r.disabled=!1,t.disabled=!1,i.forEach(a=>{a.disabled=!1}),s.error?.toLowerCase().includes("participat")||s.error?.toLowerCase().includes("role")){d();return}f(o,"error",s.error||"Could not save your signup. Please try again."),s.error?.toLowerCase().includes("email")&&t.focus()});</script> </div> </div> </section> </main> <footer class="site-footer"> <div class="container-wide"> <div class="site-footer__inner"> <div> <p class="site-footer__brand">Threnne</p> <p class="site-footer__tagline">
 Built for writers, readers, and the people watching romance from the inside. Slow, careful, curious.
-</p> </div> <div> <p class="site-footer__label">The page</p> <ul class="site-footer__links"> <li><a href="../index.html#main-content">Home</a></li><li><a href="#exchange-waitlist">Join the waitlist</a></li><li><a href="./">How it works</a></li> </ul> </div> <div> <p class="site-footer__label">Reach us</p> <ul class="site-footer__links"> <li><a href="mailto:info@threnne.com">info@threnne.com</a></li> <li><a href="https://romancesignal.com">Romance Signal</a></li> <li><a href="./">The Exchange</a></li> </ul> </div> </div> <div class="site-footer__version"> <span>&copy; 2026 Threnne</span> <span>The Exchange · v3 · 2026-05-28</span> </div> </div> </footer>  </body></html>
+</p> </div> <div> <p class="site-footer__label">The page</p> <ul class="site-footer__links"> <li> <a href="../index.html#main-content"> Home </a> </li><li> <a href="#exchange-waitlist"> Join the waitlist </a> </li><li> <a href="./"> How it works </a> </li> </ul> </div> <div> <p class="site-footer__label">Reach us</p> <ul class="site-footer__links"> <li> <a href="mailto:info@threnne.com"> info@threnne.com </a> </li><li> <a href="https://romancesignal.com" target="_blank" rel="noopener noreferrer"> Romance Signal </a> </li><li> <a href="./"> The Exchange </a> </li> </ul> </div> </div> <div class="site-footer__version"> <span>&copy; 2026 Threnne</span> </div> </div> </footer>  </body></html>

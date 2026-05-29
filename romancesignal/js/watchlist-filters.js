@@ -1,5 +1,5 @@
 /**
- * Watchlist listing - text search + collapsible facet filters.
+ * Watchlist listing — text search + collapsible facet filters.
  */
 (function () {
   const panel = document.getElementById('wl-filters');
@@ -18,7 +18,7 @@
 
   /** @type {Record<string, 'single' | 'multi'>} */
   const controlTypes = {};
-  const facetRoot = filtersPanel || panel;
+  const facetRoot = panel;
   facetRoot.querySelectorAll('[data-filter-dimension]').forEach((group) => {
     const key = group.getAttribute('data-filter-dimension');
     const control = group.getAttribute('data-filter-control');
@@ -110,7 +110,7 @@
       select.value = typeof val === 'string' ? val : '';
     });
 
-    facetRoot.querySelectorAll('.wl-checkgrid input[type="checkbox"][data-dimension]').forEach((input) => {
+    facetRoot.querySelectorAll('.wl-checkgrid input[type="checkbox"][data-dimension], .wl-chips input[type="checkbox"][data-dimension]').forEach((input) => {
       const key = input.getAttribute('data-dimension');
       const value = input.getAttribute('data-value');
       if (!key || !value) return;
@@ -119,9 +119,7 @@
     });
 
     if (filtersToggle) {
-      const count = activeFilterCount();
-      const base = 'Filters';
-      filtersToggle.textContent = count > 0 ? `${base} (${count})` : base;
+      filtersToggle.classList.toggle('is-open', Boolean(filtersPanel && !filtersPanel.hidden));
     }
   }
 
@@ -129,7 +127,7 @@
     facetRoot.querySelectorAll('.wl-select[data-dimension]').forEach((select) => {
       select.value = '';
     });
-    facetRoot.querySelectorAll('.wl-checkgrid input[type="checkbox"]').forEach((input) => {
+    facetRoot.querySelectorAll('.wl-checkgrid input[type="checkbox"], .wl-chips input[type="checkbox"]').forEach((input) => {
       input.checked = false;
     });
     facetRoot.querySelectorAll('.wl-segment__btn[data-dimension]').forEach((btn) => {
@@ -144,6 +142,7 @@
     if (!filtersPanel || !filtersToggle) return;
     filtersPanel.hidden = !open;
     filtersToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    filtersToggle.classList.toggle('is-open', open);
   }
 
   function updateUrl() {
@@ -173,7 +172,7 @@
       const hasSearch = searchQuery.length > 0;
       const hasFacets = activeFilterCount() > 0;
       if (visible === totalBooks && !hasSearch && !hasFacets) {
-        statusEl.textContent = `Showing all ${totalBooks} books.`;
+        statusEl.textContent = `Showing all ${totalBooks} books · sorted by signal velocity`;
       } else {
         statusEl.textContent = `Showing ${visible} of ${totalBooks} books.`;
       }

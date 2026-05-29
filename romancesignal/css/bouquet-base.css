@@ -6,7 +6,7 @@
    Generated 2026-05-29 by merging identical rules across all 6 pages.
    ============================================================ */
 
-:root{--sage:#8FA88A; --sage-deep:#6E876A; --peony:#B25083; --peony-bright:#C4628F; --acid:#C9D862; --acid-deep:#B6C44F; --teal:#5DAD9F; --teal-deep:#4A9488; --pink:#DB4574; --bg:#0E0B0D; --bg-2:#151014; --surface:#1B141A; --surface-2:#241A24; --plum:#4A2545; --grid:rgba(143,168,138,0.10); --border:rgba(196,210,98,0.13); --border-strong:rgba(196,210,98,0.26); --text:#F3E6DC; --text-muted:#C4B6AE; --text-faint:#8E8079; --euc:var(--sage); --thistle:var(--acid); --font-display:'Satoshi','Inter',sans-serif; --font-body:'Inter','system-ui',sans-serif; --font-serif:'Spectral','Georgia',serif; --font-mono:'JetBrains Mono','ui-monospace',monospace; --maxw:1220px; --radius:10px;}
+:root{--sage:#8FA88A; --sage-deep:#6E876A; --peony:#B25083; --peony-bright:#C4628F; --acid:#C9D862; --acid-deep:#B6C44F; --teal:#5DAD9F; --teal-deep:#4A9488; --pink:#DB4574; --bg:#0E0B0D; --bg-2:#151014; --surface:#1B141A; --surface-2:#241A24; --plum:#4A2545; --grid:rgba(143,168,138,0.10); --border:rgba(196,210,98,0.13); --border-strong:rgba(196,210,98,0.26); --text:#F3E6DC; --text-muted:#C4B6AE; --text-faint:#8E8079; --euc:var(--sage); --thistle:var(--acid); --font-display:'Satoshi','Inter',sans-serif; --font-body:'Inter','system-ui',sans-serif; --font-serif:'Spectral','Georgia',serif; --font-mono:'JetBrains Mono','ui-monospace',monospace; --maxw:1200px; --radius:10px;}
 [data-theme="light"]{--bg:#F6F1EA; --bg-2:#EDE6DB; --surface:#FFFFFF; --surface-2:#F7F1E8; --plum:#E9DCE4; --grid:rgba(74,37,69,0.09); --border:rgba(74,37,69,0.14); --border-strong:rgba(74,37,69,0.26); --text:#1E1419; --text-muted:#5A4A52; --text-faint:#857069; --sage:#5E7A6A; --sage-deep:#4C6657; --peony:#A13E6F; --acid:#5E6B1F; --acid-deep:#4C5718; --teal:#3E8678; --teal-deep:#326D62; --pink:#C0285C; --euc:var(--sage); --thistle:var(--acid);}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
@@ -14,7 +14,7 @@ body{background:var(--bg);color:var(--text);font-family:var(--font-body);font-si
 a{color:inherit;text-decoration:none}
 body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none; background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px); background-size:64px 64px;opacity:.5; mask-image:radial-gradient(ellipse 80% 60% at 70% 0%,#000 0%,transparent 75%)}
 .app{position:relative;z-index:1}
-.wrap{max-width:var(--maxw);margin:0 auto;padding:0 26px}
+/* Shell width/padding finalized in base.css (.wrap, .page-shell) */
 .tnum{font-variant-numeric:tabular-nums lining-nums}
 .toggle{width:34px;height:34px;display:grid;place-items:center;border:1px solid var(--border);border-radius:6px; color:var(--text-muted);cursor:pointer;background:transparent;transition:.2s}
 .toggle:hover{color:var(--euc);border-color:var(--euc)}
@@ -35,6 +35,6 @@ body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none; ba
 .foot__tag{font-family:var(--font-serif);font-style:italic;color:var(--text-muted);max-width:32ch;margin-top:12px;font-size:13.5px}
 .foot__bottom{margin-top:32px;padding-top:20px;border-top:1px solid var(--border); display:flex;justify-content:space-between;font-family:var(--font-mono);font-size:11.5px;color:var(--text-faint)}
 
-/* get_involved() nav button = conversion CTA → pink (must beat .nav__links a specificity) */
+/* interest signup nav button = conversion CTA → pink (must beat .nav__links a specificity) */
 .nav__links a.nav__cta{color:var(--pink);border:1px solid var(--pink)}
 .nav__links a.nav__cta:hover{background:var(--pink);color:#fff;border-color:var(--pink)}

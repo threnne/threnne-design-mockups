@@ -1,12 +1,12 @@
 /* =============================================================
-   THE ROMANCE LEDGER - DESIGN TOKENS + BASE
+   THE ROMANCE LEDGER — DESIGN TOKENS + BASE
    CoinMarketCap-inspired: crisp, dense, colorful, alive.
    Romance accent: magenta-pink. Crypto-style up/down greens/reds.
    ============================================================= */
 
 :root,
 [data-theme='light'] {
-  /* Surfaces - crisp white, soft gray surfaces */
+  /* Surfaces — crisp white, soft gray surfaces */
   --color-bg: #ffffff;
   --color-surface: #ffffff;
   --color-surface-2: #f8fafd;
@@ -21,14 +21,14 @@
   --color-text-faint: #a6b0c3;
   --color-text-inverse: #ffffff;
 
-  /* Accent - rose (romance-coded, joyful, sophisticated) */
+  /* Accent — rose (romance-coded, joyful, sophisticated) */
   --color-primary: #d6336c;
   --color-primary-hover: #b8285c;
   --color-primary-active: #98204c;
   --color-primary-soft: #fce4ec;
   --color-primary-highlight: #fdedf2;
 
-  /* Secondary accents - for dashboard cards, chips */
+  /* Secondary accents — for dashboard cards, chips */
   --color-violet: #7c3aed;
   --color-violet-soft: #ede4ff;
   --color-blue: #3861fb;
@@ -42,7 +42,7 @@
   --color-mint: #16c784;
   --color-mint-soft: #d4f4e6;
 
-  /* Semantic - CMC-style market signals */
+  /* Semantic — CMC-style market signals */
   --color-up: #16c784;
   --color-up-soft: #d4f4e6;
   --color-up-bg: #ecfdf5;
@@ -67,12 +67,18 @@
   --shadow-lg: 0 8px 24px rgba(13, 20, 33, 0.08);
   --shadow-card: 0 1px 0 rgba(13, 20, 33, 0.04), 0 0 0 1px var(--color-border);
 
-  /* Content widths */
   --content-narrow: 720px;
   --content-default: 1200px;
   --content-wide: 1440px;
+  --maxw: var(--content-default);
 
-  /* Type scale - tighter, more compact than editorial */
+  /* Responsive breakpoints (marketing pages):
+     640px — shell padding tighten
+     720px — 2-col card grids → 1 col
+     768px — volume editorial grids
+     900px — major layout stacks */
+
+  /* Type scale — tighter, more compact than editorial */
   --text-xs: 0.75rem;       /* 12px */
   --text-sm: 0.8125rem;     /* 13px */
   --text-base: 0.9375rem;   /* 15px */
@@ -96,9 +102,12 @@
   --space-20: 5rem;
   --space-24: 6rem;
 
+  /* Horizontal inset for .wrap, page mains, and full-bleed bands */
+  --shell-inline: clamp(1.125rem, 4vw, var(--space-6));
+
 }
 
-/* DARK MODE - CMC-style deep slate */
+/* DARK MODE — CMC-style deep slate */
 [data-theme='dark'] {
   --color-bg: #0d1421;
   --color-surface: #17202f;
@@ -313,4 +322,36 @@ select {
 .tabular {
   font-variant-numeric: tabular-nums lining-nums;
   font-feature-settings: 'tnum' 1, 'lnum' 1;
+}
+
+/* Shared marketing page shell — nav, footer, heroes, sections */
+.page-shell,
+.wrap {
+  width: 100%;
+  max-width: var(--content-default);
+  margin-inline: auto;
+  padding-inline: var(--shell-inline);
+}
+
+/* Page content rails — match methodology inset on all marketing routes */
+.meth-main,
+.rs-main,
+.bg-main,
+.wl-detail,
+.bg-kpis,
+.bg-closing,
+.vol-page {
+  padding-inline: var(--shell-inline);
+}
+
+/* Closing bands — translucent pink wash over page bg (not off-brand navy) */
+.meth-closing,
+.bg-closing {
+  background: linear-gradient(
+    160deg,
+    color-mix(in srgb, var(--pink) 14%, var(--bg)),
+    color-mix(in srgb, var(--peony) 10%, var(--bg-2))
+  );
+  border-top: 1px solid color-mix(in srgb, var(--pink) 22%, var(--border));
+  color: var(--text);
 }
