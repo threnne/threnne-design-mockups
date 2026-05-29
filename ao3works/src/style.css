@@ -1021,7 +1021,7 @@ body.side-panel-resizing .ProseMirror {
 .close-btn:hover { color: var(--text); }
 
 /* Panel form elements */
-.panel-helper { font-size: 0.78rem; line-height: 1.55; color: #1a4a7a; background: #eef4fd; border-radius: 6px; padding: 10px 12px; border-left: 2px solid #85b7eb; }
+.panel-helper { font-size: 0.78rem; line-height: 1.55; color: #1F4C43; background: #e6f1ee; border-radius: 6px; padding: 10px 12px; border-left: 2px solid #5DAD9F; }
 .panel-field-hint { font-size: 0.72rem; line-height: 1.45; color: var(--muted, #64748b); margin: 2px 0 6px; }
 .panel-field-hint code { font-size: 0.9em; }
 .panel-field { display: flex; flex-direction: column; }
@@ -1112,7 +1112,7 @@ body.side-panel-resizing .ProseMirror {
 .char-counter.char-warn { color: #b45309; font-weight: 600; }
 
 /* ── MODAL BASE ──────────────────────────────────────────────── */
-.modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(26,21,18,0.55); display: flex; align-items: center; justify-content: center; z-index: 2000; }
+.modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(26,21,18,0.50); backdrop-filter: blur(2px); -webkit-backdrop-filter: blur(2px); display: flex; align-items: center; justify-content: center; z-index: 2000; }
 .ao3-insert-modal { max-width: 420px; }
 .ao3-insert-modal-actions {
   display: flex;
@@ -1456,6 +1456,9 @@ body.side-panel-resizing .ProseMirror {
   --mulberry-deep: #6B2447;
   --sage: #8FA88A;
   --sage-deep: #6E876A;
+  /* Works-teal wayfinding accent for export-modal chrome (brand-refresh). */
+  --works-teal: #5DAD9F;
+  --works-teal-deep: #2E6B5F;
   --acid: #C9D862;
   --acid-deep: #A8B743;
 
@@ -1966,8 +1969,13 @@ body.aw-theme-threnne {
 .aw-theme-threnne .modal-content.aw-chrome {
   background: var(--ink);
   color: var(--offwhite);
+  /* Warm-desk modal: hairline + soft floating shadow instead of a hard
+     border, with a friendlier radius to match the chrome rail. */
   border: 1px solid var(--offwhite-rule);
-  border-radius: 12px;
+  border-radius: 16px;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.04),
+              0 24px 60px rgba(20, 14, 12, 0.34),
+              0 8px 24px rgba(20, 14, 12, 0.22);
 }
 .aw-chrome .modal-header { border-bottom: 1px solid var(--offwhite-rule); }
 .aw-chrome .modal-header h2 {
@@ -1999,8 +2007,9 @@ body.aw-theme-threnne {
 
 .aw-chrome .export-step-number,
 .aw-chrome .step-badge {
-  background: var(--mulberry);
-  color: var(--offwhite);
+  /* Sequence indicators = wayfinding -> teal (was off-brand mulberry). */
+  background: var(--aw-brand-teal);
+  color: #F4F1EC;
   font-family: var(--aw-mono);
   letter-spacing: 0.06em;
 }
@@ -2024,8 +2033,12 @@ body.aw-theme-threnne {
   color: var(--offwhite-lede);
 }
 .aw-chrome .help-inline-list li strong { color: var(--offwhite); }
+/* Links = wayfinding -> teal (was acid; acid is reserved for action and
+   is low-contrast as text on the dark modal). */
 .aw-chrome .help-notes a,
-.aw-chrome .modal-body a { color: var(--acid); }
+.aw-chrome .modal-body a { color: var(--works-teal); }
+.aw-chrome .help-notes a:hover,
+.aw-chrome .modal-body a:hover { color: var(--works-teal-deep); }
 .aw-chrome .help-divider { border-top: 1px solid var(--offwhite-rule); }
 
 .aw-chrome .help-data-link {
@@ -2365,51 +2378,71 @@ body.aw-theme-threnne.aw-mode-light .aw-chrome .btn-primary {
 
 /* ── First-run tour: welcome banner ─────────────────────────── */
 /* Mulberry-deep + offwhite, immune to light/dark mode (same pattern as BETA pill). */
+/* Floating tip pill (brand-refresh creative pass): the old full-bleed teal
+   slab becomes a slim dismissible pill, right-aligned over the cream gutter,
+   so a low-priority hint stops dominating the chrome. */
 .aw-tour-welcome {
   display: flex;
-  align-items: stretch;
+  align-items: center;
+  justify-content: flex-end;
   width: 100%;
-  background: #6B2447;
-  color: #F4F1EC;
-  font-family: 'General Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  margin: 0;
+  padding: 4px 20px 0;
+  background: transparent;
+  color: var(--aw-brand-teal, #2E6B5F);
+  font-family: 'Hanken Grotesk', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-size: 13px;
   font-weight: 500;
   letter-spacing: 0.01em;
+  box-sizing: border-box;
 }
 .aw-tour-welcome.hidden { display: none; }
 .aw-tour-welcome-body {
-  flex: 1;
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  background: transparent;
-  color: inherit;
-  border: 0;
-  padding: 8px 16px;
+  gap: 8px;
+  background: var(--aw-brand-teal-soft, #e6f1ee);
+  color: var(--aw-brand-teal, #2E6B5F);
+  border: 1px solid var(--aw-brand-teal-mid, #9fcabf);
+  border-radius: 999px 0 0 999px;
+  padding: 7px 12px 7px 16px;
   cursor: pointer;
   font: inherit;
   text-align: center;
+  box-shadow: 0 2px 10px rgba(46, 107, 95, 0.10);
 }
-.aw-tour-welcome-body:hover { background: rgba(244, 241, 236, 0.08); }
+.aw-tour-welcome-body:hover {
+  background: color-mix(in srgb, var(--aw-brand-teal-soft, #e6f1ee) 70%, var(--aw-brand-teal-mid, #9fcabf));
+}
 .aw-tour-welcome-body:focus-visible {
-  outline: 2px solid #F4F1EC;
-  outline-offset: -2px;
+  outline: 2px solid var(--aw-brand-teal, #2E6B5F);
+  outline-offset: 2px;
 }
 .aw-tour-welcome-text { display: inline-block; }
 .aw-tour-welcome-dismiss {
-  background: transparent;
-  color: #F4F1EC;
-  border: 0;
-  padding: 0 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  align-self: stretch;
+  background: var(--aw-brand-teal-soft, #e6f1ee);
+  color: var(--aw-brand-teal, #2E6B5F);
+  border: 1px solid var(--aw-brand-teal-mid, #9fcabf);
+  border-left: 0;
+  border-radius: 0 999px 999px 0;
+  padding: 0;
   cursor: pointer;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1;
   font-family: inherit;
+  box-shadow: 0 2px 10px rgba(46, 107, 95, 0.10);
 }
-.aw-tour-welcome-dismiss:hover { background: rgba(244, 241, 236, 0.12); }
+.aw-tour-welcome-dismiss:hover {
+  background: color-mix(in srgb, var(--aw-brand-teal-soft, #e6f1ee) 60%, var(--aw-brand-teal-mid, #9fcabf));
+}
 .aw-tour-welcome-dismiss:focus-visible {
-  outline: 2px solid #F4F1EC;
-  outline-offset: -2px;
+  outline: 2px solid var(--aw-brand-teal, #2E6B5F);
+  outline-offset: 2px;
 }
 
 /* ── First-run tour: replay '?' button in header ────────────── */
@@ -2560,12 +2593,12 @@ body.aw-mode-light .aw-replay-tour-btn:hover { color: #F4F1EC; }
  * (active tab + primary CTA) and acid-deep (warning severity).
  * ============================================================ */
 
-#export-panel.modal-overlay { background: rgba(14, 11, 13, 0.55); }
+#export-panel.modal-overlay { background: rgba(14, 11, 13, 0.50); backdrop-filter: blur(2px); -webkit-backdrop-filter: blur(2px); }
 .export-modal-v2 {
   max-width: 960px;
   max-height: 85vh;
   width: 92%;
-  border-radius: 12px;
+  border-radius: 16px;
   display: flex;
   flex-direction: column;
 }
@@ -2596,12 +2629,12 @@ body.aw-mode-light .aw-replay-tour-btn:hover { color: #F4F1EC; }
 }
 .export-tab:hover { color: var(--offwhite, #F4F1EC); }
 .export-tab:focus-visible {
-  outline: 2px solid var(--mulberry);
+  outline: 2px solid var(--works-teal);
   outline-offset: -3px;
 }
 .export-tab[aria-selected="true"] {
   color: var(--offwhite, #F4F1EC);
-  border-bottom-color: var(--mulberry-deep, #6B2447);
+  border-bottom-color: var(--works-teal, #5DAD9F);
   font-weight: 700;
 }
 
@@ -2914,20 +2947,27 @@ body.aw-theme-default-b {
   font-size: 15px;
   line-height: 1.5;
 
-  /* Neutral chrome palette. */
-  --aw-chrome-bg:        #ffffff;
-  --aw-chrome-bg-soft:   #f4f4f4;
-  --aw-chrome-border:    #d8d8d8;
-  --aw-chrome-border-soft: #ebebeb;
+  /* Warm "writing desk" chrome palette (brand-refresh creative pass).
+     Layered cream paper instead of stark white; hairline shadows do the
+     separating, not hard 1px rules. */
+  --aw-chrome-bg:        #FBFAF7;   /* header / toolbar rail "paper" */
+  --aw-chrome-bg-2:      #F5F3EE;   /* surface gutter, one layer down */
+  --aw-chrome-bg-soft:   #F1EFE9;   /* hover fill */
+  --aw-chrome-border:    #E6E3DC;   /* hairline */
+  --aw-chrome-border-soft: #EEEBE4;
   --aw-chrome-text:      #2A2A2A;
   --aw-chrome-text-mute: #6b6b6b;
   --aw-chrome-text-soft: #9a9a9a;
+  /* Soft layered-paper shadow used between chrome bands and on the rail. */
+  --aw-chrome-shadow:    0 1px 0 rgba(42,42,42,.05), 0 6px 20px rgba(42,42,42,.06);
+  --aw-chrome-shadow-sm: 0 1px 0 rgba(42,42,42,.05), 0 3px 12px rgba(42,42,42,.05);
 
-  /* Accent — overridden in -b. */
-  --aw-accent:           #2A6496;
-  --aw-accent-deep:      #1f4b73;
-  --aw-accent-visited:   #900;
-  --aw-accent-bg:        #eef4fb;
+  /* Active toolbar accent -> acid (joy), warm to teal on hover.
+     (Was AO3 blue; pink/blue removed from wayfinding per brand-refresh.) */
+  --aw-accent:           var(--aw-brand-acid);
+  --aw-accent-deep:      var(--aw-brand-acid-deep);
+  --aw-accent-visited:   var(--aw-brand-teal-deep);
+  --aw-accent-bg:        var(--aw-brand-acid-soft);
 
   /* Brand palette — header bar uses only blue, pink, and acid green. */
   --aw-brand-blue:       #2A6496;
@@ -2944,36 +2984,55 @@ body.aw-theme-default-b {
   --aw-brand-acid-mid:   #d4df9a;
   --aw-brand-acid-text:  #4f5618;
 
-  /* Header button tints (bar + overflow menu accents). */
-  --aw-hdr-import-bg:       var(--aw-brand-blue-soft);
-  --aw-hdr-import-border:   var(--aw-brand-blue-mid);
-  --aw-hdr-import-text:     var(--aw-brand-blue-deep);
-  --aw-hdr-import-icon:     var(--aw-brand-blue);
-  --aw-hdr-download-bg:     var(--aw-brand-acid-soft);
-  --aw-hdr-download-border: var(--aw-brand-acid-mid);
-  --aw-hdr-download-text:   var(--aw-brand-acid-text);
-  --aw-hdr-theme-bg:        var(--aw-brand-pink-soft);
-  --aw-hdr-theme-border:    var(--aw-brand-pink-mid);
-  --aw-hdr-theme-text:      var(--aw-brand-pink-deep);
-  --aw-hdr-help-bg:         color-mix(in srgb, var(--aw-brand-blue-soft) 50%, #fff);
-  --aw-hdr-help-border:     color-mix(in srgb, var(--aw-brand-blue-mid) 55%, #fff);
-  --aw-hdr-help-text:       var(--aw-brand-blue-deep);
-  --aw-hdr-data-bg:         color-mix(in srgb, var(--aw-brand-pink-soft) 55%, #fff);
-  --aw-hdr-data-border:     color-mix(in srgb, var(--aw-brand-pink-mid) 60%, #fff);
-  --aw-hdr-data-text:       var(--aw-brand-pink-deep);
-  --aw-hdr-tour-bg:         color-mix(in srgb, var(--aw-brand-acid-soft) 65%, #fff);
-  --aw-hdr-tour-border:     var(--aw-brand-acid-mid);
-  --aw-hdr-tour-text:       var(--aw-brand-acid-text);
-  --aw-hdr-clear-bg:        color-mix(in srgb, var(--aw-brand-pink-soft) 40%, #fff);
-  --aw-hdr-clear-border:    var(--aw-brand-pink-mid);
-  --aw-hdr-clear-text:      var(--aw-brand-pink-deep);
+  /* Works-teal wayfinding + warning hues (brand-refresh). */
+  --aw-brand-teal:       #2E6B5F;
+  --aw-brand-teal-deep:  #1F4C43;
+  --aw-brand-teal-soft:  #e6f1ee;
+  --aw-brand-teal-mid:   #9fcabf;
+  --aw-brand-warn:       #B4452C;
+  --aw-brand-warn-deep:  #7C2E1C;
+  --aw-brand-warn-soft:  #fbeae5;
+  --aw-brand-warn-mid:   #e3b3a6;
+
+  /* Header button tints — unified NEUTRAL chrome (brand-refresh).
+     Secondary actions share one quiet treatment so the bar isn't busy.
+     Reserve color for: acid = joyful primary, teal = wayfinding,
+     warn = destructive. Pink stays for the Export conversion CTA only. */
+  /* Ghost header buttons: no resting border; warm to teal on hover. */
+  --aw-hdr-neutral-bg:     transparent;
+  --aw-hdr-neutral-border: transparent;
+  --aw-hdr-neutral-text:   var(--aw-chrome-text-mute);
+  --aw-hdr-import-bg:       var(--aw-hdr-neutral-bg);
+  --aw-hdr-import-border:   var(--aw-hdr-neutral-border);
+  --aw-hdr-import-text:     var(--aw-hdr-neutral-text);
+  --aw-hdr-import-icon:     var(--aw-chrome-text-mute);
+  --aw-hdr-download-bg:     var(--aw-hdr-neutral-bg);
+  --aw-hdr-download-border: var(--aw-hdr-neutral-border);
+  --aw-hdr-download-text:   var(--aw-hdr-neutral-text);
+  --aw-hdr-theme-bg:        var(--aw-hdr-neutral-bg);
+  --aw-hdr-theme-border:    var(--aw-hdr-neutral-border);
+  --aw-hdr-theme-text:      var(--aw-hdr-neutral-text);
+  --aw-hdr-help-bg:         var(--aw-hdr-neutral-bg);
+  --aw-hdr-help-border:     var(--aw-hdr-neutral-border);
+  --aw-hdr-help-text:       var(--aw-hdr-neutral-text);
+  --aw-hdr-data-bg:         var(--aw-hdr-neutral-bg);
+  --aw-hdr-data-border:     var(--aw-hdr-neutral-border);
+  --aw-hdr-data-text:       var(--aw-hdr-neutral-text);
+  --aw-hdr-tour-bg:         var(--aw-hdr-neutral-bg);
+  --aw-hdr-tour-border:     var(--aw-hdr-neutral-border);
+  --aw-hdr-tour-text:       var(--aw-hdr-neutral-text);
+  --aw-hdr-clear-bg:        var(--aw-hdr-neutral-bg);
+  --aw-hdr-clear-border:    var(--aw-hdr-neutral-border);
+  --aw-hdr-clear-text:      var(--aw-hdr-neutral-text);
 }
 
 body.aw-theme-default-b {
-  --aw-accent:           #B25083;
-  --aw-accent-deep:      #6B2447;
-  --aw-accent-visited:   #6B2447;
-  --aw-accent-bg:        #fbeef4;
+  /* Keep the active-tool accent acid in both surface variants (joy is
+     theme-independent); pink stays the Export CTA only. */
+  --aw-accent:           var(--aw-brand-acid);
+  --aw-accent-deep:      var(--aw-brand-acid-deep);
+  --aw-accent-visited:   var(--aw-brand-teal-deep);
+  --aw-accent-bg:        var(--aw-brand-acid-soft);
 }
 
 /* ── HEADER (v2 — single thin row) ─────────────────────────── */
@@ -2983,12 +3042,15 @@ body.aw-theme-default-b .app-header.aw-header-v2 {
   flex-wrap: nowrap;
   align-items: center;
   gap: 14px;
-  padding: 8px 20px;
-  min-height: 48px;
-  height: 48px;
+  padding: 8px 22px;
+  min-height: 52px;
+  height: 52px;
   background: var(--aw-chrome-bg);
+  /* Layered paper: hairline + soft shadow instead of a hard rule. */
   border-bottom: 1px solid var(--aw-chrome-border);
-  box-shadow: none;
+  box-shadow: var(--aw-chrome-shadow);
+  position: relative;
+  z-index: 12;
   color: var(--aw-chrome-text);
 }
 body.aw-theme-default-a .aw-header-v2 .header-left,
@@ -3041,17 +3103,34 @@ body.aw-theme-default-b .aw-header-v2 .aw-logo {
 }
 body.aw-theme-default-a .aw-header-v2 .aw-wordmark,
 body.aw-theme-default-b .aw-header-v2 .aw-wordmark {
-  font-family: 'Clash Display', 'General Sans', system-ui, sans-serif;
-  font-size: 17px;
-  font-weight: 600;
-  letter-spacing: -0.01em;
-  color: var(--aw-chrome-text);
+  font-family: 'Hanken Grotesk', system-ui, sans-serif;
   display: inline-flex;
   align-items: baseline;
+  gap: 8px;
 }
-body.aw-theme-default-a .aw-header-v2 .aw-wordmark-dot,
-body.aw-theme-default-b .aw-header-v2 .aw-wordmark-dot {
-  color: var(--aw-accent);
+/* Locked lockup: lowercase wordmark, teal 3 + w, inline dimmer byline. */
+body.aw-theme-default-a .aw-header-v2 .aw-wordmark-name,
+body.aw-theme-default-b .aw-header-v2 .aw-wordmark-name {
+  font-family: 'Hanken Grotesk', system-ui, sans-serif;
+  font-weight: 800;
+  font-size: 17px;
+  letter-spacing: -0.02em;
+  text-transform: lowercase;
+  color: var(--aw-chrome-text);
+}
+body.aw-theme-default-a .aw-header-v2 .aw-wordmark-sig,
+body.aw-theme-default-b .aw-header-v2 .aw-wordmark-sig {
+  color: var(--aw-brand-teal);
+}
+body.aw-theme-default-a .aw-header-v2 .aw-wordmark-byline,
+body.aw-theme-default-b .aw-header-v2 .aw-wordmark-byline {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-weight: 500;
+  font-size: 10px;
+  letter-spacing: 0.04em;
+  text-transform: lowercase;
+  color: var(--aw-chrome-text-soft);
+  margin-left: 0;
 }
 body.aw-theme-default-a .aw-header-v2 .beta-badge,
 body.aw-theme-default-b .aw-header-v2 .beta-badge {
@@ -3131,17 +3210,21 @@ body.aw-theme-default-a .aw-header-v2 .toolbar-btn:hover,
 body.aw-theme-default-b .aw-header-v2 .toolbar-btn:hover,
 body.aw-theme-default-a .aw-toolbar-v2 .toolbar-btn:hover,
 body.aw-theme-default-b .aw-toolbar-v2 .toolbar-btn:hover {
-  background: var(--aw-chrome-bg-soft);
-  color: var(--aw-chrome-text);
-  border-color: var(--aw-chrome-border-soft);
+  /* Warm to teal on hover — quiet, tactile, on-brand wayfinding hue. */
+  background: #ffffff;
+  color: var(--aw-brand-teal);
+  border-color: transparent;
   transform: none;
 }
+/* Active tool: white chip lifted out of the cluster with an acid underline
+   (joy), not a filled blue box. */
 body.aw-theme-default-a .aw-toolbar-v2 .toolbar-btn.active,
 body.aw-theme-default-b .aw-toolbar-v2 .toolbar-btn.active {
-  background: var(--aw-accent-bg);
-  color: var(--aw-accent-deep);
-  border-color: color-mix(in srgb, var(--aw-accent) 30%, transparent);
-  box-shadow: none;
+  background: #ffffff;
+  color: var(--aw-chrome-text);
+  border-color: transparent;
+  box-shadow: inset 0 -2px 0 var(--aw-brand-acid),
+              0 1px 3px rgba(42, 42, 42, 0.08);
 }
 body.aw-theme-default-a .aw-toolbar-v2 .toolbar-btn:focus-visible,
 body.aw-theme-default-b .aw-toolbar-v2 .toolbar-btn:focus-visible,
@@ -3152,6 +3235,8 @@ body.aw-theme-default-b .aw-header-v2 .toolbar-btn:focus-visible {
 }
 
 /* Header Export CTA — the only primary in the bar. */
+/* The one conversion CTA on the page — pink, per the locked brand rule
+   (pink = conversion CTAs ONLY). Everything else stays neutral/teal/acid. */
 body.aw-theme-default-a .aw-export-cta,
 body.aw-theme-default-b .aw-export-cta {
   display: inline-flex;
@@ -3160,9 +3245,9 @@ body.aw-theme-default-b .aw-export-cta {
   height: 30px;
   padding: 0 14px;
   border-radius: 6px;
-  background: var(--aw-accent);
+  background: #C0285C;
   color: #fff;
-  border: 1px solid var(--aw-accent-deep);
+  border: 1px solid #97204A;
   font-family: inherit;
   font-size: 13px;
   font-weight: 600;
@@ -3171,7 +3256,7 @@ body.aw-theme-default-b .aw-export-cta {
 }
 body.aw-theme-default-a .aw-export-cta:hover,
 body.aw-theme-default-b .aw-export-cta:hover {
-  background: var(--aw-accent-deep);
+  background: #97204A;
 }
 
 /* View-as in header — compact pill. */
@@ -3305,29 +3390,68 @@ body.aw-theme-default-b .app-toolbar.aw-toolbar-v2 {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 6px;
-  padding: 6px 16px;
+  gap: 8px;
+  /* Floating warm rail: margin lifts it off a cream-2 gutter, rounded with a
+     soft shadow instead of a full-bleed band with a hard rule. */
+  margin: 12px 18px 8px;
+  padding: 8px 12px;
   min-height: 44px;
   height: auto;
   background: var(--aw-chrome-bg);
-  border-bottom: 1px solid var(--aw-chrome-border);
-  box-shadow: none;
+  border: 1px solid var(--aw-chrome-border);
+  border-radius: 14px;
+  box-shadow: var(--aw-chrome-shadow-sm);
   color: var(--aw-chrome-text);
   overflow: visible;
 }
+/* Warm cream-2 gutter behind the floating toolbar + writing surface. */
+body.aw-theme-default-a .editor-surface,
+body.aw-theme-default-b .editor-surface {
+  background: var(--aw-chrome-bg-2);
+}
+body.aw-theme-default-a .app-workspace,
+body.aw-theme-default-b .app-workspace {
+  background: var(--aw-chrome-bg-2);
+}
+/* Whisper of personality: one faint handwritten Caveat mark in the gutter,
+   bottom-right, behind the floating writing card. Non-interactive, decorative,
+   never overlaps content; hidden when the side panel is open or on small screens. */
+body.aw-theme-default-a .app-workspace::after,
+body.aw-theme-default-b .app-workspace::after {
+  content: "your draft, your way";
+  position: absolute;
+  right: 26px;
+  bottom: 16px;
+  z-index: 0;
+  font-family: 'Caveat', cursive;
+  font-size: 19px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  color: var(--aw-brand-teal-mid, #9fcabf);
+  opacity: 0.55;
+  transform: rotate(-2deg);
+  pointer-events: none;
+  user-select: none;
+}
+@media (max-width: 900px) {
+  body.aw-theme-default-a .app-workspace::after,
+  body.aw-theme-default-b .app-workspace::after { display: none; }
+}
+/* Soft grouped clusters give the rail rhythm; the faint inset fill replaces
+   the old hard dividers. */
 body.aw-theme-default-a .aw-toolbar-v2 .aw-tb-cluster,
 body.aw-theme-default-b .aw-toolbar-v2 .aw-tb-cluster {
   display: inline-flex;
   align-items: center;
-  gap: 2px;
+  gap: 1px;
+  background: rgba(42, 42, 42, 0.035);
+  border-radius: 9px;
+  padding: 3px;
 }
+/* Dividers are now redundant with the cluster pills — hide them. */
 body.aw-theme-default-a .aw-toolbar-v2 .aw-tb-divider,
 body.aw-theme-default-b .aw-toolbar-v2 .aw-tb-divider {
-  width: 1px;
-  height: 20px;
-  background: var(--aw-chrome-border);
-  margin: 0 6px;
-  align-self: center;
+  display: none;
 }
 body.aw-theme-default-a .aw-toolbar-v2 .aw-tb-spacer,
 body.aw-theme-default-b .aw-toolbar-v2 .aw-tb-spacer {
@@ -3392,36 +3516,38 @@ body.aw-theme-default-b .aw-toolbar-v2 .aw-tb-insert-toggle {
   height: 32px;
   padding: 0 14px 0 11px;
   border-radius: 7px;
-  background: #B25083;
-  color: #fff;
-  border: 1px solid #8E3F69;
+  /* Insert is the toolbar's primary action -> acid (joy/action), per the
+     locked color rule. Pink is reserved for the Export conversion CTA only. */
+  background: var(--aw-brand-acid);
+  color: var(--aw-brand-acid-text);
+  border: 1px solid var(--aw-brand-acid-deep);
   font-family: inherit;
   font-size: 13px;
   font-weight: 600;
   line-height: 1;
   cursor: pointer;
   box-shadow: 0 1px 0 rgba(20, 20, 20, 0.06),
-              0 2px 6px rgba(178, 80, 131, 0.30);
+              0 2px 6px rgba(150, 165, 40, 0.28);
   transition: background 120ms ease, box-shadow 120ms ease, transform 60ms ease;
 }
 body.aw-theme-default-a .aw-toolbar-v2 .aw-tb-insert-toggle:hover,
 body.aw-theme-default-b .aw-toolbar-v2 .aw-tb-insert-toggle:hover {
-  background: #9F4274;
-  border-color: #6B2447;
-  color: #fff;
+  background: var(--aw-brand-acid-deep);
+  border-color: var(--aw-brand-acid-deep);
+  color: var(--aw-brand-acid-text);
   transform: none;
   box-shadow: 0 1px 0 rgba(20, 20, 20, 0.08),
-              0 3px 10px rgba(107, 36, 71, 0.35);
+              0 3px 10px rgba(122, 139, 23, 0.32);
 }
 body.aw-theme-default-a .aw-toolbar-v2 .aw-tb-insert-toggle:active,
 body.aw-theme-default-b .aw-toolbar-v2 .aw-tb-insert-toggle:active {
-  background: #8E3F69;
+  background: var(--aw-brand-acid-deep);
   box-shadow: inset 0 1px 2px rgba(20, 20, 20, 0.22);
   transform: translateY(1px);
 }
 body.aw-theme-default-a .aw-toolbar-v2 .aw-tb-insert-toggle:focus-visible,
 body.aw-theme-default-b .aw-toolbar-v2 .aw-tb-insert-toggle:focus-visible {
-  outline: 2px solid #B25083;
+  outline: 2px solid var(--aw-brand-acid-deep);
   outline-offset: 2px;
 }
 body.aw-theme-default-a .aw-toolbar-v2 .aw-tb-insert-plus,
@@ -3433,7 +3559,7 @@ body.aw-theme-default-b .aw-toolbar-v2 .aw-tb-insert-plus {
   height: 18px;
   border-radius: 0;
   background: transparent;
-  color: #fff;
+  color: var(--aw-brand-acid-text);
   font-weight: 700;
   font-size: 18px;
   line-height: 1;
@@ -3443,7 +3569,7 @@ body.aw-theme-default-b .aw-toolbar-v2 .aw-tb-insert-label {
   font-weight: 600;
   font-size: 13px;
   letter-spacing: 0.01em;
-  color: #fff;
+  color: var(--aw-brand-acid-text);
 }
 
 /* + Insert dropdown panel — grouped sections.
@@ -3768,6 +3894,7 @@ body.aw-theme-default-b .aw-header-action-btn {
   white-space: nowrap;
   cursor: pointer;
   box-shadow: none;
+  border-radius: 9px;
   transition: background 120ms ease, border-color 120ms ease, color 120ms ease;
 }
 body.aw-theme-default-a .aw-header-action-btn--help,
@@ -3814,9 +3941,18 @@ body.aw-theme-default-b .aw-header-action-btn--destructive {
 }
 body.aw-theme-default-a .aw-header-action-btn--destructive:hover,
 body.aw-theme-default-b .aw-header-action-btn--destructive:hover {
-  background: color-mix(in srgb, var(--aw-brand-pink) 14%, var(--aw-hdr-clear-bg));
-  border-color: var(--aw-brand-pink);
-  color: var(--aw-brand-pink-deep);
+  background: var(--aw-brand-warn-soft);
+  border-color: var(--aw-brand-warn);
+  color: var(--aw-brand-warn-deep);
+}
+/* Unified ghost hover for non-destructive header actions: warm to teal,
+   no hard border. Placed after the per-button rules so it wins; destructive
+   keeps its warning hover above. */
+body.aw-theme-default-a .aw-header-action-btn:not(.aw-header-action-btn--destructive):hover,
+body.aw-theme-default-b .aw-header-action-btn:not(.aw-header-action-btn--destructive):hover {
+  background: rgba(46, 107, 95, 0.08);
+  border-color: transparent;
+  color: var(--aw-brand-teal);
 }
 
 /* Overflow ⋯ / hamburger. */
@@ -4240,10 +4376,10 @@ body.aw-theme-default-b .aw-header-download-btn:disabled {
   min-width: 280px;
   max-width: 320px;
   padding: 14px 14px 12px;
-  border-radius: 10px;
+  border-radius: 12px;
   background: var(--aw-chrome-bg, #fff);
   border: 1px solid var(--aw-chrome-border, #d8d8d8);
-  box-shadow: 0 10px 24px rgba(20, 20, 20, 0.16);
+  box-shadow: 0 1px 0 rgba(42,42,42,.04), 0 12px 30px rgba(42, 42, 42, 0.14);
   font-family: inherit;
   color: var(--aw-chrome-text, #2A2A2A);
 }
@@ -4320,8 +4456,8 @@ body.aw-theme-threnne .aw-chrome .aw-header-clear-confirm .btn-ghost-sm:hover {
   padding: 14px 16px;
   background: var(--aw-chrome-bg);
   border: 1px solid var(--aw-hdr-clear-border);
-  border-radius: 10px;
-  box-shadow: 0 12px 28px rgba(20, 20, 20, 0.14);
+  border-radius: 12px;
+  box-shadow: 0 1px 0 rgba(42,42,42,.04), 0 12px 30px rgba(42, 42, 42, 0.14);
 }
 .aw-header-clear-confirm.hidden { display: none; }
 .aw-header-clear-confirm-title {
@@ -4347,13 +4483,13 @@ body.aw-theme-threnne .aw-chrome .aw-header-clear-confirm .btn-ghost-sm:hover {
   color: var(--aw-chrome-text, #2A2A2A);
 }
 .aw-header-clear-confirm-erase {
-  background: var(--aw-brand-pink-deep) !important;
-  border-color: var(--aw-brand-pink-deep) !important;
+  background: var(--aw-brand-warn) !important;
+  border-color: var(--aw-brand-warn-deep) !important;
   color: #fff !important;
 }
 .aw-header-clear-confirm-erase:hover {
-  background: var(--aw-brand-pink) !important;
-  border-color: var(--aw-brand-pink-deep) !important;
+  background: var(--aw-brand-warn-deep) !important;
+  border-color: var(--aw-brand-warn-deep) !important;
 }
 .aw-header-confirm-modal .modal-body {
   padding-top: 0;

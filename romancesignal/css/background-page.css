@@ -1,4 +1,4 @@
-/* Background — industry pipelines (publishing vs Hollywood) */
+/* Background - industry pipelines (publishing vs Hollywood) */
 
 .bg-page {
   --bg-acq: var(--color-primary);
@@ -59,7 +59,7 @@
   color: var(--color-text);
 }
 
-/* KPI strip — soft lanes, dark text (contrast-safe) */
+/* KPI strip - soft lanes, dark text (contrast-safe) */
 .bg-kpis {
   max-width: var(--content-wide);
   margin: 2rem auto 0;
@@ -607,7 +607,7 @@
 .bg-signal-bar-fill--acq { background: var(--bg-acq); }
 .bg-signal-bar-fill--scout { background: var(--bg-scout); }
 
-/* Closing band — fixed dark palette (like home CTA) */
+/* Closing band - fixed dark palette (like home CTA) */
 .bg-closing {
   --home-ink: #0d1421;
   --home-on-dark: #f6f0f2;

@@ -111,7 +111,7 @@
       }
       form.reset();
       clearInterestsError();
-      setStatus('success', "Thanks — you're on the list. We'll be in touch.");
+      setStatus('success', "Thanks, you're on the list. We'll be in touch.");
     } catch {
       setStatus('error', 'Network error. Try again or email signal@threnne.com.');
     } finally {

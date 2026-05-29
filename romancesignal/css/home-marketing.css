@@ -1,4 +1,4 @@
-/* Home marketing layout — review structure, design-system tokens */
+/* Home marketing layout - review structure, design-system tokens */
 
 /* Dark hero + watchlist panel: fixed palette (not theme surface tokens). */
 .home-hero {
@@ -189,6 +189,22 @@
 
 .home-hero .wl-card__title-link:hover .wl-card__title {
   color: var(--home-accent-soft);
+}
+
+/* Static (non-linking) variants for books without a detail page yet. */
+.home-hero .wl-card__title-link--static {
+  cursor: default;
+}
+
+.home-hero .wl-card__title-link--static:hover .wl-card__title {
+  color: inherit;
+}
+
+.wl-card__breakdown-static {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-text-faint);
+  font-style: italic;
 }
 
 .wl-card__links {
