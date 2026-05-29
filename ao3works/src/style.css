@@ -1021,7 +1021,7 @@ body.side-panel-resizing .ProseMirror {
 .close-btn:hover { color: var(--text); }
 
 /* Panel form elements */
-.panel-helper { font-size: 0.78rem; line-height: 1.55; color: #1a4a7a; background: #eef4fd; border-radius: 6px; padding: 10px 12px; border-left: 2px solid #85b7eb; }
+.panel-helper { font-size: 0.78rem; line-height: 1.55; color: #1F4C43; background: #e6f1ee; border-radius: 6px; padding: 10px 12px; border-left: 2px solid #5DAD9F; }
 .panel-field-hint { font-size: 0.72rem; line-height: 1.45; color: var(--muted, #64748b); margin: 2px 0 6px; }
 .panel-field-hint code { font-size: 0.9em; }
 .panel-field { display: flex; flex-direction: column; }
@@ -1456,6 +1456,9 @@ body.side-panel-resizing .ProseMirror {
   --mulberry-deep: #6B2447;
   --sage: #8FA88A;
   --sage-deep: #6E876A;
+  /* Works-teal wayfinding accent for export-modal chrome (brand-refresh). */
+  --works-teal: #5DAD9F;
+  --works-teal-deep: #2E6B5F;
   --acid: #C9D862;
   --acid-deep: #A8B743;
 
@@ -2369,7 +2372,7 @@ body.aw-theme-threnne.aw-mode-light .aw-chrome .btn-primary {
   display: flex;
   align-items: stretch;
   width: 100%;
-  background: #6B2447;
+  background: #2E6B5F;
   color: #F4F1EC;
   font-family: 'General Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-size: 13px;
@@ -2596,12 +2599,12 @@ body.aw-mode-light .aw-replay-tour-btn:hover { color: #F4F1EC; }
 }
 .export-tab:hover { color: var(--offwhite, #F4F1EC); }
 .export-tab:focus-visible {
-  outline: 2px solid var(--mulberry);
+  outline: 2px solid var(--works-teal);
   outline-offset: -3px;
 }
 .export-tab[aria-selected="true"] {
   color: var(--offwhite, #F4F1EC);
-  border-bottom-color: var(--mulberry-deep, #6B2447);
+  border-bottom-color: var(--works-teal, #5DAD9F);
   font-weight: 700;
 }
 
@@ -2944,29 +2947,45 @@ body.aw-theme-default-b {
   --aw-brand-acid-mid:   #d4df9a;
   --aw-brand-acid-text:  #4f5618;
 
-  /* Header button tints (bar + overflow menu accents). */
-  --aw-hdr-import-bg:       var(--aw-brand-blue-soft);
-  --aw-hdr-import-border:   var(--aw-brand-blue-mid);
-  --aw-hdr-import-text:     var(--aw-brand-blue-deep);
-  --aw-hdr-import-icon:     var(--aw-brand-blue);
-  --aw-hdr-download-bg:     var(--aw-brand-acid-soft);
-  --aw-hdr-download-border: var(--aw-brand-acid-mid);
-  --aw-hdr-download-text:   var(--aw-brand-acid-text);
-  --aw-hdr-theme-bg:        var(--aw-brand-pink-soft);
-  --aw-hdr-theme-border:    var(--aw-brand-pink-mid);
-  --aw-hdr-theme-text:      var(--aw-brand-pink-deep);
-  --aw-hdr-help-bg:         color-mix(in srgb, var(--aw-brand-blue-soft) 50%, #fff);
-  --aw-hdr-help-border:     color-mix(in srgb, var(--aw-brand-blue-mid) 55%, #fff);
-  --aw-hdr-help-text:       var(--aw-brand-blue-deep);
-  --aw-hdr-data-bg:         color-mix(in srgb, var(--aw-brand-pink-soft) 55%, #fff);
-  --aw-hdr-data-border:     color-mix(in srgb, var(--aw-brand-pink-mid) 60%, #fff);
-  --aw-hdr-data-text:       var(--aw-brand-pink-deep);
-  --aw-hdr-tour-bg:         color-mix(in srgb, var(--aw-brand-acid-soft) 65%, #fff);
-  --aw-hdr-tour-border:     var(--aw-brand-acid-mid);
-  --aw-hdr-tour-text:       var(--aw-brand-acid-text);
-  --aw-hdr-clear-bg:        color-mix(in srgb, var(--aw-brand-pink-soft) 40%, #fff);
-  --aw-hdr-clear-border:    var(--aw-brand-pink-mid);
-  --aw-hdr-clear-text:      var(--aw-brand-pink-deep);
+  /* Works-teal wayfinding + warning hues (brand-refresh). */
+  --aw-brand-teal:       #2E6B5F;
+  --aw-brand-teal-deep:  #1F4C43;
+  --aw-brand-teal-soft:  #e6f1ee;
+  --aw-brand-teal-mid:   #9fcabf;
+  --aw-brand-warn:       #B4452C;
+  --aw-brand-warn-deep:  #7C2E1C;
+  --aw-brand-warn-soft:  #fbeae5;
+  --aw-brand-warn-mid:   #e3b3a6;
+
+  /* Header button tints — unified NEUTRAL chrome (brand-refresh).
+     Secondary actions share one quiet treatment so the bar isn't busy.
+     Reserve color for: acid = joyful primary, teal = wayfinding,
+     warn = destructive. Pink stays for the Export conversion CTA only. */
+  --aw-hdr-neutral-bg:     transparent;
+  --aw-hdr-neutral-border: var(--aw-chrome-border);
+  --aw-hdr-neutral-text:   var(--aw-chrome-text-mute);
+  --aw-hdr-import-bg:       var(--aw-hdr-neutral-bg);
+  --aw-hdr-import-border:   var(--aw-hdr-neutral-border);
+  --aw-hdr-import-text:     var(--aw-hdr-neutral-text);
+  --aw-hdr-import-icon:     var(--aw-chrome-text-mute);
+  --aw-hdr-download-bg:     var(--aw-hdr-neutral-bg);
+  --aw-hdr-download-border: var(--aw-hdr-neutral-border);
+  --aw-hdr-download-text:   var(--aw-hdr-neutral-text);
+  --aw-hdr-theme-bg:        var(--aw-hdr-neutral-bg);
+  --aw-hdr-theme-border:    var(--aw-hdr-neutral-border);
+  --aw-hdr-theme-text:      var(--aw-hdr-neutral-text);
+  --aw-hdr-help-bg:         var(--aw-hdr-neutral-bg);
+  --aw-hdr-help-border:     var(--aw-hdr-neutral-border);
+  --aw-hdr-help-text:       var(--aw-hdr-neutral-text);
+  --aw-hdr-data-bg:         var(--aw-hdr-neutral-bg);
+  --aw-hdr-data-border:     var(--aw-hdr-neutral-border);
+  --aw-hdr-data-text:       var(--aw-hdr-neutral-text);
+  --aw-hdr-tour-bg:         var(--aw-hdr-neutral-bg);
+  --aw-hdr-tour-border:     var(--aw-hdr-neutral-border);
+  --aw-hdr-tour-text:       var(--aw-hdr-neutral-text);
+  --aw-hdr-clear-bg:        var(--aw-hdr-neutral-bg);
+  --aw-hdr-clear-border:    var(--aw-hdr-neutral-border);
+  --aw-hdr-clear-text:      var(--aw-hdr-neutral-text);
 }
 
 body.aw-theme-default-b {
@@ -3041,17 +3060,34 @@ body.aw-theme-default-b .aw-header-v2 .aw-logo {
 }
 body.aw-theme-default-a .aw-header-v2 .aw-wordmark,
 body.aw-theme-default-b .aw-header-v2 .aw-wordmark {
-  font-family: 'Clash Display', 'General Sans', system-ui, sans-serif;
-  font-size: 17px;
-  font-weight: 600;
-  letter-spacing: -0.01em;
-  color: var(--aw-chrome-text);
+  font-family: 'Hanken Grotesk', system-ui, sans-serif;
   display: inline-flex;
   align-items: baseline;
+  gap: 8px;
 }
-body.aw-theme-default-a .aw-header-v2 .aw-wordmark-dot,
-body.aw-theme-default-b .aw-header-v2 .aw-wordmark-dot {
-  color: var(--aw-accent);
+/* Locked lockup: lowercase wordmark, teal 3 + w, inline dimmer byline. */
+body.aw-theme-default-a .aw-header-v2 .aw-wordmark-name,
+body.aw-theme-default-b .aw-header-v2 .aw-wordmark-name {
+  font-family: 'Hanken Grotesk', system-ui, sans-serif;
+  font-weight: 800;
+  font-size: 17px;
+  letter-spacing: -0.02em;
+  text-transform: lowercase;
+  color: var(--aw-chrome-text);
+}
+body.aw-theme-default-a .aw-header-v2 .aw-wordmark-sig,
+body.aw-theme-default-b .aw-header-v2 .aw-wordmark-sig {
+  color: var(--aw-brand-teal);
+}
+body.aw-theme-default-a .aw-header-v2 .aw-wordmark-byline,
+body.aw-theme-default-b .aw-header-v2 .aw-wordmark-byline {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-weight: 500;
+  font-size: 10px;
+  letter-spacing: 0.04em;
+  text-transform: lowercase;
+  color: var(--aw-chrome-text-soft);
+  margin-left: 0;
 }
 body.aw-theme-default-a .aw-header-v2 .beta-badge,
 body.aw-theme-default-b .aw-header-v2 .beta-badge {
@@ -3152,6 +3188,8 @@ body.aw-theme-default-b .aw-header-v2 .toolbar-btn:focus-visible {
 }
 
 /* Header Export CTA — the only primary in the bar. */
+/* The one conversion CTA on the page — pink, per the locked brand rule
+   (pink = conversion CTAs ONLY). Everything else stays neutral/teal/acid. */
 body.aw-theme-default-a .aw-export-cta,
 body.aw-theme-default-b .aw-export-cta {
   display: inline-flex;
@@ -3160,9 +3198,9 @@ body.aw-theme-default-b .aw-export-cta {
   height: 30px;
   padding: 0 14px;
   border-radius: 6px;
-  background: var(--aw-accent);
+  background: #C0285C;
   color: #fff;
-  border: 1px solid var(--aw-accent-deep);
+  border: 1px solid #97204A;
   font-family: inherit;
   font-size: 13px;
   font-weight: 600;
@@ -3171,7 +3209,7 @@ body.aw-theme-default-b .aw-export-cta {
 }
 body.aw-theme-default-a .aw-export-cta:hover,
 body.aw-theme-default-b .aw-export-cta:hover {
-  background: var(--aw-accent-deep);
+  background: #97204A;
 }
 
 /* View-as in header — compact pill. */
@@ -3814,9 +3852,9 @@ body.aw-theme-default-b .aw-header-action-btn--destructive {
 }
 body.aw-theme-default-a .aw-header-action-btn--destructive:hover,
 body.aw-theme-default-b .aw-header-action-btn--destructive:hover {
-  background: color-mix(in srgb, var(--aw-brand-pink) 14%, var(--aw-hdr-clear-bg));
-  border-color: var(--aw-brand-pink);
-  color: var(--aw-brand-pink-deep);
+  background: var(--aw-brand-warn-soft);
+  border-color: var(--aw-brand-warn);
+  color: var(--aw-brand-warn-deep);
 }
 
 /* Overflow ⋯ / hamburger. */
@@ -4347,13 +4385,13 @@ body.aw-theme-threnne .aw-chrome .aw-header-clear-confirm .btn-ghost-sm:hover {
   color: var(--aw-chrome-text, #2A2A2A);
 }
 .aw-header-clear-confirm-erase {
-  background: var(--aw-brand-pink-deep) !important;
-  border-color: var(--aw-brand-pink-deep) !important;
+  background: var(--aw-brand-warn) !important;
+  border-color: var(--aw-brand-warn-deep) !important;
   color: #fff !important;
 }
 .aw-header-clear-confirm-erase:hover {
-  background: var(--aw-brand-pink) !important;
-  border-color: var(--aw-brand-pink-deep) !important;
+  background: var(--aw-brand-warn-deep) !important;
+  border-color: var(--aw-brand-warn-deep) !important;
 }
 .aw-header-confirm-modal .modal-body {
   padding-top: 0;

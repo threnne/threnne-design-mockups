@@ -29,10 +29,12 @@
    * Viewport width tiers: at or above minWidth, only ranks listed are forced
    * into overflow (cumulative). Theme (7) is last in the collapse sequence.
    */
+  // brand-refresh: even at full width, tuck the lowest-priority secondary
+  // actions (Tour=1, Data=2) into the ⋯ menu so the bar stays uncluttered.
   const WIDTH_STEPS = [
-    { minWidth: 1280, overflowRanks: [] },
-    { minWidth: 1080, overflowRanks: ['1'] },
-    { minWidth: 980, overflowRanks: ['1', '2'] },
+    { minWidth: 1280, overflowRanks: ['1', '2'] },
+    { minWidth: 1080, overflowRanks: ['1', '2'] },
+    { minWidth: 980, overflowRanks: ['1', '2', '3'] },
     { minWidth: 900, overflowRanks: ['1', '2', '3'] },
     { minWidth: 820, overflowRanks: ['1', '2', '3', '4'] },
     { minWidth: 760, overflowRanks: ['1', '2', '3', '4', '5'] },
