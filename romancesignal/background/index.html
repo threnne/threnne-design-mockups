@@ -1,104 +1,893 @@
-<!DOCTYPE html><html lang="en" data-brand="signal" data-theme="dark"> <head>
-<base href="/romancesignal/background/" />
+<!DOCTYPE html><html lang="en" data-brand="signal" data-theme="dark">
+<head>
 <meta name="robots" content="noindex" />
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Background · Romance Signal</title><meta name="description" content="How romance books move through publishing acquisition and Hollywood scouting: decision-makers, timelines, and signal weights."><link rel="icon" type="image/svg+xml" href="../favicon.svg"><link rel="icon" type="image/png" sizes="32x32" href="../favicon-32-light.png"><link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png"><link rel="manifest" href="../manifest.webmanifest"><meta name="theme-color" content="#0C0F1F" media="(prefers-color-scheme: dark)"><meta name="theme-color" content="#FAFAF7" media="(prefers-color-scheme: light)"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300..700&family=JetBrains+Mono:wght@400;500&display=swap"><link rel="stylesheet" href="../css/base.css"><link rel="stylesheet" href="../css/style.css"><link rel="stylesheet" href="../css/style-pages.css"><link rel="stylesheet" href="../css/get-involved.css"><link rel="stylesheet" href="../css/background-page.css"><link rel="stylesheet" href="../brand/legacy-aliases.css"><script>
-      // Restore theme before paint to avoid flash
-      try {
-        const saved = localStorage.getItem('rs-theme');
-        if (saved === 'light' || saved === 'dark') {
-          document.documentElement.setAttribute('data-theme', saved);
-        } else {
-          document.documentElement.setAttribute('data-theme', 'dark');
-        }
-      } catch (e) {}
-    </script><link rel="stylesheet" href="../_astro/index.Du8h-bcg.css"></head> <body data-page="background">
-<div class="mockup-banner mockup-banner--watchlist" role="note"> <div class="mockup-banner__inner mockup-banner__inner--watchlist"> <span class="mockup-banner__chip">WATCHLIST · TESTING</span> <span class="mockup-banner__copy"> 
-Watchlist data is currently in testing as we build our cohort of starting books. Please be patient
-            while coverage and charts come online.
- </span>  </div> </div> <header class="topnav"> <div class="topnav__inner"> <a href="../index.html" class="brand" aria-label="Romance Signal by Threnne home"> <img class="brand__mark" src="../brand/signal-s-mark-dark.svg" alt="" width="32" height="32" data-brand-mark-dark="../brand/signal-s-mark-dark.svg" data-brand-mark-light="../brand/signal-s-mark-light.svg"> <span class="brand__text"> <img class="brand__wordmark-img" src="../brand/romance-signal-wordmark-dark.svg" alt="Romance Signal" height="20" data-brand-wordmark-dark="../brand/romance-signal-wordmark-dark.svg" data-brand-wordmark-light="../brand/romance-signal-wordmark-light.svg"> <span class="brand__sub">by Threnne</span> </span> </a> <nav class="topnav__links" aria-label="Primary"> <a href="../watchlist/index.html" class="topnav__link">Watchlist</a><a href="./index.html" class="topnav__link is-active">Background</a><a href="../research/index.html" class="topnav__link">Research</a><a href="../methodology/index.html" class="topnav__link">Methodology</a> </nav> <div class="topnav__actions"> <button type="button" class="topnav__menu-btn" id="navMenuToggle" aria-expanded="false" aria-controls="navMenuPanel" aria-label="Open navigation menu"> <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"> <path d="M4 7h16M4 12h16M4 17h16"></path> </svg> </button> <button type="button" class="theme-toggle" aria-label="Toggle theme" id="themeToggle"> <svg class="theme-toggle__sun" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="currentColor"></circle><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2v3"></path><path d="M12 19v3"></path><path d="M2 12h3"></path><path d="M19 12h3"></path><path d="m4.9 4.9 2.1 2.1"></path><path d="m17 17 2.1 2.1"></path><path d="m4.9 19.1 2.1-2.1"></path><path d="m17 7 2.1-2.1"></path></g></svg> <svg class="theme-toggle__moon" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.5A9 9 0 1 1 11.5 3a7 7 0 0 0 9.5 9.5z" fill="currentColor"></path></svg> </button> </div> </div> <nav class="topnav__menu-panel" id="navMenuPanel" aria-label="Primary mobile" hidden> <a href="../watchlist/index.html" class="topnav__menu-link">Watchlist</a><a href="./index.html" class="topnav__menu-link is-active">Background</a><a href="../research/index.html" class="topnav__menu-link">Research</a><a href="../methodology/index.html" class="topnav__menu-link">Methodology</a> </nav> </header> <script>
-  (function () {
-    const btn = document.getElementById('navMenuToggle');
-    const panel = document.getElementById('navMenuPanel');
-    if (!btn || !panel) return;
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Background · Romance Signal</title>
+<meta name="description" content="How a romance book gets acquired, and how it gets scouted for screen. Decision-makers, timelines, signal weights, drawn from named 2026 industry sources.">
+<meta name="theme-color" content="#0E0B0D" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#F6F1EA" media="(prefers-color-scheme: light)">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;1,300;1,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script>
+  // Restore theme before paint to avoid flash; default dark
+  try {
+    var saved = localStorage.getItem('rs-theme');
+    document.documentElement.setAttribute('data-theme', (saved === 'light' || saved === 'dark') ? saved : 'dark');
+  } catch (e) {}
+</script>
+<link rel="stylesheet" href="../css/bouquet-base.css">
+<style>
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.nav__links a.is-active{color:var(--text)}
+.nav__cta{font-family:var(--font-mono);font-size:12px;border:1px solid var(--pink);color:var(--pink);
+  padding:8px 15px;border-radius:6px;transition:.2s;letter-spacing:.02em}
+.nav__cta:hover{background:var(--pink);color:#fff}
 
-    function setOpen(open) {
-      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-      btn.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
-      if (open) panel.removeAttribute('hidden');
-      else panel.setAttribute('hidden', '');
+/* section frame */
+.eyebrow{font-family:var(--font-mono);font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--peony);margin-bottom:14px;display:flex;align-items:center;gap:10px}
+.eyebrow::before{content:"";width:24px;height:1px;background:var(--peony)}
+.h2{font-family:var(--font-display);font-weight:700;font-size:clamp(26px,3.2vw,38px);letter-spacing:-.02em;
+  line-height:1.12;max-width:24ch;text-wrap:balance;color:var(--text)}
+.h2 em{font-family:var(--font-serif);font-style:italic;font-weight:400;color:var(--thistle)}
+.lead{font-size:16.5px;color:var(--text-muted);max-width:62ch;margin-top:16px;line-height:1.6;text-wrap:pretty}
+.lead .serif{font-family:var(--font-serif);font-style:italic;color:var(--text)}
+
+/* hero */
+.bg-hero{padding:56px 0 28px}
+.bg-hero__label{font-family:var(--font-mono);font-size:11.5px;color:var(--euc);letter-spacing:.16em;text-transform:uppercase;
+  display:inline-flex;align-items:center;gap:8px;margin-bottom:22px;
+  border:1px solid var(--border);padding:6px 12px;border-radius:999px;background:var(--surface)}
+.bg-hero__label::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--euc);box-shadow:0 0 8px var(--euc)}
+.bg-hero h1{font-family:var(--font-display);font-weight:900;font-size:clamp(34px,4.4vw,54px);line-height:1.05;
+  letter-spacing:-.025em;max-width:22ch;margin-bottom:22px}
+.bg-acq{color:var(--sage)}
+.bg-scout{color:var(--peony)}
+.bg-hero h1 em{font-family:var(--font-serif);font-style:italic;font-weight:400;color:var(--thistle)}
+.bg-hero__intro{font-size:17px;color:var(--text-muted);max-width:62ch;line-height:1.6;margin-bottom:14px}
+.bg-hero__framing{font-size:15px;color:var(--text-muted);max-width:68ch;line-height:1.65}
+.bg-hero__framing em{font-family:var(--font-serif);font-style:italic;color:var(--text);font-weight:400}
+
+/* kpi ribbon */
+.kpis{border-top:1px solid var(--border);border-bottom:1px solid var(--border);margin-top:34px;background:var(--bg-2)}
+.kpis__in{display:grid;grid-template-columns:repeat(4,1fr)}
+.kpi{padding:22px 24px;border-right:1px solid var(--border);position:relative}
+.kpi:last-child{border-right:none}
+.kpi__label{font-family:var(--font-mono);font-size:11px;color:var(--text-faint);letter-spacing:.06em;text-transform:uppercase}
+.kpi__value{font-family:var(--font-mono);font-weight:700;font-size:28px;letter-spacing:-.01em;margin-top:8px}
+.kpi__note{font-size:12.5px;color:var(--text-muted);margin-top:6px;line-height:1.45}
+.kpi__cite{font-family:var(--font-mono);font-size:10px;letter-spacing:.04em;color:var(--text-faint);margin-top:8px;line-height:1.4}
+.kpi__cite a{color:var(--text-faint);text-decoration:none;border-bottom:1px solid color-mix(in srgb,var(--text-faint) 40%,transparent)}
+.kpi__cite a:hover{color:var(--sage);border-color:var(--sage)}
+.kpi--acq .kpi__value{color:var(--sage)}
+.kpi--scout .kpi__value{color:var(--peony)}
+.kpi::before{content:"";position:absolute;left:0;top:0;height:2px;width:36px;background:var(--border-strong)}
+.kpi--acq::before{background:var(--sage)}
+.kpi--scout::before{background:var(--peony)}
+
+/* sections */
+section.block{padding:64px 0 12px;position:relative}
+.sec-head{display:flex;align-items:baseline;gap:14px;margin-bottom:8px}
+.sec-num{font-family:var(--font-mono);font-size:11px;color:var(--peony);letter-spacing:.18em;text-transform:uppercase}
+.sec-divider{flex:1;height:1px;background:var(--border)}
+
+/* timeline grid */
+.timeline-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:30px}
+.timeline-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:26px 24px}
+.timeline-card--acq{border-top:3px solid var(--sage)}
+.timeline-card--scout{border-top:3px solid var(--peony)}
+.timeline-card__label{font-family:var(--font-mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--text-faint);margin-bottom:8px}
+.timeline-card--acq .timeline-card__label{color:var(--sage)}
+.timeline-card--scout .timeline-card__label{color:var(--peony)}
+.timeline-card__title{font-family:var(--font-display);font-weight:700;font-size:20px;letter-spacing:-.015em;margin-bottom:18px}
+.timeline-list{list-style:none;display:flex;flex-direction:column;gap:14px}
+.timeline-step{display:grid;grid-template-columns:38px 1fr;gap:14px;align-items:start;padding:12px 0;border-top:1px solid var(--border)}
+.timeline-step:first-child{border-top:none;padding-top:0}
+.timeline-step__num{font-family:var(--font-mono);font-size:11px;color:var(--text-faint);letter-spacing:.06em;padding-top:3px}
+.timeline-card--acq .timeline-step__num{color:var(--sage)}
+.timeline-card--scout .timeline-step__num{color:var(--peony)}
+.timeline-step__name{font-family:var(--font-display);font-weight:700;font-size:14.5px;letter-spacing:-.005em;margin-bottom:3px}
+.timeline-step__detail{font-size:13px;color:var(--text-muted);line-height:1.5}
+
+/* controls + table */
+.bg-controls{display:flex;justify-content:space-between;align-items:center;gap:18px;margin-top:26px;flex-wrap:wrap}
+.bg-filters{display:flex;gap:8px;flex-wrap:wrap}
+.bg-chip{font-family:var(--font-mono);font-size:11.5px;color:var(--text-muted);background:var(--surface);
+  border:1px solid var(--border);border-radius:999px;padding:7px 13px;cursor:pointer;transition:.15s;letter-spacing:.02em}
+.bg-chip:hover{border-color:var(--sage);color:var(--text)}
+.bg-chip[aria-pressed="true"]{background:color-mix(in srgb,var(--sage) 20%,transparent);border-color:var(--sage);color:var(--sage);font-weight:600}
+.bg-search-wrap{display:flex;align-items:center;gap:9px;background:var(--surface);border:1px solid var(--border);border-radius:7px;padding:8px 12px;min-width:240px}
+.bg-search{background:none;border:none;outline:none;color:var(--text);font-family:var(--font-body);font-size:13.5px;width:100%}
+.bg-search::placeholder{color:var(--text-faint)}
+
+.bg-table-wrap{margin-top:20px;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;background:var(--surface)}
+.bg-table{width:100%;border-collapse:collapse;table-layout:fixed}
+.bg-table thead{background:var(--bg-2);border-bottom:1px solid var(--border)}
+.bg-table th{text-align:left;padding:13px 14px;font-family:var(--font-mono);font-size:10.5px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--text-faint);font-weight:600}
+.bg-table th button{background:none;border:none;color:inherit;font:inherit;cursor:pointer;display:inline-flex;align-items:center;gap:6px;padding:0;letter-spacing:inherit;text-transform:inherit}
+.bg-table th button::after{content:"";display:inline-block;width:0;height:0;border-left:4px solid transparent;border-right:4px solid transparent;border-top:5px solid currentColor;opacity:.4;margin-left:2px;transform:translateY(-1px)}
+.bg-table th button[aria-sort="ascending"]::after{border-top:none;border-bottom:5px solid var(--sage);opacity:1}
+.bg-table th button[aria-sort="descending"]::after{border-top:5px solid var(--sage);opacity:1}
+.bg-col-expand{width:44px}
+.bg-table th:nth-child(2){width:14%}
+.bg-table th:nth-child(3){width:22%}
+.bg-table th:nth-child(4),.bg-table th:nth-child(5){width:30%}
+
+.bg-data-row{border-bottom:1px solid var(--border);transition:background .15s}
+.bg-data-row:hover{background:var(--bg-2)}
+.bg-data-row td{padding:16px 14px;vertical-align:top}
+.bg-expand-btn{width:28px;height:28px;display:grid;place-items:center;border:1px solid var(--border-strong);border-radius:6px;
+  background:transparent;color:var(--euc);cursor:pointer;font-family:var(--font-mono);font-size:14px;line-height:1;transition:.15s}
+.bg-expand-btn:hover{background:color-mix(in srgb,var(--sage) 15%,transparent);border-color:var(--sage)}
+.bg-expand-btn[aria-expanded="true"]{background:var(--sage);color:var(--bg);border-color:var(--sage)}
+.bg-expand-btn[aria-expanded="true"] span[aria-hidden]::before{content:"−"}
+.bg-expand-btn[aria-expanded="true"] span[aria-hidden]{font-size:0}
+.bg-expand-btn[aria-expanded="true"] span[aria-hidden]::before{font-size:14px}
+.bg-category{font-family:var(--font-mono);font-size:11px;color:var(--text-faint);letter-spacing:.06em;text-transform:uppercase}
+.bg-dimension{font-family:var(--font-display);font-weight:700;font-size:14.5px;letter-spacing:-.005em;color:var(--text)}
+.bg-acq-cell .bg-cell-summary, .bg-scout-cell .bg-cell-summary{font-size:13.5px;line-height:1.5;color:var(--text)}
+.bg-cell-metric{font-family:var(--font-mono);font-size:11.5px;color:var(--text-muted);margin-top:5px}
+.bg-acq-cell{border-left:2px solid var(--sage);padding-left:14px !important}
+.bg-scout-cell{border-left:2px solid var(--peony);padding-left:14px !important}
+
+.bg-detail-row{background:var(--bg-2);border-bottom:1px solid var(--border)}
+.bg-detail-row td{padding:22px 22px 24px}
+.bg-detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:18px}
+.bg-detail-block{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:16px 18px}
+.bg-detail-block--acq{border-left:3px solid var(--sage)}
+.bg-detail-block--scout{border-left:3px solid var(--peony)}
+.bg-detail-block__label{font-family:var(--font-mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:8px}
+.bg-detail-block--acq .bg-detail-block__label{color:var(--sage)}
+.bg-detail-block--scout .bg-detail-block__label{color:var(--peony)}
+.bg-detail-block__body{font-size:13.5px;color:var(--text-muted);line-height:1.6}
+.bg-detail-takeaway{background:color-mix(in srgb,var(--acid) 8%,transparent);border:1px solid color-mix(in srgb,var(--acid) 40%,transparent);
+  border-radius:8px;padding:14px 18px;margin-bottom:16px}
+.bg-detail-takeaway__label{font-family:var(--font-mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--acid);margin-bottom:6px}
+[data-theme="light"] .bg-detail-takeaway{background:color-mix(in srgb,var(--acid) 12%,transparent);border-color:color-mix(in srgb,var(--acid) 45%,transparent)}
+.bg-detail-takeaway__body{font-size:13.5px;color:var(--text);line-height:1.55}
+.bg-detail-sources__label{font-family:var(--font-mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--text-faint);margin-bottom:8px}
+.bg-detail-sources__list{list-style:none;display:flex;flex-wrap:wrap;gap:8px}
+.bg-detail-sources__list a{display:inline-block;font-family:var(--font-mono);font-size:11.5px;color:var(--euc);
+  border:1px solid var(--border-strong);border-radius:6px;padding:6px 11px;transition:.15s}
+.bg-detail-sources__list a:hover{background:color-mix(in srgb,var(--sage) 15%,transparent);border-color:var(--sage)}
+
+.bg-status{font-family:var(--font-mono);font-size:11.5px;color:var(--text-faint);padding:10px 14px;border-top:1px solid var(--border);background:var(--bg-2)}
+
+/* investigations */
+.invest-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:30px}
+.invest{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:22px 22px;display:flex;flex-direction:column;gap:14px}
+.invest--both{border-top:3px solid var(--acid-deep)}
+.invest--scout{border-top:3px solid var(--peony)}
+.invest--acq{border-top:3px solid var(--sage)}
+.invest__audience{font-family:var(--font-mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--text-faint);
+  display:inline-flex;align-items:center;gap:8px}
+.invest__audience::before{content:"";width:18px;height:1px;background:var(--text-faint)}
+.invest--both .invest__audience{color:var(--acid-deep)}
+.invest--both .invest__audience::before{background:var(--acid-deep)}
+.invest--scout .invest__audience{color:var(--peony)}
+.invest--scout .invest__audience::before{background:var(--peony)}
+.invest--acq .invest__audience{color:var(--sage)}
+.invest--acq .invest__audience::before{background:var(--sage)}
+.invest__title{font-family:var(--font-display);font-weight:700;font-size:18px;letter-spacing:-.015em;line-height:1.25}
+.invest__block-label{font-family:var(--font-mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--text-faint);margin-bottom:4px}
+.invest__block-body{font-size:13.5px;color:var(--text-muted);line-height:1.55}
+.invest__open{background:color-mix(in srgb,var(--peony) 10%,transparent);border:1px solid color-mix(in srgb,var(--peony) 35%,transparent);
+  border-radius:8px;padding:12px 14px}
+.invest__open .invest__block-label{color:var(--peony)}
+
+/* signal weights chart */
+.method-note{margin-top:24px;background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:14px 18px}
+.method-note__label{font-family:var(--font-mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--text-faint);margin-bottom:6px}
+.method-note__body{font-size:13.5px;color:var(--text-muted);line-height:1.55}
+
+.signals-chart{margin-top:28px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:26px 26px 22px;overflow-x:auto}
+.signals-axis{display:grid;grid-template-columns:230px 1fr;gap:24px;align-items:end;border-bottom:1px solid var(--border);padding-bottom:8px;margin-bottom:8px}
+.signals-axis__spacer{}
+.signals-axis__ticks{display:grid;grid-template-columns:repeat(11,1fr);font-family:var(--font-mono);font-size:10px;color:var(--text-faint);letter-spacing:.04em}
+.signals-axis__ticks span{transform:translateX(-50%);white-space:nowrap}
+.signals-axis__ticks span:first-child{transform:none}
+.signals-axis__ticks span:last-child{transform:translateX(-100%)}
+.signals-axis__title{font-family:var(--font-mono);font-size:10.5px;color:var(--text-faint);letter-spacing:.12em;text-transform:uppercase;margin-top:14px;text-align:right}
+.signal-row{display:grid;grid-template-columns:230px 1fr;gap:24px;padding:16px 0;border-bottom:1px solid var(--border)}
+.signal-row:last-child{border-bottom:none}
+.signal-row__name{font-family:var(--font-display);font-weight:700;font-size:14px;letter-spacing:-.005em;color:var(--text)}
+.signal-row__note{font-family:var(--font-mono);font-size:11px;color:var(--text-faint);margin-top:4px;letter-spacing:.02em}
+.signal-bars{display:flex;flex-direction:column;gap:8px;position:relative}
+.signal-bars::before,.signal-bars::after{
+  content:"";position:absolute;top:-4px;bottom:-4px;width:1px;background:var(--border);
+}
+.signal-bars::before{left:50%}
+.signal-bars::after{left:100%}
+.signal-bar-group{display:grid;grid-template-columns:90px 1fr 44px;gap:10px;align-items:center}
+.signal-bar-pub{font-family:var(--font-mono);font-size:11px;color:var(--sage);letter-spacing:.06em;text-transform:uppercase}
+.signal-bar-scout{font-family:var(--font-mono);font-size:11px;color:var(--peony);letter-spacing:.06em;text-transform:uppercase}
+.signal-bar{position:relative;height:14px;background:var(--bg-2);border:1px solid var(--border);border-radius:3px;overflow:hidden}
+.signal-bar-fill{position:absolute;left:0;top:0;height:100%;border-radius:2px}
+.signal-bar-fill--acq{background:linear-gradient(90deg,var(--sage),var(--sage-deep))}
+.signal-bar-fill--scout{background:linear-gradient(90deg,var(--peony),var(--peony-bright))}
+.signal-bar-value{font-family:var(--font-mono);font-weight:600;font-size:12px;text-align:right;color:var(--text)}
+
+/* closing */
+.bg-closing{margin-top:60px;border-top:1px solid var(--border);background:linear-gradient(160deg,var(--plum),var(--bg-2));
+  padding:50px 0 60px;text-align:center}
+.bg-closing__inner{max-width:var(--maxw);margin:0 auto;padding:0 26px}
+.bg-closing__text{font-family:var(--font-display);font-weight:700;font-size:clamp(20px,2.4vw,28px);letter-spacing:-.015em;line-height:1.3;max-width:50ch;margin:0 auto 22px;color:var(--text)}
+.bg-closing__cta{display:inline-flex;align-items:center;gap:8px;font-family:var(--font-mono);font-size:13px;
+  border:1px solid var(--euc);color:var(--euc);padding:11px 22px;border-radius:7px;transition:.2s;letter-spacing:.02em}
+.bg-closing__cta:hover{background:var(--euc);color:var(--bg)}
+
+/* footer */
+.foot{border-top:1px solid var(--border);padding:42px 0 34px;margin-top:0;background:var(--bg-2)}
+
+@media(max-width:980px){
+  .timeline-grid{grid-template-columns:1fr}
+  .invest-grid{grid-template-columns:1fr}
+  .bg-detail-grid{grid-template-columns:1fr}
+  .kpis__in{grid-template-columns:repeat(2,1fr)}
+  .kpi:nth-child(2){border-right:none}
+  .kpi:nth-child(1),.kpi:nth-child(2){border-bottom:1px solid var(--border)}
+  .nav__links a:not(.nav__cta):not(.toggle){display:none}
+  .nav__links{gap:14px}
+  /* table responsive */
+  .bg-table, .bg-table thead, .bg-table tbody, .bg-table tr, .bg-table th, .bg-table td{display:block;width:100% !important}
+  .bg-table thead{display:none}
+  .bg-data-row{padding:14px 16px}
+  .bg-data-row td{padding:6px 0 !important;border:none !important}
+  .bg-data-row td.bg-col-expand{display:flex;justify-content:flex-end}
+  .bg-acq-cell,.bg-scout-cell{padding-left:12px !important;margin-top:8px}
+  .bg-acq-cell::before{content:"Publishing · ";font-family:var(--font-mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--sage)}
+  .bg-scout-cell::before{content:"Hollywood · ";font-family:var(--font-mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--peony)}
+  .bg-detail-row td{padding:18px 16px !important}
+  .signals-axis,.signal-row{grid-template-columns:1fr}
+  .signal-row__name{margin-bottom:8px}
+  .signals-axis__spacer{display:none}
+  .signal-bars::before,.signal-bars::after{display:none}
+  /* compact ticks on mobile to prevent 90/100 collision */
+  .signals-axis__ticks{grid-template-columns:repeat(6,1fr);font-size:9px}
+  .signals-axis__ticks span:nth-child(2),
+  .signals-axis__ticks span:nth-child(4),
+  .signals-axis__ticks span:nth-child(6),
+  .signals-axis__ticks span:nth-child(8),
+  .signals-axis__ticks span:nth-child(10){display:none}
+}</style>
+</head>
+<body>
+
+<div class="app">
+
+<!-- TESTING BANNER (plum/peony gradient) -->
+
+<!-- NAV -->
+<header class="nav">
+  <div class="wrap nav__in">
+    <a href="../index.html" class="brand">
+      <svg class="brand__mark" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+        <rect width="32" height="32" rx="7" fill="none" stroke="var(--euc)" stroke-width="1.6"/>
+        <path d="M9 21 L13 13 L17 18 L20 10 L23 16" fill="none" stroke="var(--euc)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="23" cy="16" r="1.8" fill="var(--thistle)"/>
+      </svg>
+      <span>
+        <div class="brand__name">Romance Signal</div>
+        <div class="brand__sub">by Threnne</div>
+      </span>
+    </a>
+    <nav class="nav__links">
+      <a href="../watchlist/index.html">watchlist</a>
+      <a href="index.html" class="is-active">background</a>
+      <a href="../research/index.html">research</a>
+      <a href="../methodology/index.html">methodology</a>
+      <a href="../index.html#get-involved" class="nav__cta">get_involved()</a>
+      <button class="toggle" onclick="tog()" aria-label="Toggle theme">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="bg-hero">
+  <div class="wrap">
+    <span class="bg-hero__label">Background</span>
+    <h1>How a romance book gets <span class="bg-acq">acquired</span>, and how it gets <span class="bg-scout">scouted for screen</span>.</h1>
+    <p class="bg-hero__intro">Two pipelines, same romance manuscript. Different decision-makers, different metrics, different timelines. This page maps both, so writers and industry readers can see what the institutional landscape actually looks like.</p>
+    <p class="bg-hero__framing">Romance Signal's published research investigates specific patterns inside this landscape. This page is the reference. Underlying mechanics, decision-makers, timelines, and signal weights, drawn from named 2026 industry sources and grounded in how the genre actually moves through both pipelines. <em>Romance is its own market and its own ecosystem.</em> The patterns described here are read with that in mind.</p>
+  </div>
+</section>
+
+<!-- KPIs -->
+<div class="kpis">
+  <div class="wrap kpis__in" role="list">
+    <div class="kpi kpi--acq" role="listitem">
+      <div class="kpi__label">Romance market share</div>
+      <div class="kpi__value tnum">~20%</div>
+      <div class="kpi__note">Roughly 1 in 5 adult fiction print books sold.</div>
+      <div class="kpi__cite">Est · <a href="https://shelflovepodcast.substack.com/p/putting-romance-book-sales-data-in" target="_blank" rel="noopener noreferrer">Circana / NPD Bookscan</a>, 2022</div>
+    </div>
+    <div class="kpi kpi--scout" role="listitem">
+      <div class="kpi__label">Optioned to screen</div>
+      <div class="kpi__value tnum">&lt;10%</div>
+      <div class="kpi__note">Of optioned books reach production (directional).</div>
+      <div class="kpi__cite">Industry estimate · not a single-source figure</div>
+    </div>
+    <div class="kpi kpi--acq" role="listitem">
+      <div class="kpi__label">Publishing decision</div>
+      <div class="kpi__value tnum">5+ seats</div>
+      <div class="kpi__note">Weekly cross-functional pub board.</div>
+      <div class="kpi__cite">Est · <a href="https://www.publishingtalk.org/get-published/book-publishing-process-8-step-guide/" target="_blank" rel="noopener noreferrer">PublishingTalk</a></div>
+    </div>
+    <div class="kpi kpi--scout" role="listitem">
+      <div class="kpi__label">Hollywood decision</div>
+      <div class="kpi__value tnum">1-3</div>
+      <div class="kpi__note">Producer or streamer executive.</div>
+      <div class="kpi__cite">Est · <a href="https://jennasatterthwaite.substack.com/p/what-is-a-book-to-screen-scout-seven" target="_blank" rel="noopener noreferrer">Satterthwaite x Kooiker</a>, 2026</div>
+    </div>
+  </div>
+</div>
+
+<!-- 01 PIPELINE -->
+<section class="block">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">01</span><div class="sec-divider"></div></div>
+    <span class="eyebrow">pipeline at a glance</span>
+    <h2 class="h2">Both pipelines start from a manuscript. They diverge <em>immediately.</em></h2>
+    <p class="lead">Who reads first, what gets prioritized, and how long the path takes. <span class="serif">Same manuscript, two rooms.</span></p>
+    <div class="timeline-grid">
+      <article class="timeline-card timeline-card--acq">
+        <p class="timeline-card__label">Publishing acquisition</p>
+        <p class="timeline-card__title">Manuscript to bookstore</p>
+        <ol class="timeline-list">
+          <li class="timeline-step"><span class="timeline-step__num">01</span><div><div class="timeline-step__name">Query</div><div class="timeline-step__detail">Romance author submits to literary agent. Most agents in romance are open to direct query but require comp titles and platform.</div></div></li>
+          <li class="timeline-step"><span class="timeline-step__num">02</span><div><div class="timeline-step__name">Submission</div><div class="timeline-step__detail">Agent shops to 8-12 romance editors at Big Five imprints and category houses (Avon, Berkley, St. Martin's, Forever, Carina).</div></div></li>
+          <li class="timeline-step"><span class="timeline-step__num">03</span><div><div class="timeline-step__name">P&amp;L build</div><div class="timeline-step__detail">Editor models margins against romance comp sales, BookTok presence, and series potential. Romance P&amp;Ls weight backlist heavily.</div></div></li>
+          <li class="timeline-step"><span class="timeline-step__num">04</span><div><div class="timeline-step__name">Pub board</div><div class="timeline-step__detail">Cross-functional weekly vote including editor-in-chief, sales, marketing, production. Romance-specific imprints may have shorter approval chains.</div></div></li>
+          <li class="timeline-step"><span class="timeline-step__num">05</span><div><div class="timeline-step__name">Offer &amp; contract</div><div class="timeline-step__detail">Advance against royalty, primary rights split, subsidiary rights including audio (high-value in romance) and translation.</div></div></li>
+          <li class="timeline-step"><span class="timeline-step__num">06</span><div><div class="timeline-step__name">Edit &amp; produce</div><div class="timeline-step__detail">Twelve to eighteen months from contract to shelf. Romance has shorter cycles than literary fiction for time-to-market reasons.</div></div></li>
+          <li class="timeline-step"><span class="timeline-step__num">07</span><div><div class="timeline-step__name">On-sale</div><div class="timeline-step__detail">Bookstore launch coordinated with BookTok promotion windows and trope-tagged seasonal pushes.</div></div></li>
+        </ol>
+      </article>
+      <article class="timeline-card timeline-card--scout">
+        <p class="timeline-card__label">Hollywood scouting</p>
+        <p class="timeline-card__title">Manuscript to screen</p>
+        <ol class="timeline-list">
+          <li class="timeline-step"><span class="timeline-step__num">01</span><div><div class="timeline-step__name">Manuscript surfaces</div><div class="timeline-step__detail">Scout reader assigned, often before publication if BookTok momentum or auction heat is visible.</div></div></li>
+          <li class="timeline-step"><span class="timeline-step__num">02</span><div><div class="timeline-step__name">Coverage</div><div class="timeline-step__detail">Synopsis, cast positioning, set-piece highlights, heat-level note for romance specifically.</div></div></li>
+          <li class="timeline-step"><span class="timeline-step__num">03</span><div><div class="timeline-step__name">IP memo</div><div class="timeline-step__detail">Weekly briefing to producers and streamer execs. Romance properties flagged with subgenre and trope architecture.</div></div></li>
+          <li class="timeline-step"><span class="timeline-step__num">04</span><div><div class="timeline-step__name">Producer pitch</div><div class="timeline-step__detail">Match against client slate. Hallmark wants closed-arc warmth, streamers want spice and conflict, prestige wants literary romance.</div></div></li>
+          <li class="timeline-step"><span class="timeline-step__num">05</span><div><div class="timeline-step__name">Option or shopping</div><div class="timeline-step__detail">Twelve to eighteen month exclusive window. Romance options have moved faster in 2025-2026 with the streamer rush.</div></div></li>
+          <li class="timeline-step"><span class="timeline-step__num">06</span><div><div class="timeline-step__name">Development</div><div class="timeline-step__detail">Script, talent attachment, financing. Romance adaptations often hit attachment stage faster than other genres due to audience certainty.</div></div></li>
+          <li class="timeline-step"><span class="timeline-step__num">07</span><div><div class="timeline-step__name">Greenlight to screen</div><div class="timeline-step__detail">Fewer than ten percent of optioned books reach production. Romance closes that gap somewhat due to proven audience.</div></div></li>
+        </ol>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 02 SORTABLE COMPARISON -->
+<section class="block">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">02</span><div class="sec-divider"></div></div>
+    <span class="eyebrow">sortable comparison</span>
+    <h2 class="h2">One dimension per row, both pipelines side by side, <em>with sources.</em></h2>
+    <p class="lead">Sort by category, dimension, or metric. Filter by category. Use the expand control in the first column for the writer takeaway and source detail. <span class="serif">Every row is named.</span></p>
+
+    <div class="bg-controls">
+      <div class="bg-filters" id="bg-filters" role="group" aria-label="Filter by category">
+        <button type="button" class="bg-chip" data-cat="Decision-makers" aria-pressed="true">Decision-makers</button>
+        <button type="button" class="bg-chip" data-cat="Evaluation" aria-pressed="true">Evaluation</button>
+        <button type="button" class="bg-chip" data-cat="Timeline" aria-pressed="true">Timeline</button>
+        <button type="button" class="bg-chip" data-cat="Rights" aria-pressed="true">Rights</button>
+        <button type="button" class="bg-chip" data-cat="Signals" aria-pressed="true">Signals</button>
+      </div>
+      <div class="bg-search-wrap">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--text-faint)"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+        <label class="sr-only" for="bg-search">Search comparison rows</label>
+        <input type="search" id="bg-search" class="bg-search" placeholder="Search dimensions…" autocomplete="off">
+      </div>
+    </div>
+
+    <div class="bg-table-wrap">
+      <table class="bg-table" id="bg-comparison-table">
+        <thead>
+          <tr>
+            <th class="bg-col-expand" scope="col"><span class="sr-only">Expand</span></th>
+            <th scope="col"><button type="button" data-sort="category" aria-sort="ascending">Category</button></th>
+            <th scope="col"><button type="button" data-sort="dimension" aria-sort="none">Dimension</button></th>
+            <th scope="col"><button type="button" data-sort="pubMetric" aria-sort="none">Publishing</button></th>
+            <th scope="col"><button type="button" data-sort="hwMetric" aria-sort="none">Hollywood</button></th>
+          </tr>
+        </thead>
+        <tbody id="bg-tbody">
+          <!-- ROWS INJECTED BY JS -->
+        </tbody>
+      </table>
+      <div class="bg-status" id="bg-table-status" aria-live="polite">Showing 13 of 13 dimensions.</div>
+    </div>
+  </div>
+</section>
+
+<!-- 03 LEVERS -->
+<section class="block">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">03</span><div class="sec-divider"></div></div>
+    <span class="eyebrow">levers we're investigating</span>
+    <h2 class="h2">A short list of moves we think might <em>shift outcomes.</em></h2>
+    <p class="lead">We don't have settled evidence on most of these. This section names what we're testing, what would tell us it works, and what we don't yet know. <span class="serif">Open questions, kept open.</span></p>
+
+    <div class="invest-grid">
+      <article class="invest invest--both">
+        <p class="invest__audience">Both</p>
+        <h3 class="invest__title">Engineering a BookTok-shaped scene</h3>
+        <div><p class="invest__block-label">What we're testing</p><p class="invest__block-body">Whether building one clip-ready scene per romance (the trope moment, the chemistry beat, the chapter ending that makes a screenshot) correlates with both BookTok pickup and scout coverage.</p></div>
+        <div><p class="invest__block-label">What the field shows</p><p class="invest__block-body">Icebreaker and Fourth Wing both had scenes that became BookTok moments before adaptation interest landed. The pattern is consistent enough to take seriously.</p></div>
+        <div class="invest__open"><p class="invest__block-label">Where it's still open</p><p class="invest__block-body">What makes a scene BookTok-shaped versus just dramatic isn't well understood. We suspect emotional escalation, dialogue density, and trope legibility matter, but we don't have enough comparative data to know what's necessary versus sufficient.</p></div>
+      </article>
+
+      <article class="invest invest--scout">
+        <p class="invest__audience">Hollywood</p>
+        <h3 class="invest__title">Short-form as adaptation pitch</h3>
+        <div><p class="invest__block-label">What we're testing</p><p class="invest__block-body">Whether publishing romance novellas, short stories, or webtoon collaborations at high concept density gets faster scout attention than full novels.</p></div>
+        <div><p class="invest__block-label">What the field shows</p><p class="invest__block-body">Scouts increasingly read short-form content because it's faster to evaluate than a hundred-thousand-word manuscript. Microdrama and webtoon adaptations have become reference points in 2025-2026.</p></div>
+        <div class="invest__open"><p class="invest__block-label">Where it's still open</p><p class="invest__block-body">It's unclear whether short-form actually shortens the path to adaptation, or whether it's a pitch surface that still requires a novel to anchor the deal. We're watching whether romance writers with strong short-form portfolios convert at higher rates.</p></div>
+      </article>
+
+      <article class="invest invest--both">
+        <p class="invest__audience">Both</p>
+        <h3 class="invest__title">Backlist re-detonation</h3>
+        <div><p class="invest__block-label">What we're testing</p><p class="invest__block-body">Whether building rediscoverable moments in romance backlist (scenes, tropes, characters that can re-surface on BookTok years after publication) creates durable career value.</p></div>
+        <div><p class="invest__block-label">What the field shows</p><p class="invest__block-body">The Seven Husbands of Evelyn Hugo is the clearest recent example. Published in 2017, then rediscovered on BookTok in 2021, it had logged 37 weeks on the NYT bestseller list by the end of that year and crossed a million copies sold by early 2022, with Netflix picking up the film adaptation soon after. The book didn't change; the discovery mechanism did.</p></div>
+        <div class="invest__open"><p class="invest__block-label">Where it's still open</p><p class="invest__block-body">We don't know what makes a romance backlist title rediscoverable versus forgettable. Open-arc structure looks load-bearing per Volume 001, but it's one variable among many. The next several volumes will keep testing this.</p></div>
+      </article>
+
+      <article class="invest invest--acq">
+        <p class="invest__audience">Publishing</p>
+        <h3 class="invest__title">Subgenre comp stacks</h3>
+        <div><p class="invest__block-label">What we're testing</p><p class="invest__block-body">Whether building submission comp stacks that stay tightly inside the romance subgenre (matching trope, heat level, audience profile) outperforms stacks that reach across categories.</p></div>
+        <div><p class="invest__block-label">What the field shows</p><p class="invest__block-body">Editors weight comp sales heavily in P&amp;L modeling. Inside-genre comps reduce the explanatory burden on the submission and let the editor's case to the pub board be cleaner.</p></div>
+        <div class="invest__open"><p class="invest__block-label">Where it's still open</p><p class="invest__block-body">What we don't know is whether comp tightness matters at the edges. A romance with a literary fiction crossover ambition might benefit from a mixed stack; a category romance probably benefits from staying narrow. The threshold isn't clear.</p></div>
+      </article>
+
+      <article class="invest invest--both">
+        <p class="invest__audience">Both</p>
+        <h3 class="invest__title">Owned audience as primary asset</h3>
+        <div><p class="invest__block-label">What we're testing</p><p class="invest__block-body">Whether building a newsletter audience (rather than social following) functions as the more durable career asset for romance writers across both pipelines.</p></div>
+        <div><p class="invest__block-label">What the field shows</p><p class="invest__block-body">Newsletters travel with the writer across platform changes. Social followings often don't. Editors and scouts both report watching mailing list size as a stability signal more than viral spikes.</p></div>
+        <div class="invest__open"><p class="invest__block-label">Where it's still open</p><p class="invest__block-body">We don't have good data on how mailing list size correlates with either pipeline's decisions. The intuition is widely shared, but the threshold at which a list starts mattering for romance acquisitions specifically isn't documented.</p></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 04 SIGNAL WEIGHTS -->
+<section class="block">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">04</span><div class="sec-divider"></div></div>
+    <span class="eyebrow">2026 signal weights</span>
+    <h2 class="h2">Same signal, different weight across the <em>two pipelines.</em></h2>
+    <p class="lead">How publishing acquisition and Hollywood scouting weight different signals for romance specifically. <span class="serif">Which is why the same manuscript reads differently in each room.</span></p>
+
+    <div class="method-note">
+      <p class="method-note__label">On these weights</p>
+      <p class="method-note__body">Reasoned estimates from named 2026 industry sources (Satterthwaite x Kooiker, Publishing Perspectives, Friedman, TikTok Newsroom), not measured weights from a single dataset. They reflect what the field reports as priority order for romance acquisition in 2026. Treat as directional, not precise.</p>
+    </div>
+
+    <div class="signals-chart" id="signals-chart">
+      <div class="signals-axis">
+        <div class="signals-axis__spacer"></div>
+        <div class="signals-axis__ticks">
+          <span>0</span><span>10</span><span>20</span><span>30</span><span>40</span><span>50</span><span>60</span><span>70</span><span>80</span><span>90</span><span>100</span>
+        </div>
+      </div>
+      <div class="signals-axis" style="border:none;margin:0;padding:0">
+        <div></div>
+        <div class="signals-axis__title">Weight (0 to 100)</div>
+      </div>
+      <!-- rows -->
+      <!-- generated below -->
+    </div>
+  </div>
+</section>
+
+<!-- CLOSING -->
+<section class="bg-closing" aria-labelledby="bg-closing-heading">
+  <div class="bg-closing__inner">
+    <p class="bg-closing__text" id="bg-closing-heading">Two pipelines, one manuscript. Romance moves through both, on different timelines, by different rules. <span style="font-family:var(--font-serif);font-style:italic;font-weight:400;color:var(--thistle)">Reading both is part of the work.</span></p>
+    <a href="../research/index.html" class="bg-closing__cta">→ read research</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="foot">
+  <div class="wrap foot__in">
+    <div>
+      <a href="../index.html" class="brand">
+        <svg class="brand__mark" viewBox="0 0 32 32" fill="none" style="width:24px;height:24px"><rect width="32" height="32" rx="7" fill="none" stroke="var(--euc)" stroke-width="1.6"/><path d="M9 21 L13 13 L17 18 L20 10 L23 16" fill="none" stroke="var(--euc)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="23" cy="16" r="1.8" fill="var(--thistle)"/></svg>
+        <span class="brand__name" style="font-size:14px">Romance Signal</span>
+      </a>
+      <p class="foot__tag">Measuring the romance market for the people writing it.</p>
+    </div>
+    <div class="foot__cols">
+      <div class="foot__col"><h4>research</h4><a href="../watchlist/index.html">watchlist</a><a href="../research/index.html">volumes</a><a href="index.html">background</a></div>
+      <div class="foot__col"><h4>methods</h4><a href="../methodology/index.html">methodology</a></div>
+      <div class="foot__col"><h4>contact</h4><a href="../index.html#get-involved">get involved</a><a href="mailto:signal@threnne.com">signal@threnne.com</a></div>
+    </div>
+  </div>
+  <div class="wrap foot__bottom">
+    <span>© 2026 Romance Signal · A Threnne project</span>
+    <span>signal@threnne.com</span>
+  </div>
+</footer>
+
+</div>
+
+<script>
+function tog(){
+  var r=document.documentElement;
+  var next = r.getAttribute('data-theme')==='light' ? 'dark' : 'light';
+  r.setAttribute('data-theme', next);
+  try { localStorage.setItem('rs-theme', next); } catch(e){}
+}
+</script>
+
+<script>
+// =============== COMPARISON TABLE DATA ===============
+const BG_ROWS = [
+  {id:'dm-primary',category:'Decision-makers',dimension:'Who decides',pubMetric:5,hwMetric:2,
+    pubSummary:'Acquiring editor + pub board',pubM:'5+ stakeholders',
+    hwSummary:'Producer or streamer exec',hwM:'1-3 deciders',
+    pubDetail:'In romance, the acquiring editor builds the case (P&L, comps, BookTok potential, audience match) and champions it to a weekly pub board including editor-in-chief, sales, marketing, and production. Romance imprints (Avon, Berkley, Forever) may have specialized board members.',
+    hwDetail:'Decisions sit with a single producer, studio executive, or streamer executive, briefed by a scout. For romance specifically, streamers (Netflix, Prime, Hallmark+) have become the dominant buyers post-2024.',
+    takeaway:'Different rooms, different pitches. Publishing means surviving a cross-functional vote with romance-specific comps. Hollywood means pitching one buyer at a time, matched to their slate (Hallmark vs Netflix vs prestige needs different framings).',
+    sources:[
+      ['Jane Friedman · Book P&L','https://janefriedman.com/book-pl/'],
+      ['PublishingTalk · 8-step process','https://www.publishingtalk.org/get-published/book-publishing-process-8-step-guide/'],
+      ['Satterthwaite x Kooiker (Apr 2026)','https://jennasatterthwaite.substack.com/p/what-is-a-book-to-screen-scout-seven']
+    ]},
+  {id:'dm-gatekeeper',category:'Decision-makers',dimension:'Front-door gatekeeper',pubMetric:0,hwMetric:0,
+    pubSummary:'Literary agent',pubM:'',
+    hwSummary:'Scout coverage and IP memos',hwM:'',
+    pubDetail:'Romance has a more accessible agent landscape than literary fiction, but Big Five access still requires representation. Some category romance houses accept unagented submissions; trade romance imprints generally do not.',
+    hwDetail:'Scouts deploy readers for synopsis, character, setting, set-piece, and heat-level coverage. BookTok momentum and pre-publication auction heat trigger scout attention earlier than for other genres.',
+    takeaway:'In publishing, your agent is access. In Hollywood, your romance-specific BookTok signal or auction heat can trigger scout readers months before any traditional book-to-screen pipeline activates.',
+    sources:[
+      ['Reedsy · Get a Book Deal in 2026','https://reedsy.com/blog/how-to-get-a-book-deal/'],
+      ['Satterthwaite x Kooiker (Apr 2026)','https://jennasatterthwaite.substack.com/p/what-is-a-book-to-screen-scout-seven']
+    ]},
+  {id:'ev-core',category:'Evaluation',dimension:'Core evaluation lens',pubMetric:45,hwMetric:10,
+    pubSummary:'Marketability + platform = P&L',pubM:'~45% net margin target',
+    hwSummary:'Visual potential + viability + slate fit',hwM:'<10% optioned books reach screen',
+    pubDetail:'Romance is reduced to P&L with comp sales, return rates, BookTok presence, series potential, and audio rights value. Romance P&Ls weight backlist potential and audiobook revenue more heavily than other genres.',
+    hwDetail:"Scouts prioritize cinematic hook (the scene that sells the trailer), production viability (budget, casting feasibility), and slate fit (Hallmark vs Netflix vs prestige). For romance, the central couple's chemistry potential is load-bearing.",
+    takeaway:'Editors need market proof. Scouts need screen proof. For romance, the scene that would open the trailer (the first meet, the trope moment, the chemistry beat) does double duty as the BookTok hook.',
+    sources:[
+      ['Jane Friedman · Book P&L','https://janefriedman.com/book-pl/'],
+      ['Satterthwaite x Kooiker (Apr 2026)','https://jennasatterthwaite.substack.com/p/what-is-a-book-to-screen-scout-seven'],
+      ['Publishing Perspectives · Donovan (Apr 2026)','https://publishingperspectives.com/2026/04/the-scouting-report-with-philippa-donovan/']
+    ]},
+  {id:'ev-red-flags',category:'Evaluation',dimension:'Top red flags',pubMetric:0,hwMetric:0,
+    pubSummary:'Weak platform, thin comps, auction overpay',pubM:'',
+    hwSummary:'Period settings, costly worldbuilding, aging arcs',hwM:'',
+    pubDetail:'Limited author platform, thin or stale romance comps, overpay risk in heated auctions, and unproven heat levels all raise concern. Subgenre saturation (eg. another standard hockey romance in 2026) also flags.',
+    hwDetail:'Expensive period settings (regency, fantasy realms), heavy CGI, aging cast arcs across long series, and voice-over-heavy interiority all create budget anxiety. Romance with fantasy elements (romantasy) faces extra production cost scrutiny.',
+    takeaway:'Frame structural red flags with comparable success. Romantasy adaptations exist because Fourth Wing existed. The comp absorbs the risk argument.',
+    sources:[
+      ['Jane Friedman · Book P&L','https://janefriedman.com/book-pl/'],
+      ['Satterthwaite x Kooiker (Apr 2026)','https://jennasatterthwaite.substack.com/p/what-is-a-book-to-screen-scout-seven']
+    ]},
+  {id:'ev-deliverable',category:'Evaluation',dimension:'What gets written internally',pubMetric:0,hwMetric:0,
+    pubSummary:'P&L spreadsheet + acquisition memo',pubM:'',
+    hwSummary:'Coverage report + IP memo',hwM:'',
+    pubDetail:'Competitive analysis, comp sales history, audience demographics, full costed P&L, marketing concept, and series potential map.',
+    hwDetail:'Detailed synopsis, cast positioning, set-piece highlights, heat-level note, comparable adaptation references, and slate-positioning recommendation.',
+    takeaway:'Romance writers can prepare a one-page adaptation bait sheet (logline, central pair, trope, comparable adaptations, hero/heroine archetypes) to make scout coverage faster and more favorable.',
+    sources:[
+      ['Jane Friedman · Book P&L','https://janefriedman.com/book-pl/'],
+      ['Satterthwaite x Kooiker (Apr 2026)','https://jennasatterthwaite.substack.com/p/what-is-a-book-to-screen-scout-seven']
+    ]},
+  {id:'tl-discovery',category:'Timeline',dimension:'Discovery to offer',pubMetric:6,hwMetric:1,
+    pubSummary:'3-9 months from agent submission',pubM:'3-9 months',
+    hwSummary:'Days to weeks for hot romance',hwM:'1-6 weeks',
+    pubDetail:'Romance editor read times vary by imprint. Hot manuscripts can close in weeks; standard submissions take three to nine months across the round.',
+    hwDetail:'For romance with visible BookTok signal or auction heat, scouts surface in twenty-four to seventy-two hours and options can lock pre-publication. Icebreaker and Fourth Wing both moved fast on visible BookTok signal.',
+    takeaway:'Have adaptation representation in place before submission. For romance specifically, this is increasingly standard because the Hollywood timeline now sometimes runs ahead of the publishing one.',
+    sources:[
+      ['Reedsy · Get a Book Deal in 2026','https://reedsy.com/blog/how-to-get-a-book-deal/'],
+      ['Screen Daily · Rights feeding frenzy','https://www.screendaily.com/features/agents-and-producers-on-the-feeding-frenzy-of-the-competitive-book-rights-marketplace/5160812.article'],
+      ['Satterthwaite x Kooiker (Apr 2026)','https://jennasatterthwaite.substack.com/p/what-is-a-book-to-screen-scout-seven']
+    ]},
+  {id:'tl-greenlight',category:'Timeline',dimension:'Offer to greenlight or pub date',pubMetric:14,hwMetric:36,
+    pubSummary:'12-18 months to bookstore shelf',pubM:'~14 months',
+    hwSummary:'12-18 mo option, 2-5 yr to screen',hwM:'12-18 mo option, 2-5 yr to screen',
+    pubDetail:'Romance has slightly shorter production cycles than literary fiction due to genre-driven time-to-market pressure. Twelve to eighteen months is standard for trade romance.',
+    hwDetail:'Romance adaptations have moved faster on average than literary fiction adaptations in 2024-2026, but multi-year development is still standard. Streamers compress timelines more aggressively than studio film.',
+    takeaway:'Plan a two-track career timeline. Both pipelines have long arcs. The next book matters even when the current one is mid-deal.',
+    sources:[
+      ['PublishingTalk · 8-step process','https://www.publishingtalk.org/get-published/book-publishing-process-8-step-guide/'],
+      ['Satterthwaite x Kooiker (Apr 2026)','https://jennasatterthwaite.substack.com/p/what-is-a-book-to-screen-scout-seven'],
+      ['Friedman · Option vs Shopping','https://janefriedman.com/books-to-film-option-versus-shopping-agreement/']
+    ]},
+  {id:'rt-instrument',category:'Rights',dimension:'Deal instrument',pubMetric:0,hwMetric:0,
+    pubSummary:'Publishing agreement',pubM:'',
+    hwSummary:'Option agreement or shopping deal',hwM:'',
+    pubDetail:'Primary print and ebook rights plus a subsidiary rights bundle. Romance subsidiary rights frequently include audio (high-value), translation (high-value in 2026), and series options.',
+    hwDetail:'Option fee buys an exclusive twelve to eighteen month window. Shopping deals are lower-commitment pitch windows. Romance has seen more option-to-purchase conversions in 2024-2026 than the historical average.',
+    takeaway:'Retain film and TV rights at the publishing deal stage where possible. Romance audio rights and translation rights are also high-value and worth negotiating carefully.',
+    sources:[
+      ['Romano Law · Subsidiary Rights','https://www.romanolaw.com/what-authors-should-know-about-subsidiary-rights/'],
+      ['Friedman · Option vs Shopping','https://janefriedman.com/books-to-film-option-versus-shopping-agreement/'],
+      ['Satterthwaite x Kooiker (Apr 2026)','https://jennasatterthwaite.substack.com/p/what-is-a-book-to-screen-scout-seven']
+    ]},
+  {id:'rt-economics',category:'Rights',dimension:'Headline economics',pubMetric:12,hwMetric:0,
+    pubSummary:'Advance + 8-15% royalty',pubM:'8-15% royalty',
+    hwSummary:'Option ~10% of purchase; purchase 2-4% of budget',hwM:'',
+    pubDetail:'Romance advances are typically smaller than literary fiction for debut authors, but escalators, ebook rates, and audio royalties drive long-tail economics. Backlist matters more in romance than almost any other category.',
+    hwDetail:'Option fees are typically ten percent of an underlying purchase price. Purchase price often runs two to four percent of production budget. Episodic and franchise passives often outweigh option fees over time.',
+    takeaway:'Negotiate compounding back-end terms. Romance backlist royalties and adaptation passives often exceed initial advances over a career.',
+    sources:[
+      ['Jane Friedman · Book P&L','https://janefriedman.com/book-pl/'],
+      ['Satterthwaite x Kooiker (Apr 2026)','https://jennasatterthwaite.substack.com/p/what-is-a-book-to-screen-scout-seven'],
+      ['Friedman · Option vs Shopping','https://janefriedman.com/books-to-film-option-versus-shopping-agreement/']
+    ]},
+  {id:'rt-negotiation',category:'Rights',dimension:'Negotiation choreography',pubMetric:0,hwMetric:0,
+    pubSummary:'Editor and agent, auctions when hot',pubM:'',
+    hwSummary:'Producer and film/TV agent, reputation > price',hwM:'',
+    pubDetail:'Romance auctions compressed in 2024-2026 with BookTok-driven momentum. Hot manuscripts can multiply advances in days. Most romance deals are still single-offer negotiations.',
+    hwDetail:'For romance specifically, creative vision and adaptation track record (Bridgerton, Reedsy) often beat top bids. Producers with proven romance pipelines (Shondaland, others) command setup advantages.',
+    takeaway:'Take the strongest setup path, not just the highest headline. Romance adaptations live or die on producer execution. A producer with a romance track record beats a higher offer from a generalist.',
+    sources:[
+      ['Reedsy · Get a Book Deal in 2026','https://reedsy.com/blog/how-to-get-a-book-deal/'],
+      ['Screen Daily · Rights feeding frenzy','https://www.screendaily.com/features/agents-and-producers-on-the-feeding-frenzy-of-the-competitive-book-rights-marketplace/5160812.article']
+    ]},
+  {id:'sg-top-signal',category:'Signals',dimension:'Highest-weighted 2026 signal',pubMetric:40,hwMetric:35,
+    pubSummary:'Comp sales + BookTok momentum',pubM:'Comp sales: ~40% weight',
+    hwSummary:'BookTok dominance + cinematic visuality',hwM:'BookTok signal: ~35% weight',
+    pubDetail:'Romance comp sales remain load-bearing for P&L. BookTok is the dominant amplifier in 2026, especially for contemporary romance, romantasy, and dark romance subgenres.',
+    hwDetail:'BookTok momentum is the primary trigger for scout attention in romance. Combined with visual adaptation potential (the chemistry scene, the trope moment), it drives prioritization.',
+    takeaway:'BookTok is the highest-leverage discovery channel for romance in both pipelines. Engineer one BookTok-shaped scene per book (the meet, the trope, the spice).',
+    sources:[
+      ['BookTok power player','https://www.ttt-news.com/how-booktok-became-the-publishing-industrys-power-player/'],
+      ['Publishing Perspectives · Donovan (Apr 2026)','https://publishingperspectives.com/2026/04/the-scouting-report-with-philippa-donovan/'],
+      ['TikTok Newsroom · 50M books (Mar 2026)','https://newsroom.tiktok.com/booktok-community-50-million-books?lang=en-150']
+    ]},
+  {id:'sg-social',category:'Signals',dimension:'Social-data weight',pubMetric:0,hwMetric:0,
+    pubSummary:'Material but discounted vs sell-through',pubM:'',
+    hwSummary:'Primary discovery channel',hwM:'',
+    pubDetail:'Social metrics inform romance acquisition but rarely override weak P&L unless the BookTok signal is exceptional (Icebreaker, Fourth Wing scale).',
+    hwDetail:'Romance scouts now use BookTok virality as a primary discovery channel, capable of triggering options on backlist romance years after original publication (the Seven Husbands of Evelyn Hugo pattern: 2017 release, BookTok surge in 2021, Netflix film adaptation picked up in 2022).',
+    takeaway:'Build rediscoverable moments, not vanity follower counts. Romance backlist can re-detonate years later if the BookTok ecosystem finds it.',
+    sources:[
+      ['ELLE · Influencer prediction','https://www.elle.com/culture/books/a63445166/2025-book-publishing-trends-influencer-predictions-explained/'],
+      ['Women.com · BookTok 2026','https://www.women.com/2166101/booktok-faves-made-a-splash-2026/'],
+      ['BookNet Canada · backlist on BookTok','https://www.booknetcanada.ca/blog/research/2022/9/29/the-real-impact-of-booktok-on-book-sales'],
+      ['Oprah Daily · Evelyn Hugo BookTok rediscovery','https://www.oprahdaily.com/entertainment/books/a39729958/booktok-and-the-reinvention-rediscovery-of-books/']
+    ]},
+  {id:'sg-advance-sales',category:'Signals',dimension:'Advance / pre-order data',pubMetric:0,hwMetric:0,
+    pubSummary:'High weight at re-order, less at acquisition',pubM:'',
+    hwSummary:'NYT bestseller status triggers bonuses',hwM:'',
+    pubDetail:'Pre-order numbers matter most for romance second-printing strategy and second-book negotiations. Pre-launch romance metrics are increasingly central to series greenlights.',
+    hwDetail:'Romance properties hitting NYT lists often trigger contractual bonuses or activated provisions in Hollywood deals. Less central as a pre-deal gate; more central as a deal-enhancing signal.',
+    takeaway:"Activate pre-order pushes at maximum reporting leverage windows. The pre-order wave shapes both pipelines' future bets.",
+    sources:[
+      ['Jane Friedman · Book P&L','https://janefriedman.com/book-pl/'],
+      ['Satterthwaite x Kooiker (Apr 2026)','https://jennasatterthwaite.substack.com/p/what-is-a-book-to-screen-scout-seven']
+    ]},
+  {id:'sg-prestige',category:'Signals',dimension:'Literary prestige and prizes',pubMetric:0,hwMetric:0,
+    pubSummary:'Reputation hedge for literary romance',pubM:'',
+    hwSummary:'Used by prestige-TV scouts',hwM:'',
+    pubDetail:'Romance prizes (RITA legacy, Romance Writers of America successors) carry weight in trade romance imprints. Literary romance crossovers benefit from broader literary prize recognition.',
+    hwDetail:'Prestige TV scouts track literary romance and crossover romance with serious prose. Less central for category romance adaptations, more central for streamer prestige romance.',
+    takeaway:'A literary-romance short fiction credit can open doors in both pipelines. Prestige operates as a hedge against pure commercial signal.',
+    sources:[
+      ['Publishing Perspectives · Donovan (Apr 2026)','https://publishingperspectives.com/2026/04/the-scouting-report-with-philippa-donovan/']
+    ]},
+  {id:'sg-emerging',category:'Signals',dimension:'Emerging 2026 signals',pubMetric:0,hwMetric:0,
+    pubSummary:'Translation breakouts + email-list size',pubM:'',
+    hwSummary:'Webtoon and microdrama adjacency',hwM:'',
+    pubDetail:'Translated romance breakouts (especially Brazilian, Korean, German markets) are watched closely. Owned audience (newsletter, Patreon) is increasingly treated as durable proof in romance acquisitions.',
+    hwDetail:'Romance scouts increasingly watch webtoon adaptation pipelines and microdrama platforms as packaging precedents. Short-form romance content is treated as proof-of-concept for longer adaptations.',
+    takeaway:'Romance writers can use short-form content (newsletter serials, microdrama scripts, webtoon collaboration) as faster adaptation bait than full novels.',
+    sources:[
+      ['Women.com · BookTok 2026','https://www.women.com/2166101/booktok-faves-made-a-splash-2026/'],
+      ['Publishing Perspectives · Donovan (Apr 2026)','https://publishingperspectives.com/2026/04/the-scouting-report-with-philippa-donovan/'],
+      ['Satterthwaite x Kooiker (Apr 2026)','https://jennasatterthwaite.substack.com/p/what-is-a-book-to-screen-scout-seven']
+    ]}
+];
+
+// =============== SIGNAL WEIGHTS DATA ===============
+const SIGNALS = [
+  {name:'Comp sales history', note:'Romance P&Ls anchor here', pub:90, hw:35},
+  {name:'Author platform / following', note:'Critical for nonfiction, supportive for romance', pub:70, hw:30},
+  {name:'BookTok / TikTok virality', note:'Shared top-funnel accelerator', pub:80, hw:92},
+  {name:'Visual / cinematic potential', note:'Chemistry scene, trope moment, set-pieces', pub:15, hw:95},
+  {name:'Pre-order / advance sales', note:'Romance second-book leverage', pub:60, hw:28},
+  {name:'Literary prestige / prizes', note:'Mutual prestige signal', pub:50, hw:55},
+  {name:'Auction heat / competitive bids', note:'Attention transfer effect', pub:80, hw:70},
+  {name:'Translation / international breakout', note:'Brazil, Korea, Germany markets watched', pub:65, hw:78},
+  {name:'Built-in fanbase / existing IP', note:'Romance series and rereleases', pub:70, hw:88}
+];
+
+// =============== TABLE RENDERER ===============
+(function(){
+  const tbody = document.getElementById('bg-tbody');
+  const filtersEl = document.getElementById('bg-filters');
+  const searchEl = document.getElementById('bg-search');
+  const statusEl = document.getElementById('bg-table-status');
+  const headers = document.querySelectorAll('.bg-table th button');
+  const state = {
+    sortKey: 'category',
+    sortDir: 'asc',
+    activeCats: new Set(['Decision-makers','Evaluation','Timeline','Rights','Signals']),
+    search: '',
+    expanded: new Set()
+  };
+
+  function escapeHtml(s){return String(s||'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))}
+
+  function renderRow(r){
+    const isOpen = state.expanded.has(r.id);
+    const dataTr = `
+      <tr class="bg-data-row" data-id="${r.id}" data-category="${escapeHtml(r.category)}">
+        <td class="bg-col-expand">
+          <button type="button" class="bg-expand-btn" aria-expanded="${isOpen}" data-expand="${r.id}">
+            <span aria-hidden="true">${isOpen?'−':'+'}</span>
+            <span class="sr-only">Toggle details for ${escapeHtml(r.dimension)}</span>
+          </button>
+        </td>
+        <td class="bg-category">${escapeHtml(r.category)}</td>
+        <td class="bg-dimension">${escapeHtml(r.dimension)}</td>
+        <td class="bg-acq-cell">
+          <div class="bg-cell-summary">${escapeHtml(r.pubSummary)}</div>
+          ${r.pubM?`<div class="bg-cell-metric">${escapeHtml(r.pubM)}</div>`:''}
+        </td>
+        <td class="bg-scout-cell">
+          <div class="bg-cell-summary">${escapeHtml(r.hwSummary)}</div>
+          ${r.hwM?`<div class="bg-cell-metric">${escapeHtml(r.hwM)}</div>`:''}
+        </td>
+      </tr>`;
+    if(!isOpen) return dataTr;
+    const sourceItems = r.sources.map(s=>`<li><a href="${s[1]}" target="_blank" rel="noopener noreferrer">${escapeHtml(s[0])}</a></li>`).join('');
+    const detailTr = `
+      <tr class="bg-detail-row" data-detail="${r.id}">
+        <td colspan="5">
+          <div class="bg-detail-grid">
+            <div class="bg-detail-block bg-detail-block--acq">
+              <p class="bg-detail-block__label">Publishing</p>
+              <p class="bg-detail-block__body">${escapeHtml(r.pubDetail)}</p>
+            </div>
+            <div class="bg-detail-block bg-detail-block--scout">
+              <p class="bg-detail-block__label">Hollywood</p>
+              <p class="bg-detail-block__body">${escapeHtml(r.hwDetail)}</p>
+            </div>
+          </div>
+          <div class="bg-detail-takeaway">
+            <p class="bg-detail-takeaway__label">Writer takeaway</p>
+            <p class="bg-detail-takeaway__body">${escapeHtml(r.takeaway)}</p>
+          </div>
+          <p class="bg-detail-sources__label">Sources</p>
+          <ul class="bg-detail-sources__list">${sourceItems}</ul>
+        </td>
+      </tr>`;
+    return dataTr + detailTr;
+  }
+
+  function getSortedFiltered(){
+    const q = state.search.trim().toLowerCase();
+    let rows = BG_ROWS.filter(r=>state.activeCats.has(r.category));
+    if(q){
+      rows = rows.filter(r =>
+        r.dimension.toLowerCase().includes(q) ||
+        r.category.toLowerCase().includes(q) ||
+        r.pubSummary.toLowerCase().includes(q) ||
+        r.hwSummary.toLowerCase().includes(q) ||
+        (r.takeaway||'').toLowerCase().includes(q)
+      );
     }
-
-    btn.addEventListener('click', () => {
-      setOpen(panel.hasAttribute('hidden'));
+    const key = state.sortKey;
+    const dir = state.sortDir === 'asc' ? 1 : -1;
+    rows.sort((a,b)=>{
+      let va=a[key], vb=b[key];
+      if(typeof va === 'number' && typeof vb === 'number') return (va-vb)*dir;
+      va = String(va||'').toLowerCase(); vb = String(vb||'').toLowerCase();
+      if(va<vb) return -1*dir;
+      if(va>vb) return  1*dir;
+      return 0;
     });
+    return rows;
+  }
 
-    panel.querySelectorAll('a').forEach((link) => {
-      link.addEventListener('click', () => setOpen(false));
+  function render(){
+    const rows = getSortedFiltered();
+    tbody.innerHTML = rows.map(renderRow).join('');
+    statusEl.textContent = `Showing ${rows.length} of ${BG_ROWS.length} dimensions.`;
+    // update sort indicator on headers
+    headers.forEach(h=>{
+      if(h.dataset.sort === state.sortKey){
+        h.setAttribute('aria-sort', state.sortDir === 'asc' ? 'ascending' : 'descending');
+      } else {
+        h.setAttribute('aria-sort', 'none');
+      }
     });
+  }
 
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && !panel.hasAttribute('hidden')) setOpen(false);
-    });
+  // expand toggle via delegation
+  tbody.addEventListener('click', (e)=>{
+    const btn = e.target.closest('.bg-expand-btn');
+    if(!btn) return;
+    const id = btn.dataset.expand;
+    if(state.expanded.has(id)) state.expanded.delete(id);
+    else state.expanded.add(id);
+    render();
+  });
 
-    const mobileMq = window.matchMedia('(max-width: 768px)');
-    mobileMq.addEventListener('change', (e) => {
-      if (!e.matches) setOpen(false);
+  // filter chips
+  filtersEl.addEventListener('click', (e)=>{
+    const btn = e.target.closest('.bg-chip');
+    if(!btn) return;
+    const cat = btn.dataset.cat;
+    const pressed = btn.getAttribute('aria-pressed') === 'true';
+    if(pressed && state.activeCats.size === 1) return; // keep at least one
+    if(pressed){ state.activeCats.delete(cat); btn.setAttribute('aria-pressed','false'); }
+    else { state.activeCats.add(cat); btn.setAttribute('aria-pressed','true'); }
+    render();
+  });
+
+  // search
+  searchEl.addEventListener('input', (e)=>{
+    state.search = e.target.value;
+    render();
+  });
+
+  // sort headers
+  headers.forEach(h=>{
+    h.addEventListener('click', ()=>{
+      const k = h.dataset.sort;
+      if(state.sortKey === k){
+        state.sortDir = state.sortDir === 'asc' ? 'desc' : 'asc';
+      } else {
+        state.sortKey = k;
+        state.sortDir = 'asc';
+      }
+      render();
     });
-  })();
-</script>  <div class="bg-page"> <header class="bg-masthead"> <p class="bg-masthead__label">Background</p> <h1 class="bg-masthead__title">
-How a romance book gets <span class="bg-acq">acquired</span>, and how it gets <span class="bg-scout">scouted for screen</span>.
-</h1> <p class="bg-masthead__intro">
-Two pipelines, same romance manuscript. Different decision-makers, different metrics, different timelines. This page maps both, so writers and industry readers can see what the institutional landscape actually looks like.
-</p> <p class="bg-masthead__framing">
-Romance Signal's published research investigates specific patterns inside this landscape. This page is the reference. Underlying mechanics, decision-makers, timelines, and signal weights, drawn from named 2026 industry sources and grounded in how the genre actually moves through both pipelines. <em>Romance is its own market and its own ecosystem.</em> The patterns described here are read with that in mind.
-</p> </header> <div class="bg-kpis" role="list"> <div class="bg-kpi bg-kpi--acq" role="listitem"> <p class="bg-kpi__label">Romance market share</p> <p class="bg-kpi__value">52%</p> <p class="bg-kpi__note">Of adult fiction print sales in 2025.</p> </div><div class="bg-kpi bg-kpi--scout" role="listitem"> <p class="bg-kpi__label">Optioned to screen</p> <p class="bg-kpi__value">&lt;10%</p> <p class="bg-kpi__note">Of optioned books reach production.</p> </div><div class="bg-kpi bg-kpi--acq" role="listitem"> <p class="bg-kpi__label">Publishing decision</p> <p class="bg-kpi__value">5+ seats</p> <p class="bg-kpi__note">Weekly cross-functional pub board.</p> </div><div class="bg-kpi bg-kpi--scout" role="listitem"> <p class="bg-kpi__label">Hollywood decision</p> <p class="bg-kpi__value">1-3</p> <p class="bg-kpi__note">Producer or streamer executive.</p> </div> </div> <main class="bg-main"> <section class="bg-section" aria-labelledby="bg-s01"> <div class="bg-section__header"> <span class="bg-section__num">01</span> <div class="bg-section__divider" aria-hidden="true"></div> </div> <h2 class="bg-section__title" id="bg-s01">Pipeline at a glance</h2> <p class="bg-section__lead">
-Both pipelines start from a manuscript. They diverge immediately on who reads first, what gets prioritized, and how long the path takes.
-</p> <div class="bg-timeline-grid"> <article class="bg-timeline-card bg-timeline-card--acq"> <p class="bg-timeline-card__label">Publishing acquisition</p> <p class="bg-timeline-card__title">Manuscript to bookstore</p> <ol class="bg-timeline-list"> <li class="bg-timeline-step"> <span class="bg-timeline-step__num">01</span> <div> <div class="bg-timeline-step__name">Query</div> <div class="bg-timeline-step__detail">Romance author submits to literary agent. Most agents in romance are open to direct query but require comp titles and platform.</div> </div> </li><li class="bg-timeline-step"> <span class="bg-timeline-step__num">02</span> <div> <div class="bg-timeline-step__name">Submission</div> <div class="bg-timeline-step__detail">Agent shops to 8-12 romance editors at Big Five imprints and category houses (Avon, Berkley, St. Martin&#39;s, Forever, Carina).</div> </div> </li><li class="bg-timeline-step"> <span class="bg-timeline-step__num">03</span> <div> <div class="bg-timeline-step__name">P&amp;L build</div> <div class="bg-timeline-step__detail">Editor models margins against romance comp sales, BookTok presence, and series potential. Romance P&amp;Ls weight backlist heavily.</div> </div> </li><li class="bg-timeline-step"> <span class="bg-timeline-step__num">04</span> <div> <div class="bg-timeline-step__name">Pub board</div> <div class="bg-timeline-step__detail">Cross-functional weekly vote including editor-in-chief, sales, marketing, production. Romance-specific imprints may have shorter approval chains.</div> </div> </li><li class="bg-timeline-step"> <span class="bg-timeline-step__num">05</span> <div> <div class="bg-timeline-step__name">Offer &amp; contract</div> <div class="bg-timeline-step__detail">Advance against royalty, primary rights split, subsidiary rights including audio (high-value in romance) and translation.</div> </div> </li><li class="bg-timeline-step"> <span class="bg-timeline-step__num">06</span> <div> <div class="bg-timeline-step__name">Edit &amp; produce</div> <div class="bg-timeline-step__detail">Twelve to eighteen months from contract to shelf. Romance has shorter cycles than literary fiction for time-to-market reasons.</div> </div> </li><li class="bg-timeline-step"> <span class="bg-timeline-step__num">07</span> <div> <div class="bg-timeline-step__name">On-sale</div> <div class="bg-timeline-step__detail">Bookstore launch coordinated with BookTok promotion windows and trope-tagged seasonal pushes.</div> </div> </li> </ol> </article> <article class="bg-timeline-card bg-timeline-card--scout"> <p class="bg-timeline-card__label">Hollywood scouting</p> <p class="bg-timeline-card__title">Manuscript to screen</p> <ol class="bg-timeline-list"> <li class="bg-timeline-step"> <span class="bg-timeline-step__num">01</span> <div> <div class="bg-timeline-step__name">Manuscript surfaces</div> <div class="bg-timeline-step__detail">Scout reader assigned, often before publication if BookTok momentum or auction heat is visible.</div> </div> </li><li class="bg-timeline-step"> <span class="bg-timeline-step__num">02</span> <div> <div class="bg-timeline-step__name">Coverage</div> <div class="bg-timeline-step__detail">Synopsis, cast positioning, set-piece highlights, heat-level note for romance specifically.</div> </div> </li><li class="bg-timeline-step"> <span class="bg-timeline-step__num">03</span> <div> <div class="bg-timeline-step__name">IP memo</div> <div class="bg-timeline-step__detail">Weekly briefing to producers and streamer execs. Romance properties flagged with subgenre and trope architecture.</div> </div> </li><li class="bg-timeline-step"> <span class="bg-timeline-step__num">04</span> <div> <div class="bg-timeline-step__name">Producer pitch</div> <div class="bg-timeline-step__detail">Match against client slate. Hallmark wants closed-arc warmth, streamers want spice and conflict, prestige wants literary romance.</div> </div> </li><li class="bg-timeline-step"> <span class="bg-timeline-step__num">05</span> <div> <div class="bg-timeline-step__name">Option or shopping</div> <div class="bg-timeline-step__detail">Twelve to eighteen month exclusive window. Romance options have moved faster in 2025-2026 with the streamer rush.</div> </div> </li><li class="bg-timeline-step"> <span class="bg-timeline-step__num">06</span> <div> <div class="bg-timeline-step__name">Development</div> <div class="bg-timeline-step__detail">Script, talent attachment, financing. Romance adaptations often hit attachment stage faster than other genres due to audience certainty.</div> </div> </li><li class="bg-timeline-step"> <span class="bg-timeline-step__num">07</span> <div> <div class="bg-timeline-step__name">Greenlight to screen</div> <div class="bg-timeline-step__detail">Fewer than ten percent of optioned books reach production. Romance closes that gap somewhat due to proven audience.</div> </div> </li> </ol> </article> </div> </section> <section class="bg-section" aria-labelledby="bg-s02"> <div class="bg-section__header"> <span class="bg-section__num">02</span> <div class="bg-section__divider" aria-hidden="true"></div> </div> <h2 class="bg-section__title" id="bg-s02">Sortable comparison</h2> <p class="bg-section__lead">
-Each row compares one dimension across both pipelines, with the writer-facing takeaway and named sources. Sort by category, dimension, or metric. Use the expand control in the first column for source detail.
-</p> <div class="bg-controls"> <div class="bg-filters" id="bg-filters" role="group" aria-label="Filter by category"> <button type="button" class="bg-chip" data-cat="Decision-makers" aria-pressed="true"> Decision-makers </button><button type="button" class="bg-chip" data-cat="Evaluation" aria-pressed="true"> Evaluation </button><button type="button" class="bg-chip" data-cat="Timeline" aria-pressed="true"> Timeline </button><button type="button" class="bg-chip" data-cat="Rights" aria-pressed="true"> Rights </button><button type="button" class="bg-chip" data-cat="Signals" aria-pressed="true"> Signals </button> </div> <div class="bg-search-wrap"> <label class="sr-only" for="bg-search">Search comparison rows</label> <input type="search" id="bg-search" class="bg-search" placeholder="Search dimensions…" autocomplete="off" aria-controls="bg-comparison-table"> </div> </div> <div class="bg-table-wrap"> <table class="bg-table" id="bg-comparison-table"> <caption class="sr-only">
-Publishing vs Hollywood pipeline comparison.
-<span id="bg-table-status" aria-live="polite"></span> </caption> <thead> <tr> <th class="bg-col-expand" scope="col"><span class="sr-only">Expand row</span></th> <th scope="col"> <button type="button" data-sort="category" aria-sort="ascending">Category</button> </th> <th scope="col"> <button type="button" data-sort="dimension" aria-sort="none">Dimension</button> </th> <th scope="col"> <button type="button" data-sort="pubMetric" aria-sort="none">Publishing</button> </th> <th scope="col"> <button type="button" data-sort="hwMetric" aria-sort="none">Hollywood</button> </th> </tr> </thead> <tbody id="bg-tbody">  <tr class="bg-data-row" data-id="dm-primary" data-category="Decision-makers" data-dimension="Who decides" data-pub-metric="5" data-hw-metric="2"> <td class="bg-col-expand"> <button type="button" class="bg-expand-btn" aria-expanded="false" aria-controls="detail-dm-primary" data-expand="dm-primary"> <span aria-hidden="true">+</span> <span class="sr-only">Show details for Who decides</span> </button> </td> <td class="bg-category">Decision-makers</td> <td class="bg-dimension">Who decides</td> <td class="bg-acq-cell"> <div class="bg-cell-summary">Acquiring editor + pub board</div> <div class="bg-cell-metric">5+ stakeholders</div> </td> <td class="bg-scout-cell"> <div class="bg-cell-summary">Producer or streamer exec</div> <div class="bg-cell-metric">1-3 deciders</div> </td> </tr> <tr class="bg-detail-row" id="detail-dm-primary" data-detail="dm-primary" hidden> <td colspan="5"> <div class="bg-detail-grid"> <div class="bg-detail-block bg-detail-block--acq"> <p class="bg-detail-block__label">Publishing</p> <p class="bg-detail-block__body">In romance, the acquiring editor builds the case (P&amp;L, comps, BookTok potential, audience match) and champions it to a weekly pub board including editor-in-chief, sales, marketing, and production. Romance imprints (Avon, Berkley, Forever) may have specialized board members.</p> </div> <div class="bg-detail-block bg-detail-block--scout"> <p class="bg-detail-block__label">Hollywood</p> <p class="bg-detail-block__body">Decisions sit with a single producer, studio executive, or streamer executive, briefed by a scout. For romance specifically, streamers (Netflix, Prime, Hallmark+) have become the dominant buyers post-2024.</p> </div> </div> <div class="bg-detail-takeaway"> <p class="bg-detail-takeaway__label">Writer takeaway</p> <p class="bg-detail-takeaway__body">Different rooms, different pitches. Publishing means surviving a cross-functional vote with romance-specific comps. Hollywood means pitching one buyer at a time, matched to their slate (Hallmark vs Netflix vs prestige needs different framings).</p> </div>  <p class="bg-detail-sources__label">Sources</p> <ul class="bg-detail-sources__list"> <li> <a href="https://janefriedman.com/book-pl/" target="_blank" rel="noopener noreferrer"> Jane Friedman - Book P&amp;L </a> </li><li> <a href="https://www.publishingtalk.org/get-published/book-publishing-process-8-step-guide/" target="_blank" rel="noopener noreferrer"> PublishingTalk - 8-step process </a> </li><li> <a href="https://jennasatterthwaite.substack.com/p/what-is-a-book-to-screen-scout-seven" target="_blank" rel="noopener noreferrer"> Satterthwaite x Kooiker (Apr 2026) </a> </li> </ul>  </td> </tr>  <tr class="bg-data-row" data-id="dm-gatekeeper" data-category="Decision-makers" data-dimension="Front-door gatekeeper" data-pub-metric="0" data-hw-metric="0"> <td class="bg-col-expand"> <button type="button" class="bg-expand-btn" aria-expanded="false" aria-controls="detail-dm-gatekeeper" data-expand="dm-gatekeeper"> <span aria-hidden="true">+</span> <span class="sr-only">Show details for Front-door gatekeeper</span> </button> </td> <td class="bg-category">Decision-makers</td> <td class="bg-dimension">Front-door gatekeeper</td> <td class="bg-acq-cell"> <div class="bg-cell-summary">Literary agent</div>  </td> <td class="bg-scout-cell"> <div class="bg-cell-summary">Scout coverage and IP memos</div>  </td> </tr> <tr class="bg-detail-row" id="detail-dm-gatekeeper" data-detail="dm-gatekeeper" hidden> <td colspan="5"> <div class="bg-detail-grid"> <div class="bg-detail-block bg-detail-block--acq"> <p class="bg-detail-block__label">Publishing</p> <p class="bg-detail-block__body">Romance has a more accessible agent landscape than literary fiction, but Big Five access still requires representation. Some category romance houses accept unagented submissions; trade romance imprints generally do not.</p> </div> <div class="bg-detail-block bg-detail-block--scout"> <p class="bg-detail-block__label">Hollywood</p> <p class="bg-detail-block__body">Scouts deploy readers for synopsis, character, setting, set-piece, and heat-level coverage. BookTok momentum and pre-publication auction heat trigger scout attention earlier than for other genres.</p> </div> </div> <div class="bg-detail-takeaway"> <p class="bg-detail-takeaway__label">Writer takeaway</p> <p class="bg-detail-takeaway__body">In publishing, your agent is access. In Hollywood, your romance-specific BookTok signal or auction heat can trigger scout readers months before any traditional book-to-screen pipeline activates.</p> </div>  <p class="bg-detail-sources__label">Sources</p> <ul class="bg-detail-sources__list"> <li> <a href="https://reedsy.com/blog/how-to-get-a-book-deal/" target="_blank" rel="noopener noreferrer"> Reedsy - Get a Book Deal in 2026 </a> </li><li> <a href="https://jennasatterthwaite.substack.com/p/what-is-a-book-to-screen-scout-seven" target="_blank" rel="noopener noreferrer"> Satterthwaite x Kooiker (Apr 2026) </a> </li> </ul>  </td> </tr>  <tr class="bg-data-row" data-id="ev-core" data-category="Evaluation" data-dimension="Core evaluation lens" data-pub-metric="45" data-hw-metric="10"> <td class="bg-col-expand"> <button type="button" class="bg-expand-btn" aria-expanded="false" aria-controls="detail-ev-core" data-expand="ev-core"> <span aria-hidden="true">+</span> <span class="sr-only">Show details for Core evaluation lens</span> </button> </td> <td class="bg-category">Evaluation</td> <td class="bg-dimension">Core evaluation lens</td> <td class="bg-acq-cell"> <div class="bg-cell-summary">Marketability + platform = P&amp;L</div> <div class="bg-cell-metric">~45% net margin target</div> </td> <td class="bg-scout-cell"> <div class="bg-cell-summary">Visual potential + viability + slate fit</div> <div class="bg-cell-metric">&lt;10% optioned books reach screen</div> </td> </tr> <tr class="bg-detail-row" id="detail-ev-core" data-detail="ev-core" hidden> <td colspan="5"> <div class="bg-detail-grid"> <div class="bg-detail-block bg-detail-block--acq"> <p class="bg-detail-block__label">Publishing</p> <p class="bg-detail-block__body">Romance is reduced to P&amp;L with comp sales, return rates, BookTok presence, series potential, and audio rights value. Romance P&amp;Ls weight backlist potential and audiobook revenue more heavily than other genres.</p> </div> <div class="bg-detail-block bg-detail-block--scout"> <p class="bg-detail-block__label">Hollywood</p> <p class="bg-detail-block__body">Scouts prioritize cinematic hook (the scene that sells the trailer), production viability (budget, casting feasibility), and slate fit (Hallmark vs Netflix vs prestige). For romance, the central couple&#39;s chemistry potential is load-bearing.</p> </div> </div> <div class="bg-detail-takeaway"> <p class="bg-detail-takeaway__label">Writer takeaway</p> <p class="bg-detail-takeaway__body">Editors need market proof. Scouts need screen proof. For romance, the scene that would open the trailer (the first meet, the trope moment, the chemistry beat) does double duty as the BookTok hook.</p> </div>  <p class="bg-detail-sources__label">Sources</p> <ul class="bg-detail-sources__list"> <li> <a href="https://janefriedman.com/book-pl/" target="_blank" rel="noopener noreferrer"> Jane Friedman - Book P&amp;L </a> </li><li> <a href="https://jennasatterthwaite.substack.com/p/what-is-a-book-to-screen-scout-seven" target="_blank" rel="noopener noreferrer"> Satterthwaite x Kooiker (Apr 2026) </a> </li><li> <a href="https://publishingperspectives.com/2026/04/the-scouting-report-with-philippa-donovan/" target="_blank" rel="noopener noreferrer"> Publishing Perspectives - Donovan (Apr 2026) </a> </li> </ul>  </td> </tr>  <tr class="bg-data-row" data-id="ev-red-flags" data-category="Evaluation" data-dimension="Top red flags" data-pub-metric="0" data-hw-metric="0"> <td class="bg-col-expand"> <button type="button" class="bg-expand-btn" aria-expanded="false" aria-controls="detail-ev-red-flags" data-expand="ev-red-flags"> <span aria-hidden="true">+</span> <span class="sr-only">Show details for Top red flags</span> </button> </td> <td class="bg-category">Evaluation</td> <td class="bg-dimension">Top red flags</td> <td class="bg-acq-cell"> <div class="bg-cell-summary">Weak platform, thin comps, auction overpay</div>  </td> <td class="bg-scout-cell"> <div class="bg-cell-summary">Period settings, costly worldbuilding, aging arcs</div>  </td> </tr> <tr class="bg-detail-row" id="detail-ev-red-flags" data-detail="ev-red-flags" hidden> <td colspan="5"> <div class="bg-detail-grid"> <div class="bg-detail-block bg-detail-block--acq"> <p class="bg-detail-block__label">Publishing</p> <p class="bg-detail-block__body">Limited author platform, thin or stale romance comps, overpay risk in heated auctions, and unproven heat levels all raise concern. Subgenre saturation (eg. another standard hockey romance in 2026) also flags.</p> </div> <div class="bg-detail-block bg-detail-block--scout"> <p class="bg-detail-block__label">Hollywood</p> <p class="bg-detail-block__body">Expensive period settings (regency, fantasy realms), heavy CGI, aging cast arcs across long series, and voice-over-heavy interiority all create budget anxiety. Romance with fantasy elements (romantasy) faces extra production cost scrutiny.</p> </div> </div> <div class="bg-detail-takeaway"> <p class="bg-detail-takeaway__label">Writer takeaway</p> <p class="bg-detail-takeaway__body">Frame structural red flags with comparable success. Romantasy adaptations exist because Fourth Wing existed. The comp absorbs the risk argument.</p> </div>  <p class="bg-detail-sources__label">Sources</p> <ul class="bg-detail-sources__list"> <li> <a href="https://janefriedman.com/book-pl/" target="_blank" rel="noopener noreferrer"> Jane Friedman - Book P&amp;L </a> </li><li> <a href="https://jennasatterthwaite.substack.com/p/what-is-a-book-to-screen-scout-seven" target="_blank" rel="noopener noreferrer"> Satterthwaite x Kooiker (Apr 2026) </a> </li> </ul>  </td> </tr>  <tr class="bg-data-row" data-id="ev-deliverable" data-category="Evaluation" data-dimension="What gets written internally" data-pub-metric="0" data-hw-metric="0"> <td class="bg-col-expand"> <button type="button" class="bg-expand-btn" aria-expanded="false" aria-controls="detail-ev-deliverable" data-expand="ev-deliverable"> <span aria-hidden="true">+</span> <span class="sr-only">Show details for What gets written internally</span> </button> </td> <td class="bg-category">Evaluation</td> <td class="bg-dimension">What gets written internally</td> <td class="bg-acq-cell"> <div class="bg-cell-summary">P&amp;L spreadsheet + acquisition memo</div>  </td> <td class="bg-scout-cell"> <div class="bg-cell-summary">Coverage report + IP memo</div>  </td> </tr> <tr class="bg-detail-row" id="detail-ev-deliverable" data-detail="ev-deliverable" hidden> <td colspan="5"> <div class="bg-detail-grid"> <div class="bg-detail-block bg-detail-block--acq"> <p class="bg-detail-block__label">Publishing</p> <p class="bg-detail-block__body">Competitive analysis, comp sales history, audience demographics, full costed P&amp;L, marketing concept, and series potential map.</p> </div> <div class="bg-detail-block bg-detail-block--scout"> <p class="bg-detail-block__label">Hollywood</p> <p class="bg-detail-block__body">Detailed synopsis, cast positioning, set-piece highlights, heat-level note, comparable adaptation references, and slate-positioning recommendation.</p> </div> </div> <div class="bg-detail-takeaway"> <p class="bg-detail-takeaway__label">Writer takeaway</p> <p class="bg-detail-takeaway__body">Romance writers can prepare a one-page adaptation bait sheet (logline, central pair, trope, comparable adaptations, hero/heroine archetypes) to make scout coverage faster and more favorable.</p> </div>  <p class="bg-detail-sources__label">Sources</p> <ul class="bg-detail-sources__list"> <li> <a href="https://janefriedman.com/book-pl/" target="_blank" rel="noopener noreferrer"> Jane Friedman - Book P&amp;L </a> </li><li> <a href="https://jennasatterthwaite.substack.com/p/what-is-a-book-to-screen-scout-seven" target="_blank" rel="noopener noreferrer"> Satterthwaite x Kooiker (Apr 2026) </a> </li> </ul>  </td> </tr>  <tr class="bg-data-row" data-id="tl-discovery" data-category="Timeline" data-dimension="Discovery to offer" data-pub-metric="6" data-hw-metric="1"> <td class="bg-col-expand"> <button type="button" class="bg-expand-btn" aria-expanded="false" aria-controls="detail-tl-discovery" data-expand="tl-discovery"> <span aria-hidden="true">+</span> <span class="sr-only">Show details for Discovery to offer</span> </button> </td> <td class="bg-category">Timeline</td> <td class="bg-dimension">Discovery to offer</td> <td class="bg-acq-cell"> <div class="bg-cell-summary">3-9 months from agent submission</div> <div class="bg-cell-metric">3-9 months</div> </td> <td class="bg-scout-cell"> <div class="bg-cell-summary">Days to weeks for hot romance</div> <div class="bg-cell-metric">1-6 weeks</div> </td> </tr> <tr class="bg-detail-row" id="detail-tl-discovery" data-detail="tl-discovery" hidden> <td colspan="5"> <div class="bg-detail-grid"> <div class="bg-detail-block bg-detail-block--acq"> <p class="bg-detail-block__label">Publishing</p> <p class="bg-detail-block__body">Romance editor read times vary by imprint. Hot manuscripts can close in weeks; standard submissions take three to nine months across the round.</p> </div> <div class="bg-detail-block bg-detail-block--scout"> <p class="bg-detail-block__label">Hollywood</p> <p class="bg-detail-block__body">For romance with visible BookTok signal or auction heat, scouts surface in twenty-four to seventy-two hours and options can lock pre-publication. Heated Rivalry and Icebreaker both moved this fast.</p> </div> </div> <div class="bg-detail-takeaway"> <p class="bg-detail-takeaway__label">Writer takeaway</p> <p class="bg-detail-takeaway__body">Have adaptation representation in place before submission. For romance specifically, this is increasingly standard because the Hollywood timeline now sometimes runs ahead of the publishing one.</p> </div>  <p class="bg-detail-sources__label">Sources</p> <ul class="bg-detail-sources__list"> <li> <a href="https://reedsy.com/blog/how-to-get-a-book-deal/" target="_blank" rel="noopener noreferrer"> Reedsy - Get a Book Deal in 2026 </a> </li><li> <a href="https://www.screendaily.com/features/agents-and-producers-on-the-feeding-frenzy-of-the-competitive-book-rights-marketplace/5160812.article" target="_blank" rel="noopener noreferrer"> Screen Daily - Rights feeding frenzy </a> </li><li> <a href="https://jennasatterthwaite.substack.com/p/what-is-a-book-to-screen-scout-seven" target="_blank" rel="noopener noreferrer"> Satterthwaite x Kooiker (Apr 2026) </a> </li> </ul>  </td> </tr>  <tr class="bg-data-row" data-id="tl-greenlight" data-category="Timeline" data-dimension="Offer to greenlight or pub date" data-pub-metric="14" data-hw-metric="36"> <td class="bg-col-expand"> <button type="button" class="bg-expand-btn" aria-expanded="false" aria-controls="detail-tl-greenlight" data-expand="tl-greenlight"> <span aria-hidden="true">+</span> <span class="sr-only">Show details for Offer to greenlight or pub date</span> </button> </td> <td class="bg-category">Timeline</td> <td class="bg-dimension">Offer to greenlight or pub date</td> <td class="bg-acq-cell"> <div class="bg-cell-summary">12-18 months to bookstore shelf</div> <div class="bg-cell-metric">~14 months</div> </td> <td class="bg-scout-cell"> <div class="bg-cell-summary">12-18 mo option, 2-5 yr to screen</div> <div class="bg-cell-metric">12-18 mo option, 2-5 yr to screen</div> </td> </tr> <tr class="bg-detail-row" id="detail-tl-greenlight" data-detail="tl-greenlight" hidden> <td colspan="5"> <div class="bg-detail-grid"> <div class="bg-detail-block bg-detail-block--acq"> <p class="bg-detail-block__label">Publishing</p> <p class="bg-detail-block__body">Romance has slightly shorter production cycles than literary fiction due to genre-driven time-to-market pressure. Twelve to eighteen months is standard for trade romance.</p> </div> <div class="bg-detail-block bg-detail-block--scout"> <p class="bg-detail-block__label">Hollywood</p> <p class="bg-detail-block__body">Romance adaptations have moved faster on average than literary fiction adaptations in 2024-2026, but multi-year development is still standard. Streamers compress timelines more aggressively than studio film.</p> </div> </div> <div class="bg-detail-takeaway"> <p class="bg-detail-takeaway__label">Writer takeaway</p> <p class="bg-detail-takeaway__body">Plan a two-track career timeline. Both pipelines have long arcs. The next book matters even when the current one is mid-deal.</p> </div>  <p class="bg-detail-sources__label">Sources</p> <ul class="bg-detail-sources__list"> <li> <a href="https://www.publishingtalk.org/get-published/book-publishing-process-8-step-guide/" target="_blank" rel="noopener noreferrer"> PublishingTalk - 8-step process </a> </li><li> <a href="https://jennasatterthwaite.substack.com/p/what-is-a-book-to-screen-scout-seven" target="_blank" rel="noopener noreferrer"> Satterthwaite x Kooiker (Apr 2026) </a> </li><li> <a href="https://janefriedman.com/books-to-film-option-versus-shopping-agreement/" target="_blank" rel="noopener noreferrer"> Friedman - Option vs Shopping </a> </li> </ul>  </td> </tr>  <tr class="bg-data-row" data-id="rt-instrument" data-category="Rights" data-dimension="Deal instrument" data-pub-metric="0" data-hw-metric="0"> <td class="bg-col-expand"> <button type="button" class="bg-expand-btn" aria-expanded="false" aria-controls="detail-rt-instrument" data-expand="rt-instrument"> <span aria-hidden="true">+</span> <span class="sr-only">Show details for Deal instrument</span> </button> </td> <td class="bg-category">Rights</td> <td class="bg-dimension">Deal instrument</td> <td class="bg-acq-cell"> <div class="bg-cell-summary">Publishing agreement</div>  </td> <td class="bg-scout-cell"> <div class="bg-cell-summary">Option agreement or shopping deal</div>  </td> </tr> <tr class="bg-detail-row" id="detail-rt-instrument" data-detail="rt-instrument" hidden> <td colspan="5"> <div class="bg-detail-grid"> <div class="bg-detail-block bg-detail-block--acq"> <p class="bg-detail-block__label">Publishing</p> <p class="bg-detail-block__body">Primary print and ebook rights plus a subsidiary rights bundle. Romance subsidiary rights frequently include audio (high-value), translation (high-value in 2026), and series options.</p> </div> <div class="bg-detail-block bg-detail-block--scout"> <p class="bg-detail-block__label">Hollywood</p> <p class="bg-detail-block__body">Option fee buys an exclusive twelve to eighteen month window. Shopping deals are lower-commitment pitch windows. Romance has seen more option-to-purchase conversions in 2024-2026 than the historical average.</p> </div> </div> <div class="bg-detail-takeaway"> <p class="bg-detail-takeaway__label">Writer takeaway</p> <p class="bg-detail-takeaway__body">Retain film and TV rights at the publishing deal stage where possible. Romance audio rights and translation rights are also high-value and worth negotiating carefully.</p> </div>  <p class="bg-detail-sources__label">Sources</p> <ul class="bg-detail-sources__list"> <li> <a href="https://www.romanolaw.com/what-authors-should-know-about-subsidiary-rights/" target="_blank" rel="noopener noreferrer"> Romano Law - Subsidiary Rights </a> </li><li> <a href="https://janefriedman.com/books-to-film-option-versus-shopping-agreement/" target="_blank" rel="noopener noreferrer"> Friedman - Option vs Shopping </a> </li><li> <a href="https://jennasatterthwaite.substack.com/p/what-is-a-book-to-screen-scout-seven" target="_blank" rel="noopener noreferrer"> Satterthwaite x Kooiker (Apr 2026) </a> </li> </ul>  </td> </tr>  <tr class="bg-data-row" data-id="rt-economics" data-category="Rights" data-dimension="Headline economics" data-pub-metric="12" data-hw-metric="0"> <td class="bg-col-expand"> <button type="button" class="bg-expand-btn" aria-expanded="false" aria-controls="detail-rt-economics" data-expand="rt-economics"> <span aria-hidden="true">+</span> <span class="sr-only">Show details for Headline economics</span> </button> </td> <td class="bg-category">Rights</td> <td class="bg-dimension">Headline economics</td> <td class="bg-acq-cell"> <div class="bg-cell-summary">Advance + 8-15% royalty</div> <div class="bg-cell-metric">8-15% royalty</div> </td> <td class="bg-scout-cell"> <div class="bg-cell-summary">Option ~10% of purchase; purchase 2-4% of budget</div>  </td> </tr> <tr class="bg-detail-row" id="detail-rt-economics" data-detail="rt-economics" hidden> <td colspan="5"> <div class="bg-detail-grid"> <div class="bg-detail-block bg-detail-block--acq"> <p class="bg-detail-block__label">Publishing</p> <p class="bg-detail-block__body">Romance advances are typically smaller than literary fiction for debut authors, but escalators, ebook rates, and audio royalties drive long-tail economics. Backlist matters more in romance than almost any other category.</p> </div> <div class="bg-detail-block bg-detail-block--scout"> <p class="bg-detail-block__label">Hollywood</p> <p class="bg-detail-block__body">Option fees are typically ten percent of an underlying purchase price. Purchase price often runs two to four percent of production budget. Episodic and franchise passives often outweigh option fees over time.</p> </div> </div> <div class="bg-detail-takeaway"> <p class="bg-detail-takeaway__label">Writer takeaway</p> <p class="bg-detail-takeaway__body">Negotiate compounding back-end terms. Romance backlist royalties and adaptation passives often exceed initial advances over a career.</p> </div>  <p class="bg-detail-sources__label">Sources</p> <ul class="bg-detail-sources__list"> <li> <a href="https://janefriedman.com/book-pl/" target="_blank" rel="noopener noreferrer"> Jane Friedman - Book P&amp;L </a> </li><li> <a href="https://jennasatterthwaite.substack.com/p/what-is-a-book-to-screen-scout-seven" target="_blank" rel="noopener noreferrer"> Satterthwaite x Kooiker (Apr 2026) </a> </li><li> <a href="https://janefriedman.com/books-to-film-option-versus-shopping-agreement/" target="_blank" rel="noopener noreferrer"> Friedman - Option vs Shopping </a> </li> </ul>  </td> </tr>  <tr class="bg-data-row" data-id="rt-negotiation" data-category="Rights" data-dimension="Negotiation choreography" data-pub-metric="0" data-hw-metric="0"> <td class="bg-col-expand"> <button type="button" class="bg-expand-btn" aria-expanded="false" aria-controls="detail-rt-negotiation" data-expand="rt-negotiation"> <span aria-hidden="true">+</span> <span class="sr-only">Show details for Negotiation choreography</span> </button> </td> <td class="bg-category">Rights</td> <td class="bg-dimension">Negotiation choreography</td> <td class="bg-acq-cell"> <div class="bg-cell-summary">Editor and agent, auctions when hot</div>  </td> <td class="bg-scout-cell"> <div class="bg-cell-summary">Producer and film/TV agent, reputation &gt; price</div>  </td> </tr> <tr class="bg-detail-row" id="detail-rt-negotiation" data-detail="rt-negotiation" hidden> <td colspan="5"> <div class="bg-detail-grid"> <div class="bg-detail-block bg-detail-block--acq"> <p class="bg-detail-block__label">Publishing</p> <p class="bg-detail-block__body">Romance auctions compressed in 2024-2026 with BookTok-driven momentum. Hot manuscripts can multiply advances in days. Most romance deals are still single-offer negotiations.</p> </div> <div class="bg-detail-block bg-detail-block--scout"> <p class="bg-detail-block__label">Hollywood</p> <p class="bg-detail-block__body">For romance specifically, creative vision and adaptation track record (Bridgerton, Reedsy) often beat top bids. Producers with proven romance pipelines (Shondaland, others) command setup advantages.</p> </div> </div> <div class="bg-detail-takeaway"> <p class="bg-detail-takeaway__label">Writer takeaway</p> <p class="bg-detail-takeaway__body">Take the strongest setup path, not just the highest headline. Romance adaptations live or die on producer execution. A producer with a romance track record beats a higher offer from a generalist.</p> </div>  <p class="bg-detail-sources__label">Sources</p> <ul class="bg-detail-sources__list"> <li> <a href="https://reedsy.com/blog/how-to-get-a-book-deal/" target="_blank" rel="noopener noreferrer"> Reedsy - Get a Book Deal in 2026 </a> </li><li> <a href="https://www.screendaily.com/features/agents-and-producers-on-the-feeding-frenzy-of-the-competitive-book-rights-marketplace/5160812.article" target="_blank" rel="noopener noreferrer"> Screen Daily - Rights feeding frenzy </a> </li> </ul>  </td> </tr>  <tr class="bg-data-row" data-id="sg-top-signal" data-category="Signals" data-dimension="Highest-weighted 2026 signal" data-pub-metric="40" data-hw-metric="35"> <td class="bg-col-expand"> <button type="button" class="bg-expand-btn" aria-expanded="false" aria-controls="detail-sg-top-signal" data-expand="sg-top-signal"> <span aria-hidden="true">+</span> <span class="sr-only">Show details for Highest-weighted 2026 signal</span> </button> </td> <td class="bg-category">Signals</td> <td class="bg-dimension">Highest-weighted 2026 signal</td> <td class="bg-acq-cell"> <div class="bg-cell-summary">Comp sales + BookTok momentum</div> <div class="bg-cell-metric">Comp sales: ~40% weight</div> </td> <td class="bg-scout-cell"> <div class="bg-cell-summary">BookTok dominance + cinematic visuality</div> <div class="bg-cell-metric">BookTok signal: ~35% weight</div> </td> </tr> <tr class="bg-detail-row" id="detail-sg-top-signal" data-detail="sg-top-signal" hidden> <td colspan="5"> <div class="bg-detail-grid"> <div class="bg-detail-block bg-detail-block--acq"> <p class="bg-detail-block__label">Publishing</p> <p class="bg-detail-block__body">Romance comp sales remain load-bearing for P&amp;L. BookTok is the dominant amplifier in 2026, especially for contemporary romance, romantasy, and dark romance subgenres.</p> </div> <div class="bg-detail-block bg-detail-block--scout"> <p class="bg-detail-block__label">Hollywood</p> <p class="bg-detail-block__body">BookTok momentum is the primary trigger for scout attention in romance. Combined with visual adaptation potential (the chemistry scene, the trope moment), it drives prioritization.</p> </div> </div> <div class="bg-detail-takeaway"> <p class="bg-detail-takeaway__label">Writer takeaway</p> <p class="bg-detail-takeaway__body">BookTok is the highest-leverage discovery channel for romance in both pipelines. Engineer one BookTok-shaped scene per book (the meet, the trope, the spice).</p> </div>  <p class="bg-detail-sources__label">Sources</p> <ul class="bg-detail-sources__list"> <li> <a href="https://www.ttt-news.com/how-booktok-became-the-publishing-industrys-power-player/" target="_blank" rel="noopener noreferrer"> BookTok power player </a> </li><li> <a href="https://publishingperspectives.com/2026/04/the-scouting-report-with-philippa-donovan/" target="_blank" rel="noopener noreferrer"> Publishing Perspectives - Donovan (Apr 2026) </a> </li><li> <a href="https://newsroom.tiktok.com/booktok-community-50-million-books?lang=en-150" target="_blank" rel="noopener noreferrer"> TikTok Newsroom - 50M books (Mar 2026) </a> </li> </ul>  </td> </tr>  <tr class="bg-data-row" data-id="sg-social" data-category="Signals" data-dimension="Social-data weight" data-pub-metric="0" data-hw-metric="0"> <td class="bg-col-expand"> <button type="button" class="bg-expand-btn" aria-expanded="false" aria-controls="detail-sg-social" data-expand="sg-social"> <span aria-hidden="true">+</span> <span class="sr-only">Show details for Social-data weight</span> </button> </td> <td class="bg-category">Signals</td> <td class="bg-dimension">Social-data weight</td> <td class="bg-acq-cell"> <div class="bg-cell-summary">Material but discounted vs sell-through</div>  </td> <td class="bg-scout-cell"> <div class="bg-cell-summary">Primary discovery channel</div>  </td> </tr> <tr class="bg-detail-row" id="detail-sg-social" data-detail="sg-social" hidden> <td colspan="5"> <div class="bg-detail-grid"> <div class="bg-detail-block bg-detail-block--acq"> <p class="bg-detail-block__label">Publishing</p> <p class="bg-detail-block__body">Social metrics inform romance acquisition but rarely override weak P&amp;L unless the BookTok signal is exceptional (Icebreaker, Fourth Wing scale).</p> </div> <div class="bg-detail-block bg-detail-block--scout"> <p class="bg-detail-block__label">Hollywood</p> <p class="bg-detail-block__body">Romance scouts now use BookTok virality as a primary discovery channel, capable of triggering options on backlist romance years after original publication (Heated Rivalry pattern).</p> </div> </div> <div class="bg-detail-takeaway"> <p class="bg-detail-takeaway__label">Writer takeaway</p> <p class="bg-detail-takeaway__body">Build rediscoverable moments, not vanity follower counts. Romance backlist can re-detonate years later if the BookTok ecosystem finds it.</p> </div>  <p class="bg-detail-sources__label">Sources</p> <ul class="bg-detail-sources__list"> <li> <a href="https://www.elle.com/culture/books/a63445166/2025-book-publishing-trends-influencer-predictions-explained/" target="_blank" rel="noopener noreferrer"> ELLE - Influencer prediction </a> </li><li> <a href="https://www.women.com/2166101/booktok-faves-made-a-splash-2026/" target="_blank" rel="noopener noreferrer"> Women.com - BookTok 2026 </a> </li><li> <a href="https://publishingperspectives.com/2026/04/the-scouting-report-with-philippa-donovan/" target="_blank" rel="noopener noreferrer"> Publishing Perspectives - Donovan (Apr 2026) </a> </li> </ul>  </td> </tr>  <tr class="bg-data-row" data-id="sg-advance-sales" data-category="Signals" data-dimension="Advance / pre-order data" data-pub-metric="0" data-hw-metric="0"> <td class="bg-col-expand"> <button type="button" class="bg-expand-btn" aria-expanded="false" aria-controls="detail-sg-advance-sales" data-expand="sg-advance-sales"> <span aria-hidden="true">+</span> <span class="sr-only">Show details for Advance / pre-order data</span> </button> </td> <td class="bg-category">Signals</td> <td class="bg-dimension">Advance / pre-order data</td> <td class="bg-acq-cell"> <div class="bg-cell-summary">High weight at re-order, less at acquisition</div>  </td> <td class="bg-scout-cell"> <div class="bg-cell-summary">NYT bestseller status triggers bonuses</div>  </td> </tr> <tr class="bg-detail-row" id="detail-sg-advance-sales" data-detail="sg-advance-sales" hidden> <td colspan="5"> <div class="bg-detail-grid"> <div class="bg-detail-block bg-detail-block--acq"> <p class="bg-detail-block__label">Publishing</p> <p class="bg-detail-block__body">Pre-order numbers matter most for romance second-printing strategy and second-book negotiations. Pre-launch romance metrics are increasingly central to series greenlights.</p> </div> <div class="bg-detail-block bg-detail-block--scout"> <p class="bg-detail-block__label">Hollywood</p> <p class="bg-detail-block__body">Romance properties hitting NYT lists often trigger contractual bonuses or activated provisions in Hollywood deals. Less central as a pre-deal gate; more central as a deal-enhancing signal.</p> </div> </div> <div class="bg-detail-takeaway"> <p class="bg-detail-takeaway__label">Writer takeaway</p> <p class="bg-detail-takeaway__body">Activate pre-order pushes at maximum reporting leverage windows. The pre-order wave shapes both pipelines&#39; future bets.</p> </div>  <p class="bg-detail-sources__label">Sources</p> <ul class="bg-detail-sources__list"> <li> <a href="https://janefriedman.com/book-pl/" target="_blank" rel="noopener noreferrer"> Jane Friedman - Book P&amp;L </a> </li><li> <a href="https://jennasatterthwaite.substack.com/p/what-is-a-book-to-screen-scout-seven" target="_blank" rel="noopener noreferrer"> Satterthwaite x Kooiker (Apr 2026) </a> </li> </ul>  </td> </tr>  <tr class="bg-data-row" data-id="sg-prestige" data-category="Signals" data-dimension="Literary prestige and prizes" data-pub-metric="0" data-hw-metric="0"> <td class="bg-col-expand"> <button type="button" class="bg-expand-btn" aria-expanded="false" aria-controls="detail-sg-prestige" data-expand="sg-prestige"> <span aria-hidden="true">+</span> <span class="sr-only">Show details for Literary prestige and prizes</span> </button> </td> <td class="bg-category">Signals</td> <td class="bg-dimension">Literary prestige and prizes</td> <td class="bg-acq-cell"> <div class="bg-cell-summary">Reputation hedge for literary romance</div>  </td> <td class="bg-scout-cell"> <div class="bg-cell-summary">Used by prestige-TV scouts</div>  </td> </tr> <tr class="bg-detail-row" id="detail-sg-prestige" data-detail="sg-prestige" hidden> <td colspan="5"> <div class="bg-detail-grid"> <div class="bg-detail-block bg-detail-block--acq"> <p class="bg-detail-block__label">Publishing</p> <p class="bg-detail-block__body">Romance prizes (RITA legacy, Romance Writers of America successors) carry weight in trade romance imprints. Literary romance crossovers benefit from broader literary prize recognition.</p> </div> <div class="bg-detail-block bg-detail-block--scout"> <p class="bg-detail-block__label">Hollywood</p> <p class="bg-detail-block__body">Prestige TV scouts track literary romance and crossover romance with serious prose. Less central for category romance adaptations, more central for streamer prestige romance.</p> </div> </div> <div class="bg-detail-takeaway"> <p class="bg-detail-takeaway__label">Writer takeaway</p> <p class="bg-detail-takeaway__body">A literary-romance short fiction credit can open doors in both pipelines. Prestige operates as a hedge against pure commercial signal.</p> </div>  <p class="bg-detail-sources__label">Sources</p> <ul class="bg-detail-sources__list"> <li> <a href="https://publishingperspectives.com/2026/04/the-scouting-report-with-philippa-donovan/" target="_blank" rel="noopener noreferrer"> Publishing Perspectives - Donovan (Apr 2026) </a> </li> </ul>  </td> </tr>  <tr class="bg-data-row" data-id="sg-emerging" data-category="Signals" data-dimension="Emerging 2026 signals" data-pub-metric="0" data-hw-metric="0"> <td class="bg-col-expand"> <button type="button" class="bg-expand-btn" aria-expanded="false" aria-controls="detail-sg-emerging" data-expand="sg-emerging"> <span aria-hidden="true">+</span> <span class="sr-only">Show details for Emerging 2026 signals</span> </button> </td> <td class="bg-category">Signals</td> <td class="bg-dimension">Emerging 2026 signals</td> <td class="bg-acq-cell"> <div class="bg-cell-summary">Translation breakouts + email-list size</div>  </td> <td class="bg-scout-cell"> <div class="bg-cell-summary">Webtoon and microdrama adjacency</div>  </td> </tr> <tr class="bg-detail-row" id="detail-sg-emerging" data-detail="sg-emerging" hidden> <td colspan="5"> <div class="bg-detail-grid"> <div class="bg-detail-block bg-detail-block--acq"> <p class="bg-detail-block__label">Publishing</p> <p class="bg-detail-block__body">Translated romance breakouts (especially Brazilian, Korean, German markets) are watched closely. Owned audience (newsletter, Patreon) is increasingly treated as durable proof in romance acquisitions.</p> </div> <div class="bg-detail-block bg-detail-block--scout"> <p class="bg-detail-block__label">Hollywood</p> <p class="bg-detail-block__body">Romance scouts increasingly watch webtoon adaptation pipelines and microdrama platforms as packaging precedents. Short-form romance content is treated as proof-of-concept for longer adaptations.</p> </div> </div> <div class="bg-detail-takeaway"> <p class="bg-detail-takeaway__label">Writer takeaway</p> <p class="bg-detail-takeaway__body">Romance writers can use short-form content (newsletter serials, microdrama scripts, webtoon collaboration) as faster adaptation bait than full novels.</p> </div>  <p class="bg-detail-sources__label">Sources</p> <ul class="bg-detail-sources__list"> <li> <a href="https://www.women.com/2166101/booktok-faves-made-a-splash-2026/" target="_blank" rel="noopener noreferrer"> Women.com - BookTok 2026 </a> </li><li> <a href="https://publishingperspectives.com/2026/04/the-scouting-report-with-philippa-donovan/" target="_blank" rel="noopener noreferrer"> Publishing Perspectives - Donovan (Apr 2026) </a> </li><li> <a href="https://jennasatterthwaite.substack.com/p/what-is-a-book-to-screen-scout-seven" target="_blank" rel="noopener noreferrer"> Satterthwaite x Kooiker (Apr 2026) </a> </li> </ul>  </td> </tr>  </tbody> </table> </div> </section> <script src="../js/pipeline-comparison.js"></script> <section class="bg-section" aria-labelledby="bg-s03"> <div class="bg-section__header"> <span class="bg-section__num">03</span> <div class="bg-section__divider" aria-hidden="true"></div> </div> <h2 class="bg-section__title" id="bg-s03">Levers we're investigating</h2> <p class="bg-section__lead">
-A short list of moves we think might shift outcomes for romance writers across both pipelines. We don't have settled evidence on most of these. This section names what we're testing, what would tell us it works, and what we don't yet know.
-</p> <div class="bg-investigations"> <article class="bg-investigation bg-investigation--both"> <p class="bg-investigation__audience">Both</p> <h3 class="bg-investigation__title">Engineering a BookTok-shaped scene</h3> <div> <p class="bg-investigation__block-label">What we're testing</p> <p class="bg-investigation__block-body">Whether building one clip-ready scene per romance (the trope moment, the chemistry beat, the chapter ending that makes a screenshot) correlates with both BookTok pickup and scout coverage.</p> </div> <div> <p class="bg-investigation__block-label">What the field shows</p> <p class="bg-investigation__block-body">Heated Rivalry, Icebreaker, and Fourth Wing all had scenes that became BookTok moments before adaptation interest landed. The pattern is consistent enough to take seriously.</p> </div> <div class="bg-investigation__block--open"> <p class="bg-investigation__block-label">Where it's still open</p> <p class="bg-investigation__block-body">What makes a scene BookTok-shaped versus just dramatic isn&#39;t well understood. We suspect emotional escalation, dialogue density, and trope legibility matter, but we don&#39;t have enough comparative data to know what&#39;s necessary versus sufficient.</p> </div> </article><article class="bg-investigation bg-investigation--scout"> <p class="bg-investigation__audience">Hollywood</p> <h3 class="bg-investigation__title">Short-form as adaptation pitch</h3> <div> <p class="bg-investigation__block-label">What we're testing</p> <p class="bg-investigation__block-body">Whether publishing romance novellas, short stories, or webtoon collaborations at high concept density gets faster scout attention than full novels.</p> </div> <div> <p class="bg-investigation__block-label">What the field shows</p> <p class="bg-investigation__block-body">Scouts increasingly read short-form content because it&#39;s faster to evaluate than a hundred-thousand-word manuscript. Microdrama and webtoon adaptations have become reference points in 2025-2026.</p> </div> <div class="bg-investigation__block--open"> <p class="bg-investigation__block-label">Where it's still open</p> <p class="bg-investigation__block-body">It&#39;s unclear whether short-form actually shortens the path to adaptation, or whether it&#39;s a pitch surface that still requires a novel to anchor the deal. We&#39;re watching whether romance writers with strong short-form portfolios convert at higher rates.</p> </div> </article><article class="bg-investigation bg-investigation--both"> <p class="bg-investigation__audience">Both</p> <h3 class="bg-investigation__title">Backlist re-detonation</h3> <div> <p class="bg-investigation__block-label">What we're testing</p> <p class="bg-investigation__block-body">Whether building rediscoverable moments in romance backlist (scenes, tropes, characters that can re-surface on BookTok years after publication) creates durable career value.</p> </div> <div> <p class="bg-investigation__block-label">What the field shows</p> <p class="bg-investigation__block-body">Heated Rivalry is the clearest recent example. Published 2019, dormant for years, then a 11.5x ratings expansion in six months after broadcast. The book didn&#39;t change; the discovery mechanism did.</p> </div> <div class="bg-investigation__block--open"> <p class="bg-investigation__block-label">Where it's still open</p> <p class="bg-investigation__block-body">We don&#39;t know what makes a romance backlist title rediscoverable versus forgettable. Open-arc structure looks load-bearing per Volume 001, but it&#39;s one variable among many. The next several volumes will keep testing this.</p> </div> </article><article class="bg-investigation bg-investigation--acq"> <p class="bg-investigation__audience">Publishing</p> <h3 class="bg-investigation__title">Subgenre comp stacks</h3> <div> <p class="bg-investigation__block-label">What we're testing</p> <p class="bg-investigation__block-body">Whether building submission comp stacks that stay tightly inside the romance subgenre (matching trope, heat level, audience profile) outperforms stacks that reach across categories.</p> </div> <div> <p class="bg-investigation__block-label">What the field shows</p> <p class="bg-investigation__block-body">Editors weight comp sales heavily in P&amp;L modeling. Inside-genre comps reduce the explanatory burden on the submission and let the editor&#39;s case to the pub board be cleaner.</p> </div> <div class="bg-investigation__block--open"> <p class="bg-investigation__block-label">Where it's still open</p> <p class="bg-investigation__block-body">What we don&#39;t know is whether comp tightness matters at the edges. A romance with a literary fiction crossover ambition might benefit from a mixed stack; a category romance probably benefits from staying narrow. The threshold isn&#39;t clear.</p> </div> </article><article class="bg-investigation bg-investigation--both"> <p class="bg-investigation__audience">Both</p> <h3 class="bg-investigation__title">Owned audience as primary asset</h3> <div> <p class="bg-investigation__block-label">What we're testing</p> <p class="bg-investigation__block-body">Whether building a newsletter audience (rather than social following) functions as the more durable career asset for romance writers across both pipelines.</p> </div> <div> <p class="bg-investigation__block-label">What the field shows</p> <p class="bg-investigation__block-body">Newsletters travel with the writer across platform changes. Social followings often don&#39;t. Editors and scouts both report watching mailing list size as a stability signal more than viral spikes.</p> </div> <div class="bg-investigation__block--open"> <p class="bg-investigation__block-label">Where it's still open</p> <p class="bg-investigation__block-body">We don&#39;t have good data on how mailing list size correlates with either pipeline&#39;s decisions. The intuition is widely shared, but the threshold at which a list starts mattering for romance acquisitions specifically isn&#39;t documented.</p> </div> </article> </div> </section> <section class="bg-section" aria-labelledby="bg-s04"> <div class="bg-section__header"> <span class="bg-section__num">04</span> <div class="bg-section__divider" aria-hidden="true"></div> </div> <h2 class="bg-section__title" id="bg-s04">2026 signal weights</h2> <p class="bg-section__lead">
-How publishing acquisition and Hollywood scouting weight different signals for romance specifically. Same signal, different weight across the two pipelines, which is why the same manuscript reads differently in each room.
-</p> <div class="bg-methodology"> <p class="bg-methodology__label">On these weights</p> <p class="bg-methodology__body">
-These are reasoned estimates from named 2026 industry sources (Satterthwaite x Kooiker, Publishing Perspectives, Friedman, TikTok Newsroom), not measured weights from a single dataset. They reflect what the field reports as priority order for romance acquisition in 2026. Treat as directional, not precise.
-</p> </div> <div class="bg-signals"> <div class="bg-signal-row"> <div> <div class="bg-signal-row__name">Comp sales history</div> <div class="bg-signal-row__note">Romance P&amp;Ls anchor here</div> </div> <div class="bg-signal-bar-group"> <div class="bg-signal-bar-label bg-signal-bar-label--acq"> <span>Publishing</span> <span>90</span> </div> <div class="bg-signal-bar" role="img" aria-label="Comp sales history: Publishing 90%, Hollywood 35%"> <div class="bg-signal-bar-fill bg-signal-bar-fill--acq" style="width: 90%" aria-hidden="true"></div> </div> </div> <div class="bg-signal-bar-group"> <div class="bg-signal-bar-label bg-signal-bar-label--scout"> <span>Hollywood</span> <span>35</span> </div> <div class="bg-signal-bar" aria-hidden="true"> <div class="bg-signal-bar-fill bg-signal-bar-fill--scout" style="width: 35%"></div> </div> </div> </div><div class="bg-signal-row"> <div> <div class="bg-signal-row__name">Author platform / following</div> <div class="bg-signal-row__note">Critical for nonfiction, supportive for romance</div> </div> <div class="bg-signal-bar-group"> <div class="bg-signal-bar-label bg-signal-bar-label--acq"> <span>Publishing</span> <span>70</span> </div> <div class="bg-signal-bar" role="img" aria-label="Author platform / following: Publishing 70%, Hollywood 30%"> <div class="bg-signal-bar-fill bg-signal-bar-fill--acq" style="width: 70%" aria-hidden="true"></div> </div> </div> <div class="bg-signal-bar-group"> <div class="bg-signal-bar-label bg-signal-bar-label--scout"> <span>Hollywood</span> <span>30</span> </div> <div class="bg-signal-bar" aria-hidden="true"> <div class="bg-signal-bar-fill bg-signal-bar-fill--scout" style="width: 30%"></div> </div> </div> </div><div class="bg-signal-row"> <div> <div class="bg-signal-row__name">BookTok / TikTok virality</div> <div class="bg-signal-row__note">Shared top-funnel accelerator</div> </div> <div class="bg-signal-bar-group"> <div class="bg-signal-bar-label bg-signal-bar-label--acq"> <span>Publishing</span> <span>80</span> </div> <div class="bg-signal-bar" role="img" aria-label="BookTok / TikTok virality: Publishing 80%, Hollywood 92%"> <div class="bg-signal-bar-fill bg-signal-bar-fill--acq" style="width: 80%" aria-hidden="true"></div> </div> </div> <div class="bg-signal-bar-group"> <div class="bg-signal-bar-label bg-signal-bar-label--scout"> <span>Hollywood</span> <span>92</span> </div> <div class="bg-signal-bar" aria-hidden="true"> <div class="bg-signal-bar-fill bg-signal-bar-fill--scout" style="width: 92%"></div> </div> </div> </div><div class="bg-signal-row"> <div> <div class="bg-signal-row__name">Visual / cinematic potential</div> <div class="bg-signal-row__note">Chemistry scene, trope moment, set-pieces</div> </div> <div class="bg-signal-bar-group"> <div class="bg-signal-bar-label bg-signal-bar-label--acq"> <span>Publishing</span> <span>15</span> </div> <div class="bg-signal-bar" role="img" aria-label="Visual / cinematic potential: Publishing 15%, Hollywood 95%"> <div class="bg-signal-bar-fill bg-signal-bar-fill--acq" style="width: 15%" aria-hidden="true"></div> </div> </div> <div class="bg-signal-bar-group"> <div class="bg-signal-bar-label bg-signal-bar-label--scout"> <span>Hollywood</span> <span>95</span> </div> <div class="bg-signal-bar" aria-hidden="true"> <div class="bg-signal-bar-fill bg-signal-bar-fill--scout" style="width: 95%"></div> </div> </div> </div><div class="bg-signal-row"> <div> <div class="bg-signal-row__name">Pre-order / advance sales</div> <div class="bg-signal-row__note">Romance second-book leverage</div> </div> <div class="bg-signal-bar-group"> <div class="bg-signal-bar-label bg-signal-bar-label--acq"> <span>Publishing</span> <span>60</span> </div> <div class="bg-signal-bar" role="img" aria-label="Pre-order / advance sales: Publishing 60%, Hollywood 28%"> <div class="bg-signal-bar-fill bg-signal-bar-fill--acq" style="width: 60%" aria-hidden="true"></div> </div> </div> <div class="bg-signal-bar-group"> <div class="bg-signal-bar-label bg-signal-bar-label--scout"> <span>Hollywood</span> <span>28</span> </div> <div class="bg-signal-bar" aria-hidden="true"> <div class="bg-signal-bar-fill bg-signal-bar-fill--scout" style="width: 28%"></div> </div> </div> </div><div class="bg-signal-row"> <div> <div class="bg-signal-row__name">Literary prestige / prizes</div> <div class="bg-signal-row__note">Mutual prestige signal</div> </div> <div class="bg-signal-bar-group"> <div class="bg-signal-bar-label bg-signal-bar-label--acq"> <span>Publishing</span> <span>50</span> </div> <div class="bg-signal-bar" role="img" aria-label="Literary prestige / prizes: Publishing 50%, Hollywood 55%"> <div class="bg-signal-bar-fill bg-signal-bar-fill--acq" style="width: 50%" aria-hidden="true"></div> </div> </div> <div class="bg-signal-bar-group"> <div class="bg-signal-bar-label bg-signal-bar-label--scout"> <span>Hollywood</span> <span>55</span> </div> <div class="bg-signal-bar" aria-hidden="true"> <div class="bg-signal-bar-fill bg-signal-bar-fill--scout" style="width: 55%"></div> </div> </div> </div><div class="bg-signal-row"> <div> <div class="bg-signal-row__name">Auction heat / competitive bids</div> <div class="bg-signal-row__note">Attention transfer effect</div> </div> <div class="bg-signal-bar-group"> <div class="bg-signal-bar-label bg-signal-bar-label--acq"> <span>Publishing</span> <span>80</span> </div> <div class="bg-signal-bar" role="img" aria-label="Auction heat / competitive bids: Publishing 80%, Hollywood 70%"> <div class="bg-signal-bar-fill bg-signal-bar-fill--acq" style="width: 80%" aria-hidden="true"></div> </div> </div> <div class="bg-signal-bar-group"> <div class="bg-signal-bar-label bg-signal-bar-label--scout"> <span>Hollywood</span> <span>70</span> </div> <div class="bg-signal-bar" aria-hidden="true"> <div class="bg-signal-bar-fill bg-signal-bar-fill--scout" style="width: 70%"></div> </div> </div> </div><div class="bg-signal-row"> <div> <div class="bg-signal-row__name">Translation / international breakout</div> <div class="bg-signal-row__note">Brazil, Korea, Germany markets watched</div> </div> <div class="bg-signal-bar-group"> <div class="bg-signal-bar-label bg-signal-bar-label--acq"> <span>Publishing</span> <span>65</span> </div> <div class="bg-signal-bar" role="img" aria-label="Translation / international breakout: Publishing 65%, Hollywood 78%"> <div class="bg-signal-bar-fill bg-signal-bar-fill--acq" style="width: 65%" aria-hidden="true"></div> </div> </div> <div class="bg-signal-bar-group"> <div class="bg-signal-bar-label bg-signal-bar-label--scout"> <span>Hollywood</span> <span>78</span> </div> <div class="bg-signal-bar" aria-hidden="true"> <div class="bg-signal-bar-fill bg-signal-bar-fill--scout" style="width: 78%"></div> </div> </div> </div><div class="bg-signal-row"> <div> <div class="bg-signal-row__name">Built-in fanbase / existing IP</div> <div class="bg-signal-row__note">Romance series and rereleases</div> </div> <div class="bg-signal-bar-group"> <div class="bg-signal-bar-label bg-signal-bar-label--acq"> <span>Publishing</span> <span>70</span> </div> <div class="bg-signal-bar" role="img" aria-label="Built-in fanbase / existing IP: Publishing 70%, Hollywood 88%"> <div class="bg-signal-bar-fill bg-signal-bar-fill--acq" style="width: 70%" aria-hidden="true"></div> </div> </div> <div class="bg-signal-bar-group"> <div class="bg-signal-bar-label bg-signal-bar-label--scout"> <span>Hollywood</span> <span>88</span> </div> <div class="bg-signal-bar" aria-hidden="true"> <div class="bg-signal-bar-fill bg-signal-bar-fill--scout" style="width: 88%"></div> </div> </div> </div> </div> </section> </main> <section class="bg-closing" aria-labelledby="bg-closing-heading"> <p class="bg-closing__text" id="bg-closing-heading">
-Two pipelines, one manuscript. Romance moves through both, on different timelines, by different rules. Reading both is part of the work.
-</p> <a href="../research/index.html" class="bg-closing__cta">Read research</a> </section> </div>  <footer class="footer"> <div class="container footer__inner"> <div class="footer__brand"> <a href="../index.html" class="brand brand--footer"> <img class="brand__mark" src="../brand/signal-s-mark-dark.svg" alt="" width="24" height="24" data-brand-mark-dark="../brand/signal-s-mark-dark.svg" data-brand-mark-light="../brand/signal-s-mark-light.svg"> <span class="brand__text"> <img class="brand__wordmark-img" src="../brand/romance-signal-wordmark-dark.svg" alt="Romance Signal" height="18" data-brand-wordmark-dark="../brand/romance-signal-wordmark-dark.svg" data-brand-wordmark-light="../brand/romance-signal-wordmark-light.svg"> <span class="brand__sub">by Threnne</span> </span> </a> <p class="footer__tag">Measuring the romance market for the people writing it.</p> </div> <div class="footer__cols"> <div> <h4 class="footer__col-title">Research</h4> <ul role="list"> <li><a href="../watchlist/index.html">Watchlist</a></li> <li><a href="../research/index.html">Volumes</a></li> <li><a href="./index.html">Background</a></li> </ul> </div> <div> <h4 class="footer__col-title">Methods</h4> <ul role="list"> <li><a href="../methodology/index.html">Methodology</a></li> </ul> </div> <div> <h4 class="footer__col-title">Contact</h4> <ul role="list"> <li><a href="../index.html#get-involved">Get involved</a></li> <li><a href="mailto:signal@threnne.com">signal@threnne.com</a></li> </ul> </div> </div> </div> <div class="footer__bottom"> <div class="container footer__bottom-inner"> <span class="tabular">© 2026 Romance Signal · A Threnne project</span> <span class="tabular">signal@threnne.com</span> </div> </div> </footer> <script>
-      // Theme toggle wiring
-      (function () {
-        const root = document.documentElement;
-        const btn = document.getElementById('themeToggle');
-        if (!btn) return;
-        let current = root.getAttribute('data-theme') || 'dark';
-        function syncBrandMarks() {
-          const theme = root.getAttribute('data-theme') || 'dark';
-          const pick = (el, darkKey, lightKey) => {
-            if (!el) return;
-            const dark = el.getAttribute(darkKey);
-            const light = el.getAttribute(lightKey);
-            if (dark && light) el.setAttribute('src', theme === 'light' ? light : dark);
-          };
-          document.querySelectorAll('[data-brand-mark-dark]').forEach((el) => pick(el, 'data-brand-mark-dark', 'data-brand-mark-light'));
-          document.querySelectorAll('[data-brand-wordmark-dark]').forEach((el) => pick(el, 'data-brand-wordmark-dark', 'data-brand-wordmark-light'));
-        }
-        btn.addEventListener('click', () => {
-          current = current === 'dark' ? 'light' : 'dark';
-          root.setAttribute('data-theme', current);
-          try { localStorage.setItem('rs-theme', current); } catch (e) {}
-          syncBrandMarks();
-          btn.setAttribute('aria-label', 'Switch to ' + (current === 'dark' ? 'light' : 'dark') + ' mode');
-        });
-        syncBrandMarks();
-      })();
-      // Search "/" focus shortcut
-      document.addEventListener('keydown', (e) => {
-        const tag = document.activeElement && document.activeElement.tagName;
-        if (e.key === '/' && tag !== 'INPUT' && tag !== 'TEXTAREA') {
-          e.preventDefault();
-          const s = document.querySelector('.search input');
-          if (s) s.focus();
-        }
-      });
-    </script> </body> </html>
+  });
+
+  render();
+})();
+
+// =============== SIGNAL WEIGHTS CHART ===============
+(function(){
+  const wrap = document.getElementById('signals-chart');
+  if(!wrap) return;
+  const html = SIGNALS.map(s=>`
+    <div class="signal-row">
+      <div>
+        <div class="signal-row__name">${s.name}</div>
+        <div class="signal-row__note">${s.note}</div>
+      </div>
+      <div class="signal-bars">
+        <div class="signal-bar-group">
+          <div class="signal-bar-pub">Publishing</div>
+          <div class="signal-bar" role="img" aria-label="${s.name}: Publishing ${s.pub}%, Hollywood ${s.hw}%">
+            <div class="signal-bar-fill signal-bar-fill--acq" style="width:${s.pub}%"></div>
+          </div>
+          <div class="signal-bar-value tnum">${s.pub}</div>
+        </div>
+        <div class="signal-bar-group">
+          <div class="signal-bar-scout">Hollywood</div>
+          <div class="signal-bar" aria-hidden="true">
+            <div class="signal-bar-fill signal-bar-fill--scout" style="width:${s.hw}%"></div>
+          </div>
+          <div class="signal-bar-value tnum">${s.hw}</div>
+        </div>
+      </div>
+    </div>
+  `).join('');
+  wrap.insertAdjacentHTML('beforeend', html);
+})();
+</script>
+
+</body>
+</html>

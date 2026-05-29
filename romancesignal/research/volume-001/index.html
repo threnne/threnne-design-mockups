@@ -1,108 +1,266 @@
-<!DOCTYPE html><html lang="en" data-brand="signal" data-theme="dark"> <head>
-<base href="/romancesignal/research/volume-001/" />
+<!DOCTYPE html><html lang="en" data-brand="signal" data-theme="dark">
+<head>
 <meta name="robots" content="noindex" />
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Off Campus and Heated Rivalry · Romance Signal</title><meta name="description" content="Volume 001: What the trad pipeline catches and what it misses: Off Campus vs Heated Rivalry in Goodreads, Reddit, and AO3 signals."><link rel="icon" type="image/svg+xml" href="../../favicon.svg"><link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32-light.png"><link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png"><link rel="manifest" href="../../manifest.webmanifest"><meta name="theme-color" content="#0C0F1F" media="(prefers-color-scheme: dark)"><meta name="theme-color" content="#FAFAF7" media="(prefers-color-scheme: light)"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300..700&family=JetBrains+Mono:wght@400;500&display=swap"><link rel="stylesheet" href="../../css/base.css"><link rel="stylesheet" href="../../css/style.css"><link rel="stylesheet" href="../../css/style-pages.css"><link rel="stylesheet" href="../../css/get-involved.css"><link rel="stylesheet" href="../../css/volume-001-page.css"><link rel="stylesheet" href="../../brand/legacy-aliases.css"><script>
-      // Restore theme before paint to avoid flash
-      try {
-        const saved = localStorage.getItem('rs-theme');
-        if (saved === 'light' || saved === 'dark') {
-          document.documentElement.setAttribute('data-theme', saved);
-        } else {
-          document.documentElement.setAttribute('data-theme', 'dark');
-        }
-      } catch (e) {}
-    </script><link rel="stylesheet" href="../../_astro/index.Du8h-bcg.css"></head> <body data-page="research">
-<div class="mockup-banner mockup-banner--watchlist" role="note"> <div class="mockup-banner__inner mockup-banner__inner--watchlist"> <span class="mockup-banner__chip">WATCHLIST · TESTING</span> <span class="mockup-banner__copy"> 
-Watchlist data is currently in testing as we build our cohort of starting books. Please be patient
-            while coverage and charts come online.
- </span>  </div> </div> <header class="topnav"> <div class="topnav__inner"> <a href="../../index.html" class="brand" aria-label="Romance Signal by Threnne home"> <img class="brand__mark" src="../../brand/signal-s-mark-dark.svg" alt="" width="32" height="32" data-brand-mark-dark="../../brand/signal-s-mark-dark.svg" data-brand-mark-light="../../brand/signal-s-mark-light.svg"> <span class="brand__text"> <img class="brand__wordmark-img" src="../../brand/romance-signal-wordmark-dark.svg" alt="Romance Signal" height="20" data-brand-wordmark-dark="../../brand/romance-signal-wordmark-dark.svg" data-brand-wordmark-light="../../brand/romance-signal-wordmark-light.svg"> <span class="brand__sub">by Threnne</span> </span> </a> <nav class="topnav__links" aria-label="Primary"> <a href="../../watchlist/index.html" class="topnav__link">Watchlist</a><a href="../../background/index.html" class="topnav__link">Background</a><a href="../index.html" class="topnav__link is-active">Research</a><a href="../../methodology/index.html" class="topnav__link">Methodology</a> </nav> <div class="topnav__actions"> <button type="button" class="topnav__menu-btn" id="navMenuToggle" aria-expanded="false" aria-controls="navMenuPanel" aria-label="Open navigation menu"> <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"> <path d="M4 7h16M4 12h16M4 17h16"></path> </svg> </button> <button type="button" class="theme-toggle" aria-label="Toggle theme" id="themeToggle"> <svg class="theme-toggle__sun" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="currentColor"></circle><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2v3"></path><path d="M12 19v3"></path><path d="M2 12h3"></path><path d="M19 12h3"></path><path d="m4.9 4.9 2.1 2.1"></path><path d="m17 17 2.1 2.1"></path><path d="m4.9 19.1 2.1-2.1"></path><path d="m17 7 2.1-2.1"></path></g></svg> <svg class="theme-toggle__moon" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.5A9 9 0 1 1 11.5 3a7 7 0 0 0 9.5 9.5z" fill="currentColor"></path></svg> </button> </div> </div> <nav class="topnav__menu-panel" id="navMenuPanel" aria-label="Primary mobile" hidden> <a href="../../watchlist/index.html" class="topnav__menu-link">Watchlist</a><a href="../../background/index.html" class="topnav__menu-link">Background</a><a href="../index.html" class="topnav__menu-link is-active">Research</a><a href="../../methodology/index.html" class="topnav__menu-link">Methodology</a> </nav> </header> <script>
-  (function () {
-    const btn = document.getElementById('navMenuToggle');
-    const panel = document.getElementById('navMenuPanel');
-    if (!btn || !panel) return;
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Volume 001 · Off Campus and Heated Rivalry · Romance Signal</title>
+<meta name="description" content="Volume 001: What the trad pipeline catches and what it misses. Off Campus vs Heated Rivalry across Goodreads, Reddit, and AO3 signals.">
+<meta name="theme-color" content="#0E0B0D" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#F6F1EA" media="(prefers-color-scheme: light)">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;1,300;1,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script>
+  try {
+    var saved = localStorage.getItem('rs-theme');
+    document.documentElement.setAttribute('data-theme', (saved === 'light' || saved === 'dark') ? saved : 'dark');
+  } catch (e) {}
+</script>
+<link rel="stylesheet" href="../../css/bouquet-base.css">
+<style>
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.nav__links a.is-active{color:var(--text)}
+.nav__cta{font-family:var(--font-mono);font-size:12px;border:1px solid var(--pink);color:var(--pink);
+  padding:8px 15px;border-radius:6px;transition:.2s;letter-spacing:.02em}
+.nav__cta:hover{background:var(--pink);color:#fff}
 
-    function setOpen(open) {
-      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-      btn.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
-      if (open) panel.removeAttribute('hidden');
-      else panel.setAttribute('hidden', '');
-    }
+/* article frame */
+.vol-back{padding:22px 0 6px}
+.vol-back a{font-family:var(--font-mono);font-size:11.5px;color:var(--text-faint);letter-spacing:.06em;transition:.15s}
+.vol-back a:hover{color:var(--euc)}
 
-    btn.addEventListener('click', () => {
-      setOpen(panel.hasAttribute('hidden'));
-    });
+.vol-hero{padding:26px 0 8px}
+/* full-centered article column: hero text + all blocks share one centered measure */
+.vol-hero .wrap{max-width:760px}
+.article-col{max-width:760px}
+.vol-meta{font-family:var(--font-mono);font-size:11px;color:var(--peony);letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px;display:flex;align-items:center;gap:10px}
+.vol-meta::before{content:"";width:24px;height:1px;background:var(--peony)}
+.vol-hero h1{font-family:var(--font-display);font-weight:900;font-size:clamp(32px,4vw,50px);line-height:1.05;letter-spacing:-.025em;margin-bottom:22px}
+.vol-hero h1 em{font-family:var(--font-serif);font-style:italic;font-weight:400;color:var(--thistle)}
+.thesis{font-size:17px;color:var(--text-muted);line-height:1.65;margin-top:18px}
+.thesis em{font-family:var(--font-serif);font-style:italic;color:var(--text)}
+.thesis strong{color:var(--text);font-weight:600}
+.series-note{font-family:var(--font-serif);font-style:italic;color:var(--text-muted);font-size:15px;margin-top:22px;padding-left:14px;border-left:2px solid var(--border-strong);line-height:1.6}
 
-    panel.querySelectorAll('a').forEach((link) => {
-      link.addEventListener('click', () => setOpen(false));
-    });
+/* hook comparison */
+.hook-comparison{margin:48px 0 8px;background:var(--bg-2);border:1px solid var(--border);border-radius:var(--radius);padding:30px 28px}
+.hook-comparison-label{font-family:var(--font-mono);font-size:11px;color:var(--text-faint);letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px}
+.hook-comparison-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.hook-book{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:22px 22px;border-top:3px solid var(--sage)}
+.hook-book.dark{border-top-color:var(--peony)}
+.hook-book-title{font-family:var(--font-display);font-weight:700;font-size:22px;letter-spacing:-.015em;color:var(--text)}
+.hook-book-author{font-family:var(--font-mono);font-size:11.5px;color:var(--text-faint);letter-spacing:.04em;margin-top:6px;margin-bottom:18px}
+.hook-stats{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.hook-stat{padding:12px 14px;background:var(--bg-2);border:1px solid var(--border);border-radius:7px}
+.hook-stat-value{display:block;font-family:var(--font-mono);font-weight:700;font-size:24px;color:var(--text);letter-spacing:-.01em}
+.hook-book .hook-stat-value{color:var(--sage)}
+.hook-book.dark .hook-stat-value{color:var(--peony)}
+.hook-stat-label{display:block;font-size:11.5px;color:var(--text-muted);margin-top:6px;line-height:1.4}
+.hook-comparison-note{margin-top:22px;font-size:14.5px;color:var(--text-muted);line-height:1.6}
+.hook-comparison-note em{font-family:var(--font-serif);font-style:italic;color:var(--text)}
 
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && !panel.hasAttribute('hidden')) setOpen(false);
-    });
+/* section dividers */
+.section-divider{display:flex;align-items:center;gap:14px;margin:60px 0 26px}
+.section-divider-line{flex:1;height:1px;background:var(--border)}
+.section-divider-label{font-family:var(--font-mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--peony);white-space:nowrap}
 
-    const mobileMq = window.matchMedia('(max-width: 768px)');
-    mobileMq.addEventListener('change', (e) => {
-      if (!e.matches) setOpen(false);
-    });
-  })();
-</script>  <nav class="vol-nav" aria-label="Volume navigation"> <a href="../index.html" class="vol-nav__back">← All volumes</a> </nav> <article class="vol-page" aria-labelledby="vol-001-title"> <div><div class="title-section">
-  <p class="case-label">Volume 001 &middot; May 2026 &middot; Romance Signal</p>
-  <h1 class="case-title" id="vol-001-title">Off Campus and Heated Rivalry.<br>What the Trad Pipeline Catches, What It Misses.</h1>
-  <p class="thesis">
-    Prime Video's <em>Off Campus</em>, an adaptation of Elle Kennedy's <em>The Deal</em> (the first book of her thirteen-book Off Campus series), premiered twelve days ago. Amazon caught it cleanly. They optioned the series in October 2024, renewed for a second season in February on data confidence, and launched to a 93% Rotten Tomatoes score and #1 on JustWatch in five days. The trad pipeline did what the trad pipeline is built to do.
-  </p>
-  <p class="thesis" style="margin-top: 1.5rem;">
-    HBO Max's <em>Heated Rivalry</em>, an adaptation of Rachel Reid's book of the same name (the second book of her Game Changers series), aired six months earlier in late November 2025. The industry did not catch it the same way. By every signal that gets weighted heavily, the book looked midlist right up until the show forced the issue.
-  </p>
-  <p class="series-note">
-    This is the first investigation in an ongoing series from Romance Signal. We're using the comparison between these two adaptations to walk through what the trad pipeline catches, what it misses, and where the signals worth reading actually live. Future volumes will continue the work.
-  </p>
+/* content blocks */
+.content-block{margin-inline:auto}
+.content-block p{font-size:16px;color:var(--text-muted);line-height:1.7;margin-bottom:18px}
+.content-block p:last-child{margin-bottom:0}
+.content-block p em{font-family:var(--font-serif);font-style:italic;color:var(--text)}
+.content-block p strong{color:var(--text);font-weight:600}
+
+/* chart figure */
+.vol-chart{margin:42px 0 8px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:28px 28px 22px;overflow:hidden}
+.vol-chart__head{margin-bottom:18px}
+.vol-chart__title{font-family:var(--font-display);font-weight:700;font-size:20px;letter-spacing:-.015em;color:var(--text);margin-bottom:8px}
+.vol-chart__dek{font-size:14px;color:var(--text-muted);line-height:1.55}
+.vol-chart__wrap{margin-top:12px;background:var(--bg-2);border:1px solid var(--border);border-radius:7px;padding:14px 10px}
+.vol-svg text{font-family:var(--font-mono)}
+.vol-chart__cite{font-family:var(--font-mono);font-size:10px;letter-spacing:.04em;color:var(--text-faint);margin-top:14px;line-height:1.5}
+.vol-chart__cite a{color:var(--text-faint);border-bottom:1px solid color-mix(in srgb,var(--text-faint) 40%,transparent)}
+.vol-chart__cite a:hover{color:var(--sage);border-color:var(--sage)}
+
+.visual-caption{font-size:14.5px;color:var(--text-muted);line-height:1.6;margin-top:16px}
+.visual-caption strong{color:var(--text);font-weight:600}
+.visual-method{font-family:var(--font-mono);font-size:10.5px;letter-spacing:.04em;color:var(--text-faint);margin-top:10px;line-height:1.55}
+.visual-method a{color:var(--text-faint);border-bottom:1px solid color-mix(in srgb,var(--text-faint) 40%,transparent)}
+.visual-method a:hover{color:var(--sage);border-color:var(--sage)}
+
+/* stat grid */
+.stat-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin:42px 0 30px}
+.stat-block{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:22px 20px;border-top:3px solid var(--sage)}
+.stat-block.accent{border-top-color:var(--acid)}
+.stat-block.dark{border-top-color:var(--peony)}
+.stat-label{font-family:var(--font-mono);font-size:10.5px;color:var(--text-faint);letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px;line-height:1.4}
+.stat-figure{font-family:var(--font-mono);font-weight:700;font-size:32px;color:var(--text);letter-spacing:-.01em;line-height:1.05}
+.stat-block .stat-figure{color:var(--sage)}
+.stat-block.accent .stat-figure{color:var(--acid)}
+.stat-block.dark .stat-figure{color:var(--peony)}
+.stat-description{font-size:12.5px;color:var(--text-muted);margin-top:10px;line-height:1.5}
+.stat-description em{font-family:var(--font-serif);font-style:italic;color:var(--text)}
+.stat-cite{font-family:var(--font-mono);font-size:10px;letter-spacing:.04em;color:var(--text-faint);margin-top:8px;line-height:1.4}
+
+/* framework callouts */
+.framework-callout{margin:36px 0;background:color-mix(in srgb,var(--acid) 7%,transparent);border:1px solid color-mix(in srgb,var(--acid) 38%,transparent);border-radius:8px;padding:20px 24px}
+[data-theme="light"] .framework-callout{background:color-mix(in srgb,var(--acid) 10%,transparent);border-color:color-mix(in srgb,var(--acid) 45%,transparent)}
+.framework-callout__label{font-family:var(--font-mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--acid);margin-bottom:12px}
+.framework-callout__label em{font-family:var(--font-serif);font-style:italic;color:var(--acid);text-transform:none;letter-spacing:0}
+.framework-callout__item{font-size:14.5px;color:var(--text);line-height:1.6;padding:8px 0;border-top:1px solid color-mix(in srgb,var(--acid) 20%,transparent)}
+.framework-callout__item:first-of-type{border-top:none;padding-top:0}
+.framework-callout p{font-size:15px;color:var(--text);line-height:1.65}
+.framework-callout p + p{margin-top:14px}
+.framework-callout strong{font-weight:600}
+.framework-callout em{font-family:var(--font-serif);font-style:italic}
+
+/* series split */
+.series-split{margin:36px 0;background:var(--bg-2);border:1px solid var(--border);border-radius:var(--radius);padding:26px 28px}
+.series-split-label{font-family:var(--font-mono);font-size:11px;color:var(--text-faint);letter-spacing:.14em;text-transform:uppercase;margin-bottom:6px}
+.series-split-title{font-family:var(--font-display);font-weight:700;font-size:20px;color:var(--text);letter-spacing:-.015em;margin-bottom:18px}
+.series-split-title em{font-family:var(--font-serif);font-style:italic;font-weight:400;color:var(--thistle)}
+.series-split-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.series-split-card{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:20px 22px;border-left:3px solid var(--sage)}
+.series-split-card.closed{border-left-color:var(--teal)}
+.series-split-card-label{font-family:var(--font-mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--sage);margin-bottom:8px}
+.series-split-card.closed .series-split-card-label{color:var(--teal)}
+.series-split-card-pair{font-family:var(--font-display);font-weight:700;font-size:16px;color:var(--text);letter-spacing:-.005em;margin-bottom:4px}
+.series-split-card-books{font-family:var(--font-mono);font-size:11.5px;color:var(--text-faint);letter-spacing:.04em;margin-bottom:12px}
+.series-split-card-desc{font-size:13.5px;color:var(--text-muted);line-height:1.6}
+
+/* about + closing */
+.signal-section{margin:64px 0 0;border-top:1px solid var(--border);background:linear-gradient(160deg,var(--plum),var(--bg-2));padding:54px 0 50px}
+.signal-inner{max-width:64ch;margin:0 auto;padding:0 26px}
+.signal-label{font-family:var(--font-mono);font-size:11px;color:var(--acid);letter-spacing:.16em;text-transform:uppercase;margin-bottom:10px}
+.signal-title{font-family:var(--font-display);font-weight:900;font-size:32px;color:var(--text);letter-spacing:-.02em;margin-bottom:18px}
+.signal-body{font-size:15px;color:var(--text-muted);line-height:1.65;margin-top:14px}
+.signal-body em{font-family:var(--font-serif);font-style:italic;color:var(--text)}
+.signal-body strong{color:var(--text);font-weight:600}
+.signal-body a{color:var(--pink);border-bottom:1px solid color-mix(in srgb,var(--pink) 50%,transparent);transition:.15s}
+.signal-body a:hover{color:var(--text);border-color:var(--text)}
+
+.update-note{margin:0;padding:22px 0;border-top:1px solid var(--border);background:var(--bg-2)}
+.update-note p{max-width:var(--maxw);margin:0 auto;padding:0 26px;font-family:var(--font-mono);font-size:11px;color:var(--text-faint);letter-spacing:.04em;line-height:1.6}
+.update-note a{color:var(--text-faint);border-bottom:1px solid color-mix(in srgb,var(--text-faint) 40%,transparent)}
+.update-note a:hover{color:var(--sage);border-color:var(--sage)}
+
+/* footer */
+.foot{border-top:1px solid var(--border);padding:42px 0 34px;background:var(--bg-2)}
+
+@media(max-width:980px){
+  .nav__links a:not(.nav__cta):not(.toggle){display:none}
+  .nav__links{gap:14px}
+  .hook-comparison-grid{grid-template-columns:1fr}
+  .stat-grid{grid-template-columns:repeat(2,1fr)}
+  .series-split-grid{grid-template-columns:1fr}
+  .vol-chart{padding:22px 18px 18px}
+  .vol-chart__wrap{padding:8px 4px}
+}
+@media(max-width:560px){
+  .stat-grid{grid-template-columns:1fr}
+  .hook-stats{grid-template-columns:1fr}
+  .vol-hero h1{font-size:30px}
+}</style>
+</head>
+<body>
+
+<div class="app">
+
+<!-- TESTING BANNER -->
+
+<!-- NAV -->
+<header class="nav">
+  <div class="wrap nav__in">
+    <a href="../../index.html" class="brand">
+      <svg class="brand__mark" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+        <rect width="32" height="32" rx="7" fill="none" stroke="var(--euc)" stroke-width="1.6"/>
+        <path d="M9 21 L13 13 L17 18 L20 10 L23 16" fill="none" stroke="var(--euc)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="23" cy="16" r="1.8" fill="var(--thistle)"/>
+      </svg>
+      <span>
+        <div class="brand__name">Romance Signal</div>
+        <div class="brand__sub">by Threnne</div>
+      </span>
+    </a>
+    <nav class="nav__links">
+      <a href="../../watchlist/index.html">watchlist</a>
+      <a href="../../background/index.html">background</a>
+      <a href="../index.html" class="is-active">research</a>
+      <a href="../../methodology/index.html">methodology</a>
+      <a href="../../index.html#get-involved" class="nav__cta">get_involved()</a>
+      <button class="toggle" onclick="tog()" aria-label="Toggle theme">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap vol-back">
+  <a href="../index.html">← All volumes</a>
 </div>
 
-<main>
+<!-- HERO -->
+<section class="vol-hero">
+  <div class="wrap">
+    <p class="vol-meta">Volume 001 · May 2026 · Romance Signal</p>
+    <h1>Off Campus and Heated Rivalry. <em>What the Trad Pipeline Catches, What It Misses.</em></h1>
+    <p class="thesis">
+      Prime Video's <em>Off Campus</em>, an adaptation of Elle Kennedy's <em>The Deal</em> (the first book of her thirteen-book Off Campus series), premiered twelve days ago. Amazon caught it cleanly. They optioned the series in October 2024, renewed for a second season in February on data confidence, and launched to a 93% Rotten Tomatoes score and #1 on JustWatch in five days. The trad pipeline did what the trad pipeline is built to do.
+    </p>
+    <p class="thesis">
+      HBO Max's <em>Heated Rivalry</em>, an adaptation of Rachel Reid's book of the same name (the second book of her Game Changers series), aired six months earlier in late November 2025. The industry did not catch it the same way. By every signal that gets weighted heavily, the book looked midlist right up until the show forced the issue.
+    </p>
+    <p class="series-note">
+      This is the first investigation in an ongoing series from Romance Signal. We're using the comparison between these two adaptations to walk through what the trad pipeline catches, what it misses, and where the signals worth reading actually live. Future volumes will continue the work.
+    </p>
+  </div>
+</section>
 
+<div class="wrap article-col">
+
+  <!-- HOOK COMPARISON -->
   <div class="hook-comparison">
-    <div class="hook-comparison-header">
-      <p class="hook-comparison-label">The asymmetry, pre-show</p>
-    </div>
+    <p class="hook-comparison-label">The asymmetry, pre-show</p>
     <div class="hook-comparison-grid">
       <div class="hook-book">
         <p class="hook-book-title">The Deal</p>
-        <p class="hook-book-author">Elle Kennedy &middot; Book 1 of Off Campus, 2015</p>
+        <p class="hook-book-author">Elle Kennedy · Book 1 of Off Campus, 2015</p>
         <div class="hook-stats">
           <div class="hook-stat">
-            <span class="hook-stat-value">~1M</span>
+            <span class="hook-stat-value tnum">~1M</span>
             <span class="hook-stat-label">Goodreads ratings pre-show, this book</span>
           </div>
           <div class="hook-stat">
-            <span class="hook-stat-value">87</span>
+            <span class="hook-stat-value tnum">87</span>
             <span class="hook-stat-label">Garrett/Hannah AO3 works, pre-show</span>
           </div>
         </div>
       </div>
       <div class="hook-book dark">
         <p class="hook-book-title">Heated Rivalry</p>
-        <p class="hook-book-author">Rachel Reid &middot; Book 2 of Game Changers, 2019</p>
+        <p class="hook-book-author">Rachel Reid · Book 2 of Game Changers, 2019</p>
         <div class="hook-stats">
           <div class="hook-stat">
-            <span class="hook-stat-value">34K</span>
+            <span class="hook-stat-value tnum">34K</span>
             <span class="hook-stat-label">Goodreads ratings pre-show, this book</span>
           </div>
           <div class="hook-stat">
-            <span class="hook-stat-value">362</span>
+            <span class="hook-stat-value tnum">362</span>
             <span class="hook-stat-label">Shane/Ilya AO3 works, pre-show</span>
           </div>
         </div>
       </div>
     </div>
     <p class="hook-comparison-note">
-      Pre-show, <em>Heated Rivalry</em> had roughly 4&times; more AO3 works in its central pairing tag than <em>The Deal</em> did, with a Goodreads audience base nearly thirty times smaller. The smaller audience was producing more written work per reader. Whether that pattern is readable as a leading indicator is the open question we're sitting with.
+      Pre-show, <em>Heated Rivalry</em> had roughly 4× more AO3 works in its central pairing tag than <em>The Deal</em> did, with a Goodreads audience base nearly thirty times smaller. The smaller audience was producing more written work per reader. Whether that pattern is readable as a leading indicator is the open question we're sitting with.
     </p>
   </div>
 
+  <!-- 01 GOODREADS -->
   <div class="section-divider">
     <div class="section-divider-line"></div>
-    <span class="section-divider-label">01 &middot; What Goodreads Showed</span>
+    <span class="section-divider-label">01 · What Goodreads Showed</span>
     <div class="section-divider-line"></div>
   </div>
 
@@ -112,250 +270,177 @@ Watchlist data is currently in testing as we build our cohort of starting books.
     <p>For <em>Heated Rivalry</em>, the signal was quiet. 34,000 Goodreads ratings two months before broadcast. Respectable for a six-year-old small-press romance. Unremarkable for an industry deciding whether to bet on an adaptation.</p>
   </div>
 
-  <div class="visual-block">
-    </div> <figure class="vol-chart vol-chart--goodreads"> <div class="vol-chart__head"> <h3 class="vol-chart__title">Goodreads Velocity: The Deal vs Heated Rivalry</h3> <p class="vol-chart__dek">
-The trad pipeline read each book accurately on the data it could see. Off Campus was a million-rating property
-      before the show was cast. Heated Rivalry looked midlist until broadcast.
-</p> </div> <div class="vol-chart__wrap"> <svg viewBox="0 0 720 320" width="100%" role="img" aria-label="Goodreads cumulative ratings for The Deal and Heated Rivalry, 2022 through 2026"> <g> <line x1="56" y1="280" x2="700" y2="280" stroke="var(--color-border)" stroke-width="0.5"></line> <text x="48" y="283" text-anchor="end" font-size="10" fill="var(--color-text-faint)"> 0 </text> </g><g> <line x1="56" y1="232.8" x2="700" y2="232.8" stroke="var(--color-border)" stroke-width="0.5"></line> <text x="48" y="235.8" text-anchor="end" font-size="10" fill="var(--color-text-faint)"> 222K </text> </g><g> <line x1="56" y1="185.6" x2="700" y2="185.6" stroke="var(--color-border)" stroke-width="0.5"></line> <text x="48" y="188.6" text-anchor="end" font-size="10" fill="var(--color-text-faint)"> 443K </text> </g><g> <line x1="56" y1="138.4" x2="700" y2="138.4" stroke="var(--color-border)" stroke-width="0.5"></line> <text x="48" y="141.4" text-anchor="end" font-size="10" fill="var(--color-text-faint)"> 665K </text> </g><g> <line x1="56" y1="91.19999999999999" x2="700" y2="91.19999999999999" stroke="var(--color-border)" stroke-width="0.5"></line> <text x="48" y="94.19999999999999" text-anchor="end" font-size="10" fill="var(--color-text-faint)"> 887K </text> </g><g> <line x1="56" y1="44" x2="700" y2="44" stroke="var(--color-border)" stroke-width="0.5"></line> <text x="48" y="47" text-anchor="end" font-size="10" fill="var(--color-text-faint)"> 1.1M </text> </g> <text x="14" y="162" text-anchor="middle" font-size="10" fill="var(--color-text-muted)" transform="rotate(-90 14 162)">
-Goodreads ratings (cumulative)
-</text> <g> <line x1="653.1559633027523" y1="44" x2="653.1559633027523" y2="280" stroke="#9B2226" stroke-width="1" stroke-dasharray="4,4" opacity="0.75"></line> <text x="653.1559633027523" y="36" text-anchor="middle" font-size="9" fill="#9B2226" font-weight="600"> HR premieres Nov 28, 2025 </text> </g> <path d="M56.0,218.2 L60.6,216.7 L64.0,215.7 L67.0,214.6 L70.3,213.7 L73.3,212.8 L76.3,212.0 L79.6,211.1 L82.6,210.3 L86.0,209.6 L89.3,208.9 L92.3,208.2 L95.7,207.5 L99.0,206.7 L102.0,206.0 L105.4,205.3 L108.3,204.7 L111.3,204.0 L114.2,203.4 L117.2,202.6 L126.1,200.3 L129.4,199.5 L132.4,198.6 L132.8,198.4 L135.3,197.6 L138.3,196.6 L141.2,195.5 L144.6,194.4 L147.6,193.4 L151.0,192.3 L153.9,191.4 L156.9,190.6 L159.8,189.9 L163.2,189.3 L166.1,188.6 L169.5,187.9 L172.5,187.2 L176.3,186.4 L179.2,185.8 L188.1,183.6 L192.3,182.8 L195.3,182.1 L198.2,181.5 L201.6,180.5 L204.6,179.2 L207.5,177.2 L210.9,175.9 L217.2,173.7 L220.6,172.8 L224.0,171.9 L226.9,171.0 L229.9,170.3 L232.8,169.6 L236.2,168.9 L251.8,165.1 L284.7,157.7 L341.3,146.1 L345.1,145.2 L366.6,136.9 L399.9,127.4 L456.5,113.0 L468.7,110.3 L473.0,109.4 L504.2,102.4 L518.1,97.1 L522.3,95.4 L535.8,91.4 L541.3,89.9 L546.4,88.5 L550.2,87.6 L561.2,85.2 L564.5,84.6 L643.0,66.7 L646.4,66.2 L668.3,61.4" fill="none" stroke="#2D6A4F" stroke-width="2.25" stroke-linejoin="round"></path> <circle cx="56" cy="218.2495665480772" r="3" fill="#2D6A4F" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2022-01-13: 290,043 ratings · The Deal
-            </title> </circle><circle cx="60.642201834862384" cy="216.70390557070158" r="3" fill="#2D6A4F" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2022-01-24: 297,303 ratings · The Deal
-            </title> </circle><circle cx="64.01834862385321" cy="215.6598392576093" r="3" fill="#2D6A4F" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2022-02-01: 302,207 ratings · The Deal
-            </title> </circle><circle cx="66.97247706422019" cy="214.61343103394523" r="3" fill="#2D6A4F" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2022-02-08: 307,122 ratings · The Deal
-            </title> </circle><circle cx="70.34862385321101" cy="213.6738990927388" r="3" fill="#2D6A4F" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2022-02-16: 311,535 ratings · The Deal
-            </title> </circle><circle cx="73.30275229357798" cy="212.76225717743267" r="3" fill="#2D6A4F" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2022-02-23: 315,817 ratings · The Deal
-            </title> </circle><circle cx="76.25688073394495" cy="211.95493673305134" r="3" fill="#2D6A4F" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2022-03-02: 319,609 ratings · The Deal
-            </title> </circle><circle cx="79.63302752293578" cy="211.05479146964305" r="3" fill="#2D6A4F" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2022-03-10: 323,837 ratings · The Deal
-            </title> </circle><circle cx="82.58715596330275" cy="210.27961907038346" r="3" fill="#2D6A4F" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2022-03-17: 327,478 ratings · The Deal
-            </title> </circle><circle cx="85.96330275229357" cy="209.57300078058876" r="3" fill="#2D6A4F" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2022-03-25: 330,797 ratings · The Deal
-            </title> </circle><circle cx="89.33944954128441" cy="208.86297607541687" r="3" fill="#2D6A4F" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2022-04-02: 334,132 ratings · The Deal
-            </title> </circle><circle cx="92.29357798165137" cy="208.24322137773913" r="3" fill="#2D6A4F" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2022-04-09: 337,043 ratings · The Deal
-            </title> </circle><circle cx="95.6697247706422" cy="207.49380999476915" r="3" fill="#2D6A4F" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2022-04-17: 340,563 ratings · The Deal
-            </title> </circle><circle cx="99.04587155963303" cy="206.6673284638914" r="3" fill="#2D6A4F" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2022-04-25: 344,445 ratings · The Deal
-            </title> </circle><circle cx="102" cy="206.0056322768827" r="3" fill="#2D6A4F" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2022-05-02: 347,553 ratings · The Deal
-            </title> </circle><circle cx="105.37614678899082" cy="205.30518811495898" r="3" fill="#2D6A4F" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2022-05-10: 350,843 ratings · The Deal
-            </title> </circle><circle cx="108.3302752293578" cy="204.65967240099167" r="3" fill="#2D6A4F" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2022-05-17: 353,875 ratings · The Deal
-            </title> </circle><circle cx="111.28440366972477" cy="203.99712461013866" r="3" fill="#2D6A4F" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2022-05-24: 356,987 ratings · The Deal
-            </title> </circle><circle cx="114.23853211009174" cy="203.35969913269201" r="3" fill="#2D6A4F" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2022-05-31: 359,981 ratings · The Deal
-            </title> </circle><circle cx="117.19266055045871" cy="202.62050699585342" r="3" fill="#2D6A4F" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2022-06-07: 363,453 ratings · The Deal
-            </title> </circle><circle cx="126.05504587155963" cy="200.29839621345175" r="3" fill="#2D6A4F" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2022-06-28: 374,360 ratings · The Deal
-            </title> </circle><circle cx="129.43119266055044" cy="199.51641098343788" r="3" fill="#2D6A4F" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2022-07-06: 378,033 ratings · The Deal
-            </title> </circle><circle cx="132.38532110091742" cy="198.6494782699567" r="3" fill="#2D6A4F" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2022-07-13: 382,105 ratings · The Deal
-            </title> </circle><circle cx="132.8073394495413" cy="198.43359669543065" r="3" fill="#2D6A4F" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2022-07-14: 383,119 ratings · The Deal
-            </title> </circle><circle cx="135.3394495412844" cy="197.64309542697396" r="3" fill="#2D6A4F" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2022-07-20: 386,832 ratings · The Deal
-            </title> </circle><circle cx="138.29357798165137" cy="196.56581656395457" r="3" fill="#2D6A4F" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2022-07-27: 391,892 ratings · The Deal
-            </title> </circle><circle cx="141.24770642201833" cy="195.46660890194488" r="3" fill="#2D6A4F" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2022-08-03: 397,055 ratings · The Deal
-            </title> </circle><circle cx="144.6238532110092" cy="194.37591727837804" r="3" fill="#2D6A4F" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2022-08-11: 402,178 ratings · The Deal
-            </title> </circle><circle cx="147.57798165137615" cy="193.3710247421228" r="3" fill="#2D6A4F" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2022-08-18: 406,898 ratings · The Deal
-            </title> </circle><circle cx="150.95412844036696" cy="192.30119741274092" r="3" fill="#2D6A4F" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2022-08-26: 411,923 ratings · The Deal
-            </title> </circle><circle cx="153.90825688073394" cy="191.42298094832293" r="3" fill="#2D6A4F" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2022-09-02: 416,048 ratings · The Deal
-            </title> </circle><circle cx="156.86238532110093" cy="190.63716350100978" r="3" fill="#2D6A4F" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2022-09-09: 419,739 ratings · The Deal
-            </title> </circle><circle cx="159.8165137614679" cy="189.92862910256542" r="3" fill="#2D6A4F" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2022-09-16: 423,067 ratings · The Deal
-            </title> </circle><circle cx="163.19266055045873" cy="189.27395864727202" r="3" fill="#2D6A4F" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2022-09-24: 426,142 ratings · The Deal
-            </title> </circle><circle cx="166.1467889908257" cy="188.58245632571334" r="3" fill="#2D6A4F" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2022-10-01: 429,390 ratings · The Deal
-            </title> </circle><circle cx="169.52293577981652" cy="187.88563148012787" r="3" fill="#2D6A4F" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2022-10-09: 432,663 ratings · The Deal
-            </title> </circle><circle cx="172.47706422018348" cy="187.19412915856918" r="3" fill="#2D6A4F" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2022-10-16: 435,911 ratings · The Deal
-            </title> </circle><circle cx="176.27522935779814" cy="186.40447949395679" r="3" fill="#2D6A4F" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2022-10-25: 439,620 ratings · The Deal
-            </title> </circle><circle cx="179.22935779816513" cy="185.7689701251598" r="3" fill="#2D6A4F" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2022-11-01: 442,605 ratings · The Deal
-            </title> </circle><circle cx="188.09174311926606" cy="183.62739935774636" r="3" fill="#2D6A4F" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2022-11-22: 452,664 ratings · The Deal
-            </title> </circle><circle cx="192.3119266055046" cy="182.77175039520193" r="3" fill="#2D6A4F" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2022-12-02: 456,683 ratings · The Deal
-            </title> </circle><circle cx="195.26605504587155" cy="182.12346696874064" r="3" fill="#2D6A4F" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2022-12-09: 459,728 ratings · The Deal
-            </title> </circle><circle cx="198.22018348623854" cy="181.4538934461723" r="3" fill="#2D6A4F" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2022-12-16: 462,873 ratings · The Deal
-            </title> </circle><circle cx="201.59633027522938" cy="180.5303290770462" r="3" fill="#2D6A4F" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2022-12-24: 467,211 ratings · The Deal
-            </title> </circle><circle cx="204.55045871559633" cy="179.24738788563218" r="3" fill="#2D6A4F" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2022-12-31: 473,237 ratings · The Deal
-            </title> </circle><circle cx="207.50458715596332" cy="177.24548014868134" r="3" fill="#2D6A4F" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2023-01-07: 482,640 ratings · The Deal
-            </title> </circle><circle cx="210.88073394495413" cy="175.9350747332892" r="3" fill="#2D6A4F" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2023-01-15: 488,795 ratings · The Deal
-            </title> </circle><circle cx="217.21100917431193" cy="173.74858186308978" r="3" fill="#2D6A4F" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2023-01-30: 499,065 ratings · The Deal
-            </title> </circle><circle cx="220.58715596330273" cy="172.7617859085256" r="3" fill="#2D6A4F" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2023-02-07: 503,700 ratings · The Deal
-            </title> </circle><circle cx="223.96330275229357" cy="171.8522730028302" r="3" fill="#2D6A4F" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2023-02-15: 507,972 ratings · The Deal
-            </title> </circle><circle cx="226.91743119266056" cy="171.0343075103953" r="3" fill="#2D6A4F" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2023-02-22: 511,814 ratings · The Deal
-            </title> </circle><circle cx="229.87155963302752" cy="170.2851090283864" r="3" fill="#2D6A4F" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2023-03-01: 515,333 ratings · The Deal
-            </title> </circle><circle cx="232.8256880733945" cy="169.6127677933241" r="3" fill="#2D6A4F" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2023-03-08: 518,491 ratings · The Deal
-            </title> </circle><circle cx="236.2018348623853" cy="168.89252384202084" r="3" fill="#2D6A4F" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2023-03-16: 521,874 ratings · The Deal
-            </title> </circle><circle cx="251.8165137614679" cy="165.12013171280336" r="3" fill="#2D6A4F" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2023-04-22: 539,593 ratings · The Deal
-            </title> </circle><circle cx="284.73394495412845" cy="157.73395867036638" r="3" fill="#2D6A4F" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2023-07-09: 574,286 ratings · The Deal
-            </title> </circle><circle cx="341.2844036697248" cy="146.11275971030454" r="3" fill="#2D6A4F" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2023-11-20: 628,871 ratings · The Deal
-            </title> </circle><circle cx="345.08256880733944" cy="145.16151821623924" r="3" fill="#2D6A4F" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2023-11-29: 633,339 ratings · The Deal
-            </title> </circle><circle cx="366.60550458715596" cy="136.88605785940857" r="3" fill="#2D6A4F" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2024-01-19: 672,209 ratings · The Deal
-            </title> </circle><circle cx="399.9449541284403" cy="127.4187779225023" r="3" fill="#2D6A4F" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2024-04-07: 716,677 ratings · The Deal
-            </title> </circle><circle cx="456.4954128440367" cy="112.99218299840763" r="3" fill="#2D6A4F" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2024-08-19: 784,439 ratings · The Deal
-            </title> </circle><circle cx="468.73394495412845" cy="110.34199183499555" r="3" fill="#2D6A4F" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2024-09-17: 796,887 ratings · The Deal
-            </title> </circle><circle cx="472.95412844036696" cy="109.44716909561404" r="3" fill="#2D6A4F" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2024-09-27: 801,090 ratings · The Deal
-            </title> </circle><circle cx="504.1834862385321" cy="102.40546980818993" r="3" fill="#2D6A4F" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2024-12-10: 834,165 ratings · The Deal
-            </title> </circle><circle cx="518.1100917431193" cy="97.07400394104937" r="3" fill="#2D6A4F" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2025-01-12: 859,207 ratings · The Deal
-            </title> </circle><circle cx="522.3302752293578" cy="95.41422804853966" r="3" fill="#2D6A4F" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2025-01-22: 867,003 ratings · The Deal
-            </title> </circle><circle cx="535.8348623853211" cy="91.41978021692515" r="3" fill="#2D6A4F" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2025-02-23: 885,765 ratings · The Deal
-            </title> </circle><circle cx="541.3211009174312" cy="89.85027433190956" r="3" fill="#2D6A4F" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2025-03-08: 893,137 ratings · The Deal
-            </title> </circle><circle cx="546.3853211009174" cy="88.5375270059456" r="3" fill="#2D6A4F" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2025-03-20: 899,303 ratings · The Deal
-            </title> </circle><circle cx="550.1834862385322" cy="87.56009869366855" r="3" fill="#2D6A4F" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2025-03-29: 903,894 ratings · The Deal
-            </title> </circle><circle cx="561.1559633027523" cy="85.23990401991654" r="3" fill="#2D6A4F" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2025-04-24: 914,792 ratings · The Deal
-            </title> </circle><circle cx="564.5321100917431" cy="84.5575564396839" r="3" fill="#2D6A4F" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2025-05-02: 917,997 ratings · The Deal
-            </title> </circle><circle cx="643.0275229357799" cy="66.74093951245536" r="3" fill="#2D6A4F" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2025-11-04: 1,001,682 ratings · The Deal
-            </title> </circle><circle cx="646.4036697247707" cy="66.15588767143217" r="3" fill="#2D6A4F" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2025-11-12: 1,004,430 ratings · The Deal
-            </title> </circle><circle cx="668.348623853211" cy="61.3541193954363" r="3" fill="#2D6A4F" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2026-01-03: 1,026,984 ratings · The Deal
-            </title> </circle> <path d="M56.8,278.3 L86.4,278.1 L138.7,277.7 L193.6,277.4 L242.1,276.9 L251.8,276.8 L263.2,276.8 L267.9,276.7 L297.8,276.5 L338.3,276.2 L367.0,275.9 L381.8,275.7 L492.4,274.5 L497.9,274.5 L504.6,274.4 L516.8,274.3 L521.1,274.2 L535.8,274.0 L543.9,274.0 L550.2,273.9 L562.4,273.7 L573.0,273.6 L588.2,273.3 L608.8,273.0 L619.0,272.8 L627.0,272.7 L643.9,271.3 L654.8,268.3 L656.5,265.9 L657.8,264.2 L660.3,260.7 L661.2,259.4 L668.3,247.6 L675.9,236.0 L679.7,229.9 L700.0,208.7" fill="none" stroke="#9B2226" stroke-width="2.25" stroke-linejoin="round"></path> <circle cx="56.84403669724771" cy="278.2806118383904" r="3" fill="#9B2226" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2022-01-15: 8,076 ratings · Heated Rivalry
-            </title> </circle><circle cx="86.38532110091742" cy="278.0630270561758" r="3" fill="#9B2226" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2022-03-26: 9,098 ratings · Heated Rivalry
-            </title> </circle><circle cx="138.71559633027522" cy="277.71025016368117" r="3" fill="#9B2226" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2022-07-28: 10,755 ratings · Heated Rivalry
-            </title> </circle><circle cx="193.57798165137615" cy="277.4264531825735" r="3" fill="#9B2226" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2022-12-05: 12,088 ratings · Heated Rivalry
-            </title> </circle><circle cx="242.11009174311926" cy="276.9499808316965" r="3" fill="#9B2226" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2023-03-30: 14,326 ratings · Heated Rivalry
-            </title> </circle><circle cx="251.8165137614679" cy="276.84608516269384" r="3" fill="#9B2226" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2023-04-22: 14,814 ratings · Heated Rivalry
-            </title> </circle><circle cx="263.2110091743119" cy="276.7526216407837" r="3" fill="#9B2226" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2023-05-19: 15,253 ratings · Heated Rivalry
-            </title> </circle><circle cx="267.8532110091743" cy="276.7151510716352" r="3" fill="#9B2226" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2023-05-30: 15,429 ratings · Heated Rivalry
-            </title> </circle><circle cx="297.8165137614679" cy="276.4613731260385" r="3" fill="#9B2226" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2023-08-09: 16,621 ratings · Heated Rivalry
-            </title> </circle><circle cx="338.33027522935777" cy="276.1594795632398" r="3" fill="#9B2226" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2023-11-13: 18,039 ratings · Heated Rivalry
-            </title> </circle><circle cx="367.0275229357798" cy="275.87781159174284" r="3" fill="#9B2226" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2024-01-20: 19,362 ratings · Heated Rivalry
-            </title> </circle><circle cx="381.79816513761466" cy="275.6700202537375" r="3" fill="#9B2226" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2024-02-24: 20,338 ratings · Heated Rivalry
-            </title> </circle><circle cx="492.3669724770642" cy="274.52227117260367" r="3" fill="#9B2226" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2024-11-12: 25,729 ratings · Heated Rivalry
-            </title> </circle><circle cx="497.8532110091743" cy="274.47692326789553" r="3" fill="#9B2226" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2024-11-25: 25,942 ratings · Heated Rivalry
-            </title> </circle><circle cx="504.60550458715596" cy="274.41049816804133" r="3" fill="#9B2226" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2024-12-11: 26,254 ratings · Heated Rivalry
-            </title> </circle><circle cx="516.8440366972477" cy="274.2661513164352" r="3" fill="#9B2226" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2025-01-09: 26,932 ratings · Heated Rivalry
-            </title> </circle><circle cx="521.0642201834862" cy="274.2214421146103" r="3" fill="#9B2226" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2025-01-19: 27,142 ratings · Heated Rivalry
-            </title> </circle><circle cx="535.8348623853211" cy="274.03941179289455" r="3" fill="#9B2226" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2025-02-23: 27,997 ratings · Heated Rivalry
-            </title> </circle><circle cx="543.8532110091744" cy="273.9563804180769" r="3" fill="#9B2226" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2025-03-14: 28,387 ratings · Heated Rivalry
-            </title> </circle><circle cx="550.1834862385322" cy="273.8803747749745" r="3" fill="#9B2226" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2025-03-29: 28,744 ratings · Heated Rivalry
-            </title> </circle><circle cx="562.4220183486239" cy="273.7451826646944" r="3" fill="#9B2226" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2025-04-27: 29,379 ratings · Heated Rivalry
-            </title> </circle><circle cx="572.9724770642201" cy="273.5908294679179" r="3" fill="#9B2226" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2025-05-22: 30,104 ratings · Heated Rivalry
-            </title> </circle><circle cx="588.1651376146789" cy="273.3232129598516" r="3" fill="#9B2226" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2025-06-27: 31,361 ratings · Heated Rivalry
-            </title> </circle><circle cx="608.8440366972477" cy="272.9878939461648" r="3" fill="#9B2226" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2025-08-15: 32,936 ratings · Heated Rivalry
-            </title> </circle><circle cx="618.9724770642202" cy="272.80139270426656" r="3" fill="#9B2226" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2025-09-08: 33,812 ratings · Heated Rivalry
-            </title> </circle><circle cx="626.9908256880734" cy="272.6740779295461" r="3" fill="#9B2226" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2025-09-27: 34,410 ratings · Heated Rivalry
-            </title> </circle><circle cx="643.8715596330275" cy="271.2697831903216" r="3" fill="#9B2226" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2025-11-06: 41,006 ratings · Heated Rivalry
-            </title> </circle><circle cx="654.8440366972477" cy="268.25212496810093" r="3" fill="#9B2226" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2025-12-02: 55,180 ratings · Heated Rivalry
-            </title> </circle><circle cx="656.5321100917431" cy="265.8574149579741" r="3" fill="#9B2226" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2025-12-06: 66,428 ratings · Heated Rivalry
-            </title> </circle><circle cx="657.7981651376147" cy="264.17145224725266" r="3" fill="#9B2226" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2025-12-09: 74,347 ratings · Heated Rivalry
-            </title> </circle><circle cx="660.3302752293578" cy="260.68945702893603" r="3" fill="#9B2226" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2025-12-15: 90,702 ratings · Heated Rivalry
-            </title> </circle><circle cx="661.1743119266055" cy="259.4318510518895" r="3" fill="#9B2226" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2025-12-17: 96,609 ratings · Heated Rivalry
-            </title> </circle><circle cx="668.348623853211" cy="247.57837714329924" r="3" fill="#9B2226" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2026-01-03: 152,285 ratings · Heated Rivalry
-            </title> </circle><circle cx="675.9449541284404" cy="236.02104847155874" r="3" fill="#9B2226" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2026-01-21: 206,570 ratings · Heated Rivalry
-            </title> </circle><circle cx="679.743119266055" cy="229.94059702337032" r="3" fill="#9B2226" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2026-01-30: 235,130 ratings · Heated Rivalry
-            </title> </circle><circle cx="700" cy="208.66774589411474" r="3" fill="#9B2226" stroke="var(--color-surface)" stroke-width="1"> <title>
-              2026-03-19: 335,049 ratings · Heated Rivalry
-            </title> </circle> <text x="676.348623853211" y="51.3541193954363" font-size="10" fill="#2D6A4F" font-weight="600">
-~1.0M ratings pre-show
-</text> <text x="651.8715596330275" y="257.2697831903216" font-size="10" fill="#9B2226" font-weight="600">
-34K ratings pre-show
-</text> <text x="50.93577981651376" y="308" text-anchor="middle" font-size="10" fill="var(--color-text-faint)"> 2022 </text><text x="204.9724770642202" y="308" text-anchor="middle" font-size="10" fill="var(--color-text-faint)"> 2023 </text><text x="359.00917431192664" y="308" text-anchor="middle" font-size="10" fill="var(--color-text-faint)"> 2024 </text><text x="513.4678899082569" y="308" text-anchor="middle" font-size="10" fill="var(--color-text-faint)"> 2025 </text><text x="667.5045871559632" y="308" text-anchor="middle" font-size="10" fill="var(--color-text-faint)"> 2026 </text> <g class="vol-chart__legend" transform="translate(64 52)"> <line x1="0" y1="6" x2="18" y2="6" stroke="#2D6A4F" stroke-width="2.5"></line> <text x="24" y="10" font-size="10" fill="var(--color-text)">The Deal (Off Campus, book 1)</text> <line x1="0" y1="24" x2="18" y2="24" stroke="#9B2226" stroke-width="2.5"></line> <text x="24" y="28" font-size="10" fill="var(--color-text)">Heated Rivalry (Game Changers, book 2)</text> </g> </svg> </div> </figure> <div>
-    <p class="visual-caption">
-      <strong>Off Campus shows fulfillment. Heated Rivalry looked midlist.</strong> The trad pipeline read each one accurately on the data it had access to. The question is whether more data existed somewhere else.
-    </p>
-    <p class="visual-method">
-      Goodreads counts reconstructed from Internet Archive Wayback Machine snapshots and checked against live counts. <a href="../../methodology/index.html">Full methodology</a>.
-    </p>
-  </div>
+  <!-- CHART 1 -->
+  <figure class="vol-chart vol-chart--goodreads">
+    <div class="vol-chart__head">
+      <h3 class="vol-chart__title">Goodreads Velocity: The Deal vs Heated Rivalry</h3>
+      <p class="vol-chart__dek">The trad pipeline read each book accurately on the data it could see. Off Campus was a million-rating property before the show was cast. Heated Rivalry looked midlist until broadcast.</p>
+    </div>
+    <div class="vol-chart__wrap">
+<svg viewBox="0 0 720 320" width="100%" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Goodreads cumulative ratings for The Deal and Heated Rivalry, 2022 through 2026" class="vol-svg">
+  <!-- plot frame -->
+  <rect x="66" y="44" width="634" height="232" fill="none" stroke="var(--border)" stroke-width="0.5"/>
+  <!-- Y axis label -->
+  <text x="18" y="160" text-anchor="middle" font-family="var(--font-mono)" font-size="10" letter-spacing=".05em" fill="var(--text-muted)" transform="rotate(-90 18 160)">Goodreads ratings (cumulative)</text>
+  <!-- Y grid + labels -->
+  <line x1="66" y1="276.0" x2="700" y2="276.0" stroke="var(--border)" stroke-width="0.5" stroke-dasharray="2,3"/>
+<text x="58" y="279.5" text-anchor="end" font-family="var(--font-mono)" font-size="10" fill="var(--text-faint)">0</text>
+<line x1="66" y1="223.7" x2="700" y2="223.7" stroke="var(--border)" stroke-width="0.5" stroke-dasharray="2,3"/>
+<text x="58" y="227.2" text-anchor="end" font-family="var(--font-mono)" font-size="10" fill="var(--text-faint)">250K</text>
+<line x1="66" y1="171.5" x2="700" y2="171.5" stroke="var(--border)" stroke-width="0.5" stroke-dasharray="2,3"/>
+<text x="58" y="175.0" text-anchor="end" font-family="var(--font-mono)" font-size="10" fill="var(--text-faint)">500K</text>
+<line x1="66" y1="119.2" x2="700" y2="119.2" stroke="var(--border)" stroke-width="0.5" stroke-dasharray="2,3"/>
+<text x="58" y="122.7" text-anchor="end" font-family="var(--font-mono)" font-size="10" fill="var(--text-faint)">750K</text>
+<line x1="66" y1="67.0" x2="700" y2="67.0" stroke="var(--border)" stroke-width="0.5" stroke-dasharray="2,3"/>
+<text x="58" y="70.5" text-anchor="end" font-family="var(--font-mono)" font-size="10" fill="var(--text-faint)">1M</text>
+  <!-- X axis line -->
+  <line x1="66" y1="276" x2="700" y2="276" stroke="var(--border-strong)" stroke-width="0.75"/>
+  <!-- X ticks -->
+  <text x="66.0" y="290" text-anchor="middle" font-family="var(--font-mono)" font-size="10" fill="var(--text-faint)">2022</text>
+<text x="213.9" y="290" text-anchor="middle" font-family="var(--font-mono)" font-size="10" fill="var(--text-faint)">2023</text>
+<text x="361.7" y="290" text-anchor="middle" font-family="var(--font-mono)" font-size="10" fill="var(--text-faint)">2024</text>
+<text x="510.0" y="290" text-anchor="middle" font-family="var(--font-mono)" font-size="10" fill="var(--text-faint)">2025</text>
+<text x="657.9" y="290" text-anchor="middle" font-family="var(--font-mono)" font-size="10" fill="var(--text-faint)">2026</text>
+  <!-- HR premiere marker -->
+  <line x1="644.1" y1="44" x2="644.1" y2="276" stroke="var(--peony)" stroke-width="1" stroke-dasharray="4,4" opacity="0.85"/>
+  <text x="644.1" y="38" text-anchor="middle" font-family="var(--font-mono)" font-size="9" fill="var(--peony)" font-weight="600">HR premieres Nov 28, 2025</text>
+  <!-- Heated Rivalry line (peony) -->
+  <path d="M71.7,274.3 L100.0,274.1 L150.3,273.8 L202.9,273.5 L249.5,273.0 L258.8,272.9 L269.8,272.8 L274.2,272.8 L303.0,272.5 L341.9,272.2 L369.4,272.0 L383.6,271.7 L489.7,270.6 L495.0,270.6 L501.5,270.5 L513.2,270.4 L517.3,270.3 L531.5,270.1 L539.2,270.1 L545.2,270.0 L557.0,269.9 L567.1,269.7 L581.7,269.4 L601.6,269.1 L611.3,268.9 L619.0,268.8 L635.2,267.4 L645.7,264.5 L647.3,262.1 L648.6,260.5 L651.0,257.0 L651.8,255.8 L658.7,244.2 L666.0,232.8 L669.6,226.9 L689.1,206.0" fill="none" stroke="var(--peony)" stroke-width="2.25" stroke-linejoin="round"/>
+  <circle cx="71.7" cy="274.3" r="2.4" fill="var(--peony)"><title>2022-01-15: 8,076</title></circle>
+<circle cx="100.0" cy="274.1" r="2.4" fill="var(--peony)"><title>2022-03-26: 9,098</title></circle>
+<circle cx="150.3" cy="273.8" r="2.4" fill="var(--peony)"><title>2022-07-28: 10,755</title></circle>
+<circle cx="202.9" cy="273.5" r="2.4" fill="var(--peony)"><title>2022-12-05: 12,088</title></circle>
+<circle cx="249.5" cy="273.0" r="2.4" fill="var(--peony)"><title>2023-03-30: 14,326</title></circle>
+<circle cx="258.8" cy="272.9" r="2.4" fill="var(--peony)"><title>2023-04-22: 14,814</title></circle>
+<circle cx="269.8" cy="272.8" r="2.4" fill="var(--peony)"><title>2023-05-19: 15,253</title></circle>
+<circle cx="274.2" cy="272.8" r="2.4" fill="var(--peony)"><title>2023-05-30: 15,429</title></circle>
+<circle cx="303.0" cy="272.5" r="2.4" fill="var(--peony)"><title>2023-08-09: 16,621</title></circle>
+<circle cx="341.9" cy="272.2" r="2.4" fill="var(--peony)"><title>2023-11-13: 18,039</title></circle>
+<circle cx="369.4" cy="272.0" r="2.4" fill="var(--peony)"><title>2024-01-20: 19,362</title></circle>
+<circle cx="383.6" cy="271.7" r="2.4" fill="var(--peony)"><title>2024-02-24: 20,338</title></circle>
+<circle cx="489.7" cy="270.6" r="2.4" fill="var(--peony)"><title>2024-11-12: 25,729</title></circle>
+<circle cx="495.0" cy="270.6" r="2.4" fill="var(--peony)"><title>2024-11-25: 25,942</title></circle>
+<circle cx="501.5" cy="270.5" r="2.4" fill="var(--peony)"><title>2024-12-11: 26,254</title></circle>
+<circle cx="513.2" cy="270.4" r="2.4" fill="var(--peony)"><title>2025-01-09: 26,932</title></circle>
+<circle cx="517.3" cy="270.3" r="2.4" fill="var(--peony)"><title>2025-01-19: 27,142</title></circle>
+<circle cx="531.5" cy="270.1" r="2.4" fill="var(--peony)"><title>2025-02-23: 27,997</title></circle>
+<circle cx="539.2" cy="270.1" r="2.4" fill="var(--peony)"><title>2025-03-14: 28,387</title></circle>
+<circle cx="545.2" cy="270.0" r="2.4" fill="var(--peony)"><title>2025-03-29: 28,744</title></circle>
+<circle cx="557.0" cy="269.9" r="2.4" fill="var(--peony)"><title>2025-04-27: 29,379</title></circle>
+<circle cx="567.1" cy="269.7" r="2.4" fill="var(--peony)"><title>2025-05-22: 30,104</title></circle>
+<circle cx="581.7" cy="269.4" r="2.4" fill="var(--peony)"><title>2025-06-27: 31,361</title></circle>
+<circle cx="601.6" cy="269.1" r="2.4" fill="var(--peony)"><title>2025-08-15: 32,936</title></circle>
+<circle cx="611.3" cy="268.9" r="2.4" fill="var(--peony)"><title>2025-09-08: 33,812</title></circle>
+<circle cx="619.0" cy="268.8" r="2.4" fill="var(--peony)"><title>2025-09-27: 34,410</title></circle>
+<circle cx="635.2" cy="267.4" r="2.4" fill="var(--peony)"><title>2025-11-06: 41,006</title></circle>
+<circle cx="645.7" cy="264.5" r="2.4" fill="var(--peony)"><title>2025-12-02: 55,180</title></circle>
+<circle cx="647.3" cy="262.1" r="2.4" fill="var(--peony)"><title>2025-12-06: 66,428</title></circle>
+<circle cx="648.6" cy="260.5" r="2.4" fill="var(--peony)"><title>2025-12-09: 74,347</title></circle>
+<circle cx="651.0" cy="257.0" r="2.4" fill="var(--peony)"><title>2025-12-15: 90,702</title></circle>
+<circle cx="651.8" cy="255.8" r="2.4" fill="var(--peony)"><title>2025-12-17: 96,609</title></circle>
+<circle cx="658.7" cy="244.2" r="2.4" fill="var(--peony)"><title>2026-01-03: 152,285</title></circle>
+<circle cx="666.0" cy="232.8" r="2.4" fill="var(--peony)"><title>2026-01-21: 206,570</title></circle>
+<circle cx="669.6" cy="226.9" r="2.4" fill="var(--peony)"><title>2026-01-30: 235,130</title></circle>
+<circle cx="689.1" cy="206.0" r="2.4" fill="var(--peony)"><title>2026-03-19: 335,049</title></circle>
+  <!-- The Deal line (sage = primary) -->
+  <path d="M70.9,215.4 L75.3,213.9 L78.6,212.8 L81.4,211.8 L84.6,210.9 L87.5,210.0 L90.3,209.2 L93.5,208.3 L96.4,207.6 L99.6,206.9 L102.9,206.2 L105.7,205.6 L108.9,204.8 L112.2,204.0 L115.0,203.4 L118.3,202.7 L121.1,202.0 L123.9,201.4 L126.8,200.8 L129.6,200.0 L138.1,197.8 L141.4,197.0 L144.2,196.1 L144.6,195.9 L147.0,195.1 L149.9,194.1 L152.7,193.0 L155.9,191.9 L158.8,191.0 L162.0,189.9 L164.8,189.0 L167.7,188.3 L170.5,187.6 L173.8,186.9 L176.6,186.3 L179.8,185.6 L182.7,184.9 L186.3,184.1 L189.2,183.5 L197.7,181.4 L201.7,180.5 L204.5,179.9 L207.4,179.3 L210.6,178.3 L213.5,177.1 L216.3,175.1 L219.5,173.8 L225.6,171.7 L228.9,170.7 L232.1,169.8 L234.9,169.0 L237.8,168.3 L240.6,167.6 L243.8,166.9 L258.8,163.2 L290.4,156.0 L344.7,144.6 L348.4,143.6 L369.0,135.5 L401.0,126.2 L455.3,112.0 L467.1,109.4 L471.1,108.6 L501.1,101.7 L514.5,96.4 L518.5,94.8 L531.5,90.9 L536.7,89.3 L541.6,88.0 L545.2,87.1 L555.8,84.8 L559.0,84.1 L634.4,66.6 L637.6,66.1 L658.7,61.4" fill="none" stroke="var(--sage)" stroke-width="2.5" stroke-linejoin="round"/>
+  <circle cx="70.9" cy="215.4" r="2.4" fill="var(--sage)"><title>2022-01-13: 290,043</title></circle>
+<circle cx="75.3" cy="213.9" r="2.4" fill="var(--sage)"><title>2022-01-24: 297,303</title></circle>
+<circle cx="78.6" cy="212.8" r="2.4" fill="var(--sage)"><title>2022-02-01: 302,207</title></circle>
+<circle cx="81.4" cy="211.8" r="2.4" fill="var(--sage)"><title>2022-02-08: 307,122</title></circle>
+<circle cx="84.6" cy="210.9" r="2.4" fill="var(--sage)"><title>2022-02-16: 311,535</title></circle>
+<circle cx="87.5" cy="210.0" r="2.4" fill="var(--sage)"><title>2022-02-23: 315,817</title></circle>
+<circle cx="90.3" cy="209.2" r="2.4" fill="var(--sage)"><title>2022-03-02: 319,609</title></circle>
+<circle cx="93.5" cy="208.3" r="2.4" fill="var(--sage)"><title>2022-03-10: 323,837</title></circle>
+<circle cx="96.4" cy="207.6" r="2.4" fill="var(--sage)"><title>2022-03-17: 327,478</title></circle>
+<circle cx="99.6" cy="206.9" r="2.4" fill="var(--sage)"><title>2022-03-25: 330,797</title></circle>
+<circle cx="102.9" cy="206.2" r="2.4" fill="var(--sage)"><title>2022-04-02: 334,132</title></circle>
+<circle cx="105.7" cy="205.6" r="2.4" fill="var(--sage)"><title>2022-04-09: 337,043</title></circle>
+<circle cx="108.9" cy="204.8" r="2.4" fill="var(--sage)"><title>2022-04-17: 340,563</title></circle>
+<circle cx="112.2" cy="204.0" r="2.4" fill="var(--sage)"><title>2022-04-25: 344,445</title></circle>
+<circle cx="115.0" cy="203.4" r="2.4" fill="var(--sage)"><title>2022-05-02: 347,553</title></circle>
+<circle cx="118.3" cy="202.7" r="2.4" fill="var(--sage)"><title>2022-05-10: 350,843</title></circle>
+<circle cx="121.1" cy="202.0" r="2.4" fill="var(--sage)"><title>2022-05-17: 353,875</title></circle>
+<circle cx="123.9" cy="201.4" r="2.4" fill="var(--sage)"><title>2022-05-24: 356,987</title></circle>
+<circle cx="126.8" cy="200.8" r="2.4" fill="var(--sage)"><title>2022-05-31: 359,981</title></circle>
+<circle cx="129.6" cy="200.0" r="2.4" fill="var(--sage)"><title>2022-06-07: 363,453</title></circle>
+<circle cx="138.1" cy="197.8" r="2.4" fill="var(--sage)"><title>2022-06-28: 374,360</title></circle>
+<circle cx="141.4" cy="197.0" r="2.4" fill="var(--sage)"><title>2022-07-06: 378,033</title></circle>
+<circle cx="144.2" cy="196.1" r="2.4" fill="var(--sage)"><title>2022-07-13: 382,105</title></circle>
+<circle cx="144.6" cy="195.9" r="2.4" fill="var(--sage)"><title>2022-07-14: 383,119</title></circle>
+<circle cx="147.0" cy="195.1" r="2.4" fill="var(--sage)"><title>2022-07-20: 386,832</title></circle>
+<circle cx="149.9" cy="194.1" r="2.4" fill="var(--sage)"><title>2022-07-27: 391,892</title></circle>
+<circle cx="152.7" cy="193.0" r="2.4" fill="var(--sage)"><title>2022-08-03: 397,055</title></circle>
+<circle cx="155.9" cy="191.9" r="2.4" fill="var(--sage)"><title>2022-08-11: 402,178</title></circle>
+<circle cx="158.8" cy="191.0" r="2.4" fill="var(--sage)"><title>2022-08-18: 406,898</title></circle>
+<circle cx="162.0" cy="189.9" r="2.4" fill="var(--sage)"><title>2022-08-26: 411,923</title></circle>
+<circle cx="164.8" cy="189.0" r="2.4" fill="var(--sage)"><title>2022-09-02: 416,048</title></circle>
+<circle cx="167.7" cy="188.3" r="2.4" fill="var(--sage)"><title>2022-09-09: 419,739</title></circle>
+<circle cx="170.5" cy="187.6" r="2.4" fill="var(--sage)"><title>2022-09-16: 423,067</title></circle>
+<circle cx="173.8" cy="186.9" r="2.4" fill="var(--sage)"><title>2022-09-24: 426,142</title></circle>
+<circle cx="176.6" cy="186.3" r="2.4" fill="var(--sage)"><title>2022-10-01: 429,390</title></circle>
+<circle cx="179.8" cy="185.6" r="2.4" fill="var(--sage)"><title>2022-10-09: 432,663</title></circle>
+<circle cx="182.7" cy="184.9" r="2.4" fill="var(--sage)"><title>2022-10-16: 435,911</title></circle>
+<circle cx="186.3" cy="184.1" r="2.4" fill="var(--sage)"><title>2022-10-25: 439,620</title></circle>
+<circle cx="189.2" cy="183.5" r="2.4" fill="var(--sage)"><title>2022-11-01: 442,605</title></circle>
+<circle cx="197.7" cy="181.4" r="2.4" fill="var(--sage)"><title>2022-11-22: 452,664</title></circle>
+<circle cx="201.7" cy="180.5" r="2.4" fill="var(--sage)"><title>2022-12-02: 456,683</title></circle>
+<circle cx="204.5" cy="179.9" r="2.4" fill="var(--sage)"><title>2022-12-09: 459,728</title></circle>
+<circle cx="207.4" cy="179.3" r="2.4" fill="var(--sage)"><title>2022-12-16: 462,873</title></circle>
+<circle cx="210.6" cy="178.3" r="2.4" fill="var(--sage)"><title>2022-12-24: 467,211</title></circle>
+<circle cx="213.5" cy="177.1" r="2.4" fill="var(--sage)"><title>2022-12-31: 473,237</title></circle>
+<circle cx="216.3" cy="175.1" r="2.4" fill="var(--sage)"><title>2023-01-07: 482,640</title></circle>
+<circle cx="219.5" cy="173.8" r="2.4" fill="var(--sage)"><title>2023-01-15: 488,795</title></circle>
+<circle cx="225.6" cy="171.7" r="2.4" fill="var(--sage)"><title>2023-01-30: 499,065</title></circle>
+<circle cx="228.9" cy="170.7" r="2.4" fill="var(--sage)"><title>2023-02-07: 503,700</title></circle>
+<circle cx="232.1" cy="169.8" r="2.4" fill="var(--sage)"><title>2023-02-15: 507,972</title></circle>
+<circle cx="234.9" cy="169.0" r="2.4" fill="var(--sage)"><title>2023-02-22: 511,814</title></circle>
+<circle cx="237.8" cy="168.3" r="2.4" fill="var(--sage)"><title>2023-03-01: 515,333</title></circle>
+<circle cx="240.6" cy="167.6" r="2.4" fill="var(--sage)"><title>2023-03-08: 518,491</title></circle>
+<circle cx="243.8" cy="166.9" r="2.4" fill="var(--sage)"><title>2023-03-16: 521,874</title></circle>
+<circle cx="258.8" cy="163.2" r="2.4" fill="var(--sage)"><title>2023-04-22: 539,593</title></circle>
+<circle cx="290.4" cy="156.0" r="2.4" fill="var(--sage)"><title>2023-07-09: 574,286</title></circle>
+<circle cx="344.7" cy="144.6" r="2.4" fill="var(--sage)"><title>2023-11-20: 628,871</title></circle>
+<circle cx="348.4" cy="143.6" r="2.4" fill="var(--sage)"><title>2023-11-29: 633,339</title></circle>
+<circle cx="369.0" cy="135.5" r="2.4" fill="var(--sage)"><title>2024-01-19: 672,209</title></circle>
+<circle cx="401.0" cy="126.2" r="2.4" fill="var(--sage)"><title>2024-04-07: 716,677</title></circle>
+<circle cx="455.3" cy="112.0" r="2.4" fill="var(--sage)"><title>2024-08-19: 784,439</title></circle>
+<circle cx="467.1" cy="109.4" r="2.4" fill="var(--sage)"><title>2024-09-17: 796,887</title></circle>
+<circle cx="471.1" cy="108.6" r="2.4" fill="var(--sage)"><title>2024-09-27: 801,090</title></circle>
+<circle cx="501.1" cy="101.7" r="2.4" fill="var(--sage)"><title>2024-12-10: 834,165</title></circle>
+<circle cx="514.5" cy="96.4" r="2.4" fill="var(--sage)"><title>2025-01-12: 859,207</title></circle>
+<circle cx="518.5" cy="94.8" r="2.4" fill="var(--sage)"><title>2025-01-22: 867,003</title></circle>
+<circle cx="531.5" cy="90.9" r="2.4" fill="var(--sage)"><title>2025-02-23: 885,765</title></circle>
+<circle cx="536.7" cy="89.3" r="2.4" fill="var(--sage)"><title>2025-03-08: 893,137</title></circle>
+<circle cx="541.6" cy="88.0" r="2.4" fill="var(--sage)"><title>2025-03-20: 899,303</title></circle>
+<circle cx="545.2" cy="87.1" r="2.4" fill="var(--sage)"><title>2025-03-29: 903,894</title></circle>
+<circle cx="555.8" cy="84.8" r="2.4" fill="var(--sage)"><title>2025-04-24: 914,792</title></circle>
+<circle cx="559.0" cy="84.1" r="2.4" fill="var(--sage)"><title>2025-05-02: 917,997</title></circle>
+<circle cx="634.4" cy="66.6" r="2.4" fill="var(--sage)"><title>2025-11-04: 1,001,682</title></circle>
+<circle cx="637.6" cy="66.1" r="2.4" fill="var(--sage)"><title>2025-11-12: 1,004,430</title></circle>
+<circle cx="658.7" cy="61.4" r="2.4" fill="var(--sage)"><title>2026-01-03: 1,026,984</title></circle>
+  <!-- Endpoint annotations -->
+  <text x="640" y="62" text-anchor="end" font-family="var(--font-mono)" font-size="10" fill="var(--sage)" font-weight="600">The Deal · ~1.0M ratings pre-show</text>
+  <text x="640" y="265" text-anchor="end" font-family="var(--font-mono)" font-size="10" fill="var(--peony)" font-weight="600">Heated Rivalry · 34K ratings pre-show</text>
+  <!-- legend -->
+  <g transform="translate(78 54)">
+    <line x1="0" y1="6" x2="18" y2="6" stroke="var(--sage)" stroke-width="2.5"/>
+    <text x="24" y="10" font-family="var(--font-mono)" font-size="10" fill="var(--text)">The Deal (Off Campus, book 1)</text>
+    <line x1="0" y1="22" x2="18" y2="22" stroke="var(--peony)" stroke-width="2.5"/>
+    <text x="24" y="26" font-family="var(--font-mono)" font-size="10" fill="var(--text)">Heated Rivalry (Game Changers, book 2)</text>
+  </g>
+</svg>
+    </div>
+    <p class="vol-chart__cite">Source · <a href="https://web.archive.org/" target="_blank" rel="noopener noreferrer">Internet Archive Wayback Machine</a> snapshots of Goodreads, reconstructed and checked against live counts (2022 to 2026)</p>
+  </figure>
 
+  <p class="visual-caption"><strong>Off Campus shows fulfillment. Heated Rivalry looked midlist.</strong> The trad pipeline read each one accurately on the data it had access to. The question is whether more data existed somewhere else.</p>
+  <p class="visual-method">Goodreads counts reconstructed from Internet Archive Wayback Machine snapshots and checked against live counts. <a href="../../methodology/index.html">Full methodology</a>.</p>
+
+  <!-- 02 REDDIT -->
   <div class="section-divider">
     <div class="section-divider-line"></div>
-    <span class="section-divider-label">02 &middot; What Reddit Showed</span>
+    <span class="section-divider-label">02 · What Reddit Showed</span>
     <div class="section-divider-line"></div>
   </div>
 
@@ -365,9 +450,10 @@ Goodreads ratings (cumulative)
     <p>The pre-broadcast signal was real but not staggering. A thousand subscribers in a niche subgenre is meaningful. It is also not the kind of number that overrides a 34,000-rating Goodreads picture. A trad scout looking at both would have weighted the Goodreads number more heavily, and that weighting wasn't wrong on its own terms. The Reddit signal was telling a real story at a volume the trad pipeline doesn't routinely listen to.</p>
   </div>
 
+  <!-- 03 AO3 -->
   <div class="section-divider">
     <div class="section-divider-line"></div>
-    <span class="section-divider-label">03 &middot; What AO3 Was Saying</span>
+    <span class="section-divider-label">03 · What AO3 Was Saying</span>
     <div class="section-divider-line"></div>
   </div>
 
@@ -377,73 +463,98 @@ Goodreads ratings (cumulative)
     <p>Today, six months after broadcast, the tag holds 31,769 works. 98% of the corpus was written after the show aired. 5,200 new works per month against a pre-broadcast baseline of 52. The community that produced this volume of writing didn't appear in November 2025. It was already there. It just became visible at scale.</p>
   </div>
 
+  <!-- STAT GRID -->
   <div class="stat-grid">
     <div class="stat-block">
       <p class="stat-label">Shane/Ilya AO3, July 2025</p>
-      <p class="stat-figure">362</p>
+      <p class="stat-figure tnum">362</p>
       <p class="stat-description">Small, durable, growing slowly. The community had been there for years.</p>
+      <p class="stat-cite">Romance Signal · hand-counted from public AO3 tag, Jul 2025</p>
     </div>
     <div class="stat-block accent">
       <p class="stat-label">Shane/Ilya AO3, today</p>
-      <p class="stat-figure">31,769</p>
-      <p class="stat-description">98% of the corpus written after the show aired. 87&times; growth in ten months.</p>
+      <p class="stat-figure tnum">31,769</p>
+      <p class="stat-description">98% of the corpus written after the show aired. 87× growth in ten months.</p>
+      <p class="stat-cite">Romance Signal · public AO3 tag, May 2026</p>
     </div>
     <div class="stat-block">
       <p class="stat-label">Off Campus series AO3, total</p>
-      <p class="stat-figure">120</p>
+      <p class="stat-figure tnum">120</p>
       <p class="stat-description">All works across the thirteen-book series. A closed arc finishing itself, as the form is designed to.</p>
+      <p class="stat-cite">Romance Signal · public AO3 tag, May 2026</p>
     </div>
     <div class="stat-block dark">
       <p class="stat-label">Garrett/Hannah AO3, today</p>
-      <p class="stat-figure">146</p>
+      <p class="stat-figure tnum">146</p>
       <p class="stat-description">Central pairing of <em>The Deal</em> and Prime Video's <em>Off Campus</em>. 59 works in the eleven days after broadcast, then steady but unspectacular.</p>
+      <p class="stat-cite">Romance Signal · public AO3 tag, May 2026</p>
     </div>
   </div>
 
-  <div class="visual-block">
-    </div> <figure class="vol-chart vol-chart--ao3"> <div class="vol-chart__head"> <h3 class="vol-chart__title">AO3 Production: Shane/Ilya vs Garrett/Hannah</h3> <p class="vol-chart__dek">
-Pre-show Shane/Ilya production was small but durable. Pre-show Garrett/Hannah was barely there. Post-broadcast, the
-      closed-arc property generated a brief spike; the open-arc property generated a sustained engine.
-</p> </div> <div class="vol-chart__wrap"> <svg viewBox="0 0 720 320" width="100%" role="img" aria-label="AO3 cumulative works in central pairing tags for Shane and Ilya versus Garrett and Hannah, 2025 through 2026"> <g> <line x1="56" y1="280" x2="700" y2="280" stroke="var(--color-border)" stroke-width="0.5"></line> <text x="48" y="283" text-anchor="end" font-size="10" fill="var(--color-text-faint)"> 0 </text> </g><g> <line x1="56" y1="232.8" x2="700" y2="232.8" stroke="var(--color-border)" stroke-width="0.5"></line> <text x="48" y="235.8" text-anchor="end" font-size="10" fill="var(--color-text-faint)"> 6.7K </text> </g><g> <line x1="56" y1="185.6" x2="700" y2="185.6" stroke="var(--color-border)" stroke-width="0.5"></line> <text x="48" y="188.6" text-anchor="end" font-size="10" fill="var(--color-text-faint)"> 13K </text> </g><g> <line x1="56" y1="138.39999999999998" x2="700" y2="138.39999999999998" stroke="var(--color-border)" stroke-width="0.5"></line> <text x="48" y="141.39999999999998" text-anchor="end" font-size="10" fill="var(--color-text-faint)"> 20K </text> </g><g> <line x1="56" y1="91.19999999999999" x2="700" y2="91.19999999999999" stroke="var(--color-border)" stroke-width="0.5"></line> <text x="48" y="94.19999999999999" text-anchor="end" font-size="10" fill="var(--color-text-faint)"> 27K </text> </g><g> <line x1="56" y1="44" x2="700" y2="44" stroke="var(--color-border)" stroke-width="0.5"></line> <text x="48" y="47" text-anchor="end" font-size="10" fill="var(--color-text-faint)"> 33K </text> </g> <text x="14" y="162" text-anchor="middle" font-size="9" fill="var(--color-text-muted)" transform="rotate(-90 14 162)">
-AO3 works (cumulative, central pairing tag)
-</text> <g> <line x1="473.9686274509804" y1="44" x2="473.9686274509804" y2="280" stroke="#9B2226" stroke-width="1" stroke-dasharray="4,4" opacity="0.75"></line> <text x="473.9686274509804" y="36" text-anchor="middle" font-size="9" fill="#9B2226" font-weight="600"> HR premieres Nov 28, 2025 </text> </g><g> <line x1="683.5843137254902" y1="44" x2="683.5843137254902" y2="280" stroke="#2D6A4F" stroke-width="1" stroke-dasharray="4,4" opacity="0.75"></line> <text x="683.5843137254902" y="36" text-anchor="middle" font-size="9" fill="#2D6A4F" font-weight="600"> Off Campus premieres May 13, 2026 </text> </g> <path d="M56.0,279.6 L284.6,279.4 L683.6,279.2 L700.0,279.0" fill="none" stroke="#2D6A4F" stroke-width="2" stroke-linejoin="round"></path> <circle cx="56" cy="279.5896212061023" r="3" fill="#2D6A4F" stroke="var(--color-surface)" stroke-width="1"> <title>
-            2025-01-01: 58 works · Garrett/Hannah
-          </title> </circle><circle cx="284.55686274509804" cy="279.38443180915345" r="3" fill="#2D6A4F" stroke="var(--color-surface)" stroke-width="1"> <title>
-            2025-07-01: 87 works · Garrett/Hannah
-          </title> </circle><circle cx="683.5843137254902" cy="279.1509404264186" r="3" fill="#2D6A4F" stroke="var(--color-surface)" stroke-width="1"> <title>
-            2026-05-13: 120 works · Garrett/Hannah
-          </title> </circle><circle cx="700" cy="278.9669775188093" r="3" fill="#2D6A4F" stroke="var(--color-surface)" stroke-width="1"> <title>
-            2026-05-26: 146 works · Garrett/Hannah
-          </title> </circle> <path d="M56.0,278.5 L284.6,277.4 L463.9,277.2 L495.4,255.2 L534.6,202.2 L591.4,131.4 L700.0,55.2" fill="none" stroke="#9B2226" stroke-width="2.25" stroke-linejoin="round"></path> <circle cx="56" cy="278.51414574623254" r="3" fill="#9B2226" stroke="var(--color-surface)" stroke-width="1"> <title>
-            2025-01-01: 210 works · Shane/Ilya
-          </title> </circle><circle cx="284.55686274509804" cy="277.4386702863627" r="3" fill="#9B2226" stroke="var(--color-surface)" stroke-width="1"> <title>
-            2025-07-01: 362 works · Shane/Ilya
-          </title> </circle><circle cx="463.8666666666667" cy="277.1698014213953" r="3" fill="#9B2226" stroke="var(--color-surface)" stroke-width="1"> <title>
-            2025-11-20: 400 works · Shane/Ilya
-          </title> </circle><circle cx="495.43529411764706" cy="255.2357624372087" r="3" fill="#9B2226" stroke="var(--color-surface)" stroke-width="1"> <title>
-            2025-12-15: 3,500 works · Shane/Ilya
-          </title> </circle><circle cx="534.5803921568628" cy="202.16953908837024" r="3" fill="#9B2226" stroke="var(--color-surface)" stroke-width="1"> <title>
-            2026-01-15: 11,000 works · Shane/Ilya
-          </title> </circle><circle cx="591.4039215686274" cy="131.41457462325232" r="3" fill="#9B2226" stroke="var(--color-surface)" stroke-width="1"> <title>
-            2026-03-01: 21,000 works · Shane/Ilya
-          </title> </circle><circle cx="700" cy="55.21855339076677" r="3" fill="#9B2226" stroke="var(--color-surface)" stroke-width="1"> <title>
-            2026-05-26: 31,769 works · Shane/Ilya
-          </title> </circle> <text x="290.55686274509804" y="269.4386702863627" font-size="9" fill="#9B2226" font-style="italic">
-Pre-show baseline: 362 works
-</text> <text x="696" y="45.21855339076677" text-anchor="end" font-size="9" fill="#9B2226" font-style="italic">
-Today: 31,769 works (98% post-broadcast)
-</text> <text x="700" y="296.9669775188093" font-size="9" fill="#2D6A4F" font-style="italic">
-Garrett/Hannah, today: 146 works
-</text> <text x="56" y="308" text-anchor="middle" font-size="10" fill="var(--color-text-faint)"> 2025 </text><text x="516.9019607843138" y="308" text-anchor="middle" font-size="10" fill="var(--color-text-faint)"> 2026 </text> <g class="vol-chart__legend" transform="translate(64 52)"> <line x1="0" y1="6" x2="18" y2="6" stroke="#2D6A4F" stroke-width="2.5"></line> <text x="24" y="10" font-size="10" fill="var(--color-text)">Garrett/Hannah (Off Campus)</text> <line x1="0" y1="24" x2="18" y2="24" stroke="#9B2226" stroke-width="2.5"></line> <text x="24" y="28" font-size="10" fill="var(--color-text)">Shane/Ilya (Heated Rivalry)</text> </g> </svg> </div> </figure> <div>
-    <p class="visual-caption">
-      <strong>Pre-show, Heated Rivalry had more AO3 production than The Deal, with a much smaller audience.</strong> Most of the post-broadcast Shane/Ilya growth came after the show aired, but the small durable community producing those works existed long before broadcast.
-    </p>
-    <p class="visual-method">
-      AO3 counts pulled by hand from public tag pages. We did not view, scrape, or include locked works (those restricted to logged-in users). Romance Signal collects and stores no AO3 data beyond this initial review.
-    </p>
-  </div>
+  <!-- CHART 2 -->
+  <figure class="vol-chart vol-chart--ao3">
+    <div class="vol-chart__head">
+      <h3 class="vol-chart__title">AO3 Production: Shane/Ilya vs Garrett/Hannah</h3>
+      <p class="vol-chart__dek">Pre-show Shane/Ilya production was small but durable. Pre-show Garrett/Hannah was barely there. Post-broadcast, the closed-arc property generated a brief spike; the open-arc property generated a sustained engine.</p>
+    </div>
+    <div class="vol-chart__wrap">
+<svg viewBox="0 0 720 320" width="100%" preserveAspectRatio="xMidYMid meet" role="img" aria-label="AO3 cumulative works in central pairing tags for Shane and Ilya versus Garrett and Hannah, 2025 through 2026" class="vol-svg">
+  <rect x="66" y="44" width="634" height="232" fill="none" stroke="var(--border)" stroke-width="0.5"/>
+  <text x="18" y="160" text-anchor="middle" font-family="var(--font-mono)" font-size="10" letter-spacing=".05em" fill="var(--text-muted)" transform="rotate(-90 18 160)">AO3 works (cumulative, central pairing tag)</text>
+  <line x1="66" y1="276.0" x2="700" y2="276.0" stroke="var(--border)" stroke-width="0.5" stroke-dasharray="2,3"/>
+<text x="58" y="279.5" text-anchor="end" font-family="var(--font-mono)" font-size="10" fill="var(--text-faint)">0</text>
+<line x1="66" y1="219.8" x2="700" y2="219.8" stroke="var(--border)" stroke-width="0.5" stroke-dasharray="2,3"/>
+<text x="58" y="223.3" text-anchor="end" font-family="var(--font-mono)" font-size="10" fill="var(--text-faint)">8K</text>
+<line x1="66" y1="163.5" x2="700" y2="163.5" stroke="var(--border)" stroke-width="0.5" stroke-dasharray="2,3"/>
+<text x="58" y="167.0" text-anchor="end" font-family="var(--font-mono)" font-size="10" fill="var(--text-faint)">16K</text>
+<line x1="66" y1="107.3" x2="700" y2="107.3" stroke="var(--border)" stroke-width="0.5" stroke-dasharray="2,3"/>
+<text x="58" y="110.8" text-anchor="end" font-family="var(--font-mono)" font-size="10" fill="var(--text-faint)">24K</text>
+<line x1="66" y1="51.0" x2="700" y2="51.0" stroke="var(--border)" stroke-width="0.5" stroke-dasharray="2,3"/>
+<text x="58" y="54.5" text-anchor="end" font-family="var(--font-mono)" font-size="10" fill="var(--text-faint)">32K</text>
+  <line x1="66" y1="276" x2="700" y2="276" stroke="var(--border-strong)" stroke-width="0.75"/>
+  <text x="282.5" y="290" text-anchor="middle" font-family="var(--font-mono)" font-size="10" fill="var(--text-faint)">2025</text>
+<text x="610.3" y="290" text-anchor="middle" font-family="var(--font-mono)" font-size="10" fill="var(--text-faint)">2026</text>
+  <!-- HR premiere marker -->
+  <line x1="462.0" y1="44" x2="462.0" y2="276" stroke="var(--peony)" stroke-width="1" stroke-dasharray="4,4" opacity="0.85"/>
+  <text x="458.0" y="58" text-anchor="end" font-family="var(--font-mono)" font-size="9" fill="var(--peony)" font-weight="600">HR · Nov 28, 2025</text>
+  <!-- Off Campus premiere marker -->
+  <line x1="660.5" y1="44" x2="660.5" y2="276" stroke="var(--sage)" stroke-width="1" stroke-dasharray="4,4" opacity="0.85"/>
+  <text x="656.5" y="58" text-anchor="end" font-family="var(--font-mono)" font-size="9" fill="var(--sage)" font-weight="600">Off Campus · May 13, 2026</text>
+  <!-- Garrett/Hannah (sage) -->
+  <path d="M66.0,275.6 L282.5,275.4 L660.5,275.2 L676.1,275.0" fill="none" stroke="var(--sage)" stroke-width="2.25" stroke-linejoin="round"/>
+  <circle cx="66.0" cy="275.6" r="3" fill="var(--sage)"><title>2025-01-01: 58 works · Garrett/Hannah</title></circle>
+<circle cx="282.5" cy="275.4" r="3" fill="var(--sage)"><title>2025-07-01: 87 works · Garrett/Hannah</title></circle>
+<circle cx="660.5" cy="275.2" r="3" fill="var(--sage)"><title>2026-05-13: 120 works · Garrett/Hannah</title></circle>
+<circle cx="676.1" cy="275.0" r="3" fill="var(--sage)"><title>2026-05-26: 146 works · Garrett/Hannah</title></circle>
+  <!-- Shane/Ilya (peony = the dramatic line) -->
+  <path d="M66.0,274.5 L282.5,273.5 L452.4,273.2 L482.3,251.4 L519.4,198.7 L573.2,128.4 L676.1,52.7" fill="none" stroke="var(--peony)" stroke-width="2.5" stroke-linejoin="round"/>
+  <circle cx="66.0" cy="274.5" r="3" fill="var(--peony)"><title>2025-01-01: 210 works · Shane/Ilya</title></circle>
+<circle cx="282.5" cy="273.5" r="3" fill="var(--peony)"><title>2025-07-01: 362 works · Shane/Ilya</title></circle>
+<circle cx="452.4" cy="273.2" r="3" fill="var(--peony)"><title>2025-11-20: 400 works · Shane/Ilya</title></circle>
+<circle cx="482.3" cy="251.4" r="3" fill="var(--peony)"><title>2025-12-15: 3,500 works · Shane/Ilya</title></circle>
+<circle cx="519.4" cy="198.7" r="3" fill="var(--peony)"><title>2026-01-15: 11,000 works · Shane/Ilya</title></circle>
+<circle cx="573.2" cy="128.4" r="3" fill="var(--peony)"><title>2026-03-01: 21,000 works · Shane/Ilya</title></circle>
+<circle cx="676.1" cy="52.7" r="3" fill="var(--peony)"><title>2026-05-26: 31,769 works · Shane/Ilya</title></circle>
+  <!-- annotations -->
+  <text x="455" y="252" text-anchor="end" font-family="var(--font-serif)" font-style="italic" font-size="10" fill="var(--peony)">Pre-show baseline: 362 works</text>
+  <text x="655" y="96" text-anchor="end" font-family="var(--font-mono)" font-size="9.5" fill="var(--peony)" font-weight="600">Today: 31,769 works (98% post-broadcast)</text>
+  <text x="380" y="268" text-anchor="start" font-family="var(--font-mono)" font-size="9.5" fill="var(--sage)">Garrett/Hannah · 146 works total</text>
+  <g transform="translate(78 54)">
+    <line x1="0" y1="6" x2="18" y2="6" stroke="var(--sage)" stroke-width="2.5"/>
+    <text x="24" y="10" font-family="var(--font-mono)" font-size="10" fill="var(--text)">Garrett/Hannah (Off Campus)</text>
+    <line x1="0" y1="22" x2="18" y2="22" stroke="var(--peony)" stroke-width="2.5"/>
+    <text x="24" y="26" font-family="var(--font-mono)" font-size="10" fill="var(--text)">Shane/Ilya (Heated Rivalry)</text>
+  </g>
+</svg>
+    </div>
+    <p class="vol-chart__cite">Source · Hand-counted from public AO3 tag pages by Romance Signal (Jan 2025 to May 2026). Locked works excluded; counted by hand, not collected in bulk.</p>
+  </figure>
 
-  <div class="content-block">
+  <p class="visual-caption"><strong>Pre-show, Heated Rivalry had more AO3 production than The Deal, with a much smaller audience.</strong> Most of the post-broadcast Shane/Ilya growth came after the show aired, but the small durable community producing those works existed long before broadcast.</p>
+  <p class="visual-method">AO3 counts pulled by hand from public tag pages. We did not view, fetch, or include locked works (those restricted to logged-in users). Romance Signal collects and stores no AO3 data beyond this initial review.</p>
+
+  <!-- closed/open arc lens -->
+  <div class="content-block" style="margin-top:42px">
     <p>What kinds of stories take off on AO3? <em>Most analysis misses the true magic of romance. Some books wrap up neatly and let you go. Others refuse to leave you. You turn the final page and realize you just want to move in.</em></p>
     <p>The genre's writing about itself talks about heat level, trope, subgenre. It talks less about <em>arcs</em>. The romance arrives. The HEA lands. The question is what the story does on its way there, and what it leaves behind.</p>
     <p>A <strong>closed arc</strong> ties everything off. Character, relationship, and narrative arcs all resolve. The reader experiences total resolution, a beautifully completed circle. These are the romances that hit every beat you came for. They take you on the journey you love and deliver you back, satisfied, ready to do it all again with the next book. Most romance is this. Most successful romance is this. It is what the genre is built around.</p>
@@ -452,8 +563,9 @@ Garrett/Hannah, today: 146 works
     <p><em>Heated Rivalry</em> is open-arc. By the end of <em>The Long Game</em>, Shane and Ilya are fully out, in Shane's hometown. There's a clear HEA on the page. But the book also closes on Shane absorbing the traumatic breakdown of his team and nearly being forced to switch franchises, and that wound doesn't get tied off. What he feared would happen, happened. Readers are still arguing about whether it's actually a happy ending. That argument, plus the endless engine of fanfiction trying to answer it, is the open arc working as designed.</p>
   </div>
 
+  <!-- "what if" callout -->
   <div class="framework-callout">
-    <p class="framework-callout__label">What if, from inside <em>Heated Rivalry</em></p>
+    <p class="framework-callout__label">What if · from inside <em>Heated Rivalry</em></p>
     <p class="framework-callout__item">It's implied Shane's coming out went alright, but were there elements of the team turning against him earlier on?</p>
     <p class="framework-callout__item">What if Shane's Asian heritage was spelled out more? Or what if we spent more time analyzing his assimilation as a means to blend in?</p>
     <p class="framework-callout__item">What if Shane and Ilya weren't rivals, would they still be inevitable? How crucial is the competitive element to who they become?</p>
@@ -464,30 +576,30 @@ Garrett/Hannah, today: 146 works
     <p>Those are the gaps an open arc leaves on purpose, or by happy accident. Each one is an invitation for a reader to keep writing. The open arc is the structural feature that produces the kind of sustained AO3 activity Heated Rivalry showed pre-broadcast. It is not the only kind of property AO3 tracks, and the open/closed distinction is one note inside a larger pipeline question. But it is a useful note. AO3's leading-indicator value, if it has one, is most likely strongest for open-arc work.</p>
   </div>
 
+  <!-- SERIES SPLIT -->
   <div class="series-split">
-    <div class="series-split-header">
-      <p class="series-split-label">Inside one series, both shapes</p>
-      <p class="series-split-title"><em>Game Changers</em> by Rachel Reid</p>
-    </div>
+    <p class="series-split-label">Inside one series, both shapes</p>
+    <p class="series-split-title"><em>Game Changers</em> by Rachel Reid</p>
     <div class="series-split-grid">
       <div class="series-split-card open">
         <p class="series-split-card-label">Open Arc</p>
         <p class="series-split-card-pair">Shane Hollander &amp; Ilya Rozanov</p>
-        <p class="series-split-card-books">Heated Rivalry &middot; The Long Game</p>
+        <p class="series-split-card-books">Heated Rivalry · The Long Game</p>
         <p class="series-split-card-desc">Two books, eight years of canon, an HEA delivered around a structural wound the series doesn't close. Readers are still arguing about the ending. The Shane/Ilya AO3 tag holds 31,769 works.</p>
       </div>
       <div class="series-split-card closed">
         <p class="series-split-card-label">Closed Arc</p>
         <p class="series-split-card-pair">Kip Grady &amp; Scott Hunter, and others</p>
-        <p class="series-split-card-books">Game Changer &middot; Tough Guy &middot; Common Goal &middot; Role Model</p>
+        <p class="series-split-card-books">Game Changer · Tough Guy · Common Goal · Role Model</p>
         <p class="series-split-card-desc">Single-book arcs, full resolution, comfortable futures readers can map without further pages. The Kip and Scott episode of the show drew critique for feeling Hallmark, and praise for the same reason. Both reactions are correct.</p>
       </div>
     </div>
   </div>
 
+  <!-- 04 -->
   <div class="section-divider">
     <div class="section-divider-line"></div>
-    <span class="section-divider-label">04 &middot; The Pipeline Gap</span>
+    <span class="section-divider-label">04 · The Pipeline Gap</span>
     <div class="section-divider-line"></div>
   </div>
 
@@ -499,7 +611,7 @@ Garrett/Hannah, today: 146 works
   </div>
 
   <div class="framework-callout">
-    <p><strong>The open question.</strong> Can AO3 (and adjacent community-network signals) be read as a leading indicator of crossover for open-arc properties before the trad pipeline catches up? And if it can be read, <em>can it be read ethically</em>? AO3 is a community space explicitly resistant to commercial extraction. The fact that information sits in public doesn't mean it should be harvested at scale for commercial decisions. Reading 362 works in a tag by hand to think about a research question is different from running automated pulls to feed acquisition models. The community's norms about how this work should be treated matter, and any leading-indicator method that ignores them isn't actually a method we should build.</p>
+    <p><strong>The open question.</strong> Can AO3 (and adjacent community-network signals) be read as a leading indicator of crossover for open-arc properties before the trad pipeline catches up? And if it can be read, <em>can it be read ethically</em>? AO3 is a community space explicitly resistant to commercial extraction. The fact that information sits in public doesn't mean it should be pulled at scale for commercial decisions. Reading 362 works in a tag by hand to think about a research question is different from pulling them in bulk to feed acquisition models. The community's norms about how this work should be treated matter, and any leading-indicator method that ignores them isn't actually a method we should build.</p>
     <p>We don't know the answers yet. We're working on both halves. There are other variables that could be doing some of the work in the crossover question, chemistry, trope architecture, source-material fidelity, the cultural moment around queer masculinity, casting, platform positioning. The eventual model probably combines several. But AO3 sustained durable activity in a small pairing tag is the most under-read signal in the picture. It's also the one with the most complicated ethics. Both of those things are true, and the work has to hold both.</p>
   </div>
 
@@ -507,59 +619,56 @@ Garrett/Hannah, today: 146 works
     <p>The closed/open arc lens helps explain what AO3 catches. It is not the whole picture, and it is not the only variable that matters for crossover. It is one useful frame on a pipeline gap that future volumes will keep working through. We aren't selling a predictive model. We are walking through what the data already tells us, naming what it doesn't, and publishing the work as we go.</p>
   </div>
 
-</main>
+</div>
 
+<!-- ABOUT -->
 <section class="signal-section">
   <div class="signal-inner">
     <p class="signal-label">About this project</p>
     <h2 class="signal-title">Romance Signal</h2>
-
     <p class="signal-body">Romance Signal is the research wing of <strong>Threnne</strong>. Built for romance, built for writers trying to understand what works.</p>
-
     <p class="signal-body">Writers want to know what makes a romance succeed. Publishers, producers, scouts, and agents read signals to make those calls. We're publishing those signals, plus the harder work of finding the ones the trad pipeline misses, so writers can read their own work against <em>what the data actually says</em>.</p>
-
     <p class="signal-body">This volume tests one variable. Upcoming volumes will test others. Chemistry, trope architecture, source-material fidelity, the cultural moment around queer masculinity, casting, tone, spice level. The eventual model will combine several. The pacing depends on what the data lets us examine cleanly.</p>
-
-    <p class="signal-body"><a href="#get-involved">Get involved →</a></p>
+    <p class="signal-body"><a href="../../index.html#get-involved">Get involved →</a></p>
   </div>
 </section>
 
 <div class="update-note">
   <p>All Goodreads ratings counts and historical velocity numbers were reconstructed from Internet Archive Wayback Machine snapshots and checked against live counts. <a href="../../methodology/index.html">Full methodology and source code</a>.</p>
-</div></div> </article>  <footer class="footer"> <div class="container footer__inner"> <div class="footer__brand"> <a href="../../index.html" class="brand brand--footer"> <img class="brand__mark" src="../../brand/signal-s-mark-dark.svg" alt="" width="24" height="24" data-brand-mark-dark="../../brand/signal-s-mark-dark.svg" data-brand-mark-light="../../brand/signal-s-mark-light.svg"> <span class="brand__text"> <img class="brand__wordmark-img" src="../../brand/romance-signal-wordmark-dark.svg" alt="Romance Signal" height="18" data-brand-wordmark-dark="../../brand/romance-signal-wordmark-dark.svg" data-brand-wordmark-light="../../brand/romance-signal-wordmark-light.svg"> <span class="brand__sub">by Threnne</span> </span> </a> <p class="footer__tag">Measuring the romance market for the people writing it.</p> </div> <div class="footer__cols"> <div> <h4 class="footer__col-title">Research</h4> <ul role="list"> <li><a href="../../watchlist/index.html">Watchlist</a></li> <li><a href="../index.html">Volumes</a></li> <li><a href="../../background/index.html">Background</a></li> </ul> </div> <div> <h4 class="footer__col-title">Methods</h4> <ul role="list"> <li><a href="../../methodology/index.html">Methodology</a></li> </ul> </div> <div> <h4 class="footer__col-title">Contact</h4> <ul role="list"> <li><a href="../../index.html#get-involved">Get involved</a></li> <li><a href="mailto:signal@threnne.com">signal@threnne.com</a></li> </ul> </div> </div> </div> <div class="footer__bottom"> <div class="container footer__bottom-inner"> <span class="tabular">© 2026 Romance Signal · A Threnne project</span> <span class="tabular">signal@threnne.com</span> </div> </div> </footer> <script>
-      // Theme toggle wiring
-      (function () {
-        const root = document.documentElement;
-        const btn = document.getElementById('themeToggle');
-        if (!btn) return;
-        let current = root.getAttribute('data-theme') || 'dark';
-        function syncBrandMarks() {
-          const theme = root.getAttribute('data-theme') || 'dark';
-          const pick = (el, darkKey, lightKey) => {
-            if (!el) return;
-            const dark = el.getAttribute(darkKey);
-            const light = el.getAttribute(lightKey);
-            if (dark && light) el.setAttribute('src', theme === 'light' ? light : dark);
-          };
-          document.querySelectorAll('[data-brand-mark-dark]').forEach((el) => pick(el, 'data-brand-mark-dark', 'data-brand-mark-light'));
-          document.querySelectorAll('[data-brand-wordmark-dark]').forEach((el) => pick(el, 'data-brand-wordmark-dark', 'data-brand-wordmark-light'));
-        }
-        btn.addEventListener('click', () => {
-          current = current === 'dark' ? 'light' : 'dark';
-          root.setAttribute('data-theme', current);
-          try { localStorage.setItem('rs-theme', current); } catch (e) {}
-          syncBrandMarks();
-          btn.setAttribute('aria-label', 'Switch to ' + (current === 'dark' ? 'light' : 'dark') + ' mode');
-        });
-        syncBrandMarks();
-      })();
-      // Search "/" focus shortcut
-      document.addEventListener('keydown', (e) => {
-        const tag = document.activeElement && document.activeElement.tagName;
-        if (e.key === '/' && tag !== 'INPUT' && tag !== 'TEXTAREA') {
-          e.preventDefault();
-          const s = document.querySelector('.search input');
-          if (s) s.focus();
-        }
-      });
-    </script> </body> </html>
+</div>
+
+<!-- FOOTER -->
+<footer class="foot">
+  <div class="wrap foot__in">
+    <div>
+      <a href="../../index.html" class="brand">
+        <svg class="brand__mark" viewBox="0 0 32 32" fill="none" style="width:24px;height:24px"><rect width="32" height="32" rx="7" fill="none" stroke="var(--euc)" stroke-width="1.6"/><path d="M9 21 L13 13 L17 18 L20 10 L23 16" fill="none" stroke="var(--euc)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="23" cy="16" r="1.8" fill="var(--thistle)"/></svg>
+        <span class="brand__name" style="font-size:14px">Romance Signal</span>
+      </a>
+      <p class="foot__tag">Measuring the romance market for the people writing it.</p>
+    </div>
+    <div class="foot__cols">
+      <div class="foot__col"><h4>research</h4><a href="../../watchlist/index.html">watchlist</a><a href="../index.html">volumes</a><a href="../../background/index.html">background</a></div>
+      <div class="foot__col"><h4>methods</h4><a href="../../methodology/index.html">methodology</a></div>
+      <div class="foot__col"><h4>contact</h4><a href="../../index.html#get-involved">get involved</a><a href="mailto:signal@threnne.com">signal@threnne.com</a></div>
+    </div>
+  </div>
+  <div class="wrap foot__bottom">
+    <span>© 2026 Romance Signal · A Threnne project</span>
+    <span>signal@threnne.com</span>
+  </div>
+</footer>
+
+</div>
+
+<script>
+function tog(){
+  var r=document.documentElement;
+  var next = r.getAttribute('data-theme')==='light' ? 'dark' : 'light';
+  r.setAttribute('data-theme', next);
+  try { localStorage.setItem('rs-theme', next); } catch(e){}
+}
+</script>
+
+</body>
+</html>
