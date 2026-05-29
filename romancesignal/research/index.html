@@ -18,7 +18,7 @@
     document.documentElement.setAttribute('data-theme', (saved === 'light' || saved === 'dark') ? saved : 'dark');
   } catch (e) {}
 </script>
-<link rel="stylesheet" href="../css/bouquet-base.css">
+<link rel="stylesheet" href="../css/bouquet-base.css"><style>@media(max-width:900px){.nav__links{display:none}}</style>
 <style>
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 .nav__links a.is-active{color:var(--text)}
@@ -183,19 +183,11 @@ section.block{padding:48px 0 12px;position:relative}
 <header class="nav">
   <div class="wrap nav__in">
     <a href="../index.html" class="brand">
-      <svg class="brand__mark" viewBox="0 0 32 32" fill="none" aria-hidden="true">
-        <rect width="32" height="32" rx="7" fill="none" stroke="var(--euc)" stroke-width="1.6"/>
-        <path d="M9 21 L13 13 L17 18 L20 10 L23 16" fill="none" stroke="var(--euc)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-        <circle cx="23" cy="16" r="1.8" fill="var(--thistle)"/>
-      </svg>
-      <span>
-        <div class="brand__name">Romance Signal</div>
-        <div class="brand__sub">by Threnne</div>
-      </span>
+      <span class="brand__word">romance <span class="brand__sig">s</span>ignal</span>
+      <span class="brand__by">by threnne</span>
     </a>
     <nav class="nav__links">
       <a href="../watchlist/index.html">watchlist</a>
-      <a href="../background/index.html">background</a>
       <a href="index.html" class="is-active">research</a>
       <a href="../methodology/index.html">methodology</a>
       <a href="#get-involved" class="nav__cta">get_involved()</a>
@@ -391,8 +383,8 @@ section.block{padding:48px 0 12px;position:relative}
   <div class="wrap foot__in">
     <div>
       <a href="../index.html" class="brand">
-        <svg class="brand__mark" viewBox="0 0 32 32" fill="none" style="width:24px;height:24px"><rect width="32" height="32" rx="7" fill="none" stroke="var(--euc)" stroke-width="1.6"/><path d="M9 21 L13 13 L17 18 L20 10 L23 16" fill="none" stroke="var(--euc)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="23" cy="16" r="1.8" fill="var(--thistle)"/></svg>
-        <span class="brand__name" style="font-size:14px">Romance Signal</span>
+        <span class="brand__word">romance <span class="brand__sig">s</span>ignal</span>
+        <span class="brand__by">by threnne</span>
       </a>
       <p class="foot__tag">Measuring the romance market for the people writing it.</p>
     </div>
