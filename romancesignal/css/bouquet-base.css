@@ -1,5 +1,5 @@
 /* ============================================================
-   Romance Signal — shared base + bouquet tokens
+   Romance Signal, shared base + bouquet tokens
    SINGLE SOURCE OF TRUTH for palette, fonts, reset, nav, footer.
    Linked by every page via /romancesignal/css/bouquet-base.css
    Page-specific layout/components stay in each page's inline <style>.
@@ -23,10 +23,10 @@ body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none; ba
 .nav__links{display:flex;gap:26px;align-items:center}
 .nav__links a{font-family:var(--font-mono);font-size:12.5px;color:var(--text-muted);letter-spacing:.02em;transition:.2s}
 .nav__links a:hover{color:var(--euc)}
-.brand{display:flex;align-items:center;gap:10px}
-.brand__mark{width:28px;height:28px}
-.brand__name{font-family:var(--font-display);font-weight:700;font-size:15.5px;letter-spacing:-.01em}
-.brand__sub{font-family:var(--font-mono);font-size:10px;color:var(--text-faint);letter-spacing:.14em;text-transform:uppercase}
+.brand{display:flex;align-items:baseline;gap:8px;text-decoration:none}
+.brand__word{font-family:var(--font-display);font-weight:700;font-size:19px;letter-spacing:-.02em;text-transform:lowercase;color:var(--text)}
+.brand__sig{color:var(--acid)}
+.brand__by{font-family:var(--font-mono);font-size:11px;color:var(--text-faint);letter-spacing:.04em;text-transform:lowercase}
 .foot__in{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap}
 .foot__cols{display:flex;gap:48px;flex-wrap:wrap}
 .foot__col h4{font-family:var(--font-mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--text-faint);margin-bottom:11px}
