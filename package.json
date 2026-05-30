@@ -5,11 +5,13 @@
   "type": "module",
   "description": "Static design-review snapshots of Threnne product UIs",
   "scripts": {
+    "dev": "vite",
     "build": "node scripts/build.mjs",
     "serve": "serve . -l 4173"
   },
   "devDependencies": {
     "linkedom": "^0.18.12",
-    "serve": "^14.2.4"
+    "serve": "^14.2.4",
+    "vite": "^5.4.0"
   }
 }

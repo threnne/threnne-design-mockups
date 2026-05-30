@@ -1,0 +1,667 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title>threnne — a romance studio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png" />
+    <style>
+      :root {
+        --ink: #0c0f1f;
+        --cream: #f3e6dc;
+        --near-white: #fafaf7;
+        --pink: #d1396a;
+        --acid: #d8f03a;
+        --teal: #5dad9f;
+        --deep-teal: #134e4a;
+        --works-teal: #2e6b5f;
+        --radius: 6px;
+        --mono: 'JetBrains Mono', monospace;
+        --sans: 'Hanken Grotesk', sans-serif;
+        --ease: cubic-bezier(0.22, 1, 0.36, 1);
+      }
+
+      [data-theme='dark'] {
+        --bg: var(--ink);
+        --text: var(--cream);
+        --text-muted: rgba(243, 230, 220, 0.5);
+        --text-faint: rgba(243, 230, 220, 0.25);
+        --surface: rgba(255, 255, 255, 0.04);
+        --surface-hover: rgba(255, 255, 255, 0.07);
+        --border: rgba(255, 255, 255, 0.08);
+        --accent: var(--pink);
+        --nav-bg: rgba(12, 15, 31, 0.85);
+      }
+
+      [data-theme='light'] {
+        --bg: var(--near-white);
+        --text: var(--ink);
+        --text-muted: rgba(12, 15, 31, 0.5);
+        --text-faint: rgba(12, 15, 31, 0.25);
+        --surface: rgba(0, 0, 0, 0.04);
+        --surface-hover: rgba(0, 0, 0, 0.07);
+        --border: rgba(0, 0, 0, 0.1);
+        --accent: var(--pink);
+        --nav-bg: rgba(250, 250, 247, 0.9);
+      }
+
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+      html { scroll-behavior: smooth; }
+
+      body {
+        font-family: var(--sans);
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.6;
+        transition: background 0.3s var(--ease), color 0.3s var(--ease);
+        -webkit-font-smoothing: antialiased;
+      }
+
+      nav {
+        position: fixed;
+        top: 0; left: 0; right: 0;
+        z-index: 100;
+        background: var(--nav-bg);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border-bottom: 1px solid var(--border);
+        transition: background 0.3s var(--ease), border-color 0.3s var(--ease);
+      }
+
+      .nav-inner {
+        max-width: 1160px;
+        margin: 0 auto;
+        padding: 0 24px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .nav-wordmark {
+        font-size: 1.1rem;
+        font-weight: 500;
+        color: var(--text);
+        text-decoration: none;
+        letter-spacing: -0.02em;
+        transition: color 0.2s;
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 32px;
+        list-style: none;
+      }
+
+      .nav-links a {
+        font-family: var(--mono);
+        font-size: 0.72rem;
+        font-weight: 500;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--text-muted);
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+
+      .nav-links a:hover { color: var(--text); }
+      .nav-links a.active { color: var(--accent); }
+
+      .nav-right { display: flex; align-items: center; gap: 20px; }
+
+      .theme-toggle {
+        background: none;
+        border: 1px solid var(--border);
+        border-radius: 20px;
+        padding: 5px 12px;
+        cursor: pointer;
+        font-family: var(--mono);
+        font-size: 0.7rem;
+        font-weight: 500;
+        letter-spacing: 0.1em;
+        color: var(--text-muted);
+        transition: all 0.2s;
+      }
+
+      .theme-toggle:hover { border-color: var(--accent); color: var(--accent); }
+
+      .hero {
+        min-height: 100svh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 120px 24px 80px;
+        max-width: 1160px;
+        margin: 0 auto;
+      }
+
+      .hero-eyebrow {
+        font-family: var(--mono);
+        font-size: 0.72rem;
+        font-weight: 500;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--text-muted);
+        margin-bottom: 32px;
+      }
+
+      .hero-mark {
+        font-size: clamp(5rem, 18vw, 14rem);
+        font-weight: 500;
+        color: var(--accent);
+        line-height: 0.9;
+        letter-spacing: -0.04em;
+        margin-bottom: 48px;
+        display: block;
+      }
+
+      .hero-headline {
+        font-size: clamp(1.6rem, 4vw, 2.8rem);
+        font-weight: 400;
+        line-height: 1.2;
+        letter-spacing: -0.02em;
+        max-width: 640px;
+        margin-bottom: 24px;
+      }
+
+      .hero-body {
+        font-size: 1.05rem;
+        color: var(--text-muted);
+        max-width: 520px;
+        line-height: 1.7;
+        margin-bottom: 48px;
+      }
+
+      .hero-ctas { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+
+      .btn-primary {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: var(--accent);
+        color: #fff;
+        padding: 13px 28px;
+        border-radius: var(--radius);
+        font-weight: 600;
+        font-size: 0.95rem;
+        text-decoration: none;
+        letter-spacing: -0.01em;
+        transition: opacity 0.2s, transform 0.2s var(--ease);
+      }
+
+      .btn-primary:hover { opacity: 0.88; transform: translateY(-1px); }
+
+      .btn-secondary {
+        display: inline-flex;
+        align-items: center;
+        background: transparent;
+        color: var(--text);
+        padding: 12px 28px;
+        border-radius: var(--radius);
+        border: 1px solid var(--border);
+        font-weight: 500;
+        font-size: 0.95rem;
+        text-decoration: none;
+        transition: all 0.2s var(--ease);
+      }
+
+      .btn-secondary:hover { border-color: var(--text-muted); transform: translateY(-1px); }
+
+      .siblings-bar {
+        border-top: 1px solid var(--border);
+        margin-top: 80px;
+        padding-top: 32px;
+        display: flex;
+        gap: 40px;
+        flex-wrap: wrap;
+      }
+
+      .sibling-item { display: flex; flex-direction: column; gap: 4px; }
+
+      .sibling-label {
+        font-family: var(--mono);
+        font-size: 0.65rem;
+        font-weight: 500;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--text-faint);
+      }
+
+      .sibling-name {
+        font-size: 0.9rem;
+        font-weight: 500;
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+
+      .sibling-name.signal { color: var(--acid); }
+      [data-theme='light'] .sibling-name.signal { color: var(--deep-teal); }
+      .sibling-name.works { color: var(--teal); }
+      [data-theme='light'] .sibling-name.works { color: var(--works-teal); }
+      .sibling-name:hover { opacity: 0.75; }
+
+      section {
+        max-width: 1160px;
+        margin: 0 auto;
+        padding: 100px 24px;
+      }
+
+      .section-eyebrow {
+        font-family: var(--mono);
+        font-size: 0.68rem;
+        font-weight: 500;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--text-muted);
+        margin-bottom: 20px;
+      }
+
+      .section-headline {
+        font-size: clamp(1.5rem, 3.5vw, 2.4rem);
+        font-weight: 400;
+        line-height: 1.18;
+        letter-spacing: -0.025em;
+        margin-bottom: 20px;
+        max-width: 600px;
+      }
+
+      .section-body {
+        font-size: 1rem;
+        color: var(--text-muted);
+        line-height: 1.75;
+        max-width: 520px;
+        margin-bottom: 48px;
+      }
+
+      .pillars {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 2px;
+        margin-top: 48px;
+      }
+
+      .pillar {
+        background: var(--surface);
+        padding: 36px 32px;
+        border-radius: var(--radius);
+        transition: background 0.2s;
+      }
+
+      .pillar:hover { background: var(--surface-hover); }
+
+      .pillar-mark {
+        font-size: 2.2rem;
+        font-weight: 500;
+        letter-spacing: -0.03em;
+        margin-bottom: 20px;
+        line-height: 1;
+        display: block;
+      }
+
+      .pillar-mark.pink { color: var(--accent); }
+      .pillar-mark.acid { color: var(--acid); }
+      [data-theme='light'] .pillar-mark.acid { color: var(--deep-teal); }
+      .pillar-mark.teal { color: var(--teal); }
+      [data-theme='light'] .pillar-mark.teal { color: var(--works-teal); }
+
+      .pillar-eyebrow {
+        font-family: var(--mono);
+        font-size: 0.62rem;
+        font-weight: 500;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--text-faint);
+        margin-bottom: 8px;
+      }
+
+      .pillar-title { font-size: 1.05rem; font-weight: 500; margin-bottom: 12px; letter-spacing: -0.01em; }
+      .pillar-desc { font-size: 0.9rem; color: var(--text-muted); line-height: 1.65; }
+
+      .pillar-link {
+        display: inline-block;
+        margin-top: 20px;
+        font-family: var(--mono);
+        font-size: 0.68rem;
+        font-weight: 500;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: var(--text-muted);
+        transition: color 0.2s;
+      }
+
+      .pillar-link:hover { color: var(--text); }
+
+      .exchange-section { border-top: 1px solid var(--border); }
+
+      .exchange-layout {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 80px;
+        align-items: start;
+      }
+
+      @media (max-width: 768px) { .exchange-layout { grid-template-columns: 1fr; gap: 48px; } }
+
+      .exchange-stats { display: flex; flex-direction: column; gap: 2px; margin-top: 40px; }
+
+      .stat-row {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 16px 20px;
+        background: var(--surface);
+        border-radius: var(--radius);
+      }
+
+      .stat-bar-wrap { flex: 1; height: 3px; background: var(--border); border-radius: 2px; overflow: hidden; }
+      .stat-bar { height: 100%; border-radius: 2px; }
+      .stat-bar.pink { background: var(--accent); }
+      .stat-bar.acid { background: var(--acid); }
+      [data-theme='light'] .stat-bar.acid { background: var(--deep-teal); }
+      .stat-bar.teal { background: var(--teal); }
+      [data-theme='light'] .stat-bar.teal { background: var(--works-teal); }
+      .stat-bar.faint { background: var(--text-faint); }
+
+      .stat-label { font-family: var(--mono); font-size: 0.67rem; font-weight: 500; letter-spacing: 0.08em; color: var(--text-muted); min-width: 140px; }
+      .stat-value { font-family: var(--mono); font-size: 0.72rem; font-weight: 500; color: var(--text-muted); min-width: 32px; text-align: right; }
+
+      .exchange-how { display: flex; flex-direction: column; gap: 2px; }
+
+      .how-step {
+        display: flex;
+        gap: 20px;
+        padding: 24px 20px;
+        background: var(--surface);
+        border-radius: var(--radius);
+        transition: background 0.2s;
+      }
+
+      .how-step:hover { background: var(--surface-hover); }
+
+      .step-num { font-family: var(--mono); font-size: 0.68rem; font-weight: 500; letter-spacing: 0.08em; color: var(--text-faint); min-width: 24px; padding-top: 2px; }
+      .step-text { font-size: 0.92rem; line-height: 1.6; color: var(--text-muted); }
+      .step-text strong { color: var(--text); font-weight: 500; }
+
+      .values-section { border-top: 1px solid var(--border); }
+
+      .values-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 2px;
+        margin-top: 48px;
+      }
+
+      .value-card { padding: 32px 28px; background: var(--surface); border-radius: var(--radius); }
+      .value-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); margin-bottom: 20px; }
+      .value-title { font-size: 1rem; font-weight: 500; margin-bottom: 10px; letter-spacing: -0.01em; }
+      .value-desc { font-size: 0.88rem; color: var(--text-muted); line-height: 1.65; }
+
+      .social-section { border-top: 1px solid var(--border); }
+
+      .social-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2px;
+        margin-top: 48px;
+      }
+
+      .social-card { padding: 32px 28px; background: var(--surface); border-radius: var(--radius); display: flex; flex-direction: column; gap: 20px; }
+      .social-meta { display: flex; align-items: center; gap: 12px; }
+      .social-avatar { width: 36px; height: 36px; border-radius: 50%; background: var(--border); object-fit: cover; flex-shrink: 0; }
+      .social-handle { font-family: var(--mono); font-size: 0.7rem; font-weight: 500; letter-spacing: 0.08em; color: var(--text-muted); }
+      .social-platform { font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.1em; color: var(--text-faint); }
+      .social-quote { font-size: 0.92rem; line-height: 1.7; color: var(--text-muted); }
+      .social-img-card { padding: 0; overflow: hidden; }
+      .social-img-card img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+      .cta-band { border-top: 1px solid var(--border); }
+
+      .cta-inner { max-width: 1160px; margin: 0 auto; padding: 100px 24px; text-align: center; }
+      .cta-mark { font-size: 5rem; font-weight: 500; color: var(--accent); letter-spacing: -0.04em; line-height: 1; margin-bottom: 32px; display: block; }
+      .cta-headline { font-size: clamp(1.5rem, 3.5vw, 2.2rem); font-weight: 400; letter-spacing: -0.02em; margin-bottom: 16px; }
+      .cta-sub { font-size: 1rem; color: var(--text-muted); margin-bottom: 40px; }
+
+      footer { border-top: 1px solid var(--border); padding: 40px 24px; }
+
+      .footer-inner { max-width: 1160px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+      .footer-wordmark { font-size: 0.95rem; font-weight: 500; color: var(--text); letter-spacing: -0.02em; }
+
+      .footer-links { display: flex; gap: 24px; list-style: none; }
+      .footer-links a { font-family: var(--mono); font-size: 0.68rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-faint); text-decoration: none; transition: color 0.2s; }
+      .footer-links a:hover { color: var(--text-muted); }
+      .footer-copy { font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.1em; color: var(--text-faint); }
+
+      .mockup-banner { position: fixed; bottom: 16px; right: 16px; z-index: 200; background: var(--accent); color: #fff; font-family: var(--mono); font-size: 0.65rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; padding: 6px 12px; border-radius: 4px; opacity: 0.85; pointer-events: none; }
+
+      @media (max-width: 640px) {
+        .nav-links { display: none; }
+        .hero { padding: 100px 20px 60px; }
+        section { padding: 72px 20px; }
+        .siblings-bar { gap: 24px; }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-inner">
+        <a class="nav-wordmark" href="#">threnne</a>
+        <ul class="nav-links">
+          <li><a href="#" class="active">studio</a></li>
+          <li><a href="exchange/index.html">the exchange</a></li>
+          <li><a href="../romancesignal/index.html" target="_blank">signal</a></li>
+          <li><a href="../ao3works/index.html" target="_blank">ao3 works</a></li>
+        </ul>
+        <div class="nav-right">
+          <button class="theme-toggle" id="themeBtn">light</button>
+        </div>
+      </div>
+    </nav>
+
+    <div class="hero">
+      <p class="hero-eyebrow">A romance studio · est. 2026</p>
+      <span class="hero-mark">nn</span>
+      <h1 class="hero-headline">Tools, research, and a reciprocal beta exchange — built for romance writers.</h1>
+      <p class="hero-body">By people inside the genre. Threnne houses the tools, the research, and the community layer. Everything here is made for the people who make romance.</p>
+      <div class="hero-ctas">
+        <a href="exchange/index.html" class="btn-primary">Join the exchange</a>
+        <a href="#what" class="btn-secondary">Learn more</a>
+      </div>
+      <div class="siblings-bar">
+        <div class="sibling-item">
+          <span class="sibling-label">Research</span>
+          <a href="../romancesignal/index.html" class="sibling-name signal" target="_blank">romance signal</a>
+        </div>
+        <div class="sibling-item">
+          <span class="sibling-label">Tool</span>
+          <a href="../ao3works/index.html" class="sibling-name works" target="_blank">ao3 works</a>
+        </div>
+      </div>
+    </div>
+
+    <section id="what">
+      <p class="section-eyebrow">What we build</p>
+      <h2 class="section-headline">three brands. one studio.</h2>
+      <p class="section-body">Threnne is the parent. Romance Signal is the research wing. AO3 Works is the tool. Each carries its own accent color so they read as siblings, not duplicates.</p>
+      <div class="pillars">
+        <div class="pillar">
+          <span class="pillar-mark pink">nn</span>
+          <p class="pillar-eyebrow">Parent · studio</p>
+          <h3 class="pillar-title">threnne</h3>
+          <p class="pillar-desc">Houses the Beta Exchange as the flagship service. Tools, services, and resources for romance writers and the industry around them.</p>
+          <a href="exchange/index.html" class="pillar-link">The Exchange →</a>
+        </div>
+        <div class="pillar">
+          <span class="pillar-mark acid">s.</span>
+          <p class="pillar-eyebrow">Sub · research</p>
+          <h3 class="pillar-title">romance signal</h3>
+          <p class="pillar-desc">The research wing. Working in public on what makes a romance succeed — datasets, dispatches, and methods published as they're figured out.</p>
+          <a href="../romancesignal/index.html" class="pillar-link" target="_blank">signal.threnne.com →</a>
+        </div>
+        <div class="pillar">
+          <span class="pillar-mark teal">w3</span>
+          <p class="pillar-eyebrow">Sub · tool</p>
+          <h3 class="pillar-title">ao3 works</h3>
+          <p class="pillar-desc">Browser-based editor for formatting works, social posts, letters and more for AO3. Live previews. No code required.</p>
+          <a href="../ao3works/index.html" class="pillar-link" target="_blank">works.threnne.com →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="exchange-section" id="exchange">
+      <div class="exchange-layout">
+        <div>
+          <p class="section-eyebrow">The flagship service</p>
+          <h2 class="section-headline">the beta exchange.</h2>
+          <p class="section-body">A reciprocal reading program that pairs romance writers for structured beta exchanges. You give a read, you get a read. Every match is genre-specific, pacing-aware, and mutual.</p>
+          <a href="exchange/index.html" class="btn-primary">Join the waitlist</a>
+          <div class="exchange-stats">
+            <div class="stat-row">
+              <span class="stat-label">Strong opening</span>
+              <div class="stat-bar-wrap"><div class="stat-bar pink" style="width:78%"></div></div>
+              <span class="stat-value">78%</span>
+            </div>
+            <div class="stat-row">
+              <span class="stat-label">Reciprocated</span>
+              <div class="stat-bar-wrap"><div class="stat-bar acid" style="width:71%"></div></div>
+              <span class="stat-value">71%</span>
+            </div>
+            <div class="stat-row">
+              <span class="stat-label">Earned crisis</span>
+              <div class="stat-bar-wrap"><div class="stat-bar teal" style="width:64%"></div></div>
+              <span class="stat-value">64%</span>
+            </div>
+            <div class="stat-row">
+              <span class="stat-label">Distinct voice</span>
+              <div class="stat-bar-wrap"><div class="stat-bar faint" style="width:58%"></div></div>
+              <span class="stat-value">58%</span>
+            </div>
+          </div>
+        </div>
+        <div>
+          <p class="section-eyebrow" style="margin-bottom:20px;">How it works</p>
+          <div class="exchange-how">
+            <div class="how-step">
+              <span class="step-num">01</span>
+              <p class="step-text"><strong>Tell us about your manuscript.</strong> Genre, subgenre, word count, tropes, pacing notes. The more specific, the better the match.</p>
+            </div>
+            <div class="how-step">
+              <span class="step-num">02</span>
+              <p class="step-text"><strong>We find your pair.</strong> Matched by genre depth, not just label. Both writers commit to a deadline and a feedback format.</p>
+            </div>
+            <div class="how-step">
+              <span class="step-num">03</span>
+              <p class="step-text"><strong>Read. Respond. Repeat.</strong> Exchange happens through the platform. Feedback is structured — no vague "it was good"s.</p>
+            </div>
+            <div class="how-step">
+              <span class="step-num">04</span>
+              <p class="step-text"><strong>Build your reader history.</strong> Each completed exchange earns you reputation and access to priority matching next round.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="values-section" id="values">
+      <p class="section-eyebrow">What we stand for</p>
+      <h2 class="section-headline">by the genre, for the genre.</h2>
+      <p class="section-body">Everything Threnne builds starts from a single constraint: it has to make sense to someone actively writing romance. No outsider aesthetics, no condescension, no pivoting toward literary fiction.</p>
+      <div class="values-grid">
+        <div class="value-card">
+          <div class="value-dot"></div>
+          <h3 class="value-title">Reciprocal by design</h3>
+          <p class="value-desc">The exchange is mutual because good critique communities always are. We don't build extraction tools. We build systems that require everyone to show up.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-dot"></div>
+          <h3 class="value-title">Open research</h3>
+          <p class="value-desc">Romance Signal publishes its work as it's figured out. Datasets, methodology, findings — all public. If it's useful, it's yours.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-dot"></div>
+          <h3 class="value-title">No code required</h3>
+          <p class="value-desc">AO3 Works does the technical work so writers don't have to. The tools should feel like extensions of the writing process, not obstacles to it.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-dot"></div>
+          <h3 class="value-title">Genre-serious</h3>
+          <p class="value-desc">Romance is a craft. Threnne treats it that way — in the research, in the tooling, in every editorial decision about what we build next.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="social-section">
+      <p class="section-eyebrow">In the community</p>
+      <h2 class="section-headline">writers talking to writers.</h2>
+      <div class="social-grid">
+        <div class="social-card">
+          <div class="social-meta">
+            <img src="assets/lp-insta-avatar.jpg" class="social-avatar" alt="avatar" />
+            <div>
+              <p class="social-handle">@inkandtropes</p>
+              <p class="social-platform">Instagram</p>
+            </div>
+          </div>
+          <p class="social-quote">"Finally a beta matching system that actually understands my subgenre. Got paired with someone who knew exactly what enemies-to-lovers arc fatigue looks like."</p>
+        </div>
+        <div class="social-card social-img-card" style="min-height:240px;">
+          <img src="assets/lp-insta-photo.jpg" alt="writing desk" />
+        </div>
+        <div class="social-card">
+          <div class="social-meta">
+            <div style="width:36px;height:36px;border-radius:50%;background:var(--surface-hover);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <span style="font-family:var(--mono);font-size:0.6rem;color:var(--text-muted);">J</span>
+            </div>
+            <div>
+              <p class="social-handle">@jessicawrites</p>
+              <p class="social-platform">Instagram</p>
+            </div>
+          </div>
+          <p class="social-quote">"The structured feedback format changed how I give notes, not just how I receive them. That's the part nobody warns you about."</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="cta-band">
+      <div class="cta-inner">
+        <span class="cta-mark">nn</span>
+        <h2 class="cta-headline">ready to give a read?</h2>
+        <p class="cta-sub">Join the beta exchange waitlist. We're matching writers now.</p>
+        <a href="exchange/index.html" class="btn-primary">Join the exchange</a>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-inner">
+        <span class="footer-wordmark">threnne</span>
+        <ul class="footer-links">
+          <li><a href="exchange/index.html">Exchange</a></li>
+          <li><a href="../romancesignal/index.html" target="_blank">Signal</a></li>
+          <li><a href="../ao3works/index.html" target="_blank">AO3 Works</a></li>
+        </ul>
+        <span class="footer-copy">© 2026 threnne</span>
+      </div>
+    </footer>
+
+    <div class="mockup-banner">Mockup · design review</div>
+
+    <script>
+      const btn = document.getElementById('themeBtn');
+      const html = document.documentElement;
+      btn.addEventListener('click', () => {
+        const next = html.dataset.theme === 'dark' ? 'light' : 'dark';
+        html.dataset.theme = next;
+        btn.textContent = next === 'dark' ? 'light' : 'dark';
+      });
+    </script>
+  </body>
+</html>

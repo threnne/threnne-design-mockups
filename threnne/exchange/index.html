@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title>the exchange — threnne</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16.png" />
+    <style>
+      :root {
+        --ink: #0c0f1f;
+        --cream: #f3e6dc;
+        --near-white: #fafaf7;
+        --pink: #d1396a;
+        --acid: #d8f03a;
+        --teal: #5dad9f;
+        --deep-teal: #134e4a;
+        --works-teal: #2e6b5f;
+        --radius: 6px;
+        --mono: 'JetBrains Mono', monospace;
+        --sans: 'Hanken Grotesk', sans-serif;
+        --ease: cubic-bezier(0.22, 1, 0.36, 1);
+      }
+
+      [data-theme='dark'] {
+        --bg: var(--ink);
+        --text: var(--cream);
+        --text-muted: rgba(243, 230, 220, 0.5);
+        --text-faint: rgba(243, 230, 220, 0.25);
+        --surface: rgba(255, 255, 255, 0.04);
+        --surface-hover: rgba(255, 255, 255, 0.07);
+        --border: rgba(255, 255, 255, 0.08);
+        --accent: var(--pink);
+        --nav-bg: rgba(12, 15, 31, 0.85);
+        --input-bg: rgba(255, 255, 255, 0.05);
+        --input-border: rgba(255, 255, 255, 0.12);
+        --input-focus: rgba(209, 57, 106, 0.4);
+      }
+
+      [data-theme='light'] {
+        --bg: var(--near-white);
+        --text: var(--ink);
+        --text-muted: rgba(12, 15, 31, 0.5);
+        --text-faint: rgba(12, 15, 31, 0.25);
+        --surface: rgba(0, 0, 0, 0.04);
+        --surface-hover: rgba(0, 0, 0, 0.07);
+        --border: rgba(0, 0, 0, 0.1);
+        --accent: var(--pink);
+        --nav-bg: rgba(250, 250, 247, 0.9);
+        --input-bg: #fff;
+        --input-border: rgba(0, 0, 0, 0.15);
+        --input-focus: rgba(209, 57, 106, 0.25);
+      }
+
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+      html { scroll-behavior: smooth; }
+
+      body {
+        font-family: var(--sans);
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.6;
+        transition: background 0.3s var(--ease), color 0.3s var(--ease);
+        -webkit-font-smoothing: antialiased;
+      }
+
+      nav {
+        position: fixed;
+        top: 0; left: 0; right: 0;
+        z-index: 100;
+        background: var(--nav-bg);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border-bottom: 1px solid var(--border);
+        transition: background 0.3s var(--ease), border-color 0.3s var(--ease);
+      }
+
+      .nav-inner {
+        max-width: 1160px;
+        margin: 0 auto;
+        padding: 0 24px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .nav-left { display: flex; align-items: center; gap: 8px; }
+      .nav-back { font-family: var(--mono); font-size: 0.68rem; font-weight: 500; letter-spacing: 0.1em; color: var(--text-faint); text-decoration: none; transition: color 0.2s; }
+      .nav-back:hover { color: var(--text-muted); }
+      .nav-sep { color: var(--text-faint); font-size: 0.75rem; }
+      .nav-page { font-family: var(--mono); font-size: 0.68rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); }
+
+      .theme-toggle {
+        background: none;
+        border: 1px solid var(--border);
+        border-radius: 20px;
+        padding: 5px 12px;
+        cursor: pointer;
+        font-family: var(--mono);
+        font-size: 0.7rem;
+        font-weight: 500;
+        letter-spacing: 0.1em;
+        color: var(--text-muted);
+        transition: all 0.2s;
+      }
+
+      .theme-toggle:hover { border-color: var(--accent); color: var(--accent); }
+
+      .page-wrap {
+        min-height: 100svh;
+        display: grid;
+        grid-template-columns: 1fr 480px;
+        align-items: start;
+      }
+
+      @media (max-width: 900px) {
+        .page-wrap { grid-template-columns: 1fr; }
+        .form-col { border-left: none !important; border-top: 1px solid var(--border); }
+      }
+
+      .content-col {
+        padding: 120px 60px 80px 24px;
+        max-width: 640px;
+        margin-left: auto;
+      }
+
+      @media (max-width: 1160px) { .content-col { padding: 120px 40px 80px 24px; } }
+      @media (max-width: 900px) { .content-col { padding: 100px 24px 60px; max-width: 100%; margin: 0; } }
+
+      .eyebrow { font-family: var(--mono); font-size: 0.7rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 24px; }
+
+      .page-mark { font-size: clamp(3.5rem, 10vw, 8rem); font-weight: 500; color: var(--accent); line-height: 0.95; letter-spacing: -0.04em; margin-bottom: 40px; display: block; }
+
+      .page-headline { font-size: clamp(1.6rem, 3.5vw, 2.4rem); font-weight: 400; line-height: 1.2; letter-spacing: -0.025em; margin-bottom: 20px; max-width: 520px; }
+      .page-body { font-size: 1rem; color: var(--text-muted); line-height: 1.75; max-width: 480px; margin-bottom: 56px; }
+
+      .meta-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 48px; }
+
+      .meta-tag {
+        font-family: var(--mono);
+        font-size: 0.65rem;
+        font-weight: 500;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--text-faint);
+        border: 1px solid var(--border);
+        border-radius: 3px;
+        padding: 4px 10px;
+      }
+
+      .meta-tag.pink { color: var(--accent); border-color: rgba(209, 57, 106, 0.3); }
+      .meta-tag.acid { color: var(--acid); border-color: rgba(216, 240, 58, 0.25); }
+      [data-theme='light'] .meta-tag.acid { color: var(--deep-teal); border-color: rgba(19, 78, 74, 0.3); }
+
+      .steps { display: flex; flex-direction: column; gap: 2px; margin-bottom: 56px; }
+
+      .step { display: flex; gap: 20px; padding: 20px 0; border-bottom: 1px solid var(--border); }
+      .step:first-child { border-top: 1px solid var(--border); }
+      .step-num { font-family: var(--mono); font-size: 0.65rem; font-weight: 500; letter-spacing: 0.08em; color: var(--text-faint); min-width: 24px; padding-top: 3px; }
+      .step-title { font-size: 0.95rem; font-weight: 500; margin-bottom: 4px; letter-spacing: -0.01em; }
+      .step-desc { font-size: 0.88rem; color: var(--text-muted); line-height: 1.6; }
+
+      .form-col {
+        border-left: 1px solid var(--border);
+        position: sticky;
+        top: 60px;
+        padding: 60px 40px;
+        transition: border-color 0.3s var(--ease);
+      }
+
+      @media (max-width: 900px) { .form-col { padding: 40px 24px 60px; } }
+
+      .form-heading { font-size: 1.15rem; font-weight: 500; letter-spacing: -0.02em; margin-bottom: 6px; }
+      .form-sub { font-size: 0.88rem; color: var(--text-muted); margin-bottom: 36px; line-height: 1.6; }
+
+      .form-group { margin-bottom: 20px; }
+
+      label { display: block; font-family: var(--mono); font-size: 0.65rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
+
+      input[type="text"],
+      input[type="email"],
+      select,
+      textarea {
+        width: 100%;
+        background: var(--input-bg);
+        border: 1px solid var(--input-border);
+        border-radius: var(--radius);
+        padding: 11px 14px;
+        font-family: var(--sans);
+        font-size: 0.92rem;
+        color: var(--text);
+        outline: none;
+        transition: border-color 0.2s, box-shadow 0.2s;
+        appearance: none;
+        -webkit-appearance: none;
+      }
+
+      select {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23888' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: right 12px center;
+        padding-right: 36px;
+        cursor: pointer;
+      }
+
+      input::placeholder, textarea::placeholder { color: var(--text-faint); }
+      input:focus, select:focus, textarea:focus { border-color: var(--accent); box-shadow: 0 0 0 3px var(--input-focus); }
+      textarea { resize: vertical; min-height: 88px; }
+
+      .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+      .form-divider { height: 1px; background: var(--border); margin: 24px 0; }
+      .form-note { font-size: 0.82rem; color: var(--text-faint); line-height: 1.6; margin-bottom: 20px; }
+
+      .btn-submit {
+        width: 100%;
+        background: var(--accent);
+        color: #fff;
+        border: none;
+        border-radius: var(--radius);
+        padding: 13px 24px;
+        font-family: var(--sans);
+        font-size: 0.95rem;
+        font-weight: 600;
+        letter-spacing: -0.01em;
+        cursor: pointer;
+        transition: opacity 0.2s, transform 0.2s var(--ease);
+      }
+
+      .btn-submit:hover { opacity: 0.88; transform: translateY(-1px); }
+      .btn-submit:active { transform: translateY(0); }
+
+      .waitlist-count { display: flex; align-items: center; gap: 8px; margin-top: 16px; }
+
+      .count-dot {
+        width: 6px; height: 6px; border-radius: 50%; background: var(--accent);
+        animation: pulse 2s infinite;
+      }
+
+      @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+
+      .count-label { font-family: var(--mono); font-size: 0.67rem; font-weight: 500; letter-spacing: 0.1em; color: var(--text-faint); }
+
+      .form-success { display: none; text-align: center; padding: 40px 0; }
+      .form-success.visible { display: block; }
+      .success-mark { font-size: 4rem; font-weight: 500; color: var(--accent); letter-spacing: -0.04em; line-height: 1; margin-bottom: 24px; display: block; }
+      .success-headline { font-size: 1.2rem; font-weight: 500; letter-spacing: -0.02em; margin-bottom: 12px; }
+      .success-body { font-size: 0.9rem; color: var(--text-muted); line-height: 1.7; }
+
+      footer { border-top: 1px solid var(--border); padding: 32px 24px; }
+      .footer-inner { max-width: 1160px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+      .footer-wordmark { font-size: 0.9rem; font-weight: 500; color: var(--text); text-decoration: none; letter-spacing: -0.02em; }
+      .footer-copy { font-family: var(--mono); font-size: 0.63rem; letter-spacing: 0.1em; color: var(--text-faint); }
+
+      .mockup-banner { position: fixed; bottom: 16px; right: 16px; z-index: 200; background: var(--accent); color: #fff; font-family: var(--mono); font-size: 0.65rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; padding: 6px 12px; border-radius: 4px; opacity: 0.85; pointer-events: none; }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-inner">
+        <div class="nav-left">
+          <a href="../index.html" class="nav-back">threnne</a>
+          <span class="nav-sep">/</span>
+          <span class="nav-page">The Exchange</span>
+        </div>
+        <button class="theme-toggle" id="themeBtn">light</button>
+      </div>
+    </nav>
+
+    <div class="page-wrap">
+      <div class="content-col">
+        <p class="eyebrow">Beta exchange · waitlist</p>
+        <span class="page-mark">nn</span>
+        <h1 class="page-headline">a reciprocal beta exchange for romance writers.</h1>
+        <p class="page-body">You give a read, you get a read. Every match is genre-specific, pacing-aware, and mutual. No more cold DMs, no more lopsided exchanges, no more "I'll read yours eventually."</p>
+
+        <div class="meta-tags">
+          <span class="meta-tag pink">Romance only</span>
+          <span class="meta-tag">Genre-matched</span>
+          <span class="meta-tag">Structured feedback</span>
+          <span class="meta-tag acid">Open beta · 2026</span>
+        </div>
+
+        <div class="steps">
+          <div class="step">
+            <span class="step-num">01</span>
+            <div>
+              <p class="step-title">Tell us about your manuscript</p>
+              <p class="step-desc">Genre, subgenre, word count, tropes, pacing notes. The more specific, the better the match.</p>
+            </div>
+          </div>
+          <div class="step">
+            <span class="step-num">02</span>
+            <div>
+              <p class="step-title">We find your pair</p>
+              <p class="step-desc">Matched by genre depth, not just label. Both writers commit to a deadline and a feedback format.</p>
+            </div>
+          </div>
+          <div class="step">
+            <span class="step-num">03</span>
+            <div>
+              <p class="step-title">Read. Respond. Repeat.</p>
+              <p class="step-desc">Exchange happens through the platform. Feedback is structured — no vague "it was good"s.</p>
+            </div>
+          </div>
+          <div class="step">
+            <span class="step-num">04</span>
+            <div>
+              <p class="step-title">Build your reader history</p>
+              <p class="step-desc">Each completed exchange earns reputation and access to priority matching next round.</p>
+            </div>
+          </div>
+        </div>
+
+        <p style="font-family:var(--mono);font-size:0.65rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-faint);">
+          Part of the threnne studio &nbsp;·&nbsp;
+          <a href="../index.html" style="color:var(--text-faint);text-decoration:none;">threnne.com</a>
+        </p>
+      </div>
+
+      <div class="form-col">
+        <div id="formContainer">
+          <h2 class="form-heading">join the waitlist</h2>
+          <p class="form-sub">We're matching writers now. First round opens when we hit critical mass in your genre pairing.</p>
+
+          <form id="waitlistForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="firstName">First name</label>
+                <input type="text" id="firstName" placeholder="Ada" autocomplete="given-name" />
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last name</label>
+                <input type="text" id="lastName" placeholder="Lovelace" autocomplete="family-name" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" placeholder="you@example.com" autocomplete="email" />
+            </div>
+
+            <div class="form-divider"></div>
+
+            <div class="form-group">
+              <label for="genre">Primary genre</label>
+              <select id="genre">
+                <option value="" disabled selected>Select your genre</option>
+                <option>Contemporary romance</option>
+                <option>Historical romance</option>
+                <option>Paranormal romance</option>
+                <option>Fantasy romance</option>
+                <option>Romantic suspense</option>
+                <option>Sports romance</option>
+                <option>Dark romance</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="wordcount">Manuscript word count</label>
+              <select id="wordcount">
+                <option value="" disabled selected>Select range</option>
+                <option>Under 40k (novella)</option>
+                <option>40k – 60k</option>
+                <option>60k – 80k</option>
+                <option>80k – 100k</option>
+                <option>Over 100k</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="tropes">Key tropes <span style="opacity:0.5;font-weight:400;">(optional)</span></label>
+              <input type="text" id="tropes" placeholder="enemies-to-lovers, forced proximity…" />
+            </div>
+
+            <div class="form-group">
+              <label for="notes">Anything else we should know</label>
+              <textarea id="notes" placeholder="Heat level, pacing concerns, what kind of feedback helps you most…"></textarea>
+            </div>
+
+            <div class="form-divider"></div>
+
+            <p class="form-note">By joining you agree to give one beta read for every one you receive. We'll email you when we have a match.</p>
+
+            <button type="submit" class="btn-submit">Join the exchange</button>
+
+            <div class="waitlist-count">
+              <span class="count-dot"></span>
+              <span class="count-label">247 writers on the waitlist</span>
+            </div>
+          </form>
+        </div>
+
+        <div class="form-success" id="formSuccess">
+          <span class="success-mark">nn</span>
+          <h3 class="success-headline">you're on the list.</h3>
+          <p class="success-body">We'll email you when we have a match in your genre. In the meantime, check out Romance Signal for open research on what makes romance work.</p>
+          <a href="../../romancesignal/index.html" style="display:inline-block;margin-top:24px;font-family:var(--mono);font-size:0.68rem;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-muted);text-decoration:none;" target="_blank">Romance Signal →</a>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-inner">
+        <a href="../index.html" class="footer-wordmark">threnne</a>
+        <span class="footer-copy">© 2026 threnne</span>
+      </div>
+    </footer>
+
+    <div class="mockup-banner">Mockup · design review</div>
+
+    <script>
+      const btn = document.getElementById('themeBtn');
+      const html = document.documentElement;
+      btn.addEventListener('click', () => {
+        const next = html.dataset.theme === 'dark' ? 'light' : 'dark';
+        html.dataset.theme = next;
+        btn.textContent = next === 'dark' ? 'light' : 'dark';
+      });
+
+      document.getElementById('waitlistForm').addEventListener('submit', (e) => {
+        e.preventDefault();
+        document.getElementById('formContainer').style.display = 'none';
+        document.getElementById('formSuccess').classList.add('visible');
+      });
+    </script>
+  </body>
+</html>

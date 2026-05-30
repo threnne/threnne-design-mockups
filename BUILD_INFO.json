@@ -1,11 +1,11 @@
 {
-  "builtAt": "2026-05-30T02:35:46.782Z",
+  "builtAt": "2026-05-30T02:57:46.426Z",
   "monorepoRoot": "threnne",
   "sources": {
     "1-assets": null,
-    "2-threnne": "ea6c7de",
-    "3-romancesignal": "60df2e4",
-    "4-ao3works": "9b8614d"
+    "2-threnne": null,
+    "3-romancesignal": null,
+    "4-ao3works": null
   },
   "rsBookSlug": "heated-rivalry"
 }

@@ -559,11 +559,36 @@ async function reprocessHtmlOnly() {
   }
 }
 
+async function standaloneCheck() {
+  log('Standalone mode — skipping monorepo builds, validating existing outputs');
+  const missing = [];
+  for (const [label, p] of [
+    ['threnne/index.html', join(PATHS.out.threnne, 'index.html')],
+    ['threnne/exchange/index.html', join(PATHS.out.threnne, 'exchange', 'index.html')],
+    ['brand/threnne-brand-guide.pdf', join(PATHS.out.brand, 'threnne-brand-guide.pdf')],
+    ['index.html', join(MOCKUPS_ROOT, 'index.html')],
+  ]) {
+    if (!(await exists(p))) missing.push(label);
+  }
+  if (missing.length) {
+    log(`Warning: missing files: ${missing.join(', ')}`);
+  } else {
+    log('All expected output files present');
+  }
+  await writeBuildInfo();
+  log('Done — run npm run serve in mockups/');
+}
+
 async function main() {
   log(`Monorepo root: ${MONOREPO_ROOT}`);
   if (process.argv.includes('--reprocess-html')) {
     await reprocessHtmlOnly();
     log('Done — HTML reprocessed');
+    return;
+  }
+  const hasMonorepo = await exists(PATHS.assets) && await exists(PATHS.threnne);
+  if (!hasMonorepo) {
+    await standaloneCheck();
     return;
   }
   await cleanProductOutputs();
