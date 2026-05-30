@@ -27,10 +27,10 @@
   --line-strong:      rgba(243, 230, 220, 0.14);
 
   /* Accents — full family always available */
-  --pink:             #DB4574;   /* Threnne · brand-refresh v02 · AA 4.63:1 on ink (text-safe) */
+  --pink:             #D1396A;   /* Threnne · LARGE/display only on ground (4.08:1) */
   --pink-soft:        #9A2649;
   --pink-bg:          #BD3360;   /* Button-bg variant · 4.51:1 cream-on-pink-bg, AA compliant */
-  --acid:             #C4D93A;   /* Signal · brand-refresh v02 · eased from #D8F03A · AAA 12.08:1 */
+  --acid:             #D8F03A;   /* Signal · AAA 14.90:1 */
   --teal:             #5DAD9F;   /* Works · AAA 7.20:1 */
 
   /* Wayfinding aliases — meaningful per-surface */
@@ -57,9 +57,9 @@
   --line-strong:      rgba(12, 15, 31, 0.14);
 
   /* Light-mode accent shifts */
-  --pink:             #C0285C;        /* brand-refresh v02 · deeper wine · AA 5.43:1 (text-safe) */
+  --pink:             #D1396A;        /* unchanged · LARGE/display only (4.46:1) */
   --pink-bg:          #BD3360;        /* button background · AA compliant with near-white text */
-  --acid:             #0F4C5C;        /* brand-refresh v02 · cooler signal teal-blue · AAA 9.09:1 · distinct from works teal */
+  --acid:             #134E4A;        /* deep teal — acid loses contrast on white · AAA 9.06:1 */
   --teal:             #2E6B5F;        /* AA 5.93:1 */
 
   /* refresh wayfinding aliases */

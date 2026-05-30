@@ -630,9 +630,9 @@
   margin-bottom: 12px;
 }
 #workskin .tw-avatar { width: 40px; height: 40px; border-radius: 50%; background: #cfd9de; flex: 0 0 auto; overflow: hidden; margin-right: 10px; line-height: 0; }
-#workskin .tw-user { display: block; }
-#workskin .tw-name  { font-weight: 700; font-size: 15px; color: #0f1419; }
-#workskin .tw-handle { font-size: 14px; color: #536471; }
+#workskin .tw-user { display: block; flex: 1; min-width: 0; }
+#workskin .tw-name  { font-weight: 700; font-size: 15px; color: #0f1419; display: inline; }
+#workskin .tw-handle { font-size: 14px; color: #536471; display: inline; margin-left: 0.25em; }
 #workskin .tw-body { font-size: 16px; line-height: 1.5; color: #0f1419; margin-bottom: 12px; }
 #workskin .tw-footer { border-top: 1px solid #eff3f4; padding-top: 10px; }
 #workskin .tw-stats { display: block; }
@@ -646,10 +646,7 @@
   color: #536471;
 }
 #workskin .tw-bar-grow {
-  flex: 1 1 auto;
-  min-width: 8px;
-  margin-left: 0;
-  margin-right: 0;
+  display: none;
 }
 #workskin .tw-bar-btn {
   display: inline-flex;
@@ -657,11 +654,38 @@
   line-height: 1;
   margin-right: 25px;
 }
+#workskin .tw-bar-views,
+#workskin .tw-bar-bookmark {
+  float: right;
+  margin-right: 0;
+}
+#workskin .tw-bar-bookmark {
+  margin-left: 12px;
+}
+#workskin .tw-action-bar::after,
+#workskin .tweet-container .tw-action-bar > p::after {
+  content: '';
+  display: table;
+  clear: both;
+}
 #workskin .tw-bar-num { font-size: 12px; font-weight: 700; color: #0f1419; }
 #workskin .tw-date {
+  display: block;
   font-size: 13px;
   color: #536471;
   margin-top: 2px;
+}
+/* AO3 wraps tweet rows in <p> — neutralize ProseMirror margins. */
+#workskin .tweet-container .tw-user > p,
+#workskin .tweet-container .tw-body > p {
+  margin: 0 !important;
+  padding: 0 !important;
+  display: block !important;
+}
+#workskin .tweet-container .tw-action-bar > p {
+  margin: 0 !important;
+  padding: 0 !important;
+  display: block !important;
 }
 #workskin .tw-avatar-img {
   width: 100%;

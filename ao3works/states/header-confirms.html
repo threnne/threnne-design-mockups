@@ -1,23 +1,17 @@
 <!DOCTYPE html>
-<html lang="en" class="ao3works-boot" data-theme="dark" data-brand="works">
+<html lang="en" class="ao3works-boot">
 <head>
 <base href="/ao3works/states/" />
-<meta name="robots" content="noindex" />
-<meta charset="UTF-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
   <title>AO3 Works</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
   <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32-light.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32-light.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16-light.png">
   <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300..700&family=JetBrains+Mono:wght@400;500&display=swap">
-  <link rel="stylesheet" href="../assets/brand/tokens.css">
-  <link rel="stylesheet" href="../assets/brand/theme.css">
-  <link rel="stylesheet" href="../assets/brand/legacy-aliases.css">
   <link rel="preconnect" href="https://api.fontshare.com" crossorigin="">
-  <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=kalam@400,700&f[]=comico@400&f[]=sharpie@400&f[]=dancing-script@400,500&display=swap">
+  <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&f[]=general-sans@400,500,600&f[]=boska@500,500i&f[]=jetbrains-mono@400,500&f[]=kalam@400,700&f[]=comico@400&f[]=sharpie@400&f[]=dancing-script@400,500&display=swap">
   <link rel="stylesheet" href="../src/style.css" id="ao3-app-stylesheet">
   <link rel="stylesheet" href="../assets/master-skin.css" id="ao3-master-stylesheet">
   <style>
@@ -39,18 +33,14 @@
   <div id="app-toast" class="app-toast"></div>
   <header class="app-header aw-chrome aw-header-v2">
     <div class="header-left">
-      <a class="aw-lockup" href="../index.html" aria-label="AO3 Works home">
-        <span class="aw-logo" aria-hidden="true">
-          <svg viewBox="0 0 32 32" width="22" height="22" focusable="false">
-            <rect x="2" y="4" width="28" height="3" rx="1.5" fill="currentColor" />
-            <rect x="2" y="14.5" width="22" height="3" rx="1.5" fill="currentColor" />
-            <rect x="2" y="25" width="16" height="3" rx="1.5" fill="currentColor" />
-          </svg>
-        </span>
-        <span class="aw-wordmark">
-          <span class="aw-wordmark-name">AO3 Works</span><span class="aw-wordmark-dot">.</span>
-        </span>
-      </a>
+      <div class="aw-lockup">
+        <a class="aw-wordmark-link" href="../index.html" aria-label="ao3 works home">
+          <span class="aw-wordmark">
+            <span class="aw-wordmark-name">ao<span class="aw-wordmark-sig">3</span> <span class="aw-wordmark-sig">w</span>orks</span>
+          </span>
+        </a>
+        <a class="aw-wordmark-byline" href="https://threnne.com" target="_blank" rel="noopener noreferrer">by threnne</a>
+      </div>
       <span class="beta-badge">BETA</span>
       <span id="header-autosave"></span>
       <span id="header-wordcount" class="word-count">0 words</span>
@@ -79,7 +69,7 @@
           </div>
         </div>
         <button type="button" id="help-btn" class="aw-header-collapsible aw-header-action-btn aw-header-action-btn--help" data-collapse-rank="3" data-overflow-policy="proxy" data-overflow-label="Help" data-overflow-accent="help" data-tip="Open help and tips for using AO3 Works" aria-label="Help">Help</button>
-        <button type="button" id="data-btn" class="aw-header-collapsible aw-header-action-btn aw-header-action-btn--data" data-collapse-rank="2" data-overflow-policy="proxy" data-overflow-label="Data" data-overflow-accent="data" data-tip="Your data and privacy — what stays on your device" aria-label="Your Data and Your Privacy">Data</button>
+        <button type="button" id="data-btn" class="aw-header-collapsible aw-header-action-btn aw-header-action-btn--data" data-collapse-rank="2" data-overflow-policy="proxy" data-overflow-label="Data" data-overflow-accent="data" data-tip="Your data and privacy, what stays on your device" aria-label="Your Data and Your Privacy">Data</button>
         <button type="button" id="replay-tour-btn" class="aw-header-collapsible aw-header-action-btn aw-header-action-btn--tour" data-collapse-rank="1" data-overflow-policy="proxy" data-overflow-label="Tour" data-overflow-accent="tour" data-tip="Replay the 90-second editor tour" aria-label="Replay tour">Tour</button>
         <div class="aw-header-collapsible aw-header-clear-wrap" data-collapse-rank="4" data-overflow-policy="proxy-modal" data-overflow-label="Clear draft" data-overflow-accent="clear">
           <button type="button" id="clear-draft-btn" class="aw-header-action-btn aw-header-action-btn--destructive" data-tip="Clear the current draft from this browser" aria-label="Clear draft">Clear</button>
@@ -87,7 +77,7 @@
       </nav>
       <div id="aw-header-popovers" class="aw-header-popovers" aria-live="polite">
         <div id="header-import-confirm" class="aw-header-import-confirm" role="dialog" aria-modal="false" aria-labelledby="header-import-confirm-title" aria-hidden="true">
-          <p id="header-import-confirm-title" class="aw-header-import-confirm-title">Replace your current draft with the imported file?</p>
+          <p id="header-import-confirm-title" class="aw-header-import-confirm-title">Replace Your Current Draft With the Imported File?</p>
           <p class="aw-header-import-confirm-body">Your current draft will be replaced. You can press Undo (⌘Z) right after to restore it.</p>
           <div class="aw-header-import-confirm-actions">
             <button type="button" id="header-import-confirm-cancel" class="btn-ghost-sm">Cancel</button>
@@ -95,11 +85,11 @@
           </div>
         </div>
         <div id="header-clear-confirm" class="aw-header-clear-confirm" role="dialog" aria-modal="false" aria-labelledby="header-clear-confirm-title" aria-hidden="true">
-          <p id="header-clear-confirm-title" class="aw-header-clear-confirm-title">Clear your draft?</p>
+          <p id="header-clear-confirm-title" class="aw-header-clear-confirm-title">Clear Your Draft?</p>
           <p class="aw-header-clear-confirm-body">This empties the editor and removes the saved copy in this browser. You cannot undo this.</p>
           <div class="aw-header-clear-confirm-actions">
             <button type="button" id="header-clear-confirm-cancel" class="btn-ghost-sm">Cancel</button>
-            <button type="button" id="header-clear-confirm-erase" class="btn-primary aw-header-clear-confirm-erase">Clear draft</button>
+            <button type="button" id="header-clear-confirm-erase" class="btn-primary aw-header-clear-confirm-erase">Clear Draft</button>
           </div>
         </div>
       </div>
@@ -367,7 +357,7 @@
               → <strong>My Work Skins</strong> → <strong>Create Work Skin</strong>.
             </li>
             <li>
-              Name it with the date you’re pasting (e.g. <strong>“AO3 Works — May 20, 2026”</strong>),
+              Name it with the date you’re pasting (e.g. <strong>“AO3 Works, May 20, 2026”</strong>),
               paste the CSS below into the <strong>CSS</strong> field, and click <strong>Submit</strong>.
             </li>
             <li>
@@ -417,7 +407,7 @@
     <div class="modal-content import-html-modal aw-chrome">
       <div class="modal-header">
         <div>
-          <h2 id="import-html-modal-title">Import chapter</h2>
+          <h2 id="import-html-modal-title">Import Chapter</h2>
           <p class="modal-subtitle">Open a file from your computer. Nothing is uploaded.</p>
         </div>
         <button type="button" id="import-html-modal-close" class="close-btn" aria-label="Close">×</button>
@@ -473,7 +463,7 @@
     <div class="modal-content ao3-insert-modal aw-chrome" role="dialog" aria-labelledby="image-modal-title">
       <div class="modal-header">
         <div>
-          <h2 id="image-modal-title">Insert image</h2>
+          <h2 id="image-modal-title">Insert Image</h2>
           <p class="modal-subtitle">Hosted image: paste a direct link, not a gallery page</p>
         </div>
         <button type="button" id="image-modal-close" class="close-btn" aria-label="Close">×</button>
@@ -500,7 +490,7 @@
   <div id="header-import-replace-modal" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="header-import-replace-modal-title">
     <div class="modal-content ao3-insert-modal aw-chrome aw-header-confirm-modal">
       <div class="modal-header">
-        <h2 id="header-import-replace-modal-title">Replace your draft?</h2>
+        <h2 id="header-import-replace-modal-title">Replace Your Draft?</h2>
         <button type="button" id="header-import-replace-modal-close" class="close-btn" aria-label="Close">×</button>
       </div>
       <div class="modal-body">
@@ -515,11 +505,11 @@
   <div id="header-theme-modal" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="header-theme-modal-title">
     <div class="modal-content ao3-insert-modal aw-chrome aw-header-confirm-modal aw-header-theme-modal">
       <div class="modal-header">
-        <h2 id="header-theme-modal-title">Preview theme</h2>
+        <h2 id="header-theme-modal-title">Preview Theme</h2>
         <button type="button" id="header-theme-modal-close" class="close-btn" aria-label="Close">×</button>
       </div>
       <div class="modal-body">
-        <p class="aw-header-confirm-modal-body">Switch the writing surface theme. Affects the editor only — never the exported HTML.</p>
+        <p class="aw-header-confirm-modal-body">Switch the writing surface theme. Affects the editor only, never the exported HTML.</p>
         <div class="aw-header-theme-modal-options" role="group" aria-label="Theme options">
           <button type="button" class="btn-secondary aw-header-theme-option" data-surface="default-a">Default</button>
           <button type="button" class="btn-secondary aw-header-theme-option" data-surface="ao3-reversi">AO3 Reversi (dark)</button>
@@ -530,14 +520,14 @@
   <div id="header-clear-modal" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="header-clear-modal-title">
     <div class="modal-content ao3-insert-modal aw-chrome aw-header-confirm-modal">
       <div class="modal-header">
-        <h2 id="header-clear-modal-title">Clear your draft?</h2>
+        <h2 id="header-clear-modal-title">Clear Your Draft?</h2>
         <button type="button" id="header-clear-modal-close" class="close-btn" aria-label="Close">×</button>
       </div>
       <div class="modal-body">
         <p class="aw-header-confirm-modal-body">This empties the editor and removes the saved copy in this browser. You cannot undo this.</p>
         <div class="aw-header-confirm-modal-actions">
           <button type="button" id="header-clear-modal-cancel" class="btn-ghost-sm">Cancel</button>
-          <button type="button" id="header-clear-modal-erase" class="btn-primary aw-header-clear-confirm-erase">Clear draft</button>
+          <button type="button" id="header-clear-modal-erase" class="btn-primary aw-header-clear-confirm-erase">Clear Draft</button>
         </div>
       </div>
     </div>
@@ -553,7 +543,7 @@
       <div class="modal-body">
         <div class="help-step-row">
           <span class="help-icon">✍️</span>
-          <div><strong>Write your chapter</strong><p>Type normally in the editor. The toolbar covers everything you'd expect from a rich text editor:</p>
+          <div><strong>Write Your Chapter</strong><p>Type normally in the editor. The toolbar covers everything you'd expect from a rich text editor:</p>
             <ul class="help-inline-list">
               <li><strong>Basics:</strong> bold, italic, underline, strikethrough, inline code, subscript, superscript</li>
               <li><strong>Structure:</strong> Text menu for Normal text and Headings 1 through 6, lists, blockquotes, horizontal dividers (or type <code>---</code> at the start of a line)</li>
@@ -565,7 +555,7 @@
         </div>
         <div class="help-step-row">
           <span class="help-icon">📱</span>
-          <div><strong>Insert skin blocks</strong><p>Use the <strong>+ Insert</strong> menu in the toolbar to add iMessage conversations, tweets, letters, Slack, Discord messages, and more. Each block shows a live preview as you fill in the form, so what you see is what readers will see on AO3.</p></div>
+          <div><strong>Insert Skin Blocks</strong><p>Use the <strong>+ Insert</strong> menu in the toolbar to add iMessage conversations, tweets, letters, Slack, Discord messages, and more. Each block shows a live preview as you fill in the form, so what you see is what readers will see on AO3.</p></div>
         </div>
         <div class="help-step-row">
           <span class="help-icon">📤</span>

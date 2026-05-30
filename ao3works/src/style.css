@@ -1,6 +1,8 @@
 /* ============================================================
    AO3 STUDIO — style.css
    ============================================================ */
+@import './editor-canvas-locked.css';
+
 
 /* ── VARIABLES ──────────────────────────────────────────────── */
 :root {
@@ -795,31 +797,6 @@ html.ao3works-boot #editor-surface {
   visibility: hidden;
 }
 
-.app-workspace { display: flex; flex-grow: 1; overflow: hidden; position: relative; min-width: 0; }
-.editor-surface {
-  flex: 1 1 auto;
-  min-width: 0;
-  width: 100%;
-  overflow-y: auto;
-  overflow-x: hidden;
-  padding: 36px 24px;
-  display: flex;
-  justify-content: center;
-  background: var(--bg);
-  transition: padding-right 0.3s ease;
-}
-.editor-surface.panel-open { padding-right: calc(var(--sidebar-w) + 24px); }
-.editor-wrap {
-  width: 100%;
-  max-width: min(var(--page-w), 100%);
-  background: var(--surface);
-  min-height: 700px;
-  padding: 56px 64px;
-  border: 0.5px solid var(--border);
-  border-radius: 6px;
-  align-self: flex-start;
-  position: relative;
-}
 
 /* Hover chip: edit link / image in prose (not skin previews) */
 .editor-hover-edit {
@@ -854,62 +831,6 @@ html.ao3works-boot #editor-surface {
   display: none !important;
 }
 
-/* ── AO3-ACCURATE PROSEMIRROR STYLES ────────────────────────── */
-.ProseMirror { outline: none; min-height: 500px; font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'GNU Unifont', Verdana, Helvetica, sans-serif; font-size: 1em; line-height: 1.5; color: #2a2a2a; }
-.ProseMirror p { margin-top: 0; margin-bottom: 1em; }
-.ProseMirror h1 { font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'GNU Unifont', Verdana, Helvetica, sans-serif; font-size: 2em; font-weight: normal; text-align: center; margin: 0.67em 0; color: #2a2a2a; }
-.ProseMirror h2 { font-size: 1.5em; font-weight: normal; margin: 0.83em 0; color: #2a2a2a; }
-.ProseMirror h3 { font-size: 1.17em; font-weight: normal; margin: 1em 0; padding-bottom: 0.2em; border-bottom: 3px double #2a2a2a; color: #2a2a2a; }
-.ProseMirror h4 { font-size: 1em; font-weight: bold; margin: 1.33em 0; color: #2a2a2a; }
-.ProseMirror h5 { font-size: 0.875em; font-weight: bold; margin: 1.67em 0; color: #2a2a2a; }
-.ProseMirror h6 { font-size: 0.85em; font-weight: bold; margin: 2.33em 0 1em; padding-bottom: 0.2em; border-bottom: 1px solid #2a2a2a; color: #2a2a2a; }
-.ProseMirror blockquote { border-inline-start: 2px solid #999; margin-inline-start: 1.5em; margin-inline-end: 0; padding-inline-start: 1em; color: inherit; }
-/* Divider: large vertical hit target so it’s easy to click/select/delete; line stays thin */
-.ProseMirror hr {
-  display: block;
-  border: none;
-  margin: 1.25em auto;
-  width: 50%;
-  max-width: 100%;
-  box-sizing: border-box;
-  height: 32px;
-  padding: 0;
-  background: transparent;
-  cursor: pointer;
-  position: relative;
-}
-.ProseMirror hr::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  height: 1px;
-  background: #aaa;
-  pointer-events: none;
-}
-.ProseMirror hr:hover {
-  background: rgba(42, 42, 42, 0.06);
-}
-.ProseMirror hr.ProseMirror-selectednode {
-  outline: 2px solid var(--brand);
-  outline-offset: 2px;
-  border-radius: 3px;
-  background: rgba(153, 0, 0, 0.07);
-}
-.ProseMirror hr.ProseMirror-selectednode::after {
-  background: var(--brand);
-}
-.ProseMirror a { color: #900; text-decoration: underline; }
-.ProseMirror img { max-width: 100%; height: auto; vertical-align: middle; }
-.ProseMirror s, .ProseMirror del { text-decoration: line-through; }
-.ProseMirror code { font-family: 'Monaco', 'Consolas', Courier, monospace; font-size: 0.857em; background: #f4f4f4; padding: 0 3px; border-radius: 2px; }
-.ProseMirror pre { font-family: 'Monaco', 'Consolas', Courier, monospace; font-size: 0.857em; background: #f4f4f4; padding: 0.75em 1em; overflow-x: auto; border-radius: 2px; }
-.ProseMirror ul, .ProseMirror ol { margin: 0.5em 0 1em 2em; padding: 0; }
-.ProseMirror li { margin-bottom: 0.25em; }
-.ProseMirror img { max-width: 100%; height: auto; }
-.ProseMirror p.is-editor-empty:first-child::before { content: attr(data-placeholder); color: #aaa; pointer-events: none; float: left; height: 0; }
 
 /* ── SKIN BLOCK NODEVIEW ─────────────────────────────────────── */
 .skin-block { position: relative; margin: 1.5rem 0; border: 1px solid transparent; border-radius: 8px; transition: border-color 0.15s; }
@@ -1321,36 +1242,6 @@ body.side-panel-resizing .ProseMirror {
   .text-type-dropdown .dropdown-toggle.text-type-toggle { max-width: 100%; }
 }
 
-/* ── EDITOR INTERACTIVITY AFFORDANCES ───────────────────────── */
-
-/* Make the whole card feel clickable */
-.editor-wrap { cursor: text; }
-
-/* ProseMirror needs a text cursor too */
-.ProseMirror { cursor: text; }
-
-/* Placeholder — shown when editor is empty (TipTap adds .is-editor-empty automatically) */
-.ProseMirror.is-editor-empty > p:first-child::before {
-  content: 'Start writing your chapter here…';
-  color: var(--faint);
-  font-style: italic;
-  font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'GNU Unifont', Verdana, Helvetica, sans-serif;
-  pointer-events: none;
-  float: left;
-  height: 0;
-}
-
-/* Subtle focus ring on the page card when the editor is active */
-.editor-wrap:focus-within {
-  border-color: var(--border-mid);
-  outline: none;
-}
-
-/* The ProseMirror div itself — make sure it fills the wrapper */
-.ProseMirror {
-  min-height: 600px;
-  width: 100%;
-}
 
 /* ── AO3 WYSIWYG preview (export modal) ──────────────────────────── */
 .ao3-preview-wrap {
@@ -1532,13 +1423,31 @@ body.aw-theme-threnne {
   display: inline-flex;
   align-items: center;
   gap: 10px;
+}
+.aw-wordmark-link {
+  display: inline-flex;
+  align-items: center;
   text-decoration: none;
   color: var(--offwhite);
   padding: 4px 2px;
   border-radius: 4px;
 }
-.aw-lockup:hover { color: var(--offwhite); }
-.aw-lockup:focus-visible { outline: 2px solid var(--acid); outline-offset: 3px; }
+.aw-wordmark-link:hover { color: var(--offwhite); }
+.aw-wordmark-link:focus-visible { outline: 2px solid var(--acid); outline-offset: 3px; }
+.aw-wordmark-byline {
+  font-family: var(--aw-mono);
+  font-weight: 500;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--offwhite-mute);
+  margin-left: 0;
+  text-decoration: none;
+  padding: 4px 2px;
+  border-radius: 4px;
+}
+.aw-wordmark-byline:hover { color: var(--offwhite); }
+.aw-wordmark-byline:focus-visible { outline: 2px solid var(--acid); outline-offset: 3px; }
 
 .aw-logo {
   display: inline-flex;
@@ -1561,15 +1470,6 @@ body.aw-theme-threnne {
   font-style: italic;
   color: var(--mulberry);
   margin-left: 0.5px;
-}
-.aw-wordmark-byline {
-  font-family: var(--aw-mono);
-  font-weight: 500;
-  font-size: 10px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--offwhite-mute);
-  margin-left: 4px;
 }
 
 .aw-theme-threnne .header-left h1 { display: none; }
@@ -1901,14 +1801,32 @@ body.aw-theme-threnne {
   color: #2a2a2a;
 }
 .aw-theme-threnne .editor-surface[data-surface="ao3-reversi"] .editor-wrap {
-  background: #222;
-  color: #bbb;
+  background: #333;
+  color: #eee;
 }
 .aw-theme-threnne .editor-surface[data-surface="ao3-reversi"] .editor-wrap .ProseMirror {
-  background: #222;
-  color: #bbb;
+  background: #333;
+  color: #eee;
 }
-.aw-theme-threnne .editor-surface[data-surface="ao3-reversi"] .ProseMirror a { color: #fa8; }
+.aw-theme-threnne .editor-surface[data-surface="ao3-reversi"] .ProseMirror a,
+.aw-theme-threnne .editor-surface[data-surface="ao3-reversi"] .userstuff a {
+  color: #fff;
+  text-decoration: underline;
+}
+.aw-theme-threnne .editor-surface[data-surface="ao3-reversi"] .ProseMirror a:visited,
+.aw-theme-threnne .editor-surface[data-surface="ao3-reversi"] .userstuff a:visited {
+  color: #999;
+}
+.aw-theme-threnne .editor-surface[data-surface="ao3-reversi"] .ProseMirror code {
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+  color: inherit;
+}
+.aw-theme-threnne .editor-surface[data-surface="ao3-reversi"] .ProseMirror pre {
+  background: transparent;
+  color: inherit;
+}
 .aw-theme-threnne .editor-surface[data-surface="threnne"] .editor-wrap {
   background: var(--offwhite);
   color: var(--ink);
@@ -1923,21 +1841,32 @@ body.aw-theme-threnne {
 }
 
 /* Heading color overrides per surface — .ProseMirror h1-h6 hardcode color: #2a2a2a
-   which is invisible on Reversi (#222) and inconsistent on Threnne paper.
+   which is invisible on Reversi (#333) and inconsistent on Threnne paper.
    Override per-element + h3/h6 border colors. */
-.aw-theme-threnne .editor-surface[data-surface="ao3-reversi"] .ProseMirror h1,
-.aw-theme-threnne .editor-surface[data-surface="ao3-reversi"] .ProseMirror h2,
-.aw-theme-threnne .editor-surface[data-surface="ao3-reversi"] .ProseMirror h3,
-.aw-theme-threnne .editor-surface[data-surface="ao3-reversi"] .ProseMirror h4,
-.aw-theme-threnne .editor-surface[data-surface="ao3-reversi"] .ProseMirror h5,
-.aw-theme-threnne .editor-surface[data-surface="ao3-reversi"] .ProseMirror h6 {
-  color: #bbb;
+.aw-theme-threnne .editor-surface[data-surface="ao3-reversi"] .ProseMirror h1 {
+  color: #eee;
+}
+.aw-theme-threnne .editor-surface[data-surface="ao3-reversi"] .ProseMirror h2 {
+  color: #eee;
 }
 .aw-theme-threnne .editor-surface[data-surface="ao3-reversi"] .ProseMirror h3 {
-  border-bottom-color: #bbb;
+  font-weight: 500;
+  color: #eee;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+.aw-theme-threnne .editor-surface[data-surface="ao3-reversi"] .ProseMirror h4 {
+  font-weight: 700;
+  color: #eee;
+}
+.aw-theme-threnne .editor-surface[data-surface="ao3-reversi"] .ProseMirror h5 {
+  font-weight: 600;
+  color: #eee;
 }
 .aw-theme-threnne .editor-surface[data-surface="ao3-reversi"] .ProseMirror h6 {
-  border-bottom-color: #bbb;
+  font-weight: 700;
+  color: #eee;
+  border-bottom-color: #eee;
 }
 
 .aw-theme-threnne .editor-surface[data-surface="threnne"] .ProseMirror h1,
@@ -2378,13 +2307,12 @@ body.aw-theme-threnne.aw-mode-light .aw-chrome .btn-primary {
 
 /* ── First-run tour: welcome banner ─────────────────────────── */
 /* Mulberry-deep + offwhite, immune to light/dark mode (same pattern as BETA pill). */
-/* Floating tip pill (brand-refresh creative pass): the old full-bleed teal
-   slab becomes a slim dismissible pill, right-aligned over the cream gutter,
-   so a low-priority hint stops dominating the chrome. */
+/* Floating tip pill (brand-refresh creative pass): slim dismissible pill,
+   centered over the cream gutter, so a low-priority hint stops dominating the chrome. */
 .aw-tour-welcome {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
   width: 100%;
   margin: 0;
   padding: 4px 20px 0;
@@ -2395,6 +2323,8 @@ body.aw-theme-threnne.aw-mode-light .aw-chrome .btn-primary {
   font-weight: 500;
   letter-spacing: 0.01em;
   box-sizing: border-box;
+  /* Full-width row must not steal clicks from header dropdowns that overlap it. */
+  pointer-events: none;
 }
 .aw-tour-welcome.hidden { display: none; }
 .aw-tour-welcome-body {
@@ -2410,6 +2340,7 @@ body.aw-theme-threnne.aw-mode-light .aw-chrome .btn-primary {
   font: inherit;
   text-align: center;
   box-shadow: 0 2px 10px rgba(46, 107, 95, 0.10);
+  pointer-events: auto;
 }
 .aw-tour-welcome-body:hover {
   background: color-mix(in srgb, var(--aw-brand-teal-soft, #e6f1ee) 70%, var(--aw-brand-teal-mid, #9fcabf));
@@ -2436,6 +2367,7 @@ body.aw-theme-threnne.aw-mode-light .aw-chrome .btn-primary {
   line-height: 1;
   font-family: inherit;
   box-shadow: 0 2px 10px rgba(46, 107, 95, 0.10);
+  pointer-events: auto;
 }
 .aw-tour-welcome-dismiss:hover {
   background: color-mix(in srgb, var(--aw-brand-teal-soft, #e6f1ee) 60%, var(--aw-brand-teal-mid, #9fcabf));
@@ -2952,7 +2884,7 @@ body.aw-theme-default-b {
      separating, not hard 1px rules. */
   --aw-chrome-bg:        #FBFAF7;   /* header / toolbar rail "paper" */
   --aw-chrome-bg-2:      #F5F3EE;   /* surface gutter, one layer down */
-  --aw-chrome-bg-soft:   #F1EFE9;   /* hover fill */
+  --aw-chrome-bg-soft:   #f4f4f4;   /* hover fill + canvas gutter */
   --aw-chrome-border:    #E6E3DC;   /* hairline */
   --aw-chrome-border-soft: #EEEBE4;
   --aw-chrome-text:      #2A2A2A;
@@ -3307,6 +3239,9 @@ body.aw-theme-default-b .aw-header-view-as .view-as-current {
    including Threnne / Reversi where the legacy chrome rules don't
    reach into .app-header. */
 .aw-header-v2 .toolbar-dropdown { position: relative; }
+.aw-header-v2 .toolbar-dropdown.open {
+  z-index: 400;
+}
 .aw-header-v2 .dropdown-menu {
   display: none;
   position: absolute;
@@ -3403,39 +3338,6 @@ body.aw-theme-default-b .app-toolbar.aw-toolbar-v2 {
   box-shadow: var(--aw-chrome-shadow-sm);
   color: var(--aw-chrome-text);
   overflow: visible;
-}
-/* Warm cream-2 gutter behind the floating toolbar + writing surface. */
-body.aw-theme-default-a .editor-surface,
-body.aw-theme-default-b .editor-surface {
-  background: var(--aw-chrome-bg-2);
-}
-body.aw-theme-default-a .app-workspace,
-body.aw-theme-default-b .app-workspace {
-  background: var(--aw-chrome-bg-2);
-}
-/* Whisper of personality: one faint handwritten Caveat mark in the gutter,
-   bottom-right, behind the floating writing card. Non-interactive, decorative,
-   never overlaps content; hidden when the side panel is open or on small screens. */
-body.aw-theme-default-a .app-workspace::after,
-body.aw-theme-default-b .app-workspace::after {
-  content: "your draft, your way";
-  position: absolute;
-  right: 26px;
-  bottom: 16px;
-  z-index: 0;
-  font-family: 'Caveat', cursive;
-  font-size: 19px;
-  font-weight: 500;
-  letter-spacing: 0.01em;
-  color: var(--aw-brand-teal-mid, #9fcabf);
-  opacity: 0.55;
-  transform: rotate(-2deg);
-  pointer-events: none;
-  user-select: none;
-}
-@media (max-width: 900px) {
-  body.aw-theme-default-a .app-workspace::after,
-  body.aw-theme-default-b .app-workspace::after { display: none; }
 }
 /* Soft grouped clusters give the rail rhythm; the faint inset fill replaces
    the old hard dividers. */
@@ -3678,123 +3580,6 @@ body.aw-theme-default-b .aw-toolbar-v2 .dropdown-toggle[data-tip]::after {
   content: none;
 }
 
-/* ── CONTENT AREA — anchor to ~1100px AO3 column ────────────── */
-body.aw-theme-default-a .app-workspace,
-body.aw-theme-default-b .app-workspace {
-  background: var(--aw-chrome-bg-soft);
-}
-body.aw-theme-default-a .editor-surface,
-body.aw-theme-default-b .editor-surface {
-  background: var(--aw-chrome-bg-soft);
-  padding: 32px 24px 64px;
-}
-body.aw-theme-default-a .editor-surface .editor-wrap,
-body.aw-theme-default-b .editor-surface .editor-wrap {
-  width: 100%;
-  max-width: var(--aw-content-w);
-  margin: 0 auto;
-  background: #ffffff;
-  color: #2A2A2A;
-  border: 1px solid var(--aw-chrome-border-soft);
-  border-radius: 4px;
-  padding: 56px 80px;
-  min-height: 700px;
-  box-shadow: 0 1px 3px rgba(20, 20, 20, 0.04);
-}
-@media (max-width: 1180px) {
-  body.aw-theme-default-a .editor-surface .editor-wrap,
-  body.aw-theme-default-b .editor-surface .editor-wrap { padding: 48px 48px; }
-}
-@media (max-width: 800px) {
-  body.aw-theme-default-a .editor-surface .editor-wrap,
-  body.aw-theme-default-b .editor-surface .editor-wrap { padding: 32px 24px; }
-}
-
-/* Default-A — True AO3 link colors inside the canvas. */
-body.aw-theme-default-a .editor-surface .ProseMirror a,
-body.aw-theme-default-a .editor-surface .userstuff a {
-  color: #2A6496;
-  text-decoration: underline;
-}
-body.aw-theme-default-a .editor-surface .ProseMirror a:visited,
-body.aw-theme-default-a .editor-surface .userstuff a:visited {
-  color: #900;
-}
-
-/* Default-B — mulberry accent kept inside canvas. */
-body.aw-theme-default-b .editor-surface .ProseMirror a,
-body.aw-theme-default-b .editor-surface .userstuff a {
-  color: #B25083;
-  text-decoration: underline;
-}
-body.aw-theme-default-b .editor-surface .ProseMirror a:visited,
-body.aw-theme-default-b .editor-surface .userstuff a:visited {
-  color: #6B2447;
-}
-
-/* AO3 Reversi preview — dark canvas only; header/toolbar stay on Default chrome. */
-body.aw-theme-default-a .editor-surface[data-surface="ao3-reversi"] .editor-wrap,
-body.aw-theme-default-b .editor-surface[data-surface="ao3-reversi"] .editor-wrap {
-  background: #222;
-  color: #bbb;
-  border-color: #3a3a3a;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-}
-body.aw-theme-default-a .editor-surface[data-surface="ao3-reversi"] .editor-wrap .ProseMirror,
-body.aw-theme-default-b .editor-surface[data-surface="ao3-reversi"] .editor-wrap .ProseMirror {
-  background: #222;
-  color: #bbb;
-}
-body.aw-theme-default-a .editor-surface[data-surface="ao3-reversi"] .ProseMirror a,
-body.aw-theme-default-a .editor-surface[data-surface="ao3-reversi"] .userstuff a,
-body.aw-theme-default-b .editor-surface[data-surface="ao3-reversi"] .ProseMirror a,
-body.aw-theme-default-b .editor-surface[data-surface="ao3-reversi"] .userstuff a {
-  color: #fa8;
-}
-body.aw-theme-default-a .editor-surface[data-surface="ao3-reversi"] .ProseMirror h1,
-body.aw-theme-default-a .editor-surface[data-surface="ao3-reversi"] .ProseMirror h2,
-body.aw-theme-default-a .editor-surface[data-surface="ao3-reversi"] .ProseMirror h3,
-body.aw-theme-default-a .editor-surface[data-surface="ao3-reversi"] .ProseMirror h4,
-body.aw-theme-default-a .editor-surface[data-surface="ao3-reversi"] .ProseMirror h5,
-body.aw-theme-default-a .editor-surface[data-surface="ao3-reversi"] .ProseMirror h6,
-body.aw-theme-default-b .editor-surface[data-surface="ao3-reversi"] .ProseMirror h1,
-body.aw-theme-default-b .editor-surface[data-surface="ao3-reversi"] .ProseMirror h2,
-body.aw-theme-default-b .editor-surface[data-surface="ao3-reversi"] .ProseMirror h3,
-body.aw-theme-default-b .editor-surface[data-surface="ao3-reversi"] .ProseMirror h4,
-body.aw-theme-default-b .editor-surface[data-surface="ao3-reversi"] .ProseMirror h5,
-body.aw-theme-default-b .editor-surface[data-surface="ao3-reversi"] .ProseMirror h6 {
-  color: #bbb;
-}
-body.aw-theme-default-a .editor-surface[data-surface="ao3-reversi"] .ProseMirror h3,
-body.aw-theme-default-b .editor-surface[data-surface="ao3-reversi"] .ProseMirror h3 {
-  border-bottom-color: #bbb;
-}
-body.aw-theme-default-a .editor-surface[data-surface="ao3-reversi"] .ProseMirror h6,
-body.aw-theme-default-b .editor-surface[data-surface="ao3-reversi"] .ProseMirror h6 {
-  border-bottom-color: #bbb;
-}
-
-/* The legacy AO3 stylesheet rules (.ProseMirror h*, hr, code, etc.)
-   already render correctly on white. We only need to make sure the
-   selected-node highlights pick up the theme accent. */
-body.aw-theme-default-a .ProseMirror hr.ProseMirror-selectednode,
-body.aw-theme-default-b .ProseMirror hr.ProseMirror-selectednode {
-  outline-color: var(--aw-accent);
-  background: color-mix(in srgb, var(--aw-accent) 6%, transparent);
-}
-body.aw-theme-default-a .ProseMirror hr.ProseMirror-selectednode::after,
-body.aw-theme-default-b .ProseMirror hr.ProseMirror-selectednode::after {
-  background: var(--aw-accent);
-}
-
-/* ── ALSO clamp content width inside Threnne paper and Reversi
-   when they share this editor — keep ~1100px for visual parity. */
-body.aw-theme-threnne .editor-surface[data-surface="default-a"] .editor-wrap,
-body.aw-theme-threnne .editor-surface[data-surface="default-b"] .editor-wrap,
-body.aw-theme-threnne .editor-surface[data-surface="ao3-reversi"] .editor-wrap {
-  max-width: var(--aw-content-w);
-  margin: 0 auto;
-}
 
 /* Threnne paper surface keeps its existing narrower max-width
    (defined further up as 760px). Per PR D scope, only the two
@@ -3855,7 +3640,8 @@ body.aw-theme-threnne .editor-surface[data-surface="ao3-reversi"] .editor-wrap {
   gap: 8px;
   min-width: 0;
   flex: 1 1 auto;
-  overflow: hidden;
+  /* Dropdown menus (Theme, etc.) hang below the bar — must stay clickable. */
+  overflow: visible;
 }
 .aw-header-actions .aw-header-collapsible.is-bar-hidden {
   display: none !important;
@@ -4056,6 +3842,8 @@ body.aw-theme-default-b .aw-header-action-btn:not(.aw-header-action-btn--destruc
   display: inline-flex;
   align-items: center;
   gap: 8px;
+}
+.aw-header-v2 .aw-wordmark-link {
   text-decoration: none;
 }
 
@@ -4279,12 +4067,6 @@ body.aw-theme-default-b .aw-replay-tour-btn:hover {
   border-color: var(--aw-accent);
 }
 
-/* ── In-canvas surfaces for default-a / default-b — same as light AO3 */
-.editor-surface[data-surface="default-a"] .editor-wrap,
-.editor-surface[data-surface="default-b"] .editor-wrap {
-  background: #ffffff;
-  color: #2A2A2A;
-}
 
 /* ── Header Import / Download — tinted file actions ─────────────── */
 .aw-header-import-wrap {

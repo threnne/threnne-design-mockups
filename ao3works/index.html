@@ -2,7 +2,6 @@
 <html lang="en" data-theme="dark" data-brand="works">
 <head>
 <base href="/ao3works/" />
-<meta name="robots" content="noindex" />
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>AO3 Works</title>
@@ -18,6 +17,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300..800&family=JetBrains+Mono:wght@400;500&family=Caveat:wght@500;600&display=swap" />
+<link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
 <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32-light.png" />
 <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16-light.png" />
 <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png" />
@@ -72,9 +72,11 @@ body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;
 .nav{position:sticky;top:0;z-index:40;background:color-mix(in srgb,var(--ground) 88%,transparent);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
 .nav__in{display:flex;align-items:center;justify-content:space-between;height:64px}
 .brand{display:flex;align-items:baseline;gap:8px}
+.brand__home{text-decoration:none;color:inherit;display:inline-flex;align-items:baseline}
 .brand__word{font-weight:800;font-size:19px;letter-spacing:-.02em;text-transform:lowercase;color:var(--text)}
 .brand__sig{color:var(--teal)}
-.brand__by{font-family:var(--mono);font-size:11px;color:var(--text-faint);letter-spacing:.04em;text-transform:lowercase}
+.brand__by{font-family:var(--mono);font-size:11px;color:var(--text-faint);letter-spacing:.04em;text-transform:lowercase;text-decoration:none}
+.brand__by:hover{color:var(--text-dim)}
 .beta{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--acid);border:1px solid var(--acid);border-radius:999px;padding:2px 8px 1px;margin-left:10px}
 .nav__links{display:flex;gap:26px;align-items:center}
 .nav__links a{font-size:14px;color:var(--text-dim);transition:.2s}
@@ -178,7 +180,7 @@ body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;
 <!-- NAV -->
 <header class="nav"><div class="wrap nav__in">
   <span style="display:flex;align-items:baseline">
-    <a class="brand" href="#"><span class="brand__word">ao<span class="brand__sig">3</span> <span class="brand__sig">w</span>orks</span><span class="brand__by">by threnne</span></a>
+    <span class="brand"><a class="brand__home" href="./index.html"><span class="brand__word">ao<span class="brand__sig">3</span> <span class="brand__sig">w</span>orks</span></a><a class="brand__by" href="https://threnne.com" target="_blank" rel="noopener noreferrer">by threnne</a></span>
     <span class="beta">beta</span>
   </span>
   <nav class="nav__links">
@@ -237,7 +239,7 @@ body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;
       <div class="card"><div class="card__emoji">📸</div><div class="card__t">Instagram</div><div class="card__d">Posts and DMs, with likes, captions and a full comment thread underneath.</div></div>
       <div class="card"><div class="card__emoji">✉️</div><div class="card__t">Letter</div><div class="card__d">Typed or handwritten, for the correspondence and slow-burn letter arcs.</div></div>
     </div>
-    <p style="margin-top:24px;font-size:15px;color:var(--text-dim)">Plus <span class="acc-acid" style="font-weight:700">15 more</span>: Slack, WhatsApp, Discord, Reddit, Tumblr, Bluesky, voicemail and friends. <a href="#" class="acc-teal" style="border-bottom:1px solid currentColor;font-weight:600">See them all</a></p>
+    <p style="margin-top:24px;font-size:15px;color:var(--text-dim)">Plus <span class="acc-acid" style="font-weight:700">15 more</span>: Slack, WhatsApp, Discord, Reddit, Tumblr, Bluesky, voicemail and friends. <a href="./editor/index.html" class="acc-teal" style="border-bottom:1px solid currentColor;font-weight:600">See them all</a></p>
   </div>
 </section>
 
@@ -254,7 +256,7 @@ body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;
 
     <div class="beta-note">
       <span class="beta-note__tag">beta</span>
-      <p class="beta-note__txt">AO3 Works is in beta. That means it's live and free forever, but still in active testing, so some skins may render unevenly on devices or browsers we haven't covered yet, and features can change as we go. We test every skin before it ships, and we always recommend previewing your work on AO3 before you post. Spot something off? <a href="#" class="acc-teal" style="border-bottom:1px solid currentColor;font-weight:600">Tell us</a> and we'll fix it fast.</p>
+      <p class="beta-note__txt">AO3 Works is in beta. That means it's live and free forever, but still in active testing, so some skins may render unevenly on devices or browsers we haven't covered yet, and features can change as we go. We test every skin before it ships, and we always recommend previewing your work on AO3 before you post. Spot something off? <a href="https://threnne.canny.io/ao3-works" class="acc-teal" style="border-bottom:1px solid currentColor;font-weight:600" target="_blank" rel="noopener noreferrer">Tell us</a> and we'll fix it fast.</p>
     </div>
   </div>
 </section>
@@ -278,8 +280,8 @@ body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;
 <!-- FOOTER -->
 <footer class="foot"><div class="wrap">
   <div class="foot__top">
-    <a class="foot__brand" href="#">ao<span class="sig">3</span> <span class="sig">w</span>orks</a>
-    <nav class="foot__nav"><a class="foot__threnne" href="/">threnne</a><a class="foot__cta" href="./editor/index.html">Open the Editor →</a></nav>
+    <a class="foot__brand" href="./index.html">ao<span class="sig">3</span> <span class="sig">w</span>orks</a>
+    <nav class="foot__nav"><a class="foot__threnne" href="https://threnne.com" target="_blank" rel="noopener noreferrer">threnne</a><a class="foot__cta" href="./editor/index.html">Open the Editor →</a></nav>
   </div>
   <p class="foot__disc">ao3 works is an independent fan project, made with love. Not affiliated with, endorsed by, or connected to the Organization for Transformative Works or Archive of Our Own.</p>
 </div></footer>

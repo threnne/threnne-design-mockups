@@ -11,7 +11,8 @@
 // ============================================================
 
 (function () {
-  const DEMO_IMG = '';
+  // Same stable postimg direct link as defaultWelcomeDoc tweet/chatroom avatars.
+  const DEMO_IMG = 'https://i.postimg.cc/HWzcXDtq/negative-space-female-model-smile.jpg';
 
   function t(text, marks) {
     const n = { type: 'text', text };
